@@ -95,12 +95,6 @@ Then set the **`secret_scope` widget** at the top of each notebook (e.g., `RTM_0
    databricks bundle run rtm_fraud_detection_workflow
    ```
 
-The bundle will automatically:
-- Create a dedicated cluster with the correct RTM configuration
-- Run the introduction and quick start notebooks
-- Execute the full fraud detection pipeline
-- Train and deploy the ML model with MLflow
-
 Alternatively, you can deploy from the **Databricks UI**:
 1. Open the cloned folder in your workspace
 2. Open the **Asset Bundle Editor**
