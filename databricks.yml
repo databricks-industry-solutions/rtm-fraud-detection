@@ -45,7 +45,7 @@ resources:
         - task_key: introduction
           job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/00_Introduction"
+            notebook_path: "./notebooks/00_Introduction.py"
 
         # Step 1: Quick Start (self-contained RTM demo, no Kafka)
         - task_key: quick_start
@@ -53,7 +53,7 @@ resources:
             - task_key: introduction
           job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/RTM_00_Quick_Start"
+            notebook_path: "./notebooks/RTM_00_Quick_Start.py"
 
         # Step 2: Full fraud detection with Kafka + stateful processing
         - task_key: fraud_detection_streaming
@@ -61,7 +61,7 @@ resources:
             - task_key: quick_start
           job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/RTM_01_Introduction_fraud_detection"
+            notebook_path: "./notebooks/RTM_01_Introduction_fraud_detection.py"
 
         # Step 3: ML-powered fraud detection with Lakebase + MLflow
         - task_key: advanced_ml_fraud
@@ -69,7 +69,7 @@ resources:
             - task_key: fraud_detection_streaming
           job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/RTM_02_Advanced_fraud_detection_ml"
+            notebook_path: "./notebooks/RTM_02_Advanced_fraud_detection_ml.py"
 
   # Uncomment when app deployment is available on this workspace
   # apps:
