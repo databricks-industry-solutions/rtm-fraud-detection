@@ -12,7 +12,7 @@ This repository contains an end-to-end implementation of **real-time fraud detec
 
 Fraud detection demands sub-second latency — a fraudulent transaction must be blocked *before* it settles. Historically this has meant licensing separate specialized streaming engines outside the data platform, adding cost, operational complexity, and yet another tool to integrate and maintain. Traditional micro-batch processing simply can't meet the latency these workloads require, forcing teams to operate two parallel stacks.
 
-With [**Real-Time Mode**](https://www.databricks.com/blog/introducing-real-time-mode-apache-sparktm-structured-streaming) (GA March 2026), Databricks brings **sub-300ms end-to-end latency** directly into Spark Structured Streaming — same APIs, same platform, no separate engine needed.
+With [**Real-Time Mode**](https://www.databricks.com/blog/introducing-real-time-mode-apache-sparktm-structured-streaming), Databricks brings **sub-300ms end-to-end latency** directly into Spark Structured Streaming — same APIs, same platform, no separate engine needed.
 
 ### What This Solution Does
 
@@ -31,22 +31,6 @@ While this example focuses on financial fraud, the architecture and approach are
 - E-commerce session scoring
 - Supply chain event processing
 
-## Architecture
-
-```
-┌──────────────┐     ┌─────────────────────────────────────────────────────────┐     ┌──────────────┐
-│              │     │              Databricks Real-Time Mode                  │     │              │
-│  Kafka /     │────>│                                                         │────>│  Kafka       │
-│  Kinesis     │     │     Parse ─> Velocity ─> Enrich ─> Score ─> Route       │     │  (approved/  │
-│              │     │                                                         │     │   flagged/   │
-│              │     │                                                         │     │   blocked)   │
-└──────────────┘     │                                                         │     └──────────────┘
-                     │  ┌─────────────┐  ┌─────────────┐  ┌──────────────────┐ │
-                     │  │ Lakebase    │  │ MLflow      │  │ Databricks App   │ │
-                     │  │ (features)  │  │ (ML model)  │  │ (live dashboard) │ │
-                     │  └─────────────┘  └─────────────┘  └──────────────────┘ │
-                     └─────────────────────────────────────────────────────────┘
-```
 
 The solution leverages several Databricks technologies:
 
