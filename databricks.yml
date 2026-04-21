@@ -1,19 +1,15 @@
 bundle:
-  name: demo_workflow
+  name: rtm_fraud_detection
 
 variables:
-  # Project name - replace with your solution accelerator name
   project_name:
-    description: "Name of your solution accelerator"
-    default: "my-solution-accelerator"
-    
-  # The "warehouse_id" variable is used to reference the warehouse used by the dashboard.
+    description: "Name of the solution accelerator"
+    default: "rtm-fraud-detection"
+
   warehouse_id:
     lookup:
-      # Replace this with the name of your SQL warehouse.
       warehouse: "Shared Unity Catalog Serverless"
-      
-  # Environment variable used for deployment paths
+
   environment:
     description: "Deployment environment (dev, staging, prod)"
     default: "dev"
@@ -23,72 +19,68 @@ targets:
     default: true
     mode: development
 
-# Customize the resources below based on your solution accelerator needs
 resources:
-  # Uncomment and customize if you have Databricks Apps
-  # apps:
-  #   your_app:
-  #     name: "your-app-name"
-  #     description: "Your app description"
-  #     source_code_path: "/Users/${workspace.current_user.userName}/${var.project_name}-${var.environment}/files/apps/your_app"
-
-  # Uncomment and customize if you have dashboards
-  # dashboards:
-  #   your_dashboard:
-  #     display_name: "Your Dashboard"
-  #     file_path: "./dashboards/your_dashboard.lvdash.json"
-  #     warehouse_id: "${var.warehouse_id}"
-
-  # Example job workflow - customize based on your notebooks
   jobs:
-    example_workflow:
-      name: "${var.project_name} - Example Workflow"
+    rtm_fraud_detection_workflow:
+      name: "${var.project_name} - Fraud Detection Workflow"
+
+      job_clusters:
+        - job_cluster_key: rtm_cluster
+          new_cluster:
+            spark_version: "18.0.x-scala2.13"
+            num_workers: 6
+            node_type_id: "i3.xlarge"
+            driver_node_type_id: "i3.xlarge"
+            runtime_engine: STANDARD
+            data_security_mode: SINGLE_USER
+            spark_conf:
+              spark.databricks.streaming.realTimeMode.enabled: "true"
+              spark.sql.shuffle.partitions: "4"
+            aws_attributes:
+              availability: ON_DEMAND
+              zone_id: auto
+
       tasks:
-        - task_key: example_notebook
+        # Step 0: Introduction / Overview
+        - task_key: introduction
+          job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/example_notebook.ipynb"
-        - task_key: example_databricks_notebook
+            notebook_path: "./notebooks/00_Introduction"
+
+        # Step 1: Quick Start (self-contained RTM demo, no Kafka)
+        - task_key: quick_start
           depends_on:
-            - task_key: example_notebook
+            - task_key: introduction
+          job_cluster_key: rtm_cluster
           notebook_task:
-            notebook_path: "./notebooks/example_databricks_notebook.py"
+            notebook_path: "./notebooks/RTM_00_Quick_Start"
 
-# Example resources you can uncomment and customize:
-# resources:
-#   apps:
-#     your_app:
-#       name: "your-app-name"
-#       description: "Your app description"
-#       source_code_path: "./apps/your_app"
-#
-#   jobs:
-#     your_workflow:
-#       name: "Your Workflow Name"
-#       tasks:
-#         - task_key: first_task
-#           notebook_task:
-#             notebook_path: "./notebooks/your_first_notebook.ipynb"
-#         - task_key: second_task
-#           depends_on:
-#             - task_key: first_task
-#           notebook_task:
-#             notebook_path: "./notebooks/your_second_notebook.ipynb"
-#
-#   pipelines:
-#     your_pipeline:
-#       name: "Your Pipeline"
-#       storage: "/Shared/your-pipeline"
-#       configuration:
-#         your_config: "value"
-#
-#   models:
-#     your_model:
-#       name: "Your Model"
-#       model_path: "models/your_model"
-#
-#   dashboards:
-#     your_dashboard:
-#       display_name: "Your Dashboard"
-#       file_path: "./dashboards/your_dashboard.lvdash.json"
+        # Step 2: Full fraud detection with Kafka + stateful processing
+        - task_key: fraud_detection_streaming
+          depends_on:
+            - task_key: quick_start
+          job_cluster_key: rtm_cluster
+          notebook_task:
+            notebook_path: "./notebooks/RTM_01_Introduction_fraud_detection"
 
-# For more options and schema, see: https://docs.databricks.com/aws/en/dev-tools/bundles/settings
+        # Step 3: ML-powered fraud detection with Lakebase + MLflow
+        - task_key: advanced_ml_fraud
+          depends_on:
+            - task_key: fraud_detection_streaming
+          job_cluster_key: rtm_cluster
+          notebook_task:
+            notebook_path: "./notebooks/RTM_02_Advanced_fraud_detection_ml"
+
+  # Uncomment when app deployment is available on this workspace
+  # apps:
+  #   fraud_dashboard:
+  #     name: "rtm-fraud-dashboard-${var.environment}"
+  #     description: "Real-time fraud detection dashboard powered by Lakebase"
+  #     source_code_path: "./apps"
+
+  # Uncomment if you add a Lakeview dashboard
+  # dashboards:
+  #   fraud_dashboard:
+  #     display_name: "RTM Fraud Detection Dashboard"
+  #     file_path: "./dashboards/fraud_dashboard.lvdash.json"
+  #     warehouse_id: "${var.warehouse_id}"
