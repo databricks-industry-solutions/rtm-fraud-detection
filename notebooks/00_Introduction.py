@@ -20,23 +20,6 @@
 # MAGIC store (Lakebase), this accelerator provides a production-ready foundation for real-time
 # MAGIC fraud detection on the Databricks Data Intelligence Platform.
 # MAGIC
-# MAGIC ## Architecture
-# MAGIC
-# MAGIC ```
-# MAGIC ┌──────────────┐     ┌─────────────────────────────────────────────────────────┐     ┌──────────────┐
-# MAGIC │              │     │              Databricks Real-Time Mode                   │     │              │
-# MAGIC │  Kafka /     │────>│                                                         │────>│  Kafka       │
-# MAGIC │  Kinesis     │     │  Parse ─> Velocity ─> Enrich ─> Score ─> Route          │     │  (approved/  │
-# MAGIC │  (raw txns)  │     │           Tracking    (broadcast  (UDFs)   (by           │     │   flagged/   │
-# MAGIC │              │     │           (TWS)        joins)              decision)      │     │   blocked)   │
-# MAGIC └──────────────┘     │                                                         │     └──────────────┘
-# MAGIC                      │  ┌─────────────┐  ┌─────────────┐  ┌──────────────────┐ │
-# MAGIC                      │  │ Lakebase    │  │ MLflow      │  │ Databricks App   │ │
-# MAGIC                      │  │ (features)  │  │ (ML model)  │  │ (live dashboard) │ │
-# MAGIC                      │  └─────────────┘  └─────────────┘  └──────────────────┘ │
-# MAGIC                      └─────────────────────────────────────────────────────────┘
-# MAGIC ```
-# MAGIC
 # MAGIC ## What's Included
 # MAGIC
 # MAGIC - **Quick Start** (`RTM_00_Quick_Start`) — Self-contained RTM demo with zero external dependencies.
@@ -104,5 +87,5 @@
 # MAGIC - [Real-Time Mode Documentation](https://docs.databricks.com/aws/en/structured-streaming/real-time.html)
 # MAGIC - [Real-Time Mode Examples](https://docs.databricks.com/aws/en/structured-streaming/real-time-examples)
 # MAGIC - [Stateful Applications with transformWithState](https://docs.databricks.com/aws/en/stateful-applications/)
-# MAGIC - [Lakebase Documentation](https://docs.databricks.com/en/database/lakebase.html)
+# MAGIC - [Lakebase Documentation](https://docs.databricks.com/aws/en/oltp/)
 # MAGIC - [MLflow Model Registry](https://mlflow.org/docs/latest/model-registry.html)
