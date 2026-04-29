@@ -20,16 +20,6 @@
 # MAGIC store (Lakebase), this accelerator provides a production-ready foundation for real-time
 # MAGIC fraud detection on the Databricks Data Intelligence Platform.
 # MAGIC
-# MAGIC ## Architecture
-# MAGIC
-# MAGIC See the architecture diagram in the [README](../README.md) (`images/Image1.png`)
-# MAGIC for the visual flow. Text summary:
-# MAGIC
-# MAGIC ```
-# MAGIC Kafka  ──events──>  Spark Real-Time Mode  ──processed──>  Kafka / Lakebase  ──served──>  Databricks App
-# MAGIC                     (Parse → Velocity →
-# MAGIC                      Enrich → Score → Route)
-# MAGIC ```
 # MAGIC
 # MAGIC The RTM pipeline runs five stages continuously: parse Kafka JSON, track
 # MAGIC per-card velocity with `transformWithState`, enrich with merchant/card
@@ -70,7 +60,7 @@
 # MAGIC - Spark config: `spark.databricks.streaming.realTimeMode.enabled true`
 # MAGIC
 # MAGIC ### External Services (for Parts 1 & 2)
-# MAGIC - **Kafka cluster** (AWS MSK, Confluent Cloud, or self-managed) with TLS on port 9094
+# MAGIC - **Kafka cluster** (AWS MSK, Confluent Cloud, or self-managed)
 # MAGIC - **Databricks Secret Scope** with your Kafka bootstrap servers (see README for setup)
 # MAGIC - **Lakebase instance** (for Part 2 and Dashboard App)
 # MAGIC
