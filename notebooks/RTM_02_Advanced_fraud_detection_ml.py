@@ -24,7 +24,7 @@
 # MAGIC |-----------|-----------|-------------------|
 # MAGIC | **Lakebase** | Managed PostgreSQL on Databricks | Online feature store -- stores per-card features for sub-millisecond reads |
 # MAGIC | **MLflow** | ML lifecycle platform | Train, version, and deploy fraud detection models |
-# MAGIC | **jdbcStreaming** | Streaming Lakebase sink | Write features from Spark Streaming directly to Lakebase with upserts |
+# MAGIC | **`foreach` sink + `LakebaseFeatureWriter`** | Custom streaming sink (public Spark API) | Upsert features and scores into Lakebase with `INSERT ... ON CONFLICT` |
 # MAGIC | **Feature Store** | A pattern for serving ML features | Lakebase holds the latest features per card, always fresh |
 # MAGIC
 # MAGIC ### Prerequisites
@@ -38,7 +38,7 @@
 # MAGIC | 1 | Setup & Configuration | Kafka config, Lakebase connection, create tables |
 # MAGIC | 2 | Reference Data | Merchant + card profiles (reused from Notebook 1) |
 # MAGIC | 3 | Feature Engineering | Design and compute real-time features |
-# MAGIC | 4 | Stream Features to Lakebase | `jdbcStreaming` pipeline to online feature store |
+# MAGIC | 4 | Stream Features to Lakebase | `foreach` pipeline (`LakebaseFeatureWriter`) writing to the online feature store |
 # MAGIC | 5 | Generate Labeled Training Data | Synthetic historical data with fraud labels |
 # MAGIC | 6 | Train & Register MLflow Model | RandomForest trained on fraud features |
 # MAGIC | 7 | ML Scoring Pipeline | Real-time scoring with MLflow model + Lakebase |
@@ -85,9 +85,6 @@ dbutils.widgets.text("lakebase_instance", "", "Lakebase Instance Name")
 # Verify real-time mode
 assert spark.conf.get("spark.databricks.streaming.realTimeMode.enabled", "false") == "true", \
     "Real-time mode is not enabled! Add 'spark.databricks.streaming.realTimeMode.enabled true' to cluster Spark config."
-
-# Enable JDBC streaming for Lakebase (required for jdbcStreaming sink)
-spark.conf.set("spark.sql.streaming.jdbc.enabled", "true")
 
 # Load Kafka config -- try spark.conf first (set by Notebook 1), fall back to secrets
 try:
@@ -316,7 +313,7 @@ display(card_profile_data)
 # MAGIC 1. Read raw transactions from Kafka
 # MAGIC 2. Enrich with merchant + card profile data (inline lookups -- avoids slot pressure)
 # MAGIC 3. Compute feature columns
-# MAGIC 4. Write to Lakebase via `jdbcStreaming` (upserts by `card_id`)
+# MAGIC 4. Write to Lakebase via the `foreach` sink + `LakebaseFeatureWriter` (upserts by `card_id`)
 # MAGIC
 # MAGIC After this pipeline starts, **Lakebase always has the latest features for every card**,
 # MAGIC updated within milliseconds of each transaction.
@@ -453,14 +450,26 @@ print("Feature computation pipeline configured (join-free).")
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ### 4.3 Write Features to Lakebase via jdbcStreaming
+# MAGIC ### 4.3 Write Features to Lakebase via `foreach` (`LakebaseFeatureWriter`)
 # MAGIC
-# MAGIC The `jdbcStreaming` sink writes directly to Lakebase with **upsert** semantics:
-# MAGIC each new transaction for a card **updates** that card's feature row.
-# MAGIC This means Lakebase always reflects the card's latest state.
+# MAGIC We upsert per-card features into Lakebase using the public `foreach` sink
+# MAGIC plus a custom `LakebaseFeatureWriter` class. The writer:
 # MAGIC
-# MAGIC The `realTime` trigger tells Spark to process with minimal latency (40-300ms)
-# MAGIC while checkpointing every 30 seconds for durability.
+# MAGIC - opens a `psycopg` connection per executor partition,
+# MAGIC - buffers rows and flushes via Postgres `INSERT ... ON CONFLICT (card_id) DO UPDATE` (upsert),
+# MAGIC - refreshes the Lakebase short-lived OAuth credential before its 60-min TTL expires,
+# MAGIC - reconnects on transient connection failures.
+# MAGIC
+# MAGIC The writer class lives in `./resources/00_lakebase_writer` so this notebook
+# MAGIC stays focused on the streaming pipeline. The `realTime` trigger keeps the
+# MAGIC RTM continuous-processing model with 30-second checkpoint cadence for durability.
+# MAGIC
+# MAGIC > **When `jdbcStreaming` reaches GA**, swap Section 4.3 back to the one-line
+# MAGIC > `.format("jdbcStreaming")` form -- everything upstream and downstream is unchanged.
+
+# COMMAND ----------
+
+# MAGIC %run ./resources/00_lakebase_writer
 
 # COMMAND ----------
 
@@ -472,17 +481,46 @@ print("All queries stopped.")
 
 # COMMAND ----------
 
+# Column order must match the FEATURE_TABLE schema in Section 1.3 and the
+# `feature_output.select(...)` in Section 4.2. Update this list together with those
+# if the schema changes.
+FEATURE_COLUMNS = [
+    "card_id",
+    "last_transaction_id",
+    "last_amount",
+    "amount_to_avg_ratio",
+    "exceeds_30d_max",
+    "is_online",
+    "hour_of_day",
+    "is_weekend",
+    "is_night_owl",
+    "is_high_risk_country",
+    "is_cross_border",
+    "is_round_amount",
+    "is_small_probe",
+    "merchant_risk_score",
+    "amount_usd",
+    "last_latitude",
+    "last_longitude",
+    "updated_at",
+]
+KEY_COLUMNS = ["card_id"]
+
 dbutils.fs.rm(checkpoint_feature_store, recurse=True)
+
+writer = LakebaseFeatureWriter(
+    instance_name=LAKEBASE_INSTANCE_NAME,
+    table=FEATURE_TABLE,
+    columns=FEATURE_COLUMNS,
+    key_columns=KEY_COLUMNS,
+    database=LAKEBASE_DATABASE,
+)
 
 feature_query = (
     feature_output
-    .withWatermark("updated_at", "10 seconds")
+    .select(*FEATURE_COLUMNS)
     .writeStream
-    .format("jdbcStreaming")
-    .option("instancename", LAKEBASE_INSTANCE_NAME)
-    .option("dbtable", FEATURE_TABLE)
-    .option("upsertkey", "card_id")
-    .option("batchinterval", "10 milliseconds")
+    .foreach(writer)
     .option("checkpointLocation", checkpoint_feature_store)
     .trigger(realTime="30 seconds")
     .outputMode("update")
@@ -490,6 +528,8 @@ feature_query = (
 )
 
 print(f"Feature store pipeline started -> Lakebase table: {FEATURE_TABLE}")
+print(f"Writing columns: {FEATURE_COLUMNS}")
+print(f"Upsert key: {KEY_COLUMNS}")
 
 # COMMAND ----------
 
@@ -882,22 +922,40 @@ print("ML scoring pipeline configured.")
 
 dbutils.fs.rm(checkpoint_scoring, recurse=True)
 
+# Match the SCORES_TABLE schema declared in Section 1.3.
+SCORES_COLUMNS = [
+    "transaction_id",
+    "card_id",
+    "amount_usd",
+    "fraud_probability",
+    "ml_decision",
+    "model_version",
+    "scored_at",
+]
+SCORES_KEY = ["transaction_id"]
+
+scores_writer = LakebaseFeatureWriter(
+    instance_name=LAKEBASE_INSTANCE_NAME,
+    table=SCORES_TABLE,
+    columns=SCORES_COLUMNS,
+    key_columns=SCORES_KEY,
+    database=LAKEBASE_DATABASE,
+)
+
 scoring_query = (
     scores_output
-    #.withWatermark("scored_at", "10 seconds") #stateful streaming
+    .select(*SCORES_COLUMNS)
     .writeStream
-    .format("jdbcStreaming")
-    .option("instancename", LAKEBASE_INSTANCE_NAME)
-    .option("dbtable", SCORES_TABLE)
-    .option("upsertkey", "transaction_id")
-    .option("batchinterval", "10 milliseconds")
+    .foreach(scores_writer)
     .option("checkpointLocation", checkpoint_scoring)
-    .trigger(realTime="5 minutes") #longer the better on performance
+    .trigger(realTime="5 minutes")  # longer the better on performance
     .outputMode("update")
     .start()
 )
 
 print(f"Scoring pipeline started -> Lakebase table: {SCORES_TABLE}")
+print(f"Writing columns: {SCORES_COLUMNS}")
+print(f"Upsert key: {SCORES_KEY}")
 
 # COMMAND ----------
 

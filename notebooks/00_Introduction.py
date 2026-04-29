@@ -22,20 +22,21 @@
 # MAGIC
 # MAGIC ## Architecture
 # MAGIC
+# MAGIC See the architecture diagram in the [README](../README.md) (`images/Image1.png`)
+# MAGIC for the visual flow. Text summary:
+# MAGIC
 # MAGIC ```
-# MAGIC ┌──────────────┐     ┌─────────────────────────────────────────────────────────┐     ┌──────────────┐
-# MAGIC │              │     │              Databricks Real-Time Mode                   │     │              │
-# MAGIC │  Kafka /     │────>│                                                         │────>│  Kafka       │
-# MAGIC │  Kinesis     │     │  Parse ─> Velocity ─> Enrich ─> Score ─> Route          │     │  (approved/  │
-# MAGIC │  (raw txns)  │     │           Tracking    (broadcast  (UDFs)   (by           │     │   flagged/   │
-# MAGIC │              │     │           (TWS)        joins)              decision)      │     │   blocked)   │
-# MAGIC └──────────────┘     │                                                         │     └──────────────┘
-# MAGIC                      │  ┌─────────────┐  ┌─────────────┐  ┌──────────────────┐ │
-# MAGIC                      │  │ Lakebase    │  │ MLflow      │  │ Databricks App   │ │
-# MAGIC                      │  │ (features)  │  │ (ML model)  │  │ (live dashboard) │ │
-# MAGIC                      │  └─────────────┘  └─────────────┘  └──────────────────┘ │
-# MAGIC                      └─────────────────────────────────────────────────────────┘
+# MAGIC Kafka  ──events──>  Spark Real-Time Mode  ──processed──>  Kafka / Lakebase  ──served──>  Databricks App
+# MAGIC                     (Parse → Velocity →
+# MAGIC                      Enrich → Score → Route)
 # MAGIC ```
+# MAGIC
+# MAGIC The RTM pipeline runs five stages continuously: parse Kafka JSON, track
+# MAGIC per-card velocity with `transformWithState`, enrich with merchant/card
+# MAGIC profile data via in-memory dictionary lookups (no `BroadcastExchange` overhead),
+# MAGIC score with weighted multi-signal UDFs, and route by decision into separate
+# MAGIC output Kafka topics. Lakebase holds the online feature store, MLflow tracks
+# MAGIC the model, and the Databricks App provides the live monitoring dashboard.
 # MAGIC
 # MAGIC ## What's Included
 # MAGIC
@@ -49,8 +50,9 @@
 # MAGIC   *Requires: Kafka (AWS MSK or Confluent Cloud)*
 # MAGIC
 # MAGIC - **Part 2: ML-Powered Detection** (`RTM_02_Advanced_fraud_detection_ml`) — Upgrades from rules
-# MAGIC   to ML: streams features to Lakebase (online feature store via `jdbcStreaming`), trains a
-# MAGIC   RandomForest model tracked in MLflow, and scores transactions with the model loaded as a Spark UDF.
+# MAGIC   to ML: streams features to Lakebase (online feature store) using the public `foreach` sink and
+# MAGIC   a custom `LakebaseFeatureWriter` (see `resources/00_lakebase_writer`), trains a RandomForest
+# MAGIC   model tracked in MLflow, and scores transactions with the model loaded as a Spark UDF.
 # MAGIC   *Requires: Kafka + Lakebase instance*
 # MAGIC
 # MAGIC - **Dashboard App** (`app/`) — Streamlit-based Databricks App that provides a live fraud detection
