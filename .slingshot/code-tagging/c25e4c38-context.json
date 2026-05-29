@@ -1,0 +1,31 @@
+{
+  "filename": "RTM_02_Advanced_fraud_detection_ml.py",
+  "path": "notebooks\\RTM_02_Advanced_fraud_detection_ml.py",
+  "version": "1.1",
+  "files": {
+    "3d62d74f": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1163
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "10a9ba83": {
+      "value": "yesv correct those"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,157 @@
+{
+  "notebooks\\RTM_02_Advanced_fraud_detection_ml.py": {
+    "filename": "RTM_02_Advanced_fraud_detection_ml.py",
+    "path": "notebooks\\RTM_02_Advanced_fraud_detection_ml.py",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5c57c4": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780054639,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "10a9ba83",
+          "files": "3d62d74f"
+        },
+        "hash": "978481f4",
+        "messageId": "system_7e521330-5b52-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 5/29/2026, 5:07:19 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "343": {
+        "chunkId": "5c57c4",
+        "hash": "f306768b",
+        "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20---",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "5c57c4",
+        "hash": "be79e0b0",
+        "encoded": "eventhub_conn_string%20=%20dbutils.secrets.get(scope=%22kafka-scope%22,%20key=%22kafka-connection-string%22)",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "5c57c4",
+        "hash": "ffd49630",
+        "encoded": "kafka_sasl_jaas_config%20=%20(",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "5c57c4",
+        "hash": "7cfe30f5",
+        "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "5c57c4",
+        "hash": "bae1319f",
+        "encoded": "'username=%22$ConnectionString%22%20'",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "5c57c4",
+        "hash": "6d8f5b64",
+        "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "5c57c4",
+        "hash": "ef7eb2fc",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "5c57c4",
+        "hash": "ab884ea4",
+        "encoded": "raw_stream%20=%20(",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "5c57c4",
+        "hash": "febb95aa",
+        "encoded": "spark.readStream",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "5c57c4",
+        "hash": "dbc2846c",
+        "encoded": ".format(%22kafka%22)",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "5c57c4",
+        "hash": "32d55bec",
+        "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "5c57c4",
+        "hash": "ca9f5712",
+        "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))%20%20#%20Read%20only%202%20of%208%20partitions",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "5c57c4",
+        "hash": "24d82c64",
+        "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "5c57c4",
+        "hash": "01762ec3",
+        "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "5c57c4",
+        "hash": "e6add88b",
+        "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "5c57c4",
+        "hash": "b71dba0c",
+        "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "5c57c4",
+        "hash": "0254a445",
+        "encoded": ".option(%22kafka.sasl.jaas.config%22,%20kafka_sasl_jaas_config)",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "5c57c4",
+        "hash": "61ff24bd",
+        "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "5c57c4",
+        "hash": "2c16ad29",
+        "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "5c57c4",
+        "hash": "f4ede63d",
+        "encoded": ".load()",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "5c57c4",
+        "hash": "48426c2a",
+        "encoded": ")",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
