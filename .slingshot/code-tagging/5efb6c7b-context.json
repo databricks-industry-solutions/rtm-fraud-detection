@@ -1,0 +1,31 @@
+{
+  "filename": "00_config.py",
+  "path": "notebooks\\resources\\00_config.py",
+  "version": "1.1",
+  "files": {
+    "17f2badd": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_01_Introduction_fraud_detection.py",
+          "relativeFilePath": "notebooks/RTM_01_Introduction_fraud_detection.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            889
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "1c24b917": {
+      "value": "I have created scope in databricks \ndbutils.secrets.list(scope=\"kafka-scope\")\n[SecretMetadata(key='kafka-bootstrap-servers-plaintext'),\n SecretMetadata(key='kafka-bootstrap-servers-tls'),\n SecretMetadata(key='kafka-connection-string')]"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

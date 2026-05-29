@@ -398,6 +398,25 @@ transaction_schema = StructType([
     StructField("event_time", StringType()),
 ])
 
+# --- Azure Event Hubs (Kafka-compatible) connection config ---
+# Retrieve broker address and connection string from Databricks Secrets (scope: kafka-scope)
+kafka_brokers = dbutils.secrets.get(scope="kafka-scope", key="kafka-bootstrap-servers-tls")
+input_topic = "harbanga_raw_transactions"
+kafka_max_partitions = 4
+
+# Retrieve Event Hubs connection string from Databricks Secrets
+eh_conn_string = dbutils.secrets.get(
+    scope="kafka-scope",
+    key="kafka-connection-string"
+)
+
+# SASL/PLAIN JAAS config for Azure Event Hubs
+eh_sasl_jaas = (
+    'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule required '
+    'username="$ConnectionString" '
+    f'password="{eh_conn_string}";'
+)
+
 raw_stream = (
     spark.readStream
     .format("kafka")
@@ -405,7 +424,11 @@ raw_stream = (
     .option("subscribe", input_topic)
     .option("maxPartitions", kafka_max_partitions)
     .option("startingOffsets", "latest")
-    .option("kafka.security.protocol", "SSL")
+    .option("kafka.security.protocol", "SASL_SSL")
+    .option("kafka.sasl.mechanism", "PLAIN")
+    .option("kafka.sasl.jaas.config", eh_sasl_jaas)
+    .option("kafka.request.timeout.ms", "60000")
+    .option("kafka.session.timeout.ms", "30000")
     .load()
 )
 
@@ -574,7 +597,7 @@ print(f"Cleared checkpoint directory: {checkpoint_location}")
 # COMMAND ----------
 
 def write_decision_to_kafka(stream, decision, topic, checkpoint):
-    """Write a single decision category to its own Kafka topic."""
+    """Write a single decision category to its own Kafka topic via Azure Event Hubs."""
     return (
         stream
         .filter(col("decision") == decision)
@@ -585,7 +608,11 @@ def write_decision_to_kafka(stream, decision, topic, checkpoint):
         .writeStream
         .format("kafka")
         .option("kafka.bootstrap.servers", kafka_brokers)
-        .option("kafka.security.protocol", "SSL")
+        .option("kafka.security.protocol", "SASL_SSL")
+        .option("kafka.sasl.mechanism", "PLAIN")
+        .option("kafka.sasl.jaas.config", eh_sasl_jaas)
+        .option("kafka.request.timeout.ms", "60000")
+        .option("kafka.session.timeout.ms", "30000")
         .option("topic", topic)
         .option("checkpointLocation", checkpoint)
         .outputMode("update")
@@ -803,15 +830,14 @@ display(spark.sql("""
 
 from kafka import KafkaConsumer
 
-ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-ssl_ctx.check_hostname = False
-ssl_ctx.verify_mode = ssl.CERT_NONE
-
 consumer = KafkaConsumer(
     input_topic,
     bootstrap_servers=kafka_brokers,
-    security_protocol="SSL",
-    ssl_context=ssl_ctx,
+    security_protocol="SASL_SSL",
+    sasl_mechanism="PLAIN",
+    sasl_plain_username="$ConnectionString",
+    sasl_plain_password=eh_conn_string,
+    ssl_check_hostname=True,
     auto_offset_reset='earliest',
     consumer_timeout_ms=5000
 )
