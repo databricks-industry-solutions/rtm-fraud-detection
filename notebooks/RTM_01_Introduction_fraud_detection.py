@@ -423,7 +423,7 @@ raw_stream = (
     .option("kafka.bootstrap.servers", kafka_brokers)
     .option("subscribe", input_topic)
     .option("maxPartitions", kafka_max_partitions)
-    .option("startingOffsets", "latest")
+    .option("startingOffsets", "earliest")
     .option("kafka.security.protocol", "SASL_SSL")
     .option("kafka.sasl.mechanism", "PLAIN")
     .option("kafka.sasl.jaas.config", eh_sasl_jaas)
@@ -620,8 +620,8 @@ def write_decision_to_kafka(stream, decision, topic, checkpoint):
         .start()
     )
 
-approved_query = write_decision_to_kafka(output_stream, "APPROVED", output_topic_approved, f"{checkpoint_location}/approved")
-flagged_query  = write_decision_to_kafka(output_stream, "FLAGGED",  output_topic_flagged,  f"{checkpoint_location}/flagged")
+#approved_query = write_decision_to_kafka(output_stream, "APPROVED", output_topic_approved, f"{checkpoint_location}/approved")
+#flagged_query  = write_decision_to_kafka(output_stream, "FLAGGED",  output_topic_flagged,  f"{checkpoint_location}/flagged")
 blocked_query  = write_decision_to_kafka(output_stream, "BLOCKED",  output_topic_blocked,  f"{checkpoint_location}/blocked")
 
 slots_per_query = kafka_max_partitions + shuffle_partitions
@@ -675,8 +675,8 @@ def display_query_metrics(query):
         print(f"No progress yet for query: {query.name}")
     print()
 
-display_query_metrics(approved_query)
-display_query_metrics(flagged_query)
+#display_query_metrics(approved_query)
+#display_query_metrics(flagged_query)
 display_query_metrics(blocked_query)
 
 # COMMAND ----------
@@ -692,11 +692,12 @@ monitoring_query = (
     .format("memory")
     .queryName("fraud_monitoring")
     .outputMode("update")
-    .trigger(processingTime="5 minutes")
+    #.trigger(processingTime="5 minutes")
+    .trigger(processingTime="5 seconds")
     .start()
 )
 
-display(spark.sql("SELECT * FROM fraud_monitoring ORDER BY scored_time DESC LIMIT 100"))
+#display(spark.sql("SELECT * FROM fraud_monitoring ORDER BY scored_time DESC LIMIT 100"))
 
 # COMMAND ----------
 
@@ -742,7 +743,12 @@ for query in spark.streams.active:
 
 # COMMAND ----------
 
-run_baseline_generator(duration_seconds=60, tps=5)
+#run_baseline_generator(duration_seconds=60, tps=5)
+run_baseline_generator(duration_seconds=15, tps=2)
+time.sleep(5)
+inject_fraud_pattern("velocity")
+time.sleep(5)
+inject_fraud_pattern("amount")
 
 # COMMAND ----------
 
@@ -752,8 +758,8 @@ run_baseline_generator(duration_seconds=60, tps=5)
 # COMMAND ----------
 
 time.sleep(15)
-display_query_metrics(approved_query)
-display_query_metrics(flagged_query)
+#display_query_metrics(approved_query)
+#display_query_metrics(flagged_query)
 display_query_metrics(blocked_query)
 
 # COMMAND ----------

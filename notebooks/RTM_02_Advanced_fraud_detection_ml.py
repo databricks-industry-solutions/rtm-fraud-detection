@@ -181,7 +181,7 @@ def connect_to_lakebase(project_name, database):
   import psycopg
 
   w = WorkspaceClient()
-  host = w.database.get_database_project(name=project_name).read_write_dns
+  host = w.database.get_database_instance(name=project_name).read_write_dns
   cred = w.database.generate_database_credential(
       request_id=str(uuid.uuid4()), project_names=[project_name])
   
