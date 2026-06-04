@@ -17,7 +17,7 @@
 # MAGIC Mode. This module reproduces the five things `jdbcStreaming` was doing
 # MAGIC internally so that the calling notebook stays clean:
 # MAGIC
-# MAGIC 1. Resolves the Lakebase instance and opens a `psycopg` connection
+# MAGIC 1. Resolves the Lakebase project and opens a `psycopg` connection
 # MAGIC 2. Refreshes the short-lived Lakebase OAuth credential before its 60-min TTL expires
 # MAGIC 3. Buffers rows and flushes via Postgres `INSERT ... ON CONFLICT` (upsert)
 # MAGIC 4. Reconnects on transient `OperationalError` / `InterfaceError`
@@ -29,7 +29,7 @@
 # MAGIC %run ./resources/00_lakebase_writer
 # MAGIC
 # MAGIC writer = LakebaseFeatureWriter(
-# MAGIC     instance_name=LAKEBASE_INSTANCE_NAME,
+# MAGIC     project_name=LAKEBASE_PROJECT_NAME,
 # MAGIC     table=FEATURE_TABLE,
 # MAGIC     columns=[...],          # column order must match feature_output.select(...)
 # MAGIC     key_columns=["card_id"]
@@ -98,7 +98,7 @@ class LakebaseFeatureWriter:
 
     def __init__(
         self,
-        instance_name: str,
+        project_name: str,
         table: str,
         columns: list,
         key_columns: list,
@@ -112,7 +112,7 @@ class LakebaseFeatureWriter:
         `user`, or `password` are not provided, they are resolved via the
         Databricks SDK at construction time (driver-side only).
         """
-        self.instance_name = instance_name
+        self.project_name = project_name
         self.table = table
         self.columns = list(columns)
         self.key_columns = list(key_columns)
@@ -124,9 +124,9 @@ class LakebaseFeatureWriter:
         if host is None or user is None or password is None:
             from databricks.sdk import WorkspaceClient
             w = WorkspaceClient()
-            instance = w.database.get_database_instance(name=instance_name)
-            cred = w.database.generate_database_credential(instance_names=[instance_name])
-            host = host or instance.read_write_dns
+            project = w.database.get_database_project(name=project_name)
+            cred = w.database.generate_database_credential(project_names=[project_name])
+            host = host or project.read_write_dns
             user = user or w.current_user.me().user_name
             password = password or cred.token
 
@@ -229,7 +229,7 @@ class LakebaseFeatureWriter:
 # MAGIC
 # MAGIC Run this cell only when developing the writer in isolation. It is a no-op
 # MAGIC when the notebook is loaded via `%run` from another notebook (because the
-# MAGIC `LAKEBASE_INSTANCE_NAME` and `FEATURE_TABLE` widgets won't be set there).
+# MAGIC `LAKEBASE_PROJECT_NAME` and `FEATURE_TABLE` widgets won't be set there).
 
 # COMMAND ----------
 

@@ -30,7 +30,7 @@
 # MAGIC ### Prerequisites
 # MAGIC - **Run Notebook 1 first** (or at least its Section 1 for Kafka config)
 # MAGIC - Same cluster requirements as Notebook 1 (Real-Time Mode enabled)
-# MAGIC - A **Lakebase instance** (we'll configure the name below)
+# MAGIC - A **Lakebase project** (we'll configure the name below)
 # MAGIC
 # MAGIC ### Notebook Sections
 # MAGIC | # | Section | What it does |
@@ -74,11 +74,11 @@ dbutils.library.restartPython()
 dbutils.widgets.text("secret_scope", "", "Kafka Secret Scope Name")
 
 # --- Lakebase ---
-# Create a Lakebase instance if you don't have one:
+# Use your existing Lakebase project:
 #   1. In the Databricks UI, go to SQL > Lakebase
-#   2. Click "Create instance", give it a name (e.g., "rtm-lakebase-demo"), select a size
-#   3. Enter that instance name in the widget below
-dbutils.widgets.text("lakebase_instance", "", "Lakebase Instance Name")
+#   2. Open your Lakebase project (or create one if needed)
+#   3. Enter the project name in the widget below
+dbutils.widgets.text("lakebase_project", "", "Lakebase Project Name")
 
 # COMMAND ----------
 
@@ -130,7 +130,7 @@ Configuration:
 # MAGIC store** -- a low-latency database where streaming pipelines write features and
 # MAGIC scoring services read them in sub-milliseconds.
 # MAGIC
-# MAGIC Set your Lakebase instance name below. If you don't have one yet, create it from
+# MAGIC Set your Lakebase project name below. If you don't have one yet, create it from
 # MAGIC the Databricks UI under **SQL > Lakebase**.
 
 # COMMAND ----------
@@ -138,11 +138,11 @@ Configuration:
 # ============================================================
 # Lakebase config (reads from widget)
 # ============================================================
-LAKEBASE_INSTANCE_NAME = dbutils.widgets.get("lakebase_instance")
-if not LAKEBASE_INSTANCE_NAME:
+LAKEBASE_PROJECT_NAME = dbutils.widgets.get("lakebase_project")
+if not LAKEBASE_PROJECT_NAME:
     raise ValueError(
-        "Widget 'lakebase_instance' is empty. Enter your Lakebase instance name in the widget above. "
-        "To create one: Databricks UI > SQL > Lakebase > Create instance."
+        "Widget 'lakebase_project' is empty. Enter your Lakebase project name in the widget above. "
+        "To create one: Databricks UI > SQL > Lakebase > Create project."
     )
 LAKEBASE_DATABASE = "databricks_postgres"  # Default database
 
@@ -157,7 +157,7 @@ checkpoint_scoring       = f"{project_dir}/checkpoints/scoring"
 
 print(f"""
 Lakebase Configuration:
-  Instance:       {LAKEBASE_INSTANCE_NAME}
+  Project:        {LAKEBASE_PROJECT_NAME}
   Database:       {LAKEBASE_DATABASE}
   Feature Table:  {FEATURE_TABLE}
   Scores Table:   {SCORES_TABLE}
@@ -174,16 +174,16 @@ Lakebase Configuration:
 
 # COMMAND ----------
 
-def connect_to_lakebase(instance_name, database):
-  """Generate credentials for a Lakebase instance."""
+def connect_to_lakebase(project_name, database):
+  """Generate credentials for a Lakebase project."""
   from databricks.sdk import WorkspaceClient
   import uuid
   import psycopg
 
   w = WorkspaceClient()
-  host = w.database.get_database_instance(name=instance_name).read_write_dns
+  host = w.database.get_database_project(name=project_name).read_write_dns
   cred = w.database.generate_database_credential(
-      request_id=str(uuid.uuid4()), instance_names=[instance_name])
+      request_id=str(uuid.uuid4()), project_names=[project_name])
   
   return psycopg.connect(
     host=host,
@@ -195,7 +195,7 @@ def connect_to_lakebase(instance_name, database):
   )
 
 # Test connection and create tables
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
     # Feature store table: one row per card, upserted on each transaction
     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
     cur.execute(f"""
@@ -239,7 +239,7 @@ with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, con
     print(f"Created tables: {FEATURE_TABLE}, {SCORES_TABLE}")
 
 # Verify tables exist
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
     cur.execute(f"SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '{FEATURE_TABLE}' ORDER BY ordinal_position")
     print(f"\n{FEATURE_TABLE} schema:")
     for row in cur.fetchall():
@@ -521,7 +521,7 @@ KEY_COLUMNS = ["card_id"]
 dbutils.fs.rm(checkpoint_feature_store, recurse=True)
 
 writer = LakebaseFeatureWriter(
-    instance_name=LAKEBASE_INSTANCE_NAME,
+    project_name=LAKEBASE_PROJECT_NAME,
     table=FEATURE_TABLE,
     columns=FEATURE_COLUMNS,
     key_columns=KEY_COLUMNS,
@@ -958,7 +958,7 @@ SCORES_COLUMNS = [
 SCORES_KEY = ["transaction_id"]
 
 scores_writer = LakebaseFeatureWriter(
-    instance_name=LAKEBASE_INSTANCE_NAME,
+    project_name=LAKEBASE_PROJECT_NAME,
     table=SCORES_TABLE,
     columns=SCORES_COLUMNS,
     key_columns=SCORES_KEY,
@@ -1025,7 +1025,7 @@ run_baseline_generator(duration_seconds=30, tps=5)
 
 time.sleep(10)
 
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {FEATURE_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total rows in {FEATURE_TABLE}: {total}\n")
@@ -1080,7 +1080,7 @@ print("\nFraud injection complete.")
 
 time.sleep(300)
 
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {SCORES_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total scored transactions: {total}\n")
@@ -1133,7 +1133,7 @@ display(spark.sql("""
 
 # DBTITLE 1,Grant App access to all tables
 # If you want to grant access to all tables in the Lakebase schema, uncomment the following code
-# with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
 #       conn.autocommit = True
 #       cur.execute("GRANT ALL ON ALL TABLES IN SCHEMA public TO PUBLIC")
 #       print("Done") 
@@ -1162,7 +1162,7 @@ print("All queries stopped, tables uncached.")
 # COMMAND ----------
 
 # Optional: drop Lakebase tables (uncomment to run)
-# with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
 #     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
 #     cur.execute(f"DROP TABLE IF EXISTS {SCORES_TABLE}")
 #     conn.commit()
