@@ -20,7 +20,7 @@ producer = KafkaProducer(
     sasl_plain_password=eh_conn_string,
     value_serializer=lambda v: json.dumps(v).encode('utf-8'),
     request_timeout_ms=10000,
-    api_version_auto_timeout_ms=10000
+    #api_version_auto_timeout_ms=10000
 )
 
 # --- Constants ---
