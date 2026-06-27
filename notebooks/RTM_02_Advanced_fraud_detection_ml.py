@@ -177,7 +177,7 @@ Lakebase Configuration:
 def connect_to_lakebase(project_name, database):
   """Generate credentials for a Lakebase project using the Projects API.
   
-  Uses the Lakebase Projects API (get_database_project) to resolve the
+  Uses the Lakebase Projects API (get_project) to resolve the
   read/write DNS endpoint and generate a short-lived credential.
   See: https://docs.databricks.com/aws/en/oltp/projects/api-usage
   """
@@ -185,8 +185,8 @@ def connect_to_lakebase(project_name, database):
   import psycopg
 
   w = WorkspaceClient()
-  # Use the Projects API (not the deprecated Instance API)
-  project = w.database.get_database_project(name=project_name)
+  # Use the Projects API to resolve DNS and generate credential
+  project = w.database.get_project(name=project_name)
   host = project.read_write_dns
   cred = w.database.generate_database_credential(project_names=[project_name])
   

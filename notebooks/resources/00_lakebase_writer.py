@@ -124,7 +124,7 @@ class LakebaseFeatureWriter:
         if host is None or user is None or password is None:
             from databricks.sdk import WorkspaceClient
             w = WorkspaceClient()
-            project = w.database.get_database_project(name=project_name)
+            project = w.database.get_project(name=project_name)
             cred = w.database.generate_database_credential(project_names=[project_name])
             host = host or project.read_write_dns
             user = user or w.current_user.me().user_name
