@@ -17,11 +17,29 @@
           ]
         }
       ]
+    },
+    "ac380ae7": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1229
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
     "56727438": {
       "value": "sam eerror..AttributeError: 'DatabaseAPI' object has no attribute 'get_project'\n[Trace ID: 00-da765c47144a7ecad4f4a696b2e02a21-052e74dc21fc58ea-00]"
+    },
+    "2f514128": {
+      "value": "AttributeError: Could not resolve Lakebase project 'rtm-fraud-lakebase'. Available DatabaseAPI methods: ['create_database_catalog', 'create_database_instance', 'create_database_instance_and_wait', 'create_database_instance_role', 'create_database_table', 'create_synced_database_table', 'delete_database_catalog', 'delete_database_instance', 'delete_database_instance_role', 'delete_database_table', 'delete_synced_database_table', 'find_database_instance_by_uid', 'generate_database_credential', 'ge"
     }
   },
   "localPrompts": {},

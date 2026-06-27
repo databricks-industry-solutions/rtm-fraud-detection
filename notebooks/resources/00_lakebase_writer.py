@@ -125,42 +125,49 @@ class LakebaseFeatureWriter:
             from databricks.sdk import WorkspaceClient
             w = WorkspaceClient()
 
-            # Resolve the Lakebase project — the DatabaseAPI method name varies
-            # across SDK versions (get, get_project, get_database_project).
+            # Resolve the Lakebase instance ("project" in the UI).
+            # In the Databricks SDK, Lakebase projects map to "database instances".
+            # The correct methods are get_database_instance / list_database_instances.
             db_api = w.database
-            project_obj = None
-            for method_name in ("get", "get_project", "get_database_project"):
-                fn = getattr(db_api, method_name, None)
-                if fn is not None:
-                    try:
-                        project_obj = fn(name=project_name)
-                        break
-                    except TypeError:
-                        try:
-                            project_obj = fn(project_name)
-                            break
-                        except Exception:
-                            continue
-                    except Exception:
-                        continue
+            instance = None
 
-            if project_obj is None:
-                list_fn = getattr(db_api, "list", getattr(db_api, "list_projects", None))
-                if list_fn is not None:
-                    for p in list_fn():
-                        if getattr(p, "name", None) == project_name:
-                            project_obj = p
-                            break
+            # Try direct lookup by name
+            try:
+                instance = db_api.get_database_instance(name=project_name)
+            except TypeError:
+                try:
+                    instance = db_api.get_database_instance(project_name)
+                except Exception:
+                    pass
+            except Exception:
+                pass
 
-            if project_obj is None:
-                available = [m for m in dir(db_api) if not m.startswith("_")]
-                raise AttributeError(
-                    f"Could not resolve Lakebase project '{project_name}'. "
-                    f"Available DatabaseAPI methods: {available}"
+            # Fallback: list all instances and match by name
+            if instance is None:
+                try:
+                    for inst in db_api.list_database_instances():
+                        if getattr(inst, "name", None) == project_name:
+                            instance = inst
+                            break
+                except Exception as e:
+                    raise RuntimeError(
+                        f"Failed to list Lakebase instances: {e}. "
+                        f"Verify that your Lakebase project '{project_name}' exists."
+                    )
+
+            if instance is None:
+                try:
+                    available_names = [getattr(inst, "name", "?") for inst in db_api.list_database_instances()]
+                except Exception:
+                    available_names = ["(could not list instances)"]
+                raise ValueError(
+                    f"Lakebase instance '{project_name}' not found. "
+                    f"Available instances: {available_names}. "
+                    f"Check the name in Databricks UI > SQL > Lakebase."
                 )
 
-            cred = w.database.generate_database_credential(project_names=[project_name])
-            host = host or project_obj.read_write_dns
+            cred = db_api.generate_database_credential(project_names=[project_name])
+            host = host or instance.read_write_dns
             user = user or w.current_user.me().user_name
             password = password or cred.token
 

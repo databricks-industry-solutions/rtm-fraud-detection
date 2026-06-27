@@ -1761,7 +1761,9 @@
         "chunkId": "ce56c2",
         "hash": "a8fd4dd2",
         "encoded": "def%20connect_to_lakebase(project_name,%20database):",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "177": {
         "chunkId": "ce56c2",
@@ -1775,112 +1777,56 @@
         "encoded": "Resolves%20the%20read/write%20DNS%20endpoint%20and%20generates%20a%20short-lived%20credential.",
         "prevChunkIds": []
       },
-      "180": {
-        "chunkId": "ce56c2",
-        "hash": "b6125167",
-        "encoded": "Uses%20runtime%20introspection%20to%20find%20the%20correct%20DatabaseAPI%20method,%20since%20the",
-        "prevChunkIds": []
-      },
-      "181": {
-        "chunkId": "ce56c2",
-        "hash": "6bd4a7c8",
-        "encoded": "method%20name%20varies%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
-        "prevChunkIds": []
-      },
-      "182": {
-        "chunkId": "ce56c2",
-        "hash": "487a3698",
-        "encoded": "See:%20https://docs.databricks.com/aws/en/oltp/projects/api-usage",
-        "prevChunkIds": []
-      },
-      "183": {
-        "chunkId": "ce56c2",
-        "hash": "85c28aea",
-        "encoded": "%22%22%22",
-        "prevChunkIds": []
-      },
       "184": {
         "chunkId": "ce56c2",
-        "hash": "955da897",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
-        "prevChunkIds": []
+        "hash": "310c3bfd",
+        "encoded": "See:%20https://docs.databricks.com/aws/en/oltp/projects/api-usage",
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "185": {
         "chunkId": "ce56c2",
-        "hash": "dfb0e831",
-        "encoded": "import%20psycopg",
-        "prevChunkIds": []
+        "hash": "2c9016e9",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "e93542"
+        ]
+      },
+      "186": {
+        "chunkId": "ce56c2",
+        "hash": "42b1a9dd",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "187": {
         "chunkId": "ce56c2",
-        "hash": "31a771f1",
-        "encoded": "w%20=%20WorkspaceClient()",
-        "prevChunkIds": []
+        "hash": "4b39f668",
+        "encoded": "import%20psycopg",
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "189": {
         "chunkId": "ce56c2",
-        "hash": "f6758c94",
-        "encoded": "#%20---%20Resolve%20the%20Lakebase%20project%20---",
-        "prevChunkIds": []
-      },
-      "190": {
-        "chunkId": "ce56c2",
-        "hash": "7c614e62",
-        "encoded": "#%20The%20DatabaseAPI%20method%20name%20varies%20across%20SDK%20versions.%20Try%20each%20known",
-        "prevChunkIds": []
-      },
-      "191": {
-        "chunkId": "ce56c2",
-        "hash": "523284a2",
-        "encoded": "#%20variant%20in%20order%20of%20likelihood.",
-        "prevChunkIds": []
-      },
-      "192": {
-        "chunkId": "ce56c2",
-        "hash": "ff6087fc",
-        "encoded": "db_api%20=%20w.database",
-        "prevChunkIds": []
-      },
-      "193": {
-        "chunkId": "ce56c2",
-        "hash": "07de9f5e",
-        "encoded": "project%20=%20None",
-        "prevChunkIds": []
+        "hash": "612abe5f",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "194": {
         "chunkId": "ce56c2",
-        "hash": "66975998",
-        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
-        "prevChunkIds": []
-      },
-      "195": {
-        "chunkId": "ce56c2",
-        "hash": "3cb7f361",
-        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
-        "prevChunkIds": []
-      },
-      "196": {
-        "chunkId": "ce56c2",
-        "hash": "242f8620",
-        "encoded": "if%20fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "197": {
-        "chunkId": "ce56c2",
-        "hash": "7cb5bd98",
-        "encoded": "try:",
+        "hash": "f1c7358b",
+        "encoded": "db_api%20=%20w.database",
         "prevChunkIds": []
       },
       "198": {
         "chunkId": "ce56c2",
-        "hash": "38fe3fe2",
-        "encoded": "project%20=%20fn(name=project_name)",
-        "prevChunkIds": []
-      },
-      "199": {
-        "chunkId": "ce56c2",
-        "hash": "53126346",
-        "encoded": "break",
+        "hash": "86989738",
+        "encoded": "try:",
         "prevChunkIds": []
       },
       "200": {
@@ -1889,1774 +1835,1803 @@
         "encoded": "except%20TypeError:",
         "prevChunkIds": []
       },
-      "201": {
-        "chunkId": "ce56c2",
-        "hash": "bf4a05b1",
-        "encoded": "#%20Method%20exists%20but%20doesn't%20accept%20'name'%20kwarg%20%E2%80%94%20try%20positional",
-        "prevChunkIds": []
-      },
       "202": {
         "chunkId": "ce56c2",
         "hash": "e88675c3",
         "encoded": "try:",
         "prevChunkIds": []
       },
-      "203": {
-        "chunkId": "ce56c2",
-        "hash": "e6845edb",
-        "encoded": "project%20=%20fn(project_name)",
-        "prevChunkIds": []
-      },
       "204": {
         "chunkId": "ce56c2",
-        "hash": "85c40c7a",
-        "encoded": "break",
-        "prevChunkIds": []
-      },
-      "205": {
-        "chunkId": "ce56c2",
-        "hash": "608b783b",
+        "hash": "35369308",
         "encoded": "except%20Exception:",
         "prevChunkIds": []
       },
       "206": {
         "chunkId": "ce56c2",
-        "hash": "55916e41",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "207": {
-        "chunkId": "ce56c2",
-        "hash": "6632e54e",
+        "hash": "be8a406a",
         "encoded": "except%20Exception:",
-        "prevChunkIds": []
-      },
-      "208": {
-        "chunkId": "ce56c2",
-        "hash": "87c68ddc",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "210": {
-        "chunkId": "ce56c2",
-        "hash": "7a27d705",
-        "encoded": "if%20project%20is%20None:",
-        "prevChunkIds": []
-      },
-      "211": {
-        "chunkId": "ce56c2",
-        "hash": "d960fc13",
-        "encoded": "#%20Last%20resort:%20list%20all%20projects%20and%20filter%20by%20name",
-        "prevChunkIds": []
-      },
-      "212": {
-        "chunkId": "ce56c2",
-        "hash": "076620f7",
-        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
-        "prevChunkIds": []
-      },
-      "213": {
-        "chunkId": "ce56c2",
-        "hash": "0273f856",
-        "encoded": "if%20list_fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "214": {
-        "chunkId": "ce56c2",
-        "hash": "a8c6ec63",
-        "encoded": "for%20p%20in%20list_fn():",
         "prevChunkIds": []
       },
       "215": {
         "chunkId": "ce56c2",
-        "hash": "c78d2fb3",
-        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
-        "prevChunkIds": []
-      },
-      "216": {
-        "chunkId": "ce56c2",
-        "hash": "1a9462df",
-        "encoded": "project%20=%20p",
-        "prevChunkIds": []
-      },
-      "217": {
-        "chunkId": "ce56c2",
-        "hash": "9b912b92",
+        "hash": "c32f76a4",
         "encoded": "break",
-        "prevChunkIds": []
-      },
-      "219": {
-        "chunkId": "ce56c2",
-        "hash": "6aa8f535",
-        "encoded": "if%20project%20is%20None:",
-        "prevChunkIds": []
-      },
-      "220": {
-        "chunkId": "ce56c2",
-        "hash": "37e7cbe6",
-        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
         "prevChunkIds": []
       },
       "221": {
         "chunkId": "ce56c2",
-        "hash": "35de7408",
-        "encoded": "raise%20AttributeError(",
-        "prevChunkIds": []
-      },
-      "222": {
-        "chunkId": "ce56c2",
-        "hash": "fe026028",
-        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
-        "prevChunkIds": []
-      },
-      "223": {
-        "chunkId": "ce56c2",
-        "hash": "f2b912a5",
-        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
-        "prevChunkIds": []
-      },
-      "224": {
-        "chunkId": "ce56c2",
-        "hash": "7ce3e01f",
+        "hash": "a4e08708",
         "encoded": ")",
-        "prevChunkIds": []
-      },
-      "226": {
-        "chunkId": "ce56c2",
-        "hash": "4b2672a1",
-        "encoded": "host%20=%20project.read_write_dns",
-        "prevChunkIds": []
-      },
-      "227": {
-        "chunkId": "ce56c2",
-        "hash": "aa203325",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
-        "prevChunkIds": []
-      },
-      "229": {
-        "chunkId": "ce56c2",
-        "hash": "c47be4be",
-        "encoded": "return%20psycopg.connect(",
-        "prevChunkIds": []
-      },
-      "230": {
-        "chunkId": "ce56c2",
-        "hash": "5f806f77",
-        "encoded": "host=host,",
-        "prevChunkIds": []
-      },
-      "231": {
-        "chunkId": "ce56c2",
-        "hash": "bc5cc66a",
-        "encoded": "port=5432,",
-        "prevChunkIds": []
-      },
-      "232": {
-        "chunkId": "ce56c2",
-        "hash": "ef94f86f",
-        "encoded": "dbname=database,",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "e93542"
+        ]
       },
       "233": {
         "chunkId": "ce56c2",
-        "hash": "8549e4c1",
-        "encoded": "user=w.current_user.me().user_name,",
-        "prevChunkIds": []
-      },
-      "234": {
-        "chunkId": "ce56c2",
-        "hash": "d1ad69ac",
-        "encoded": "password=cred.token,",
-        "prevChunkIds": []
-      },
-      "235": {
-        "chunkId": "ce56c2",
-        "hash": "c74d66af",
-        "encoded": "sslmode='require'",
-        "prevChunkIds": []
-      },
-      "236": {
-        "chunkId": "ce56c2",
-        "hash": "e41a7043",
+        "hash": "b9b15153",
         "encoded": ")",
-        "prevChunkIds": []
-      },
-      "242": {
-        "chunkId": "e93542",
-        "hash": "c8305ac3",
-        "encoded": "See:%20https://docs.databricks.com/aws/en/oltp/projects/api-usage",
         "prevChunkIds": [
           "716ffd"
+        ]
+      },
+      "238": {
+        "chunkId": "ce56c2",
+        "hash": "4bdb41a5",
+        "encoded": "return%20psycopg.connect(",
+        "prevChunkIds": [
+          "e93542"
+        ]
+      },
+      "239": {
+        "chunkId": "ce56c2",
+        "hash": "c72118cb",
+        "encoded": "host=host,",
+        "prevChunkIds": [
+          "e93542"
+        ]
+      },
+      "240": {
+        "chunkId": "ce56c2",
+        "hash": "21419a09",
+        "encoded": "port=5432,",
+        "prevChunkIds": [
+          "e93542"
+        ]
+      },
+      "241": {
+        "chunkId": "ce56c2",
+        "hash": "0c86b1db",
+        "encoded": "dbname=database,",
+        "prevChunkIds": [
+          "e93542"
+        ]
+      },
+      "242": {
+        "chunkId": "ce56c2",
+        "hash": "262ac34c",
+        "encoded": "user=w.current_user.me().user_name,",
+        "prevChunkIds": [
+          "e93542"
         ]
       },
       "243": {
-        "chunkId": "e93542",
-        "hash": "99f61e1d",
-        "encoded": "%22%22%22",
+        "chunkId": "ce56c2",
+        "hash": "7d8ca235",
+        "encoded": "password=cred.token,",
         "prevChunkIds": [
-          "716ffd"
+          "e93542"
         ]
       },
       "244": {
-        "chunkId": "e93542",
-        "hash": "e627f3ef",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "chunkId": "ce56c2",
+        "hash": "b0b3ea6a",
+        "encoded": "sslmode='require'",
         "prevChunkIds": [
-          "716ffd"
+          "e93542"
         ]
       },
       "245": {
         "chunkId": "e93542",
-        "hash": "542a0b76",
-        "encoded": "import%20psycopg",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "247": {
-        "chunkId": "e93542",
-        "hash": "9a2adafb",
-        "encoded": "w%20=%20WorkspaceClient()",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "284": {
-        "chunkId": "e93542",
-        "hash": "8eb92dbb",
+        "hash": "d6516f34",
         "encoded": ")",
         "prevChunkIds": [
           "c8e757"
         ]
       },
-      "286": {
-        "chunkId": "e93542",
-        "hash": "67996e6a",
-        "encoded": "host%20=%20project.read_write_dns",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "287": {
-        "chunkId": "e93542",
-        "hash": "550da287",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
-        "prevChunkIds": []
-      },
-      "289": {
-        "chunkId": "e93542",
-        "hash": "50f79ba8",
-        "encoded": "return%20psycopg.connect(",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "290": {
-        "chunkId": "e93542",
-        "hash": "25c998dc",
-        "encoded": "host=host,",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "291": {
-        "chunkId": "e93542",
-        "hash": "006733df",
-        "encoded": "port=5432,",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "292": {
-        "chunkId": "e93542",
-        "hash": "dd4d33e0",
-        "encoded": "dbname=database,",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "293": {
-        "chunkId": "e93542",
-        "hash": "672a1e73",
-        "encoded": "user=w.current_user.me().user_name,",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "294": {
-        "chunkId": "e93542",
-        "hash": "69362c43",
-        "encoded": "password=cred.token,",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "295": {
-        "chunkId": "e93542",
-        "hash": "b2b0bc1f",
-        "encoded": "sslmode='require'",
-        "prevChunkIds": [
-          "716ffd"
-        ]
-      },
-      "296": {
-        "chunkId": "716ffd",
-        "hash": "6f636190",
-        "encoded": ")",
-        "prevChunkIds": []
-      },
-      "300": {
+      "249": {
         "chunkId": "93472e",
-        "hash": "0a9c2f31",
+        "hash": "452ea7a6",
         "encoded": "#%20Feature%20store%20table:%20one%20row%20per%20card,%20upserted%20on%20each%20transaction",
         "prevChunkIds": [
+          "93472e",
           "c8e757",
           "cd84e7"
         ]
       },
-      "303": {
+      "252": {
         "chunkId": "93472e",
-        "hash": "52973c1e",
+        "hash": "d9ab5120",
         "encoded": "CREATE%20TABLE%20%7BFEATURE_TABLE%7D%20(",
         "prevChunkIds": [
+          "93472e",
           "c8e757",
           "cd84e7"
         ]
       },
-      "322": {
-        "chunkId": "c8e757",
-        "hash": "b49ca990",
+      "271": {
+        "chunkId": "716ffd",
+        "hash": "757ab519",
         "encoded": ")",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "cd84e7"
+        ]
       },
-      "323": {
+      "272": {
         "chunkId": "cd84e7",
-        "hash": "aa8763b3",
+        "hash": "c02723a6",
         "encoded": "%22%22%22)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "cd84e7"
+        ]
       },
-      "325": {
+      "274": {
         "chunkId": "93472e",
-        "hash": "eda2f551",
+        "hash": "30658fe8",
         "encoded": "#%20Scores%20table:%20one%20row%20per%20transaction",
         "prevChunkIds": [
+          "93472e",
           "cd84e7"
         ]
       },
-      "328": {
+      "277": {
         "chunkId": "93472e",
-        "hash": "ae513ed3",
+        "hash": "6c82303e",
         "encoded": "CREATE%20TABLE%20%7BSCORES_TABLE%7D%20(",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "93472e"
+        ]
       },
-      "336": {
-        "chunkId": "cd84e7",
-        "hash": "d14bdc34",
+      "285": {
+        "chunkId": "c8e757",
+        "hash": "83fcf372",
         "encoded": ")",
         "prevChunkIds": [
-          "329f02",
-          "cd84e7"
+          "1fdcd4"
         ]
       },
-      "337": {
+      "286": {
         "chunkId": "9019c8",
-        "hash": "4dc2c7e6",
+        "hash": "628e7273",
         "encoded": "%22%22%22)",
         "prevChunkIds": [
           "9019c8"
         ]
       },
-      "342": {
+      "291": {
         "chunkId": "93472e",
-        "hash": "9b4a63e7",
+        "hash": "8d075405",
         "encoded": "#%20Verify%20tables%20exist",
         "prevChunkIds": [
+          "93472e",
           "090428"
         ]
       },
-      "345": {
+      "294": {
         "chunkId": "93472e",
-        "hash": "fe123d0b",
+        "hash": "22aa12e7",
         "encoded": "print(f%22%5Cn%7BFEATURE_TABLE%7D%20schema:%22)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "93472e"
+        ]
       },
-      "349": {
+      "298": {
         "chunkId": "f4bc26",
-        "hash": "c89bae29",
+        "hash": "39ffddee",
         "encoded": "#%20COMMAND%20----------",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "f4bc26"
+        ]
       },
-      "351": {
+      "300": {
         "chunkId": "04c7c8",
-        "hash": "8a3d3931",
+        "hash": "ee1a4ba1",
         "encoded": "#%20MAGIC%20%25md",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "04c7c8"
+        ]
       },
-      "352": {
+      "301": {
         "chunkId": "04c7c8",
-        "hash": "64c48b25",
+        "hash": "52cf9d5b",
         "encoded": "#%20MAGIC%20---",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "04c7c8"
+        ]
       },
-      "354": {
+      "303": {
         "chunkId": "670968",
-        "hash": "154a19b6",
+        "hash": "d8026947",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
+          "670968",
           "090428"
         ]
       },
-      "358": {
+      "307": {
         "chunkId": "f4bc26",
-        "hash": "070160a6",
+        "hash": "7ccf38bb",
         "encoded": "#%20COMMAND%20----------",
         "prevChunkIds": [
+          "f4bc26",
           "090428"
         ]
       },
-      "362": {
-        "chunkId": "f4bc26",
-        "hash": "a127e8c5",
-        "encoded": "#%20COMMAND%20----------",
-        "prevChunkIds": [
-          "090428"
-        ]
-      },
-      "364": {
-        "chunkId": "79b326",
-        "hash": "9ecff1ef",
-        "encoded": "from%20pyspark.sql.types%20import%20*",
-        "prevChunkIds": []
-      },
-      "369": {
+      "311": {
         "chunkId": "120c71",
-        "hash": "10fb4a2d",
+        "hash": "15c47388",
         "encoded": "#%20COMMAND%20----------",
         "prevChunkIds": [
+          "f4bc26",
           "1fdcd4"
         ]
       },
-      "373": {
+      "313": {
+        "chunkId": "79b326",
+        "hash": "c66a6dd8",
+        "encoded": "from%20pyspark.sql.types%20import%20*",
+        "prevChunkIds": [
+          "79b326"
+        ]
+      },
+      "318": {
         "chunkId": "2951a0",
-        "hash": "badebd24",
+        "hash": "d720c11e",
         "encoded": "#%20COMMAND%20----------",
-        "prevChunkIds": []
-      },
-      "375": {
-        "chunkId": "f4bc26",
-        "hash": "ceff853f",
-        "encoded": "#%20MAGIC%20%25md",
         "prevChunkIds": [
-          "93472e"
+          "120c71"
         ]
       },
-      "378": {
-        "chunkId": "670968",
-        "hash": "ae63869c",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "381": {
-        "chunkId": "670968",
-        "hash": "09a1f5dd",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "383": {
-        "chunkId": "670968",
-        "hash": "3acf59cb",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "397": {
-        "chunkId": "670968",
-        "hash": "7ed431be",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "399": {
-        "chunkId": "903350",
-        "hash": "542f5e05",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "04c7c8",
-          "93472e",
-          "903350"
-        ]
-      },
-      "404": {
-        "chunkId": "329f02",
-        "hash": "51d3460b",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "407": {
+      "322": {
         "chunkId": "1f57a1",
-        "hash": "02abcae7",
+        "hash": "25973f5f",
         "encoded": "#%20COMMAND%20----------",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "409": {
-        "chunkId": "120c71",
-        "hash": "552ed43f",
-        "encoded": "#%20MAGIC%20%25md",
-        "prevChunkIds": [
-          "f4bc26",
-          "93472e"
-        ]
-      },
-      "412": {
-        "chunkId": "903350",
-        "hash": "e55abde3",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "903350"
-        ]
-      },
-      "413": {
-        "chunkId": "04c7c8",
-        "hash": "6cedcfa1",
-        "encoded": "#%20MAGIC%20This%20is%20the%20core%20**online%20feature%20store**%20pipeline:",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "414": {
-        "chunkId": "04c7c8",
-        "hash": "291bfa92",
-        "encoded": "#%20MAGIC%201.%20Read%20raw%20transactions%20from%20Kafka",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "415": {
-        "chunkId": "04c7c8",
-        "hash": "b70971e1",
-        "encoded": "#%20MAGIC%202.%20Enrich%20with%20merchant%20+%20card%20profile%20data%20(inline%20lookups%20--%20avoids%20slot%20pressure)",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "416": {
-        "chunkId": "04c7c8",
-        "hash": "23e01ec8",
-        "encoded": "#%20MAGIC%203.%20Compute%20feature%20columns",
-        "prevChunkIds": [
-          "120c71",
-          "93472e"
-        ]
-      },
-      "418": {
-        "chunkId": "cd84e7",
-        "hash": "062d03fc",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "93472e"
-        ]
-      },
-      "420": {
-        "chunkId": "04c7c8",
-        "hash": "a514440c",
-        "encoded": "#%20MAGIC%20updated%20within%20milliseconds%20of%20each%20transaction.",
         "prevChunkIds": [
           "2951a0",
           "93472e"
         ]
       },
-      "422": {
-        "chunkId": "ee124b",
-        "hash": "53e84c9b",
-        "encoded": "#%20COMMAND%20----------",
+      "324": {
+        "chunkId": "f4bc26",
+        "hash": "48ecdc7c",
+        "encoded": "#%20MAGIC%20%25md",
         "prevChunkIds": [
           "f4bc26",
           "93472e"
         ]
       },
-      "432": {
+      "327": {
+        "chunkId": "670968",
+        "hash": "29c0c24f",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "93472e"
+        ]
+      },
+      "330": {
+        "chunkId": "670968",
+        "hash": "33d3511c",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "93472e"
+        ]
+      },
+      "332": {
+        "chunkId": "670968",
+        "hash": "bf1c1ed5",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "93472e"
+        ]
+      },
+      "346": {
+        "chunkId": "670968",
+        "hash": "31ff06e6",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "93472e"
+        ]
+      },
+      "348": {
+        "chunkId": "903350",
+        "hash": "c72a6c10",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "903350",
+          "04c7c8",
+          "93472e"
+        ]
+      },
+      "353": {
+        "chunkId": "329f02",
+        "hash": "85f205ca",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "329f02",
+          "93472e"
+        ]
+      },
+      "356": {
+        "chunkId": "ee124b",
+        "hash": "073399a5",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "1f57a1",
+          "f4bc26",
+          "93472e"
+        ]
+      },
+      "358": {
+        "chunkId": "120c71",
+        "hash": "93743b6a",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "120c71",
+          "f4bc26",
+          "93472e"
+        ]
+      },
+      "361": {
+        "chunkId": "903350",
+        "hash": "3ba8ed89",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "903350"
+        ]
+      },
+      "362": {
+        "chunkId": "04c7c8",
+        "hash": "7d69b540",
+        "encoded": "#%20MAGIC%20This%20is%20the%20core%20**online%20feature%20store**%20pipeline:",
+        "prevChunkIds": [
+          "04c7c8",
+          "93472e"
+        ]
+      },
+      "363": {
+        "chunkId": "04c7c8",
+        "hash": "2dfe9b57",
+        "encoded": "#%20MAGIC%201.%20Read%20raw%20transactions%20from%20Kafka",
+        "prevChunkIds": [
+          "04c7c8",
+          "93472e"
+        ]
+      },
+      "364": {
+        "chunkId": "04c7c8",
+        "hash": "3c76e4b1",
+        "encoded": "#%20MAGIC%202.%20Enrich%20with%20merchant%20+%20card%20profile%20data%20(inline%20lookups%20--%20avoids%20slot%20pressure)",
+        "prevChunkIds": [
+          "04c7c8",
+          "93472e"
+        ]
+      },
+      "365": {
+        "chunkId": "04c7c8",
+        "hash": "100bce12",
+        "encoded": "#%20MAGIC%203.%20Compute%20feature%20columns",
+        "prevChunkIds": [
+          "04c7c8",
+          "120c71",
+          "93472e"
+        ]
+      },
+      "367": {
+        "chunkId": "cd84e7",
+        "hash": "9302de0a",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "cd84e7",
+          "93472e"
+        ]
+      },
+      "369": {
+        "chunkId": "04c7c8",
+        "hash": "40c1b999",
+        "encoded": "#%20MAGIC%20updated%20within%20milliseconds%20of%20each%20transaction.",
+        "prevChunkIds": [
+          "04c7c8",
+          "2951a0",
+          "93472e"
+        ]
+      },
+      "371": {
+        "chunkId": "f4bc26",
+        "hash": "07e1d762",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "ee124b",
+          "090428"
+        ]
+      },
+      "381": {
         "chunkId": "79b326",
-        "hash": "6ad1c10c",
+        "hash": "7277c1ef",
         "encoded": "StructField(%22card_id%22,%20StringType()),",
         "prevChunkIds": [
+          "79b326",
           "93472e"
         ]
       },
-      "435": {
+      "384": {
         "chunkId": "79b326",
-        "hash": "3cbc7cf6",
+        "hash": "83b3a34f",
         "encoded": "StructField(%22amount_usd%22,%20DoubleType()),",
         "prevChunkIds": [
+          "79b326",
           "93472e"
         ]
       },
-      "443": {
+      "392": {
         "chunkId": "79b326",
-        "hash": "474300b8",
+        "hash": "9f407ae6",
         "encoded": "%5D)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "79b326"
+        ]
       },
-      "445": {
+      "394": {
         "chunkId": "5c57c4",
-        "hash": "f9667283",
+        "hash": "b094801c",
         "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20---",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "446": {
+      "395": {
         "chunkId": "5c57c4",
-        "hash": "893d1d1d",
+        "hash": "ff3f19fa",
         "encoded": "eventhub_conn_string%20=%20dbutils.secrets.get(scope=%22kafka-scope%22,%20key=%22kafka-connection-string%22)",
         "prevChunkIds": [
-          "903350",
-          "5c57c4"
+          "5c57c4",
+          "903350"
         ]
       },
-      "447": {
+      "396": {
         "chunkId": "5c57c4",
-        "hash": "dc2224e1",
+        "hash": "4a57d177",
         "encoded": "kafka_sasl_jaas_config%20=%20(",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "448": {
+      "397": {
         "chunkId": "5c57c4",
-        "hash": "ff4e8ba2",
+        "hash": "fe0d3857",
         "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "449": {
+      "398": {
         "chunkId": "5c57c4",
-        "hash": "44b5c09e",
+        "hash": "b5d96f9a",
         "encoded": "'username=%22$ConnectionString%22%20'",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "450": {
+      "399": {
         "chunkId": "5c57c4",
-        "hash": "881a1d23",
+        "hash": "9b3d2e88",
         "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "451": {
-        "chunkId": "1fdcd4",
-        "hash": "a7ef57e5",
+      "400": {
+        "chunkId": "cd84e7",
+        "hash": "08574e23",
         "encoded": ")",
         "prevChunkIds": [
-          "cd84e7",
-          "090428",
-          "1fdcd4"
+          "93472e",
+          "329f02",
+          "cd84e7"
         ]
       },
-      "453": {
+      "402": {
         "chunkId": "5c57c4",
-        "hash": "7fe3d800",
+        "hash": "be0b30e5",
         "encoded": "raw_stream%20=%20(",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "454": {
+      "403": {
         "chunkId": "5c57c4",
-        "hash": "56e862a2",
+        "hash": "24668218",
         "encoded": "spark.readStream",
         "prevChunkIds": [
-          "1f57a1",
-          "5c57c4"
+          "5c57c4",
+          "1f57a1"
         ]
       },
-      "455": {
+      "404": {
         "chunkId": "5c57c4",
-        "hash": "d26f472e",
+        "hash": "2da15739",
         "encoded": ".format(%22kafka%22)",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "456": {
+      "405": {
         "chunkId": "5c57c4",
-        "hash": "bb2c53a0",
+        "hash": "79875aa3",
         "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
         "prevChunkIds": [
-          "120c71",
-          "5c57c4"
+          "5c57c4",
+          "120c71"
         ]
       },
-      "457": {
+      "406": {
         "chunkId": "5c57c4",
-        "hash": "66aab55a",
+        "hash": "343df920",
         "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))%20%20#%20Read%20only%202%20of%208%20partitions",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "458": {
+      "407": {
         "chunkId": "5c57c4",
-        "hash": "ddffba9a",
+        "hash": "b1193dd0",
         "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "459": {
+      "408": {
         "chunkId": "5c57c4",
-        "hash": "252612b5",
+        "hash": "6b4b20a0",
         "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
         "prevChunkIds": [
-          "903350",
-          "5c57c4"
+          "5c57c4",
+          "903350"
         ]
       },
-      "460": {
+      "409": {
         "chunkId": "5c57c4",
-        "hash": "02d4dc1c",
+        "hash": "ca3d9439",
         "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
         "prevChunkIds": [
-          "04c7c8",
-          "5c57c4"
+          "5c57c4",
+          "04c7c8"
         ]
       },
-      "461": {
+      "410": {
         "chunkId": "5c57c4",
-        "hash": "70d36143",
+        "hash": "ca782097",
         "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
         "prevChunkIds": [
-          "04c7c8",
-          "5c57c4"
+          "5c57c4",
+          "04c7c8"
         ]
       },
-      "462": {
+      "411": {
         "chunkId": "5c57c4",
-        "hash": "8055e4c7",
+        "hash": "dea8ff64",
         "encoded": ".option(%22kafka.sasl.jaas.config%22,%20kafka_sasl_jaas_config)",
         "prevChunkIds": [
-          "04c7c8",
-          "5c57c4"
+          "5c57c4",
+          "04c7c8"
         ]
       },
-      "463": {
+      "412": {
         "chunkId": "5c57c4",
-        "hash": "4d49dfd1",
+        "hash": "d7443f3b",
         "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
         "prevChunkIds": [
-          "04c7c8",
-          "5c57c4"
+          "5c57c4",
+          "04c7c8"
         ]
       },
-      "464": {
+      "413": {
         "chunkId": "5c57c4",
-        "hash": "c5f2b995",
+        "hash": "6d65e241",
         "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
         "prevChunkIds": [
           "5c57c4"
         ]
       },
-      "465": {
+      "414": {
         "chunkId": "5c57c4",
-        "hash": "2e85e976",
+        "hash": "cef5f1a4",
         "encoded": ".load()",
         "prevChunkIds": [
-          "cd84e7",
-          "5c57c4"
-        ]
-      },
-      "466": {
-        "chunkId": "93472e",
-        "hash": "aab68411",
-        "encoded": ")",
-        "prevChunkIds": [
-          "ee124b",
-          "1fdcd4"
-        ]
-      },
-      "474": {
-        "chunkId": "93472e",
-        "hash": "7f37b015",
-        "encoded": ")",
-        "prevChunkIds": []
-      },
-      "536": {
-        "chunkId": "5c57c4",
-        "hash": "1e0be67d",
-        "encoded": ")",
-        "prevChunkIds": [
-          "79b326",
-          "5c57c4"
-        ]
-      },
-      "557": {
-        "chunkId": "5c57c4",
-        "hash": "02484d9f",
-        "encoded": ")",
-        "prevChunkIds": [
           "5c57c4",
-          "1fdcd4"
+          "cd84e7"
         ]
       },
-      "567": {
-        "chunkId": "cd84e7",
-        "hash": "69771a46",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": [
-          "04c7c8"
-        ]
-      },
-      "570": {
-        "chunkId": "090428",
-        "hash": "8783a48d",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": []
-      },
-      "575": {
+      "415": {
         "chunkId": "1fdcd4",
-        "hash": "67b4b7a2",
-        "encoded": "#%20MAGIC",
+        "hash": "974bb952",
+        "encoded": ")",
         "prevChunkIds": [
+          "93472e",
+          "cd84e7",
           "090428",
           "1fdcd4"
         ]
       },
-      "579": {
+      "423": {
         "chunkId": "93472e",
-        "hash": "2f1ef053",
+        "hash": "829990a0",
+        "encoded": ")",
+        "prevChunkIds": [
+          "5c57c4",
+          "ee124b",
+          "1fdcd4"
+        ]
+      },
+      "485": {
+        "chunkId": "93472e",
+        "hash": "c6986d4e",
+        "encoded": ")",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "506": {
+        "chunkId": "5c57c4",
+        "hash": "8ff79e34",
+        "encoded": ")",
+        "prevChunkIds": [
+          "b73a71",
+          "79b326",
+          "5c57c4"
+        ]
+      },
+      "516": {
+        "chunkId": "cd84e7",
+        "hash": "2f3eeb6d",
         "encoded": "#%20MAGIC",
-        "prevChunkIds": []
-      },
-      "589": {
-        "chunkId": "f4bc26",
-        "hash": "c0df9d56",
-        "encoded": "print(f%22Active%20streaming%20queries:%20%7Blen(spark.streams.active)%7D%22)",
-        "prevChunkIds": []
-      },
-      "590": {
-        "chunkId": "f4bc26",
-        "hash": "c9e78e55",
-        "encoded": "for%20q%20in%20spark.streams.active:",
-        "prevChunkIds": []
-      },
-      "591": {
-        "chunkId": "f4bc26",
-        "hash": "ad791cc2",
-        "encoded": "print(f%22%20%20Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
-        "prevChunkIds": []
-      },
-      "592": {
-        "chunkId": "f4bc26",
-        "hash": "ed4b1073",
-        "encoded": "q.stop()",
-        "prevChunkIds": []
-      },
-      "593": {
-        "chunkId": "f4bc26",
-        "hash": "712c8024",
-        "encoded": "print(%22All%20queries%20stopped.%22)",
-        "prevChunkIds": []
-      },
-      "597": {
-        "chunkId": "f4bc26",
-        "hash": "486554f4",
-        "encoded": "#%20Column%20order%20must%20match%20the%20FEATURE_TABLE%20schema%20in%20Section%201.3%20and%20the",
-        "prevChunkIds": []
-      },
-      "598": {
-        "chunkId": "f4bc26",
-        "hash": "b721dab2",
-        "encoded": "#%20%60feature_output.select(...)%60%20in%20Section%204.2.%20Update%20this%20list%20together%20with%20those",
-        "prevChunkIds": []
-      },
-      "599": {
-        "chunkId": "f4bc26",
-        "hash": "26036947",
-        "encoded": "#%20if%20the%20schema%20changes.",
-        "prevChunkIds": []
-      },
-      "600": {
-        "chunkId": "f4bc26",
-        "hash": "42db714c",
-        "encoded": "FEATURE_COLUMNS%20=%20%5B",
-        "prevChunkIds": []
-      },
-      "601": {
-        "chunkId": "f4bc26",
-        "hash": "99106187",
-        "encoded": "%22card_id%22,",
-        "prevChunkIds": []
-      },
-      "602": {
-        "chunkId": "f4bc26",
-        "hash": "9753076c",
-        "encoded": "%22last_transaction_id%22,",
-        "prevChunkIds": []
-      },
-      "603": {
-        "chunkId": "f4bc26",
-        "hash": "99883bc8",
-        "encoded": "%22last_amount%22,",
-        "prevChunkIds": []
-      },
-      "604": {
-        "chunkId": "f4bc26",
-        "hash": "06630785",
-        "encoded": "%22amount_to_avg_ratio%22,",
         "prevChunkIds": [
-          "69ec31"
+          "cd84e7",
+          "04c7c8"
         ]
       },
-      "605": {
-        "chunkId": "f4bc26",
-        "hash": "131d940a",
-        "encoded": "%22exceeds_30d_max%22,",
-        "prevChunkIds": [
-          "79b326"
-        ]
-      },
-      "606": {
-        "chunkId": "f4bc26",
-        "hash": "97d0a246",
-        "encoded": "%22is_online%22,",
-        "prevChunkIds": []
-      },
-      "607": {
-        "chunkId": "f4bc26",
-        "hash": "953154ca",
-        "encoded": "%22hour_of_day%22,",
-        "prevChunkIds": []
-      },
-      "608": {
-        "chunkId": "f4bc26",
-        "hash": "0bc5aace",
-        "encoded": "%22is_weekend%22,",
-        "prevChunkIds": [
-          "79b326"
-        ]
-      },
-      "609": {
-        "chunkId": "f4bc26",
-        "hash": "429418db",
-        "encoded": "%22is_night_owl%22,",
-        "prevChunkIds": []
-      },
-      "610": {
-        "chunkId": "f4bc26",
-        "hash": "42aa2ffc",
-        "encoded": "%22is_high_risk_country%22,",
-        "prevChunkIds": []
-      },
-      "611": {
-        "chunkId": "f4bc26",
-        "hash": "d6df659d",
-        "encoded": "%22is_cross_border%22,",
-        "prevChunkIds": []
-      },
-      "612": {
-        "chunkId": "f4bc26",
-        "hash": "16b9e4fc",
-        "encoded": "%22is_round_amount%22,",
-        "prevChunkIds": []
-      },
-      "613": {
-        "chunkId": "f4bc26",
-        "hash": "496aa9e4",
-        "encoded": "%22is_small_probe%22,",
-        "prevChunkIds": []
-      },
-      "614": {
-        "chunkId": "f4bc26",
-        "hash": "9a996137",
-        "encoded": "%22merchant_risk_score%22,",
-        "prevChunkIds": [
-          "cd84e7"
-        ]
-      },
-      "615": {
-        "chunkId": "f4bc26",
-        "hash": "c5cdd17e",
-        "encoded": "%22amount_usd%22,",
-        "prevChunkIds": []
-      },
-      "616": {
-        "chunkId": "f4bc26",
-        "hash": "2f368da3",
-        "encoded": "%22last_latitude%22,",
-        "prevChunkIds": [
-          "79b326"
-        ]
-      },
-      "617": {
-        "chunkId": "f4bc26",
-        "hash": "823e8fda",
-        "encoded": "%22last_longitude%22,",
+      "519": {
+        "chunkId": "090428",
+        "hash": "81cfc13a",
+        "encoded": "#%20MAGIC",
         "prevChunkIds": [
           "090428"
         ]
       },
-      "618": {
+      "524": {
+        "chunkId": "1fdcd4",
+        "hash": "b7b466dd",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1fdcd4",
+          "090428"
+        ]
+      },
+      "528": {
+        "chunkId": "93472e",
+        "hash": "fe432092",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "538": {
         "chunkId": "f4bc26",
-        "hash": "abeb0b9d",
+        "hash": "9acaf2d0",
+        "encoded": "print(f%22Active%20streaming%20queries:%20%7Blen(spark.streams.active)%7D%22)",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "539": {
+        "chunkId": "f4bc26",
+        "hash": "5c89e63a",
+        "encoded": "for%20q%20in%20spark.streams.active:",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "540": {
+        "chunkId": "f4bc26",
+        "hash": "c88af0b2",
+        "encoded": "print(f%22%20%20Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "541": {
+        "chunkId": "f4bc26",
+        "hash": "1199e183",
+        "encoded": "q.stop()",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "542": {
+        "chunkId": "f4bc26",
+        "hash": "ceec36ef",
+        "encoded": "print(%22All%20queries%20stopped.%22)",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "546": {
+        "chunkId": "f4bc26",
+        "hash": "32429880",
+        "encoded": "#%20Column%20order%20must%20match%20the%20FEATURE_TABLE%20schema%20in%20Section%201.3%20and%20the",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "547": {
+        "chunkId": "f4bc26",
+        "hash": "849b115d",
+        "encoded": "#%20%60feature_output.select(...)%60%20in%20Section%204.2.%20Update%20this%20list%20together%20with%20those",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "548": {
+        "chunkId": "f4bc26",
+        "hash": "3d6d26ea",
+        "encoded": "#%20if%20the%20schema%20changes.",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "549": {
+        "chunkId": "f4bc26",
+        "hash": "5dcc4421",
+        "encoded": "FEATURE_COLUMNS%20=%20%5B",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "550": {
+        "chunkId": "f4bc26",
+        "hash": "c5674e7d",
+        "encoded": "%22card_id%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "551": {
+        "chunkId": "f4bc26",
+        "hash": "6aa6c0d7",
+        "encoded": "%22last_transaction_id%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "552": {
+        "chunkId": "f4bc26",
+        "hash": "6ed0e75f",
+        "encoded": "%22last_amount%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "553": {
+        "chunkId": "f4bc26",
+        "hash": "87fb318b",
+        "encoded": "%22amount_to_avg_ratio%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "69ec31"
+        ]
+      },
+      "554": {
+        "chunkId": "f4bc26",
+        "hash": "1f55fe44",
+        "encoded": "%22exceeds_30d_max%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "79b326"
+        ]
+      },
+      "555": {
+        "chunkId": "f4bc26",
+        "hash": "476e8531",
+        "encoded": "%22is_online%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "556": {
+        "chunkId": "f4bc26",
+        "hash": "00865a85",
+        "encoded": "%22hour_of_day%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "557": {
+        "chunkId": "f4bc26",
+        "hash": "f4c52e53",
+        "encoded": "%22is_weekend%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "79b326"
+        ]
+      },
+      "558": {
+        "chunkId": "f4bc26",
+        "hash": "cf7e23f6",
+        "encoded": "%22is_night_owl%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "559": {
+        "chunkId": "f4bc26",
+        "hash": "4d46bad1",
+        "encoded": "%22is_high_risk_country%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "560": {
+        "chunkId": "f4bc26",
+        "hash": "c4546057",
+        "encoded": "%22is_cross_border%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "561": {
+        "chunkId": "f4bc26",
+        "hash": "f3fd7a58",
+        "encoded": "%22is_round_amount%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "562": {
+        "chunkId": "f4bc26",
+        "hash": "42be97a2",
+        "encoded": "%22is_small_probe%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "563": {
+        "chunkId": "f4bc26",
+        "hash": "8188dafc",
+        "encoded": "%22merchant_risk_score%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "cd84e7"
+        ]
+      },
+      "564": {
+        "chunkId": "f4bc26",
+        "hash": "1c2f315f",
+        "encoded": "%22amount_usd%22,",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "565": {
+        "chunkId": "f4bc26",
+        "hash": "88a15aff",
+        "encoded": "%22last_latitude%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "79b326"
+        ]
+      },
+      "566": {
+        "chunkId": "f4bc26",
+        "hash": "7b3292a7",
+        "encoded": "%22last_longitude%22,",
+        "prevChunkIds": [
+          "f4bc26",
+          "090428"
+        ]
+      },
+      "567": {
+        "chunkId": "f4bc26",
+        "hash": "c9beabbf",
         "encoded": "%22updated_at%22,",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "619": {
+      "568": {
         "chunkId": "f4bc26",
-        "hash": "46791201",
+        "hash": "b6fa142f",
         "encoded": "%5D",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "620": {
+      "569": {
         "chunkId": "f4bc26",
-        "hash": "307cce9f",
+        "hash": "76a86c8b",
         "encoded": "KEY_COLUMNS%20=%20%5B%22card_id%22%5D",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "622": {
+      "571": {
         "chunkId": "f4bc26",
-        "hash": "37987909",
+        "hash": "ca500bc0",
         "encoded": "dbutils.fs.rm(checkpoint_feature_store,%20recurse=True)",
         "prevChunkIds": [
+          "f4bc26",
           "1fdcd4",
           "5c57c4"
         ]
       },
-      "630": {
-        "chunkId": "b73a71",
-        "hash": "311f90f9",
+      "579": {
+        "chunkId": "5c57c4",
+        "hash": "94e1ec3a",
         "encoded": ")",
         "prevChunkIds": [
-          "79b326",
-          "b73a71"
+          "69ec31",
+          "5c57c4",
+          "1fdcd4"
         ]
       },
-      "632": {
+      "581": {
         "chunkId": "f4bc26",
-        "hash": "9f94c3d9",
+        "hash": "8904cbeb",
         "encoded": "feature_query%20=%20(",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "633": {
+      "582": {
         "chunkId": "f4bc26",
-        "hash": "0c0d2e52",
+        "hash": "0c959aeb",
         "encoded": "feature_output",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "634": {
+      "583": {
         "chunkId": "f4bc26",
-        "hash": "28f075e6",
+        "hash": "f3d7585c",
         "encoded": ".select(*FEATURE_COLUMNS)",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "635": {
+      "584": {
         "chunkId": "f4bc26",
-        "hash": "cb7bf838",
+        "hash": "9eba30aa",
         "encoded": ".writeStream",
         "prevChunkIds": [
+          "f4bc26",
           "5c57c4"
         ]
       },
-      "637": {
+      "586": {
         "chunkId": "f4bc26",
-        "hash": "8e053d1f",
+        "hash": "ce033212",
         "encoded": ".option(%22checkpointLocation%22,%20checkpoint_feature_store)",
         "prevChunkIds": [
           "f4bc26",
           "5c57c4"
         ]
       },
-      "639": {
+      "588": {
         "chunkId": "f4bc26",
-        "hash": "169fad58",
+        "hash": "036f7684",
         "encoded": ".outputMode(%22update%22)",
         "prevChunkIds": [
           "f4bc26",
           "b73a71"
         ]
       },
-      "640": {
+      "589": {
         "chunkId": "f4bc26",
-        "hash": "35454507",
+        "hash": "85d7c238",
         "encoded": ".start()",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "641": {
-        "chunkId": "69ec31",
-        "hash": "1d8c324e",
+      "590": {
+        "chunkId": "b73a71",
+        "hash": "bcab8d78",
         "encoded": ")",
         "prevChunkIds": [
-          "69ec31"
+          "b73a71",
+          "79b326"
         ]
       },
-      "644": {
+      "593": {
         "chunkId": "f4bc26",
-        "hash": "5262fe87",
+        "hash": "7b9c9a28",
         "encoded": "print(f%22Writing%20columns:%20%7BFEATURE_COLUMNS%7D%22)",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "645": {
+      "594": {
         "chunkId": "f4bc26",
-        "hash": "7cbc6224",
+        "hash": "45946d9c",
         "encoded": "print(f%22Upsert%20key:%20%7BKEY_COLUMNS%7D%22)",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "652": {
+      "601": {
         "chunkId": "79b326",
-        "hash": "8c41c5c0",
+        "hash": "78d4f739",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
+          "79b326",
           "f4bc26"
         ]
       },
-      "656": {
+      "605": {
         "chunkId": "04c7c8",
-        "hash": "27284ed6",
+        "hash": "5832f084",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
+          "04c7c8",
           "f4bc26"
         ]
       },
-      "658": {
+      "607": {
         "chunkId": "04c7c8",
-        "hash": "7c3c7f52",
+        "hash": "b4ef8b3e",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
+          "04c7c8",
           "f4bc26"
         ]
       },
-      "676": {
+      "625": {
+        "chunkId": "e93542",
+        "hash": "13f848be",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "629": {
         "chunkId": "716ffd",
-        "hash": "cd7d0bc2",
-        "encoded": "%22%22%22",
-        "prevChunkIds": []
-      },
-      "680": {
-        "chunkId": "c8e757",
-        "hash": "e1bb627d",
+        "hash": "add0ac4d",
         "encoded": "%22%22%22",
         "prevChunkIds": [
-          "f4bc26"
+          "c8e757"
         ]
       },
-      "729": {
+      "678": {
         "chunkId": "1f57a1",
-        "hash": "10004900",
+        "hash": "62bd5378",
         "encoded": "display(",
         "prevChunkIds": [
+          "1f57a1",
           "f4bc26"
         ]
       },
-      "738": {
-        "chunkId": "b73a71",
-        "hash": "8515ee42",
+      "687": {
+        "chunkId": "69ec31",
+        "hash": "c4f66541",
         "encoded": ")",
         "prevChunkIds": [
+          "f4bc26",
+          "69ec31"
+        ]
+      },
+      "688": {
+        "chunkId": "b73a71",
+        "hash": "0cedd173",
+        "encoded": ")",
+        "prevChunkIds": [
+          "120c71",
           "5c57c4",
           "b73a71"
         ]
       },
-      "739": {
+      "695": {
         "chunkId": "f4bc26",
-        "hash": "d2259f77",
-        "encoded": ")",
-        "prevChunkIds": []
-      },
-      "746": {
-        "chunkId": "f4bc26",
-        "hash": "ebf69807",
+        "hash": "a64e9b56",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "753": {
+      "702": {
         "chunkId": "f4bc26",
-        "hash": "00056043",
+        "hash": "818d1c6a",
         "encoded": "#%20MAGIC",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "768": {
-        "chunkId": "120c71",
-        "hash": "44f7c0e1",
+      "717": {
+        "chunkId": "f4bc26",
+        "hash": "42c2940d",
         "encoded": ")",
         "prevChunkIds": [
-          "f4bc26"
+          "1f57a1"
         ]
       },
-      "783": {
+      "732": {
         "chunkId": "120c71",
-        "hash": "322d7926",
+        "hash": "920dcc50",
         "encoded": "%5D",
         "prevChunkIds": [
+          "120c71",
           "f4bc26"
         ]
       },
-      "850": {
+      "799": {
         "chunkId": "cd84e7",
-        "hash": "3e7ede14",
+        "hash": "f40ebe95",
         "encoded": "print(f%22%22%22",
-        "prevChunkIds": []
-      },
-      "858": {
-        "chunkId": "93472e",
-        "hash": "54c8e39c",
-        "encoded": "%22%22%22)",
-        "prevChunkIds": []
-      },
-      "869": {
-        "chunkId": "f4bc26",
-        "hash": "3e3122f0",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": []
-      },
-      "883": {
-        "chunkId": "090428",
-        "hash": "3d59addf",
-        "encoded": "print(f%22%22%22",
-        "prevChunkIds": []
-      },
-      "890": {
-        "chunkId": "93472e",
-        "hash": "952105b9",
-        "encoded": "%22%22%22)",
-        "prevChunkIds": []
-      },
-      "896": {
-        "chunkId": "84d414",
-        "hash": "3ddc2064",
-        "encoded": "#%20MAGIC%20##%20Section%207:%20ML%20Scoring%20Pipeline",
-        "prevChunkIds": []
-      },
-      "897": {
-        "chunkId": "84d414",
-        "hash": "af4077ad",
-        "encoded": "#%20MAGIC",
         "prevChunkIds": [
           "cd84e7"
         ]
       },
-      "898": {
-        "chunkId": "84d414",
-        "hash": "f28e99a2",
-        "encoded": "#%20MAGIC%20Now%20we%20bring%20it%20all%20together:%20a%20streaming%20pipeline%20that%20reads%20transactions%20from%20Kafka,",
-        "prevChunkIds": []
-      },
-      "899": {
-        "chunkId": "84d414",
-        "hash": "e56635e5",
-        "encoded": "#%20MAGIC%20computes%20the%20same%20features,%20scores%20each%20transaction%20with%20the%20trained%20ML%20model,",
-        "prevChunkIds": []
-      },
-      "901": {
-        "chunkId": "84d414",
-        "hash": "ef38503d",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": []
-      },
-      "902": {
-        "chunkId": "84d414",
-        "hash": "0435919b",
-        "encoded": "#%20MAGIC%20The%20ML%20model%20is%20loaded%20as%20a%20**Spark%20UDF**%20(User-Defined%20Function),%20which%20means",
-        "prevChunkIds": []
-      },
-      "903": {
-        "chunkId": "84d414",
-        "hash": "b713c88e",
-        "encoded": "#%20MAGIC%20it%20runs%20natively%20inside%20the%20streaming%20pipeline%20--%20no%20external%20API%20calls%20needed.",
-        "prevChunkIds": []
-      },
-      "924": {
-        "chunkId": "2951a0",
-        "hash": "59bb661d",
-        "encoded": "#%20MAGIC",
-        "prevChunkIds": []
-      },
-      "930": {
-        "chunkId": "b73a71",
-        "hash": "3ee743ff",
-        "encoded": "#%20Read%20from%20the%20same%20Kafka%20topic%20(2%20partitions%20to%20stay%20within%20slot%20limits)",
+      "807": {
+        "chunkId": "93472e",
+        "hash": "68787f01",
+        "encoded": "%22%22%22)",
         "prevChunkIds": [
-          "090428",
-          "b73a71"
+          "93472e"
         ]
       },
-      "931": {
+      "818": {
+        "chunkId": "f4bc26",
+        "hash": "2047515b",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "832": {
+        "chunkId": "090428",
+        "hash": "c5a66287",
+        "encoded": "print(f%22%22%22",
+        "prevChunkIds": [
+          "090428"
+        ]
+      },
+      "839": {
+        "chunkId": "93472e",
+        "hash": "c910651b",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "845": {
+        "chunkId": "84d414",
+        "hash": "1aa6bac0",
+        "encoded": "#%20MAGIC%20##%20Section%207:%20ML%20Scoring%20Pipeline",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "846": {
+        "chunkId": "84d414",
+        "hash": "229072e9",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "84d414",
+          "cd84e7"
+        ]
+      },
+      "847": {
+        "chunkId": "84d414",
+        "hash": "920f2e54",
+        "encoded": "#%20MAGIC%20Now%20we%20bring%20it%20all%20together:%20a%20streaming%20pipeline%20that%20reads%20transactions%20from%20Kafka,",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "848": {
+        "chunkId": "84d414",
+        "hash": "e4391a71",
+        "encoded": "#%20MAGIC%20computes%20the%20same%20features,%20scores%20each%20transaction%20with%20the%20trained%20ML%20model,",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "850": {
+        "chunkId": "84d414",
+        "hash": "f655e3ab",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "851": {
+        "chunkId": "84d414",
+        "hash": "c634729f",
+        "encoded": "#%20MAGIC%20The%20ML%20model%20is%20loaded%20as%20a%20**Spark%20UDF**%20(User-Defined%20Function),%20which%20means",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "852": {
+        "chunkId": "84d414",
+        "hash": "323fef47",
+        "encoded": "#%20MAGIC%20it%20runs%20natively%20inside%20the%20streaming%20pipeline%20--%20no%20external%20API%20calls%20needed.",
+        "prevChunkIds": [
+          "84d414"
+        ]
+      },
+      "873": {
+        "chunkId": "2951a0",
+        "hash": "8c8ddb87",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "2951a0"
+        ]
+      },
+      "879": {
         "chunkId": "b73a71",
-        "hash": "5c0e68e4",
+        "hash": "08deeb6f",
+        "encoded": "#%20Read%20from%20the%20same%20Kafka%20topic%20(2%20partitions%20to%20stay%20within%20slot%20limits)",
+        "prevChunkIds": [
+          "b73a71",
+          "090428"
+        ]
+      },
+      "880": {
+        "chunkId": "b73a71",
+        "hash": "f077aba7",
         "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20(same%20as%20Section%204.1)%20---",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "932": {
+      "881": {
         "chunkId": "b73a71",
-        "hash": "38667a6f",
+        "hash": "8c770462",
         "encoded": "scoring_sasl_jaas_config%20=%20(",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "933": {
+      "882": {
         "chunkId": "b73a71",
-        "hash": "ac483971",
+        "hash": "1107de9f",
         "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "934": {
+      "883": {
         "chunkId": "b73a71",
-        "hash": "ae5417ec",
+        "hash": "6a530dd6",
         "encoded": "'username=%22$ConnectionString%22%20'",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "935": {
+      "884": {
         "chunkId": "b73a71",
-        "hash": "10eaf78b",
+        "hash": "5212bf86",
         "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "936": {
-        "chunkId": "1f57a1",
-        "hash": "8581da73",
+      "885": {
+        "chunkId": "120c71",
+        "hash": "8f65eda4",
         "encoded": ")",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "1f57a1",
+          "f4bc26"
+        ]
       },
-      "938": {
+      "887": {
         "chunkId": "b73a71",
-        "hash": "21499bdf",
+        "hash": "a8f1d390",
         "encoded": "raw_stream_scoring%20=%20(",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "939": {
+      "888": {
         "chunkId": "b73a71",
-        "hash": "e7ddc063",
+        "hash": "f221595b",
         "encoded": "spark.readStream",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "940": {
+      "889": {
         "chunkId": "b73a71",
-        "hash": "80a94b0f",
+        "hash": "59e68fe6",
         "encoded": ".format(%22kafka%22)",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "941": {
+      "890": {
         "chunkId": "b73a71",
-        "hash": "01dd71f0",
+        "hash": "b132a0dd",
         "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "942": {
+      "891": {
         "chunkId": "b73a71",
-        "hash": "38d6aaa4",
+        "hash": "aa5cf196",
         "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "943": {
+      "892": {
         "chunkId": "b73a71",
-        "hash": "27e7ca46",
+        "hash": "e75a8e8c",
         "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "944": {
+      "893": {
         "chunkId": "b73a71",
-        "hash": "52b7269c",
+        "hash": "127b2f7c",
         "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "945": {
+      "894": {
         "chunkId": "b73a71",
-        "hash": "0da4464a",
+        "hash": "d38a1124",
         "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "946": {
+      "895": {
         "chunkId": "b73a71",
-        "hash": "b6b8a330",
+        "hash": "74e8e511",
         "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "947": {
+      "896": {
         "chunkId": "b73a71",
-        "hash": "c960c06d",
+        "hash": "928bb71c",
         "encoded": ".option(%22kafka.sasl.jaas.config%22,%20scoring_sasl_jaas_config)",
         "prevChunkIds": [
           "b73a71"
         ]
       },
-      "948": {
+      "897": {
         "chunkId": "b73a71",
-        "hash": "8a232a00",
+        "hash": "e3096d19",
         "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "949": {
+      "898": {
         "chunkId": "b73a71",
-        "hash": "0b7507fe",
+        "hash": "1bc7a9ab",
         "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "950": {
+      "899": {
         "chunkId": "b73a71",
-        "hash": "2b075fa3",
+        "hash": "187650b5",
         "encoded": ".load()",
         "prevChunkIds": [
-          "84d414",
-          "b73a71"
+          "b73a71",
+          "84d414"
         ]
       },
-      "951": {
+      "900": {
         "chunkId": "1f57a1",
-        "hash": "07300c0e",
+        "hash": "f56d79b9",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "908": {
+        "chunkId": "1f57a1",
+        "hash": "f51cca3d",
         "encoded": ")",
         "prevChunkIds": [
           "f4bc26"
         ]
       },
-      "1019": {
+      "968": {
         "chunkId": "000ce8",
-        "hash": "1af15215",
+        "hash": "6093388f",
         "encoded": "scores_output%20=%20ml_scored.select(",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "000ce8"
+        ]
+      },
+      "980": {
+        "chunkId": "1f57a1",
+        "hash": "ae2238de",
+        "encoded": "%22transaction_id%22,%20%22card_id%22,%20%22amount_usd%22,",
+        "prevChunkIds": [
+          "1f57a1"
+        ]
+      },
+      "984": {
+        "chunkId": "120c71",
+        "hash": "5625a666",
+        "encoded": "%22scored_at%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "996": {
+        "chunkId": "120c71",
+        "hash": "54b2cf93",
+        "encoded": "dbutils.fs.rm(checkpoint_scoring,%20recurse=True)",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "998": {
+        "chunkId": "120c71",
+        "hash": "f0fa07da",
+        "encoded": "#%20Match%20the%20SCORES_TABLE%20schema%20declared%20in%20Section%201.3.",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "999": {
+        "chunkId": "120c71",
+        "hash": "63d8ac90",
+        "encoded": "SCORES_COLUMNS%20=%20%5B",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1000": {
+        "chunkId": "120c71",
+        "hash": "fb7def2d",
+        "encoded": "%22transaction_id%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1001": {
+        "chunkId": "120c71",
+        "hash": "b66fd3f1",
+        "encoded": "%22card_id%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1002": {
+        "chunkId": "120c71",
+        "hash": "037f4480",
+        "encoded": "%22amount_usd%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1003": {
+        "chunkId": "120c71",
+        "hash": "98ce743d",
+        "encoded": "%22fraud_probability%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1004": {
+        "chunkId": "120c71",
+        "hash": "cc06e950",
+        "encoded": "%22ml_decision%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1005": {
+        "chunkId": "120c71",
+        "hash": "48727dea",
+        "encoded": "%22model_version%22,",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1008": {
+        "chunkId": "120c71",
+        "hash": "8d1e98d0",
+        "encoded": "SCORES_KEY%20=%20%5B%22transaction_id%22%5D",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1018": {
+        "chunkId": "120c71",
+        "hash": "0dceb474",
+        "encoded": "scoring_query%20=%20(",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1019": {
+        "chunkId": "120c71",
+        "hash": "6ead726a",
+        "encoded": "scores_output",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1020": {
+        "chunkId": "120c71",
+        "hash": "2c08b55e",
+        "encoded": ".select(*SCORES_COLUMNS)",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1021": {
+        "chunkId": "120c71",
+        "hash": "2f61fa2c",
+        "encoded": ".writeStream",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1023": {
+        "chunkId": "120c71",
+        "hash": "6267da0b",
+        "encoded": ".option(%22checkpointLocation%22,%20checkpoint_scoring)",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1025": {
+        "chunkId": "120c71",
+        "hash": "7d14a5b8",
+        "encoded": ".outputMode(%22update%22)",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1026": {
+        "chunkId": "120c71",
+        "hash": "153c641a",
+        "encoded": ".start()",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1030": {
+        "chunkId": "120c71",
+        "hash": "35780918",
+        "encoded": "print(f%22Writing%20columns:%20%7BSCORES_COLUMNS%7D%22)",
+        "prevChunkIds": [
+          "120c71"
+        ]
       },
       "1031": {
-        "chunkId": "1f57a1",
-        "hash": "d237f1fd",
-        "encoded": "%22transaction_id%22,%20%22card_id%22,%20%22amount_usd%22,",
-        "prevChunkIds": []
-      },
-      "1035": {
         "chunkId": "120c71",
-        "hash": "eeb1f709",
-        "encoded": "%22scored_at%22,",
-        "prevChunkIds": []
-      },
-      "1047": {
-        "chunkId": "120c71",
-        "hash": "9e10a308",
-        "encoded": "dbutils.fs.rm(checkpoint_scoring,%20recurse=True)",
-        "prevChunkIds": []
-      },
-      "1049": {
-        "chunkId": "120c71",
-        "hash": "7cd0815f",
-        "encoded": "#%20Match%20the%20SCORES_TABLE%20schema%20declared%20in%20Section%201.3.",
-        "prevChunkIds": []
-      },
-      "1050": {
-        "chunkId": "120c71",
-        "hash": "1d0716be",
-        "encoded": "SCORES_COLUMNS%20=%20%5B",
-        "prevChunkIds": []
-      },
-      "1051": {
-        "chunkId": "120c71",
-        "hash": "e3f91dc7",
-        "encoded": "%22transaction_id%22,",
-        "prevChunkIds": []
-      },
-      "1052": {
-        "chunkId": "120c71",
-        "hash": "afb42bcd",
-        "encoded": "%22card_id%22,",
-        "prevChunkIds": []
-      },
-      "1053": {
-        "chunkId": "120c71",
-        "hash": "548433d2",
-        "encoded": "%22amount_usd%22,",
-        "prevChunkIds": []
-      },
-      "1054": {
-        "chunkId": "120c71",
-        "hash": "68fc60b7",
-        "encoded": "%22fraud_probability%22,",
-        "prevChunkIds": []
-      },
-      "1055": {
-        "chunkId": "120c71",
-        "hash": "c53840c2",
-        "encoded": "%22ml_decision%22,",
-        "prevChunkIds": []
-      },
-      "1056": {
-        "chunkId": "120c71",
-        "hash": "31ac5f97",
-        "encoded": "%22model_version%22,",
-        "prevChunkIds": []
-      },
-      "1059": {
-        "chunkId": "120c71",
-        "hash": "9f94f93c",
-        "encoded": "SCORES_KEY%20=%20%5B%22transaction_id%22%5D",
-        "prevChunkIds": []
-      },
-      "1069": {
-        "chunkId": "120c71",
-        "hash": "0020e3c7",
-        "encoded": "scoring_query%20=%20(",
-        "prevChunkIds": []
-      },
-      "1070": {
-        "chunkId": "120c71",
-        "hash": "92e28e23",
-        "encoded": "scores_output",
-        "prevChunkIds": []
-      },
-      "1071": {
-        "chunkId": "120c71",
-        "hash": "932bca92",
-        "encoded": ".select(*SCORES_COLUMNS)",
-        "prevChunkIds": []
-      },
-      "1072": {
-        "chunkId": "120c71",
-        "hash": "31b6910a",
-        "encoded": ".writeStream",
-        "prevChunkIds": []
-      },
-      "1074": {
-        "chunkId": "120c71",
-        "hash": "c33daf3b",
-        "encoded": ".option(%22checkpointLocation%22,%20checkpoint_scoring)",
-        "prevChunkIds": []
-      },
-      "1076": {
-        "chunkId": "120c71",
-        "hash": "1ac1fd9d",
-        "encoded": ".outputMode(%22update%22)",
-        "prevChunkIds": []
-      },
-      "1077": {
-        "chunkId": "120c71",
-        "hash": "44ec9308",
-        "encoded": ".start()",
-        "prevChunkIds": []
-      },
-      "1081": {
-        "chunkId": "120c71",
-        "hash": "7ef5a4d9",
-        "encoded": "print(f%22Writing%20columns:%20%7BSCORES_COLUMNS%7D%22)",
-        "prevChunkIds": []
-      },
-      "1082": {
-        "chunkId": "120c71",
-        "hash": "7eeb8eb1",
+        "hash": "9e70ab06",
         "encoded": "print(f%22Upsert%20key:%20%7BSCORES_KEY%7D%22)",
         "prevChunkIds": [
           "120c71"
         ]
       },
-      "1122": {
+      "1071": {
         "chunkId": "2951a0",
-        "hash": "fb408c1c",
+        "hash": "c7e6fd8b",
         "encoded": "#%20MAGIC%20Let's%20see%20what%20the%20online%20feature%20store%20looks%20like%20now.%20Each%20card%20should%20have",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "2951a0"
+        ]
       },
-      "1123": {
+      "1072": {
         "chunkId": "2951a0",
-        "hash": "59096ad3",
+        "hash": "c4197e2c",
         "encoded": "#%20MAGIC%20its%20latest%20features%20updated%20in%20near-real-time.",
         "prevChunkIds": [
+          "2951a0",
           "120c71"
         ]
       },
-      "1127": {
+      "1076": {
         "chunkId": "2951a0",
-        "hash": "0fd42548",
+        "hash": "7c82cb97",
         "encoded": "time.sleep(10)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "2951a0"
+        ]
       },
-      "1132": {
+      "1081": {
         "chunkId": "2951a0",
-        "hash": "1161c8b3",
+        "hash": "673be9e1",
         "encoded": "print(f%22Total%20rows%20in%20%7BFEATURE_TABLE%7D:%20%7Btotal%7D%5Cn%22)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "2951a0"
+        ]
       },
-      "1182": {
+      "1131": {
         "chunkId": "1f57a1",
-        "hash": "9ffab602",
+        "hash": "7c2d8eed",
         "encoded": "time.sleep(300)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "1f57a1"
+        ]
       },
-      "1187": {
+      "1136": {
         "chunkId": "1f57a1",
-        "hash": "068643b2",
+        "hash": "314d5993",
         "encoded": "print(f%22Total%20scored%20transactions:%20%7Btotal%7D%5Cn%22)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "1f57a1"
+        ]
       },
-      "1196": {
+      "1145": {
         "chunkId": "f4bc26",
-        "hash": "ab13cc30",
+        "hash": "ee450af0",
         "encoded": "%22%22%22)",
         "prevChunkIds": [
+          "f4bc26",
           "b73a71"
         ]
       },
-      "1235": {
+      "1184": {
         "chunkId": "805620",
-        "hash": "afc8a554",
+        "hash": "0ea5b810",
         "encoded": "#%20DBTITLE%201,Grant%20App%20access%20to%20all%20tables",
-        "prevChunkIds": []
-      },
-      "1252": {
-        "chunkId": "ee124b",
-        "hash": "a68c9dd8",
-        "encoded": "#%20Stop%20all%20streaming%20queries",
-        "prevChunkIds": []
-      },
-      "1253": {
-        "chunkId": "ee124b",
-        "hash": "f2c34585",
-        "encoded": "for%20q%20in%20spark.streams.active:",
-        "prevChunkIds": []
-      },
-      "1254": {
-        "chunkId": "ee124b",
-        "hash": "2c5f10d7",
-        "encoded": "print(f%22Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
-        "prevChunkIds": []
-      },
-      "1255": {
-        "chunkId": "ee124b",
-        "hash": "1612e855",
-        "encoded": "q.stop()",
-        "prevChunkIds": []
-      },
-      "1257": {
-        "chunkId": "ee124b",
-        "hash": "dbe939fa",
-        "encoded": "#%20Uncache%20reference%20tables",
-        "prevChunkIds": []
-      },
-      "1258": {
-        "chunkId": "ee124b",
-        "hash": "6e691590",
-        "encoded": "spark.catalog.uncacheTable(%22merchants%22)",
-        "prevChunkIds": []
-      },
-      "1259": {
-        "chunkId": "ee124b",
-        "hash": "f7525785",
-        "encoded": "spark.catalog.uncacheTable(%22card_profiles%22)",
-        "prevChunkIds": []
-      },
-      "1261": {
-        "chunkId": "ee124b",
-        "hash": "1532cd0b",
-        "encoded": "print(%22All%20queries%20stopped,%20tables%20uncached.%22)",
-        "prevChunkIds": []
-      },
-      "1272": {
-        "chunkId": "ee124b",
-        "hash": "ea823bf9",
-        "encoded": "#%20Optional:%20clean%20up%20checkpoints",
-        "prevChunkIds": []
-      },
-      "1273": {
-        "chunkId": "ee124b",
-        "hash": "6927ab7c",
-        "encoded": "#%20dbutils.fs.rm(f%22%7Bproject_dir%7D/checkpoints%22,%20recurse=True)",
-        "prevChunkIds": []
-      },
-      "1274": {
-        "chunkId": "ee124b",
-        "hash": "a63c6681",
-        "encoded": "#%20print(%22Checkpoints%20cleared.%22)",
-        "prevChunkIds": []
-      },
-      "1282": {
-        "chunkId": "d099ed",
-        "hash": "af1ca4a0",
-        "encoded": "#%20MAGIC%20**References:**",
         "prevChunkIds": [
           "805620"
         ]
       },
-      "1284": {
+      "1201": {
+        "chunkId": "ee124b",
+        "hash": "6e3117c3",
+        "encoded": "#%20Stop%20all%20streaming%20queries",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1202": {
+        "chunkId": "ee124b",
+        "hash": "27d47896",
+        "encoded": "for%20q%20in%20spark.streams.active:",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1203": {
+        "chunkId": "ee124b",
+        "hash": "69e3da72",
+        "encoded": "print(f%22Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1204": {
+        "chunkId": "ee124b",
+        "hash": "b3780602",
+        "encoded": "q.stop()",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1206": {
+        "chunkId": "ee124b",
+        "hash": "4a3c1d81",
+        "encoded": "#%20Uncache%20reference%20tables",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1207": {
+        "chunkId": "ee124b",
+        "hash": "0c0a19ca",
+        "encoded": "spark.catalog.uncacheTable(%22merchants%22)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1208": {
+        "chunkId": "ee124b",
+        "hash": "3eba1b35",
+        "encoded": "spark.catalog.uncacheTable(%22card_profiles%22)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1210": {
+        "chunkId": "ee124b",
+        "hash": "850d67ec",
+        "encoded": "print(%22All%20queries%20stopped,%20tables%20uncached.%22)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1221": {
+        "chunkId": "ee124b",
+        "hash": "ea0d8006",
+        "encoded": "#%20Optional:%20clean%20up%20checkpoints",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1222": {
+        "chunkId": "ee124b",
+        "hash": "190f6ccd",
+        "encoded": "#%20dbutils.fs.rm(f%22%7Bproject_dir%7D/checkpoints%22,%20recurse=True)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1223": {
+        "chunkId": "ee124b",
+        "hash": "f9fd4086",
+        "encoded": "#%20print(%22Checkpoints%20cleared.%22)",
+        "prevChunkIds": [
+          "ee124b"
+        ]
+      },
+      "1231": {
         "chunkId": "d099ed",
-        "hash": "9ef65ec9",
+        "hash": "931eaafe",
+        "encoded": "#%20MAGIC%20**References:**",
+        "prevChunkIds": [
+          "d099ed",
+          "805620"
+        ]
+      },
+      "1233": {
+        "chunkId": "d099ed",
+        "hash": "2def6697",
         "encoded": "#%20MAGIC%20-%20%5BMLflow%20Model%20Registry%5D(https://mlflow.org/docs/latest/model-registry.html)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "d099ed"
+        ]
       },
-      "1285": {
+      "1234": {
         "chunkId": "d099ed",
-        "hash": "06473f54",
+        "hash": "e1fd467b",
         "encoded": "#%20MAGIC%20-%20%5BReal-Time%20Mode%20in%20Structured%20Streaming%5D(https://docs.databricks.com/en/structured-streaming/real-time.html)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "d099ed"
+        ]
       },
-      "1287": {
+      "1236": {
         "chunkId": "d099ed",
-        "hash": "04b813e9",
+        "hash": "2ff10edb",
         "encoded": "#%20MAGIC%20-%20%5BFeature%20Store%20Concepts%5D(https://docs.databricks.com/en/machine-learning/feature-store/index.html)",
-        "prevChunkIds": []
+        "prevChunkIds": [
+          "d099ed"
+        ]
       }
     },
-    "_prevLineCount": 1193
+    "_prevLineCount": 1238
   }
 }

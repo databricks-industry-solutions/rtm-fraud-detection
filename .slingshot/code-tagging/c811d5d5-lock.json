@@ -80,6 +80,25 @@
         "codeBlockId": null,
         "isActive": true,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:33:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "814b3d": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558657,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2f514128",
+          "files": "ac380ae7"
+        },
+        "hash": "31febbae",
+        "messageId": "system_6f463650-7218-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:40:57 PM\n- **source**: agent\n- **type**: agentEditTool\n"
       }
     },
     "lines": {
@@ -108,300 +127,540 @@
         "prevChunkIds": []
       },
       "127": {
-        "chunkId": "3a8317",
-        "hash": "137db924",
-        "encoded": "project%20=%20w.database.get(name=project_name)",
+        "chunkId": "814b3d",
+        "hash": "cbc09051",
+        "encoded": "#%20Resolve%20the%20Lakebase%20instance%20(%22project%22%20in%20the%20UI).",
         "prevChunkIds": []
       },
       "128": {
-        "chunkId": "3a8317",
-        "hash": "7d0f7774",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "814b3d",
+        "hash": "ea86bddc",
+        "encoded": "#%20In%20the%20Databricks%20SDK,%20Lakebase%20projects%20map%20to%20%22database%20instances%22.",
         "prevChunkIds": []
       },
       "129": {
-        "chunkId": "3a8317",
-        "hash": "a17d9551",
-        "encoded": "host%20=%20host%20or%20project.read_write_dns",
+        "chunkId": "814b3d",
+        "hash": "dfe5bee6",
+        "encoded": "#%20The%20correct%20methods%20are%20get_database_instance%20/%20list_database_instances.",
         "prevChunkIds": []
       },
       "130": {
-        "chunkId": "3a8317",
-        "hash": "ffaacda9",
-        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
-        "prevChunkIds": []
-      },
-      "131": {
-        "chunkId": "3a8317",
-        "hash": "cea91ade",
-        "encoded": "password%20=%20password%20or%20cred.token",
-        "prevChunkIds": []
-      },
-      "132": {
-        "chunkId": "f0682d",
-        "hash": "ceee21ad",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
-        "prevChunkIds": []
-      },
-      "133": {
-        "chunkId": "f0682d",
-        "hash": "72d6fd1e",
-        "encoded": "w%20=%20WorkspaceClient()",
-        "prevChunkIds": []
-      },
-      "135": {
-        "chunkId": "f0682d",
-        "hash": "5a025fba",
-        "encoded": "#%20Resolve%20the%20Lakebase%20project%20%E2%80%94%20the%20DatabaseAPI%20method%20name%20varies",
-        "prevChunkIds": []
-      },
-      "136": {
-        "chunkId": "f0682d",
-        "hash": "387ca40b",
-        "encoded": "#%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
-        "prevChunkIds": []
-      },
-      "137": {
-        "chunkId": "f0682d",
-        "hash": "565a3ffe",
+        "chunkId": "814b3d",
+        "hash": "00d0a97f",
         "encoded": "db_api%20=%20w.database",
         "prevChunkIds": []
       },
-      "138": {
-        "chunkId": "f0682d",
-        "hash": "007f12f4",
-        "encoded": "project_obj%20=%20None",
+      "131": {
+        "chunkId": "814b3d",
+        "hash": "72374952",
+        "encoded": "instance%20=%20None",
         "prevChunkIds": []
       },
-      "139": {
-        "chunkId": "f0682d",
-        "hash": "b7e6a8d1",
-        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
+      "133": {
+        "chunkId": "814b3d",
+        "hash": "6040bafc",
+        "encoded": "#%20Try%20direct%20lookup%20by%20name",
         "prevChunkIds": []
       },
-      "140": {
-        "chunkId": "f0682d",
-        "hash": "f265996b",
-        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
-        "prevChunkIds": []
-      },
-      "141": {
-        "chunkId": "f0682d",
-        "hash": "d10a38ea",
-        "encoded": "if%20fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "142": {
-        "chunkId": "f0682d",
-        "hash": "bb765773",
+      "134": {
+        "chunkId": "814b3d",
+        "hash": "94bac4aa",
         "encoded": "try:",
         "prevChunkIds": []
       },
-      "143": {
-        "chunkId": "f0682d",
-        "hash": "fb0c69ff",
-        "encoded": "project_obj%20=%20fn(name=project_name)",
+      "135": {
+        "chunkId": "814b3d",
+        "hash": "8c800d1c",
+        "encoded": "instance%20=%20db_api.get_database_instance(name=project_name)",
         "prevChunkIds": []
       },
-      "144": {
-        "chunkId": "f0682d",
-        "hash": "cc5b7771",
-        "encoded": "break",
-        "prevChunkIds": []
-      },
-      "145": {
-        "chunkId": "f0682d",
-        "hash": "05a25e38",
+      "136": {
+        "chunkId": "814b3d",
+        "hash": "81a1c5e9",
         "encoded": "except%20TypeError:",
         "prevChunkIds": []
       },
+      "137": {
+        "chunkId": "814b3d",
+        "hash": "b874511a",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "814b3d",
+        "hash": "7d911d44",
+        "encoded": "instance%20=%20db_api.get_database_instance(project_name)",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "814b3d",
+        "hash": "6278eb92",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "814b3d",
+        "hash": "6a731606",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "814b3d",
+        "hash": "e1aafdc4",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "814b3d",
+        "hash": "3faf6d29",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "814b3d",
+        "hash": "468edf51",
+        "encoded": "#%20Fallback:%20list%20all%20instances%20and%20match%20by%20name",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "814b3d",
+        "hash": "67f0bcf4",
+        "encoded": "if%20instance%20is%20None:",
+        "prevChunkIds": []
+      },
       "146": {
-        "chunkId": "f0682d",
+        "chunkId": "814b3d",
         "hash": "a8cbbce2",
         "encoded": "try:",
         "prevChunkIds": []
       },
       "147": {
-        "chunkId": "f0682d",
-        "hash": "d35df7df",
-        "encoded": "project_obj%20=%20fn(project_name)",
+        "chunkId": "814b3d",
+        "hash": "44afa38b",
+        "encoded": "for%20inst%20in%20db_api.list_database_instances():",
         "prevChunkIds": []
       },
       "148": {
-        "chunkId": "f0682d",
-        "hash": "774336fb",
-        "encoded": "break",
+        "chunkId": "814b3d",
+        "hash": "e7619bb3",
+        "encoded": "if%20getattr(inst,%20%22name%22,%20None)%20==%20project_name:",
         "prevChunkIds": []
       },
       "149": {
-        "chunkId": "f0682d",
-        "hash": "26130d97",
-        "encoded": "except%20Exception:",
+        "chunkId": "814b3d",
+        "hash": "4399303b",
+        "encoded": "instance%20=%20inst",
         "prevChunkIds": []
       },
       "150": {
-        "chunkId": "f0682d",
-        "hash": "1adc5f9e",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "151": {
-        "chunkId": "f0682d",
-        "hash": "421b2426",
-        "encoded": "except%20Exception:",
-        "prevChunkIds": []
-      },
-      "152": {
-        "chunkId": "f0682d",
-        "hash": "13397c4f",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "154": {
-        "chunkId": "f0682d",
-        "hash": "61bd3b26",
-        "encoded": "if%20project_obj%20is%20None:",
-        "prevChunkIds": []
-      },
-      "155": {
-        "chunkId": "f0682d",
-        "hash": "072f4766",
-        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
-        "prevChunkIds": []
-      },
-      "156": {
-        "chunkId": "f0682d",
-        "hash": "9d3e34aa",
-        "encoded": "if%20list_fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "157": {
-        "chunkId": "f0682d",
-        "hash": "239e31a3",
-        "encoded": "for%20p%20in%20list_fn():",
-        "prevChunkIds": []
-      },
-      "158": {
-        "chunkId": "f0682d",
-        "hash": "55779bca",
-        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
-        "prevChunkIds": []
-      },
-      "159": {
-        "chunkId": "f0682d",
-        "hash": "4ade7767",
-        "encoded": "project_obj%20=%20p",
-        "prevChunkIds": []
-      },
-      "160": {
-        "chunkId": "f0682d",
-        "hash": "9462115f",
+        "chunkId": "814b3d",
+        "hash": "97062213",
         "encoded": "break",
         "prevChunkIds": []
       },
-      "162": {
-        "chunkId": "f0682d",
-        "hash": "6ba7ad5e",
-        "encoded": "if%20project_obj%20is%20None:",
+      "151": {
+        "chunkId": "814b3d",
+        "hash": "d5c8b692",
+        "encoded": "except%20Exception%20as%20e:",
         "prevChunkIds": []
       },
-      "163": {
-        "chunkId": "f0682d",
-        "hash": "4ffa71ab",
-        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
+      "152": {
+        "chunkId": "814b3d",
+        "hash": "a8fd1ac6",
+        "encoded": "raise%20RuntimeError(",
         "prevChunkIds": []
       },
-      "164": {
-        "chunkId": "f0682d",
-        "hash": "afed9178",
-        "encoded": "raise%20AttributeError(",
+      "153": {
+        "chunkId": "814b3d",
+        "hash": "22bdfb07",
+        "encoded": "f%22Failed%20to%20list%20Lakebase%20instances:%20%7Be%7D.%20%22",
         "prevChunkIds": []
       },
-      "165": {
-        "chunkId": "f0682d",
-        "hash": "3e31010f",
-        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
+      "154": {
+        "chunkId": "814b3d",
+        "hash": "fafd7ab9",
+        "encoded": "f%22Verify%20that%20your%20Lakebase%20project%20'%7Bproject_name%7D'%20exists.%22",
         "prevChunkIds": []
       },
-      "166": {
-        "chunkId": "f0682d",
-        "hash": "1db4360f",
-        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
-        "prevChunkIds": []
-      },
-      "167": {
-        "chunkId": "f0682d",
-        "hash": "b887ce18",
+      "155": {
+        "chunkId": "814b3d",
+        "hash": "5b3ab2ba",
         "encoded": ")",
         "prevChunkIds": []
       },
+      "157": {
+        "chunkId": "814b3d",
+        "hash": "26d29a73",
+        "encoded": "if%20instance%20is%20None:",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "814b3d",
+        "hash": "972ecff6",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "814b3d",
+        "hash": "d1ea3b0a",
+        "encoded": "available_names%20=%20%5Bgetattr(inst,%20%22name%22,%20%22?%22)%20for%20inst%20in%20db_api.list_database_instances()%5D",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "814b3d",
+        "hash": "c07229e4",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "814b3d",
+        "hash": "b34bc33e",
+        "encoded": "available_names%20=%20%5B%22(could%20not%20list%20instances)%22%5D",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "814b3d",
+        "hash": "cee8152d",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "814b3d",
+        "hash": "81a3a898",
+        "encoded": "f%22Lakebase%20instance%20'%7Bproject_name%7D'%20not%20found.%20%22",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "814b3d",
+        "hash": "b5ff4803",
+        "encoded": "f%22Available%20instances:%20%7Bavailable_names%7D.%20%22",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "814b3d",
+        "hash": "8c913f76",
+        "encoded": "f%22Check%20the%20name%20in%20Databricks%20UI%20%3E%20SQL%20%3E%20Lakebase.%22",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "814b3d",
+        "hash": "1ea95003",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "814b3d",
+        "hash": "1cc201b7",
+        "encoded": "cred%20=%20db_api.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
       "169": {
-        "chunkId": "f0682d",
-        "hash": "03175ed9",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "814b3d",
+        "hash": "ef0787aa",
+        "encoded": "host%20=%20host%20or%20instance.read_write_dns",
         "prevChunkIds": []
       },
       "170": {
-        "chunkId": "f0682d",
-        "hash": "c5f8446e",
-        "encoded": "host%20=%20host%20or%20project_obj.read_write_dns",
-        "prevChunkIds": []
-      },
-      "171": {
-        "chunkId": "f0682d",
-        "hash": "ee031af4",
+        "chunkId": "814b3d",
+        "hash": "cd435591",
         "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
         "prevChunkIds": []
       },
-      "172": {
-        "chunkId": "f0682d",
-        "hash": "ff705e15",
+      "171": {
+        "chunkId": "814b3d",
+        "hash": "9924b6eb",
         "encoded": "password%20=%20password%20or%20cred.token",
         "prevChunkIds": []
       },
-      "173": {
-        "chunkId": "d82824",
-        "hash": "ac3f7191",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
-        "prevChunkIds": []
-      },
-      "174": {
-        "chunkId": "d82824",
-        "hash": "af72c5e9",
-        "encoded": "w%20=%20WorkspaceClient()",
-        "prevChunkIds": []
-      },
-      "175": {
-        "chunkId": "d82824",
-        "hash": "ab1e50c4",
-        "encoded": "project%20=%20w.database.get_project(name=project_name)",
-        "prevChunkIds": []
-      },
-      "176": {
-        "chunkId": "d82824",
-        "hash": "21e02f85",
+      "179": {
+        "chunkId": "3a8317",
+        "hash": "e906ec79",
         "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
         "prevChunkIds": []
       },
-      "278": {
+      "180": {
+        "chunkId": "3a8317",
+        "hash": "4ec9d1ad",
+        "encoded": "host%20=%20host%20or%20project.read_write_dns",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "3a8317",
+        "hash": "37883061",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "3a8317",
+        "hash": "10ee4ed1",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "f0682d",
+        "hash": "9539584a",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "f0682d",
+        "hash": "a0badee2",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "f0682d",
+        "hash": "ffb27e69",
+        "encoded": "#%20Resolve%20the%20Lakebase%20project%20%E2%80%94%20the%20DatabaseAPI%20method%20name%20varies",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "f0682d",
+        "hash": "2c451409",
+        "encoded": "#%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "f0682d",
+        "hash": "0827d321",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "f0682d",
+        "hash": "a8294d8f",
+        "encoded": "project_obj%20=%20None",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "f0682d",
+        "hash": "6524628f",
+        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "f0682d",
+        "hash": "ac4e8264",
+        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "f0682d",
+        "hash": "989ab665",
+        "encoded": "if%20fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "f0682d",
+        "hash": "e41ca95a",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "f0682d",
+        "hash": "0a09a96a",
+        "encoded": "project_obj%20=%20fn(name=project_name)",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "f0682d",
+        "hash": "e1ddfe15",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "f0682d",
+        "hash": "f9f6e6ff",
+        "encoded": "except%20TypeError:",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "f0682d",
+        "hash": "7cb5bd98",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "f0682d",
+        "hash": "a75e8bec",
+        "encoded": "project_obj%20=%20fn(project_name)",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "f0682d",
+        "hash": "53126346",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "f0682d",
+        "hash": "61e5f442",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "f0682d",
+        "hash": "0442a2e9",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "f0682d",
+        "hash": "7245fe0a",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "f0682d",
+        "hash": "0903c86b",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "f0682d",
+        "hash": "cff7c834",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "f0682d",
+        "hash": "09f26e49",
+        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "f0682d",
+        "hash": "152cbb39",
+        "encoded": "if%20list_fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "f0682d",
+        "hash": "dc3f8b2a",
+        "encoded": "for%20p%20in%20list_fn():",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "f0682d",
+        "hash": "a4eeba2f",
+        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "f0682d",
+        "hash": "02d526ea",
+        "encoded": "project_obj%20=%20p",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "f0682d",
+        "hash": "f3a2f527",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "f0682d",
+        "hash": "c65be4f4",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "f0682d",
+        "hash": "44071345",
+        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "f0682d",
+        "hash": "a0aa1d9e",
+        "encoded": "raise%20AttributeError(",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "f0682d",
+        "hash": "db2eccc0",
+        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "f0682d",
+        "hash": "4cb22cc4",
+        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "f0682d",
+        "hash": "db97fdf0",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "f0682d",
+        "hash": "cc27fc1e",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "f0682d",
+        "hash": "bb06f1c8",
+        "encoded": "host%20=%20host%20or%20project_obj.read_write_dns",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "f0682d",
+        "hash": "a5fd9496",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "f0682d",
+        "hash": "0b3fa15b",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "d82824",
+        "hash": "53f796c6",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "d82824",
+        "hash": "70af84f3",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "d82824",
+        "hash": "64fcace2",
+        "encoded": "project%20=%20w.database.get_project(name=project_name)",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "d82824",
+        "hash": "aa203325",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "329": {
         "chunkId": "a4f1ec",
-        "hash": "bb8726e8",
+        "hash": "1786cf70",
         "encoded": "#%20MAGIC%20Run%20this%20cell%20only%20when%20developing%20the%20writer%20in%20isolation.%20It%20is%20a%20no-op",
         "prevChunkIds": []
       },
-      "279": {
+      "330": {
         "chunkId": "a4f1ec",
-        "hash": "e55e1bec",
+        "hash": "f81c0749",
         "encoded": "#%20MAGIC%20when%20the%20notebook%20is%20loaded%20via%20%60%25run%60%20from%20another%20notebook%20(because%20the",
         "prevChunkIds": []
       },
-      "280": {
+      "331": {
         "chunkId": "a4f1ec",
-        "hash": "f2c0283d",
+        "hash": "0323f1c7",
         "encoded": "#%20MAGIC%20%60LAKEBASE_PROJECT_NAME%60%20and%20%60FEATURE_TABLE%60%20widgets%20won't%20be%20set%20there).",
         "prevChunkIds": []
       }
     },
-    "_prevLineCount": 272
+    "_prevLineCount": 279
   }
 }

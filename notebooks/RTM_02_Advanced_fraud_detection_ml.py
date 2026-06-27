@@ -178,8 +178,10 @@ def connect_to_lakebase(project_name, database):
   """Generate credentials for a Lakebase project using the Databricks SDK.
   
   Resolves the read/write DNS endpoint and generates a short-lived credential.
-  Uses runtime introspection to find the correct DatabaseAPI method, since the
-  method name varies across SDK versions (get, get_project, get_database_project).
+  
+  IMPORTANT: In the Databricks SDK, Lakebase "projects" map to DatabaseAPI
+  "instances". The correct method is `get_database_instance(name=...)` or
+  `list_database_instances()` — there is no `get_project` / `get_database_project`.
   See: https://docs.databricks.com/aws/en/oltp/projects/api-usage
   """
   from databricks.sdk import WorkspaceClient
@@ -187,45 +189,52 @@ def connect_to_lakebase(project_name, database):
 
   w = WorkspaceClient()
 
-  # --- Resolve the Lakebase project ---
-  # The DatabaseAPI method name varies across SDK versions. Try each known
-  # variant in order of likelihood.
+  # --- Resolve the Lakebase instance ("project" in the UI) ---
+  # The DatabaseAPI exposes instances, not projects. Use get_database_instance
+  # first, then fall back to listing all instances and filtering by name.
   db_api = w.database
-  project = None
-  for method_name in ("get", "get_project", "get_database_project"):
-      fn = getattr(db_api, method_name, None)
-      if fn is not None:
-          try:
-              project = fn(name=project_name)
-              break
-          except TypeError:
-              # Method exists but doesn't accept 'name' kwarg — try positional
-              try:
-                  project = fn(project_name)
-                  break
-              except Exception:
-                  continue
-          except Exception:
-              continue
+  instance = None
 
-  if project is None:
-      # Last resort: list all projects and filter by name
-      list_fn = getattr(db_api, "list", getattr(db_api, "list_projects", None))
-      if list_fn is not None:
-          for p in list_fn():
-              if getattr(p, "name", None) == project_name:
-                  project = p
-                  break
+  # Try direct lookup by name
+  try:
+      instance = db_api.get_database_instance(name=project_name)
+  except TypeError:
+      # SDK version may not accept 'name' kwarg — try positional
+      try:
+          instance = db_api.get_database_instance(project_name)
+      except Exception:
+          pass
+  except Exception:
+      pass
 
-  if project is None:
-      available = [m for m in dir(db_api) if not m.startswith("_")]
-      raise AttributeError(
-          f"Could not resolve Lakebase project '{project_name}'. "
-          f"Available DatabaseAPI methods: {available}"
+  # Fallback: list all instances and match by name
+  if instance is None:
+      try:
+          for inst in db_api.list_database_instances():
+              if getattr(inst, "name", None) == project_name:
+                  instance = inst
+                  break
+      except Exception as e:
+          raise RuntimeError(
+              f"Failed to list Lakebase instances: {e}. "
+              f"Verify that your Lakebase project '{project_name}' exists "
+              f"and that your cluster has access to the Databricks SDK."
+          )
+
+  if instance is None:
+      # Provide helpful error with available instance names
+      try:
+          available_names = [getattr(inst, "name", "?") for inst in db_api.list_database_instances()]
+      except Exception:
+          available_names = ["(could not list instances)"]
+      raise ValueError(
+          f"Lakebase instance '{project_name}' not found. "
+          f"Available instances: {available_names}. "
+          f"Check the name in Databricks UI > SQL > Lakebase."
       )
 
-  host = project.read_write_dns
-  cred = w.database.generate_database_credential(project_names=[project_name])
+  host = instance.read_write_dns
+  cred = db_api.generate_database_credential(project_names=[project_name])
   
   return psycopg.connect(
     host=host,
