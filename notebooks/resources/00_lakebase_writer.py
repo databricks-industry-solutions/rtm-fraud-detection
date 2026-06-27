@@ -124,9 +124,43 @@ class LakebaseFeatureWriter:
         if host is None or user is None or password is None:
             from databricks.sdk import WorkspaceClient
             w = WorkspaceClient()
-            project = w.database.get_project(name=project_name)
+
+            # Resolve the Lakebase project — the DatabaseAPI method name varies
+            # across SDK versions (get, get_project, get_database_project).
+            db_api = w.database
+            project_obj = None
+            for method_name in ("get", "get_project", "get_database_project"):
+                fn = getattr(db_api, method_name, None)
+                if fn is not None:
+                    try:
+                        project_obj = fn(name=project_name)
+                        break
+                    except TypeError:
+                        try:
+                            project_obj = fn(project_name)
+                            break
+                        except Exception:
+                            continue
+                    except Exception:
+                        continue
+
+            if project_obj is None:
+                list_fn = getattr(db_api, "list", getattr(db_api, "list_projects", None))
+                if list_fn is not None:
+                    for p in list_fn():
+                        if getattr(p, "name", None) == project_name:
+                            project_obj = p
+                            break
+
+            if project_obj is None:
+                available = [m for m in dir(db_api) if not m.startswith("_")]
+                raise AttributeError(
+                    f"Could not resolve Lakebase project '{project_name}'. "
+                    f"Available DatabaseAPI methods: {available}"
+                )
+
             cred = w.database.generate_database_credential(project_names=[project_name])
-            host = host or project.read_write_dns
+            host = host or project_obj.read_write_dns
             user = user or w.current_user.me().user_name
             password = password or cred.token
 

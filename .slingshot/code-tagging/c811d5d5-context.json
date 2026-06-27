@@ -1,23 +1,8 @@
 {
-  "filename": "RTM_02_Advanced_fraud_detection_ml.py",
-  "path": "notebooks\\RTM_02_Advanced_fraud_detection_ml.py",
+  "filename": "00_lakebase_writer.py",
+  "path": "notebooks\\resources\\00_lakebase_writer.py",
   "version": "1.1",
   "files": {
-    "3d62d74f": {
-      "value": [
-        {
-          "programming_language": "Python",
-          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
-          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
-          "startLine": [
-            1
-          ],
-          "endLine": [
-            1163
-          ]
-        }
-      ]
-    },
     "bc3375ee": {
       "value": [
         {
@@ -37,9 +22,6 @@
   "promptMessage": {
     "56727438": {
       "value": "sam eerror..AttributeError: 'DatabaseAPI' object has no attribute 'get_project'\n[Trace ID: 00-da765c47144a7ecad4f4a696b2e02a21-052e74dc21fc58ea-00]"
-    },
-    "10a9ba83": {
-      "value": "yesv correct those"
     }
   },
   "localPrompts": {},

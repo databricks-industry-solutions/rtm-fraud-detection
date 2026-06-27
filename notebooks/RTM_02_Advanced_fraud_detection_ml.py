@@ -175,18 +175,55 @@ Lakebase Configuration:
 # COMMAND ----------
 
 def connect_to_lakebase(project_name, database):
-  """Generate credentials for a Lakebase project using the Projects API.
+  """Generate credentials for a Lakebase project using the Databricks SDK.
   
-  Uses the Lakebase Projects API (get_project) to resolve the
-  read/write DNS endpoint and generate a short-lived credential.
+  Resolves the read/write DNS endpoint and generates a short-lived credential.
+  Uses runtime introspection to find the correct DatabaseAPI method, since the
+  method name varies across SDK versions (get, get_project, get_database_project).
   See: https://docs.databricks.com/aws/en/oltp/projects/api-usage
   """
   from databricks.sdk import WorkspaceClient
   import psycopg
 
   w = WorkspaceClient()
-  # Use the Projects API to resolve DNS and generate credential
-  project = w.database.get_project(name=project_name)
+
+  # --- Resolve the Lakebase project ---
+  # The DatabaseAPI method name varies across SDK versions. Try each known
+  # variant in order of likelihood.
+  db_api = w.database
+  project = None
+  for method_name in ("get", "get_project", "get_database_project"):
+      fn = getattr(db_api, method_name, None)
+      if fn is not None:
+          try:
+              project = fn(name=project_name)
+              break
+          except TypeError:
+              # Method exists but doesn't accept 'name' kwarg — try positional
+              try:
+                  project = fn(project_name)
+                  break
+              except Exception:
+                  continue
+          except Exception:
+              continue
+
+  if project is None:
+      # Last resort: list all projects and filter by name
+      list_fn = getattr(db_api, "list", getattr(db_api, "list_projects", None))
+      if list_fn is not None:
+          for p in list_fn():
+              if getattr(p, "name", None) == project_name:
+                  project = p
+                  break
+
+  if project is None:
+      available = [m for m in dir(db_api) if not m.startswith("_")]
+      raise AttributeError(
+          f"Could not resolve Lakebase project '{project_name}'. "
+          f"Available DatabaseAPI methods: {available}"
+      )
+
   host = project.read_write_dns
   cred = w.database.generate_database_credential(project_names=[project_name])
   

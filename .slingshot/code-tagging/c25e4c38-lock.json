@@ -5,6 +5,63 @@
     "version": "1.2",
     "contextFile": null,
     "chunks": {
+      "670968": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551677,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "549bf269",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:37 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "805620": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "9d20066a",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "903350": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "5ebce3bb",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
       "5c57c4": {
         "user": "Harneet Singh Banga",
         "model": "claude-opus-4-6",
@@ -23,135 +80,3583 @@
         "codeBlockId": null,
         "isActive": true,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 5/29/2026, 5:07:19 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "0ab40e": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "a6628ecd",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1fdcd4": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "0e9854e8",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "9019c8": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "14a19577",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "4358f6": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "96a49441",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "fd7be2": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569658,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "0ac27db9",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "b73a71": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780569659,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "7145f7ac",
+          "files": "93385097"
+        },
+        "hash": "2ac66d51",
+        "messageId": "system_7f5bc330-6001-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:10:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1f7067": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780571832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "dcf27883",
+          "files": "93385097"
+        },
+        "hash": "b18a5a97",
+        "messageId": "system_aced2910-6006-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:47:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "ddcb29": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780571832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "dcf27883",
+          "files": "93385097"
+        },
+        "hash": "7fa915c6",
+        "messageId": "system_aced2910-6006-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:47:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "c0908b": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780571832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "dcf27883",
+          "files": "93385097"
+        },
+        "hash": "8c29e8a8",
+        "messageId": "system_aced2910-6006-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:47:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "69ec31": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780571832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "dcf27883",
+          "files": "93385097"
+        },
+        "hash": "9bc18319",
+        "messageId": "system_aced2910-6006-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:47:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "62cada": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780571844,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "dcf27883",
+          "files": "93385097"
+        },
+        "hash": "7efc9b93",
+        "messageId": "system_aced2910-6006-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/4/2026, 4:47:24 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "79b326": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551677,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "1a7ad807",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:37 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "090428": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551677,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "670865c2",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:37 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "9cf84c": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551677,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "147cf06b",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:37 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "a440ad": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551677,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "01cc0247",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:37 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "5bb917": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "e4258bcc",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1d8829": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "133e141c",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "b35c93": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "d1bbe804",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7dc4df": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "223bf58a",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "d099ed": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "ac2919e0",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "ee124b": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "081871e2",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1f57a1": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "45117fd4",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "2951a0": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "2ae969d9",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "120c71": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "70744be2",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "000ce8": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "c6b7456b",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "84d414": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "350387cb",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f4bc26": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "6ebdf2fa",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "04c7c8": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "6b47c57f",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "93472e": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "c85ef1d6",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "cd84e7": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "8f6fe3d3",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f1624e": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "07d3451e",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "329f02": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "ead8e038",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1568a7": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782551680,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "cdc976d2",
+          "files": "8c2a16d7"
+        },
+        "hash": "846d17e9",
+        "messageId": "system_16fb0350-7208-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 2:44:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "c8e757": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558036,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "746156cc",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:30:36 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "716ffd": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558036,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "86afbb51",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:30:36 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "e93542": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558036,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "87636a0a",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:30:36 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "ce56c2": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558180,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "a27d7d47",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:33:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
       }
     },
     "lines": {
-      "343": {
-        "chunkId": "5c57c4",
-        "hash": "f306768b",
-        "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20---",
+      "1": {
+        "chunkId": "090428",
+        "hash": "d882c023",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "090428"
+        ]
+      },
+      "3": {
+        "chunkId": "1568a7",
+        "hash": "3980f598",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "4": {
+        "chunkId": "1568a7",
+        "hash": "c4879418",
+        "encoded": "#%20MAGIC%20##%20From%20Rules%20to%20Machine%20Learning",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "5": {
+        "chunkId": "1568a7",
+        "hash": "aacda598",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "6": {
+        "chunkId": "1568a7",
+        "hash": "9c9f607b",
+        "encoded": "#%20MAGIC%20In%20**Part%201**,%20we%20built%20a%20rule-based%20fraud%20detection%20system%20that%20scores%20transactions",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "7": {
+        "chunkId": "1568a7",
+        "hash": "a9e1795a",
+        "encoded": "#%20MAGIC%20using%20hardcoded%20thresholds%20(velocity%20%3E%205%20=%20score%2085,%20amount%20ratio%20%3E%2010%20=%20score%2080,%20etc.).",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "8": {
+        "chunkId": "1568a7",
+        "hash": "66abbe2a",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "9": {
+        "chunkId": "1568a7",
+        "hash": "f8329921",
+        "encoded": "#%20MAGIC%20That%20works,%20but%20it%20has%20limitations:",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "10": {
+        "chunkId": "1568a7",
+        "hash": "f7a87ea5",
+        "encoded": "#%20MAGIC%20-%20**Rules%20are%20static**%20--%20they%20can't%20adapt%20to%20evolving%20fraud%20patterns",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "11": {
+        "chunkId": "1568a7",
+        "hash": "32d199b4",
+        "encoded": "#%20MAGIC%20-%20**Thresholds%20are%20arbitrary**%20--%20why%20is%205%20transactions%20%22suspicious%22?%20Why%20not%204%20or%206?",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "12": {
+        "chunkId": "1568a7",
+        "hash": "d464ecf3",
+        "encoded": "#%20MAGIC%20-%20**No%20learning**%20--%20we%20never%20improve%20from%20past%20decisions",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "13": {
+        "chunkId": "1568a7",
+        "hash": "67ef1238",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "14": {
+        "chunkId": "1568a7",
+        "hash": "7ba09c0a",
+        "encoded": "#%20MAGIC%20In%20**Part%202**,%20we%20upgrade%20to%20a%20**machine%20learning**%20approach:",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "16": {
+        "chunkId": "1568a7",
+        "hash": "40a772fe",
+        "encoded": "#%20MAGIC%202.%20**Train%20an%20ML%20model%20with%20MLflow**%20that%20learns%20fraud%20patterns%20from%20labeled%20data",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "17": {
+        "chunkId": "1568a7",
+        "hash": "9054a45a",
+        "encoded": "#%20MAGIC%203.%20**Score%20transactions%20in%20real-time**%20using%20the%20model%20+%20live%20features",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "18": {
+        "chunkId": "1568a7",
+        "hash": "102b34ca",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "19": {
+        "chunkId": "1568a7",
+        "hash": "bf0bc7a5",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "20": {
+        "chunkId": "1568a7",
+        "hash": "39183b97",
+        "encoded": "#%20MAGIC%20###%20Key%20Concepts%20for%20Newcomers",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "21": {
+        "chunkId": "1568a7",
+        "hash": "e3ef4421",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "22": {
+        "chunkId": "1568a7",
+        "hash": "1ac2aeb3",
+        "encoded": "#%20MAGIC%20%7C%20Technology%20%7C%20What%20it%20is%20%7C%20Role%20in%20this%20demo%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "23": {
+        "chunkId": "1568a7",
+        "hash": "7cd941e6",
+        "encoded": "#%20MAGIC%20%7C-----------%7C-----------%7C-------------------%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "25": {
+        "chunkId": "1568a7",
+        "hash": "365ee889",
+        "encoded": "#%20MAGIC%20%7C%20**MLflow**%20%7C%20ML%20lifecycle%20platform%20%7C%20Train,%20version,%20and%20deploy%20fraud%20detection%20models%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "28": {
+        "chunkId": "1568a7",
+        "hash": "9d3a0460",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "29": {
+        "chunkId": "1568a7",
+        "hash": "0acce6fb",
+        "encoded": "#%20MAGIC%20###%20Prerequisites",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "30": {
+        "chunkId": "1568a7",
+        "hash": "b6b88f6d",
+        "encoded": "#%20MAGIC%20-%20**Run%20Notebook%201%20first**%20(or%20at%20least%20its%20Section%201%20for%20Kafka%20config)",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "31": {
+        "chunkId": "1568a7",
+        "hash": "b601c53e",
+        "encoded": "#%20MAGIC%20-%20Same%20cluster%20requirements%20as%20Notebook%201%20(Real-Time%20Mode%20enabled)",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "33": {
+        "chunkId": "1568a7",
+        "hash": "5918f683",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "34": {
+        "chunkId": "1568a7",
+        "hash": "91f1ec81",
+        "encoded": "#%20MAGIC%20###%20Notebook%20Sections",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "35": {
+        "chunkId": "1568a7",
+        "hash": "684b5018",
+        "encoded": "#%20MAGIC%20%7C%20#%20%7C%20Section%20%7C%20What%20it%20does%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "36": {
+        "chunkId": "1568a7",
+        "hash": "8059ca8b",
+        "encoded": "#%20MAGIC%20%7C---%7C---------%7C-------------%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "38": {
+        "chunkId": "1568a7",
+        "hash": "3666d71b",
+        "encoded": "#%20MAGIC%20%7C%202%20%7C%20Reference%20Data%20%7C%20Merchant%20+%20card%20profiles%20(reused%20from%20Notebook%201)%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "39": {
+        "chunkId": "1568a7",
+        "hash": "64726b38",
+        "encoded": "#%20MAGIC%20%7C%203%20%7C%20Feature%20Engineering%20%7C%20Design%20and%20compute%20real-time%20features%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "41": {
+        "chunkId": "1568a7",
+        "hash": "5da7cac3",
+        "encoded": "#%20MAGIC%20%7C%205%20%7C%20Generate%20Labeled%20Training%20Data%20%7C%20Synthetic%20historical%20data%20with%20fraud%20labels%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "42": {
+        "chunkId": "1568a7",
+        "hash": "e74a9c4f",
+        "encoded": "#%20MAGIC%20%7C%206%20%7C%20Train%20&%20Register%20MLflow%20Model%20%7C%20RandomForest%20trained%20on%20fraud%20features%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "44": {
+        "chunkId": "1568a7",
+        "hash": "2bd1b701",
+        "encoded": "#%20MAGIC%20%7C%208%20%7C%20Demo%20Execution%20%7C%20End-to-end:%20traffic%20%E2%86%92%20features%20%E2%86%92%20scores%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "45": {
+        "chunkId": "1568a7",
+        "hash": "471005d3",
+        "encoded": "#%20MAGIC%20%7C%209%20%7C%20Cleanup%20%7C%20Stop%20queries,%20drop%20tables%20%7C",
+        "prevChunkIds": [
+          "1568a7",
+          "670968"
+        ]
+      },
+      "47": {
+        "chunkId": "1fdcd4",
+        "hash": "53ae5a1a",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "1fdcd4"
+        ]
+      },
+      "49": {
+        "chunkId": "329f02",
+        "hash": "391ed88f",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "50": {
+        "chunkId": "329f02",
+        "hash": "072a40e3",
+        "encoded": "#%20MAGIC%20---",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "51": {
+        "chunkId": "329f02",
+        "hash": "c8236519",
+        "encoded": "#%20MAGIC%20##%20Section%201:%20Setup%20&%20Configuration",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "53": {
+        "chunkId": "329f02",
+        "hash": "4b0bb647",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "55": {
+        "chunkId": "329f02",
+        "hash": "951f077c",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "56": {
+        "chunkId": "329f02",
+        "hash": "d7d07089",
+        "encoded": "#%20MAGIC%20###%201.1%20Verify%20Cluster%20&%20Load%20Kafka%20Config",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "57": {
+        "chunkId": "670968",
+        "hash": "b8deac37",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "329f02",
+          "903350"
+        ]
+      },
+      "58": {
+        "chunkId": "329f02",
+        "hash": "0333e132",
+        "encoded": "#%20MAGIC%20If%20you%20ran%20Notebook%201%20on%20this%20same%20cluster,%20the%20Kafka%20config%20is%20already%20in%20%60spark.conf%60.",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "59": {
+        "chunkId": "329f02",
+        "hash": "37f0d46f",
+        "encoded": "#%20MAGIC%20If%20not,%20we%20load%20it%20fresh%20from%20Databricks%20Secrets.",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "61": {
+        "chunkId": "329f02",
+        "hash": "45a22782",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "65": {
+        "chunkId": "329f02",
+        "hash": "f20c1875",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "67": {
+        "chunkId": "329f02",
+        "hash": "4cc28f52",
+        "encoded": "dbutils.library.restartPython()",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "69": {
+        "chunkId": "329f02",
+        "hash": "22deef20",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "71": {
+        "chunkId": "329f02",
+        "hash": "66bfdc6a",
+        "encoded": "#%20DBTITLE%201,TODO:%20Configure%20your%20environment",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "72": {
+        "chunkId": "329f02",
+        "hash": "3e4e2719",
+        "encoded": "#%20---%20Kafka%20(only%20needed%20if%20running%20standalone,%20i.e.,%20without%20running%20Notebook%201%20first)%20---",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "73": {
+        "chunkId": "329f02",
+        "hash": "18fc79d3",
+        "encoded": "dbutils.widgets.text(%22secret_scope%22,%20%22%22,%20%22Kafka%20Secret%20Scope%20Name%22)",
+        "prevChunkIds": [
+          "329f02"
+        ]
+      },
+      "75": {
+        "chunkId": "4358f6",
+        "hash": "34b6d324",
+        "encoded": "#%20---%20Lakebase%20---",
+        "prevChunkIds": [
+          "4358f6",
+          "329f02"
+        ]
+      },
+      "76": {
+        "chunkId": "4358f6",
+        "hash": "a935e47f",
+        "encoded": "#%20Use%20your%20existing%20Lakebase%20project:",
+        "prevChunkIds": [
+          "4358f6",
+          "329f02"
+        ]
+      },
+      "82": {
+        "chunkId": "1fdcd4",
+        "hash": "926b8094",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "1fdcd4"
+        ]
+      },
+      "88": {
+        "chunkId": "f1624e",
+        "hash": "0093af68",
+        "encoded": "#%20Load%20Kafka%20config%20--%20try%20spark.conf%20first%20(set%20by%20Notebook%201),%20fall%20back%20to%20secrets",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "89": {
+        "chunkId": "f1624e",
+        "hash": "f76a267b",
+        "encoded": "try:",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "90": {
+        "chunkId": "f1624e",
+        "hash": "53f3b90c",
+        "encoded": "kafka_brokers%20=%20spark.conf.get(%22demo.kafka.brokers%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "91": {
+        "chunkId": "f1624e",
+        "hash": "53d3bd4e",
+        "encoded": "input_topic%20=%20spark.conf.get(%22demo.topic.input%22)",
+        "prevChunkIds": [
+          "f1624e",
+          "090428"
+        ]
+      },
+      "92": {
+        "chunkId": "f1624e",
+        "hash": "bf147578",
+        "encoded": "print(%22Loaded%20Kafka%20config%20from%20Notebook%201%20(spark.conf)%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "93": {
+        "chunkId": "f1624e",
+        "hash": "bb971811",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "94": {
+        "chunkId": "f1624e",
+        "hash": "be299300",
+        "encoded": "#%20Running%20standalone%20--%20load%20from%20secrets%20via%20widget",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "95": {
+        "chunkId": "f1624e",
+        "hash": "1ebc63ce",
+        "encoded": "secret_scope%20=%20dbutils.widgets.get(%22secret_scope%22)",
+        "prevChunkIds": [
+          "f1624e",
+          "79b326"
+        ]
+      },
+      "96": {
+        "chunkId": "f1624e",
+        "hash": "30bd5d7f",
+        "encoded": "if%20not%20secret_scope:",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "97": {
+        "chunkId": "f1624e",
+        "hash": "d1fd3b20",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "98": {
+        "chunkId": "f1624e",
+        "hash": "5fa12114",
+        "encoded": "%22Widget%20'secret_scope'%20is%20empty.%20Set%20your%20Databricks%20Secret%20Scope%20name%20%22",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "99": {
+        "chunkId": "f1624e",
+        "hash": "78d6f566",
+        "encoded": "%22in%20the%20widget%20at%20the%20top%20of%20this%20notebook.%20See%20README%20for%20setup%20instructions.%22",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "100": {
+        "chunkId": "f1624e",
+        "hash": "b2a74a31",
+        "encoded": ")",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "101": {
+        "chunkId": "f1624e",
+        "hash": "5f3a8f9e",
+        "encoded": "kafka_brokers_tls%20=%20dbutils.secrets.get(secret_scope,%20%22kafka-bootstrap-servers-tls%22)",
+        "prevChunkIds": [
+          "f1624e",
+          "9cf84c"
+        ]
+      },
+      "102": {
+        "chunkId": "f1624e",
+        "hash": "e02a5805",
+        "encoded": "kafka_brokers%20=%20kafka_brokers_tls",
+        "prevChunkIds": [
+          "f1624e",
+          "9cf84c"
+        ]
+      },
+      "103": {
+        "chunkId": "f1624e",
+        "hash": "1447f27d",
+        "encoded": "username%20=%20spark.sql(%22SELECT%20current_user()%22).collect()%5B0%5D%5B0%5D",
+        "prevChunkIds": [
+          "f1624e",
+          "9cf84c"
+        ]
+      },
+      "104": {
+        "chunkId": "f1624e",
+        "hash": "5db2c2b0",
+        "encoded": "user%20=%20username.split(%22@%22)%5B0%5D.replace(%22.%22,%20%22_%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "105": {
+        "chunkId": "f1624e",
+        "hash": "1eda9f39",
+        "encoded": "input_topic%20=%20f%22%7Buser%7D_raw_transactions%22",
+        "prevChunkIds": [
+          "f1624e",
+          "4358f6"
+        ]
+      },
+      "106": {
+        "chunkId": "f1624e",
+        "hash": "61824296",
+        "encoded": "#%20Store%20for%20later%20cells",
+        "prevChunkIds": [
+          "f1624e",
+          "4358f6"
+        ]
+      },
+      "107": {
+        "chunkId": "f1624e",
+        "hash": "405ae8be",
+        "encoded": "spark.conf.set(%22demo.kafka.brokers%22,%20kafka_brokers)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "108": {
+        "chunkId": "f1624e",
+        "hash": "2a9b6aad",
+        "encoded": "spark.conf.set(%22demo.kafka.brokers.tls%22,%20kafka_brokers_tls)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "109": {
+        "chunkId": "f1624e",
+        "hash": "9770da2f",
+        "encoded": "spark.conf.set(%22demo.topic.input%22,%20input_topic)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "110": {
+        "chunkId": "f1624e",
+        "hash": "06e5b4c2",
+        "encoded": "print(%22Loaded%20Kafka%20config%20from%20Databricks%20Secrets%20(standalone%20mode)%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "112": {
+        "chunkId": "f1624e",
+        "hash": "80950587",
+        "encoded": "#%20Get%20username%20for%20paths",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "113": {
+        "chunkId": "f1624e",
+        "hash": "b9cc78fc",
+        "encoded": "username%20=%20spark.sql(%22SELECT%20current_user()%22).collect()%5B0%5D%5B0%5D",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "114": {
+        "chunkId": "f1624e",
+        "hash": "2b32f98a",
+        "encoded": "user%20=%20username.split(%22@%22)%5B0%5D.replace(%22.%22,%20%22_%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "116": {
+        "chunkId": "f1624e",
+        "hash": "7b986f6d",
+        "encoded": "print(f%22%22%22",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "117": {
+        "chunkId": "f1624e",
+        "hash": "b039a0a2",
+        "encoded": "Configuration:",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "118": {
+        "chunkId": "f1624e",
+        "hash": "319d1e6f",
+        "encoded": "Kafka%20Brokers:%20%7Bkafka_brokers%7D",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "119": {
+        "chunkId": "f1624e",
+        "hash": "5d301023",
+        "encoded": "Input%20Topic:%20%20%20%7Binput_topic%7D",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "120": {
+        "chunkId": "f1624e",
+        "hash": "821c1c31",
+        "encoded": "User:%20%20%20%20%20%20%20%20%20%20%7Busername%7D",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "121": {
+        "chunkId": "f1624e",
+        "hash": "ccc1ee8a",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": [
+          "f1624e"
+        ]
+      },
+      "123": {
+        "chunkId": "090428",
+        "hash": "e622ac56",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "090428",
+          "f1624e"
+        ]
+      },
+      "125": {
+        "chunkId": "cd84e7",
+        "hash": "c183deb6",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "127": {
+        "chunkId": "670968",
+        "hash": "0b8249d8",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "f1624e",
+          "903350"
+        ]
+      },
+      "131": {
+        "chunkId": "670968",
+        "hash": "45ae669f",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "f1624e",
+          "1fdcd4"
+        ]
+      },
+      "135": {
+        "chunkId": "79b326",
+        "hash": "57cd0047",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "79b326",
+          "f1624e"
+        ]
+      },
+      "137": {
+        "chunkId": "cd84e7",
+        "hash": "3c136831",
+        "encoded": "#%20============================================================",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "139": {
+        "chunkId": "cd84e7",
+        "hash": "341df23d",
+        "encoded": "#%20============================================================",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "142": {
+        "chunkId": "9019c8",
+        "hash": "6272255e",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": [
+          "9019c8",
+          "f1624e"
+        ]
+      },
+      "145": {
+        "chunkId": "9019c8",
+        "hash": "0cdca7d6",
+        "encoded": ")",
+        "prevChunkIds": [
+          "9019c8",
+          "f1624e"
+        ]
+      },
+      "149": {
+        "chunkId": "090428",
+        "hash": "039ba5e1",
+        "encoded": "FEATURE_TABLE%20=%20%22card_features%22",
+        "prevChunkIds": [
+          "090428",
+          "f1624e"
+        ]
+      },
+      "150": {
+        "chunkId": "090428",
+        "hash": "1be0a9b7",
+        "encoded": "SCORES_TABLE%20%20=%20%22fraud_scores%22",
+        "prevChunkIds": [
+          "090428",
+          "f1624e",
+          "9019c8"
+        ]
+      },
+      "152": {
+        "chunkId": "cd84e7",
+        "hash": "714c8644",
+        "encoded": "#%20Checkpoint%20paths%20for%20streaming",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "153": {
+        "chunkId": "cd84e7",
+        "hash": "92b15c7b",
+        "encoded": "project_dir%20=%20f%22/home/%7Busername%7D/fraud_detection_ml_demo%22",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "154": {
+        "chunkId": "cd84e7",
+        "hash": "832ff08a",
+        "encoded": "checkpoint_feature_store%20=%20f%22%7Bproject_dir%7D/checkpoints/feature_store%22",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "155": {
+        "chunkId": "cd84e7",
+        "hash": "16959a70",
+        "encoded": "checkpoint_scoring%20%20%20%20%20%20%20=%20f%22%7Bproject_dir%7D/checkpoints/scoring%22",
+        "prevChunkIds": [
+          "cd84e7",
+          "f1624e"
+        ]
+      },
+      "157": {
+        "chunkId": "9019c8",
+        "hash": "ef15131a",
+        "encoded": "print(f%22%22%22",
+        "prevChunkIds": [
+          "9019c8"
+        ]
+      },
+      "161": {
+        "chunkId": "cd84e7",
+        "hash": "45fdf730",
+        "encoded": "Feature%20Table:%20%20%7BFEATURE_TABLE%7D",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "162": {
+        "chunkId": "cd84e7",
+        "hash": "26b7d902",
+        "encoded": "Scores%20Table:%20%20%20%7BSCORES_TABLE%7D",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "163": {
+        "chunkId": "090428",
+        "hash": "52b9cbd6",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": [
+          "090428"
+        ]
+      },
+      "165": {
+        "chunkId": "cd84e7",
+        "hash": "611fb87a",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "167": {
+        "chunkId": "93472e",
+        "hash": "24800686",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "169": {
+        "chunkId": "670968",
+        "hash": "99bfff08",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "670968",
+          "9019c8"
+        ]
+      },
+      "171": {
+        "chunkId": "1fdcd4",
+        "hash": "aae6f0e3",
+        "encoded": "#%20MAGIC%20-%20**card_features**%20--%20per-card%20feature%20vector,%20upserted%20on%20every%20transaction",
+        "prevChunkIds": [
+          "1fdcd4",
+          "9019c8"
+        ]
+      },
+      "172": {
+        "chunkId": "1fdcd4",
+        "hash": "8f86fa26",
+        "encoded": "#%20MAGIC%20-%20**fraud_scores**%20--%20per-transaction%20ML%20fraud%20score",
+        "prevChunkIds": [
+          "1fdcd4",
+          "9019c8"
+        ]
+      },
+      "174": {
+        "chunkId": "93472e",
+        "hash": "8418473b",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "176": {
+        "chunkId": "ce56c2",
+        "hash": "a8fd4dd2",
+        "encoded": "def%20connect_to_lakebase(project_name,%20database):",
         "prevChunkIds": []
       },
-      "344": {
-        "chunkId": "5c57c4",
-        "hash": "be79e0b0",
-        "encoded": "eventhub_conn_string%20=%20dbutils.secrets.get(scope=%22kafka-scope%22,%20key=%22kafka-connection-string%22)",
+      "177": {
+        "chunkId": "ce56c2",
+        "hash": "0f7b7203",
+        "encoded": "%22%22%22Generate%20credentials%20for%20a%20Lakebase%20project%20using%20the%20Databricks%20SDK.",
         "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "ce56c2",
+        "hash": "092b92c7",
+        "encoded": "Resolves%20the%20read/write%20DNS%20endpoint%20and%20generates%20a%20short-lived%20credential.",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "ce56c2",
+        "hash": "b6125167",
+        "encoded": "Uses%20runtime%20introspection%20to%20find%20the%20correct%20DatabaseAPI%20method,%20since%20the",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "ce56c2",
+        "hash": "6bd4a7c8",
+        "encoded": "method%20name%20varies%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "ce56c2",
+        "hash": "487a3698",
+        "encoded": "See:%20https://docs.databricks.com/aws/en/oltp/projects/api-usage",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "ce56c2",
+        "hash": "85c28aea",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "ce56c2",
+        "hash": "955da897",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "ce56c2",
+        "hash": "dfb0e831",
+        "encoded": "import%20psycopg",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "ce56c2",
+        "hash": "31a771f1",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "ce56c2",
+        "hash": "f6758c94",
+        "encoded": "#%20---%20Resolve%20the%20Lakebase%20project%20---",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "ce56c2",
+        "hash": "7c614e62",
+        "encoded": "#%20The%20DatabaseAPI%20method%20name%20varies%20across%20SDK%20versions.%20Try%20each%20known",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "ce56c2",
+        "hash": "523284a2",
+        "encoded": "#%20variant%20in%20order%20of%20likelihood.",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "ce56c2",
+        "hash": "ff6087fc",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "ce56c2",
+        "hash": "07de9f5e",
+        "encoded": "project%20=%20None",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "ce56c2",
+        "hash": "66975998",
+        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "ce56c2",
+        "hash": "3cb7f361",
+        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "ce56c2",
+        "hash": "242f8620",
+        "encoded": "if%20fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "ce56c2",
+        "hash": "7cb5bd98",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "ce56c2",
+        "hash": "38fe3fe2",
+        "encoded": "project%20=%20fn(name=project_name)",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "ce56c2",
+        "hash": "53126346",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "ce56c2",
+        "hash": "132df35d",
+        "encoded": "except%20TypeError:",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "ce56c2",
+        "hash": "bf4a05b1",
+        "encoded": "#%20Method%20exists%20but%20doesn't%20accept%20'name'%20kwarg%20%E2%80%94%20try%20positional",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "ce56c2",
+        "hash": "e88675c3",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "ce56c2",
+        "hash": "e6845edb",
+        "encoded": "project%20=%20fn(project_name)",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "ce56c2",
+        "hash": "85c40c7a",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "ce56c2",
+        "hash": "608b783b",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "ce56c2",
+        "hash": "55916e41",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "ce56c2",
+        "hash": "6632e54e",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "ce56c2",
+        "hash": "87c68ddc",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "ce56c2",
+        "hash": "7a27d705",
+        "encoded": "if%20project%20is%20None:",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "ce56c2",
+        "hash": "d960fc13",
+        "encoded": "#%20Last%20resort:%20list%20all%20projects%20and%20filter%20by%20name",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "ce56c2",
+        "hash": "076620f7",
+        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "ce56c2",
+        "hash": "0273f856",
+        "encoded": "if%20list_fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "ce56c2",
+        "hash": "a8c6ec63",
+        "encoded": "for%20p%20in%20list_fn():",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "ce56c2",
+        "hash": "c78d2fb3",
+        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "ce56c2",
+        "hash": "1a9462df",
+        "encoded": "project%20=%20p",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "ce56c2",
+        "hash": "9b912b92",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "ce56c2",
+        "hash": "6aa8f535",
+        "encoded": "if%20project%20is%20None:",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "ce56c2",
+        "hash": "37e7cbe6",
+        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "ce56c2",
+        "hash": "35de7408",
+        "encoded": "raise%20AttributeError(",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "ce56c2",
+        "hash": "fe026028",
+        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "ce56c2",
+        "hash": "f2b912a5",
+        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "ce56c2",
+        "hash": "7ce3e01f",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "ce56c2",
+        "hash": "4b2672a1",
+        "encoded": "host%20=%20project.read_write_dns",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "ce56c2",
+        "hash": "aa203325",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "ce56c2",
+        "hash": "c47be4be",
+        "encoded": "return%20psycopg.connect(",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "ce56c2",
+        "hash": "5f806f77",
+        "encoded": "host=host,",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "ce56c2",
+        "hash": "bc5cc66a",
+        "encoded": "port=5432,",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "ce56c2",
+        "hash": "ef94f86f",
+        "encoded": "dbname=database,",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "ce56c2",
+        "hash": "8549e4c1",
+        "encoded": "user=w.current_user.me().user_name,",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "ce56c2",
+        "hash": "d1ad69ac",
+        "encoded": "password=cred.token,",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "ce56c2",
+        "hash": "c74d66af",
+        "encoded": "sslmode='require'",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "ce56c2",
+        "hash": "e41a7043",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "e93542",
+        "hash": "c8305ac3",
+        "encoded": "See:%20https://docs.databricks.com/aws/en/oltp/projects/api-usage",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "243": {
+        "chunkId": "e93542",
+        "hash": "99f61e1d",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "244": {
+        "chunkId": "e93542",
+        "hash": "e627f3ef",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "245": {
+        "chunkId": "e93542",
+        "hash": "542a0b76",
+        "encoded": "import%20psycopg",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "247": {
+        "chunkId": "e93542",
+        "hash": "9a2adafb",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "284": {
+        "chunkId": "e93542",
+        "hash": "8eb92dbb",
+        "encoded": ")",
+        "prevChunkIds": [
+          "c8e757"
+        ]
+      },
+      "286": {
+        "chunkId": "e93542",
+        "hash": "67996e6a",
+        "encoded": "host%20=%20project.read_write_dns",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "287": {
+        "chunkId": "e93542",
+        "hash": "550da287",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "e93542",
+        "hash": "50f79ba8",
+        "encoded": "return%20psycopg.connect(",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "290": {
+        "chunkId": "e93542",
+        "hash": "25c998dc",
+        "encoded": "host=host,",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "291": {
+        "chunkId": "e93542",
+        "hash": "006733df",
+        "encoded": "port=5432,",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "292": {
+        "chunkId": "e93542",
+        "hash": "dd4d33e0",
+        "encoded": "dbname=database,",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "293": {
+        "chunkId": "e93542",
+        "hash": "672a1e73",
+        "encoded": "user=w.current_user.me().user_name,",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "294": {
+        "chunkId": "e93542",
+        "hash": "69362c43",
+        "encoded": "password=cred.token,",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "295": {
+        "chunkId": "e93542",
+        "hash": "b2b0bc1f",
+        "encoded": "sslmode='require'",
+        "prevChunkIds": [
+          "716ffd"
+        ]
+      },
+      "296": {
+        "chunkId": "716ffd",
+        "hash": "6f636190",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "93472e",
+        "hash": "0a9c2f31",
+        "encoded": "#%20Feature%20store%20table:%20one%20row%20per%20card,%20upserted%20on%20each%20transaction",
+        "prevChunkIds": [
+          "c8e757",
+          "cd84e7"
+        ]
+      },
+      "303": {
+        "chunkId": "93472e",
+        "hash": "52973c1e",
+        "encoded": "CREATE%20TABLE%20%7BFEATURE_TABLE%7D%20(",
+        "prevChunkIds": [
+          "c8e757",
+          "cd84e7"
+        ]
+      },
+      "322": {
+        "chunkId": "c8e757",
+        "hash": "b49ca990",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "cd84e7",
+        "hash": "aa8763b3",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "93472e",
+        "hash": "eda2f551",
+        "encoded": "#%20Scores%20table:%20one%20row%20per%20transaction",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "328": {
+        "chunkId": "93472e",
+        "hash": "ae513ed3",
+        "encoded": "CREATE%20TABLE%20%7BSCORES_TABLE%7D%20(",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "cd84e7",
+        "hash": "d14bdc34",
+        "encoded": ")",
+        "prevChunkIds": [
+          "329f02",
+          "cd84e7"
+        ]
+      },
+      "337": {
+        "chunkId": "9019c8",
+        "hash": "4dc2c7e6",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": [
+          "9019c8"
+        ]
+      },
+      "342": {
+        "chunkId": "93472e",
+        "hash": "9b4a63e7",
+        "encoded": "#%20Verify%20tables%20exist",
+        "prevChunkIds": [
+          "090428"
+        ]
       },
       "345": {
-        "chunkId": "5c57c4",
-        "hash": "ffd49630",
-        "encoded": "kafka_sasl_jaas_config%20=%20(",
-        "prevChunkIds": []
-      },
-      "346": {
-        "chunkId": "5c57c4",
-        "hash": "7cfe30f5",
-        "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
-        "prevChunkIds": []
-      },
-      "347": {
-        "chunkId": "5c57c4",
-        "hash": "bae1319f",
-        "encoded": "'username=%22$ConnectionString%22%20'",
-        "prevChunkIds": []
-      },
-      "348": {
-        "chunkId": "5c57c4",
-        "hash": "6d8f5b64",
-        "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
+        "chunkId": "93472e",
+        "hash": "fe123d0b",
+        "encoded": "print(f%22%5Cn%7BFEATURE_TABLE%7D%20schema:%22)",
         "prevChunkIds": []
       },
       "349": {
-        "chunkId": "5c57c4",
-        "hash": "ef7eb2fc",
-        "encoded": ")",
+        "chunkId": "f4bc26",
+        "hash": "c89bae29",
+        "encoded": "#%20COMMAND%20----------",
         "prevChunkIds": []
       },
       "351": {
-        "chunkId": "5c57c4",
-        "hash": "ab884ea4",
-        "encoded": "raw_stream%20=%20(",
+        "chunkId": "04c7c8",
+        "hash": "8a3d3931",
+        "encoded": "#%20MAGIC%20%25md",
         "prevChunkIds": []
       },
       "352": {
-        "chunkId": "5c57c4",
-        "hash": "febb95aa",
-        "encoded": "spark.readStream",
-        "prevChunkIds": []
-      },
-      "353": {
-        "chunkId": "5c57c4",
-        "hash": "dbc2846c",
-        "encoded": ".format(%22kafka%22)",
+        "chunkId": "04c7c8",
+        "hash": "64c48b25",
+        "encoded": "#%20MAGIC%20---",
         "prevChunkIds": []
       },
       "354": {
-        "chunkId": "5c57c4",
-        "hash": "32d55bec",
-        "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
-        "prevChunkIds": []
-      },
-      "355": {
-        "chunkId": "5c57c4",
-        "hash": "ca9f5712",
-        "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))%20%20#%20Read%20only%202%20of%208%20partitions",
-        "prevChunkIds": []
-      },
-      "356": {
-        "chunkId": "5c57c4",
-        "hash": "24d82c64",
-        "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
-        "prevChunkIds": []
-      },
-      "357": {
-        "chunkId": "5c57c4",
-        "hash": "01762ec3",
-        "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
-        "prevChunkIds": []
+        "chunkId": "670968",
+        "hash": "154a19b6",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "090428"
+        ]
       },
       "358": {
-        "chunkId": "5c57c4",
-        "hash": "e6add88b",
-        "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
-        "prevChunkIds": []
-      },
-      "359": {
-        "chunkId": "5c57c4",
-        "hash": "b71dba0c",
-        "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
-        "prevChunkIds": []
-      },
-      "360": {
-        "chunkId": "5c57c4",
-        "hash": "0254a445",
-        "encoded": ".option(%22kafka.sasl.jaas.config%22,%20kafka_sasl_jaas_config)",
-        "prevChunkIds": []
-      },
-      "361": {
-        "chunkId": "5c57c4",
-        "hash": "61ff24bd",
-        "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
-        "prevChunkIds": []
+        "chunkId": "f4bc26",
+        "hash": "070160a6",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "090428"
+        ]
       },
       "362": {
-        "chunkId": "5c57c4",
-        "hash": "2c16ad29",
-        "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
-        "prevChunkIds": []
-      },
-      "363": {
-        "chunkId": "5c57c4",
-        "hash": "f4ede63d",
-        "encoded": ".load()",
-        "prevChunkIds": []
+        "chunkId": "f4bc26",
+        "hash": "a127e8c5",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "090428"
+        ]
       },
       "364": {
+        "chunkId": "79b326",
+        "hash": "9ecff1ef",
+        "encoded": "from%20pyspark.sql.types%20import%20*",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "120c71",
+        "hash": "10fb4a2d",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "1fdcd4"
+        ]
+      },
+      "373": {
+        "chunkId": "2951a0",
+        "hash": "badebd24",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "f4bc26",
+        "hash": "ceff853f",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "378": {
+        "chunkId": "670968",
+        "hash": "ae63869c",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "381": {
+        "chunkId": "670968",
+        "hash": "09a1f5dd",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "383": {
+        "chunkId": "670968",
+        "hash": "3acf59cb",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "397": {
+        "chunkId": "670968",
+        "hash": "7ed431be",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "399": {
+        "chunkId": "903350",
+        "hash": "542f5e05",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "04c7c8",
+          "93472e",
+          "903350"
+        ]
+      },
+      "404": {
+        "chunkId": "329f02",
+        "hash": "51d3460b",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "407": {
+        "chunkId": "1f57a1",
+        "hash": "02abcae7",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "409": {
+        "chunkId": "120c71",
+        "hash": "552ed43f",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": [
+          "f4bc26",
+          "93472e"
+        ]
+      },
+      "412": {
+        "chunkId": "903350",
+        "hash": "e55abde3",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "903350"
+        ]
+      },
+      "413": {
+        "chunkId": "04c7c8",
+        "hash": "6cedcfa1",
+        "encoded": "#%20MAGIC%20This%20is%20the%20core%20**online%20feature%20store**%20pipeline:",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "414": {
+        "chunkId": "04c7c8",
+        "hash": "291bfa92",
+        "encoded": "#%20MAGIC%201.%20Read%20raw%20transactions%20from%20Kafka",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "415": {
+        "chunkId": "04c7c8",
+        "hash": "b70971e1",
+        "encoded": "#%20MAGIC%202.%20Enrich%20with%20merchant%20+%20card%20profile%20data%20(inline%20lookups%20--%20avoids%20slot%20pressure)",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "416": {
+        "chunkId": "04c7c8",
+        "hash": "23e01ec8",
+        "encoded": "#%20MAGIC%203.%20Compute%20feature%20columns",
+        "prevChunkIds": [
+          "120c71",
+          "93472e"
+        ]
+      },
+      "418": {
+        "chunkId": "cd84e7",
+        "hash": "062d03fc",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "420": {
+        "chunkId": "04c7c8",
+        "hash": "a514440c",
+        "encoded": "#%20MAGIC%20updated%20within%20milliseconds%20of%20each%20transaction.",
+        "prevChunkIds": [
+          "2951a0",
+          "93472e"
+        ]
+      },
+      "422": {
+        "chunkId": "ee124b",
+        "hash": "53e84c9b",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": [
+          "f4bc26",
+          "93472e"
+        ]
+      },
+      "432": {
+        "chunkId": "79b326",
+        "hash": "6ad1c10c",
+        "encoded": "StructField(%22card_id%22,%20StringType()),",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "435": {
+        "chunkId": "79b326",
+        "hash": "3cbc7cf6",
+        "encoded": "StructField(%22amount_usd%22,%20DoubleType()),",
+        "prevChunkIds": [
+          "93472e"
+        ]
+      },
+      "443": {
+        "chunkId": "79b326",
+        "hash": "474300b8",
+        "encoded": "%5D)",
+        "prevChunkIds": []
+      },
+      "445": {
         "chunkId": "5c57c4",
-        "hash": "48426c2a",
+        "hash": "f9667283",
+        "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20---",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "446": {
+        "chunkId": "5c57c4",
+        "hash": "893d1d1d",
+        "encoded": "eventhub_conn_string%20=%20dbutils.secrets.get(scope=%22kafka-scope%22,%20key=%22kafka-connection-string%22)",
+        "prevChunkIds": [
+          "903350",
+          "5c57c4"
+        ]
+      },
+      "447": {
+        "chunkId": "5c57c4",
+        "hash": "dc2224e1",
+        "encoded": "kafka_sasl_jaas_config%20=%20(",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "448": {
+        "chunkId": "5c57c4",
+        "hash": "ff4e8ba2",
+        "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "449": {
+        "chunkId": "5c57c4",
+        "hash": "44b5c09e",
+        "encoded": "'username=%22$ConnectionString%22%20'",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "450": {
+        "chunkId": "5c57c4",
+        "hash": "881a1d23",
+        "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "451": {
+        "chunkId": "1fdcd4",
+        "hash": "a7ef57e5",
+        "encoded": ")",
+        "prevChunkIds": [
+          "cd84e7",
+          "090428",
+          "1fdcd4"
+        ]
+      },
+      "453": {
+        "chunkId": "5c57c4",
+        "hash": "7fe3d800",
+        "encoded": "raw_stream%20=%20(",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "454": {
+        "chunkId": "5c57c4",
+        "hash": "56e862a2",
+        "encoded": "spark.readStream",
+        "prevChunkIds": [
+          "1f57a1",
+          "5c57c4"
+        ]
+      },
+      "455": {
+        "chunkId": "5c57c4",
+        "hash": "d26f472e",
+        "encoded": ".format(%22kafka%22)",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "456": {
+        "chunkId": "5c57c4",
+        "hash": "bb2c53a0",
+        "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
+        "prevChunkIds": [
+          "120c71",
+          "5c57c4"
+        ]
+      },
+      "457": {
+        "chunkId": "5c57c4",
+        "hash": "66aab55a",
+        "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))%20%20#%20Read%20only%202%20of%208%20partitions",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "458": {
+        "chunkId": "5c57c4",
+        "hash": "ddffba9a",
+        "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "459": {
+        "chunkId": "5c57c4",
+        "hash": "252612b5",
+        "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
+        "prevChunkIds": [
+          "903350",
+          "5c57c4"
+        ]
+      },
+      "460": {
+        "chunkId": "5c57c4",
+        "hash": "02d4dc1c",
+        "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
+        "prevChunkIds": [
+          "04c7c8",
+          "5c57c4"
+        ]
+      },
+      "461": {
+        "chunkId": "5c57c4",
+        "hash": "70d36143",
+        "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
+        "prevChunkIds": [
+          "04c7c8",
+          "5c57c4"
+        ]
+      },
+      "462": {
+        "chunkId": "5c57c4",
+        "hash": "8055e4c7",
+        "encoded": ".option(%22kafka.sasl.jaas.config%22,%20kafka_sasl_jaas_config)",
+        "prevChunkIds": [
+          "04c7c8",
+          "5c57c4"
+        ]
+      },
+      "463": {
+        "chunkId": "5c57c4",
+        "hash": "4d49dfd1",
+        "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
+        "prevChunkIds": [
+          "04c7c8",
+          "5c57c4"
+        ]
+      },
+      "464": {
+        "chunkId": "5c57c4",
+        "hash": "c5f2b995",
+        "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "465": {
+        "chunkId": "5c57c4",
+        "hash": "2e85e976",
+        "encoded": ".load()",
+        "prevChunkIds": [
+          "cd84e7",
+          "5c57c4"
+        ]
+      },
+      "466": {
+        "chunkId": "93472e",
+        "hash": "aab68411",
+        "encoded": ")",
+        "prevChunkIds": [
+          "ee124b",
+          "1fdcd4"
+        ]
+      },
+      "474": {
+        "chunkId": "93472e",
+        "hash": "7f37b015",
         "encoded": ")",
         "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "5c57c4",
+        "hash": "1e0be67d",
+        "encoded": ")",
+        "prevChunkIds": [
+          "79b326",
+          "5c57c4"
+        ]
+      },
+      "557": {
+        "chunkId": "5c57c4",
+        "hash": "02484d9f",
+        "encoded": ")",
+        "prevChunkIds": [
+          "5c57c4",
+          "1fdcd4"
+        ]
+      },
+      "567": {
+        "chunkId": "cd84e7",
+        "hash": "69771a46",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "04c7c8"
+        ]
+      },
+      "570": {
+        "chunkId": "090428",
+        "hash": "8783a48d",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "1fdcd4",
+        "hash": "67b4b7a2",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "090428",
+          "1fdcd4"
+        ]
+      },
+      "579": {
+        "chunkId": "93472e",
+        "hash": "2f1ef053",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "f4bc26",
+        "hash": "c0df9d56",
+        "encoded": "print(f%22Active%20streaming%20queries:%20%7Blen(spark.streams.active)%7D%22)",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "f4bc26",
+        "hash": "c9e78e55",
+        "encoded": "for%20q%20in%20spark.streams.active:",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "f4bc26",
+        "hash": "ad791cc2",
+        "encoded": "print(f%22%20%20Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "f4bc26",
+        "hash": "ed4b1073",
+        "encoded": "q.stop()",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "f4bc26",
+        "hash": "712c8024",
+        "encoded": "print(%22All%20queries%20stopped.%22)",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "f4bc26",
+        "hash": "486554f4",
+        "encoded": "#%20Column%20order%20must%20match%20the%20FEATURE_TABLE%20schema%20in%20Section%201.3%20and%20the",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "f4bc26",
+        "hash": "b721dab2",
+        "encoded": "#%20%60feature_output.select(...)%60%20in%20Section%204.2.%20Update%20this%20list%20together%20with%20those",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "f4bc26",
+        "hash": "26036947",
+        "encoded": "#%20if%20the%20schema%20changes.",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "f4bc26",
+        "hash": "42db714c",
+        "encoded": "FEATURE_COLUMNS%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "601": {
+        "chunkId": "f4bc26",
+        "hash": "99106187",
+        "encoded": "%22card_id%22,",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "f4bc26",
+        "hash": "9753076c",
+        "encoded": "%22last_transaction_id%22,",
+        "prevChunkIds": []
+      },
+      "603": {
+        "chunkId": "f4bc26",
+        "hash": "99883bc8",
+        "encoded": "%22last_amount%22,",
+        "prevChunkIds": []
+      },
+      "604": {
+        "chunkId": "f4bc26",
+        "hash": "06630785",
+        "encoded": "%22amount_to_avg_ratio%22,",
+        "prevChunkIds": [
+          "69ec31"
+        ]
+      },
+      "605": {
+        "chunkId": "f4bc26",
+        "hash": "131d940a",
+        "encoded": "%22exceeds_30d_max%22,",
+        "prevChunkIds": [
+          "79b326"
+        ]
+      },
+      "606": {
+        "chunkId": "f4bc26",
+        "hash": "97d0a246",
+        "encoded": "%22is_online%22,",
+        "prevChunkIds": []
+      },
+      "607": {
+        "chunkId": "f4bc26",
+        "hash": "953154ca",
+        "encoded": "%22hour_of_day%22,",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "f4bc26",
+        "hash": "0bc5aace",
+        "encoded": "%22is_weekend%22,",
+        "prevChunkIds": [
+          "79b326"
+        ]
+      },
+      "609": {
+        "chunkId": "f4bc26",
+        "hash": "429418db",
+        "encoded": "%22is_night_owl%22,",
+        "prevChunkIds": []
+      },
+      "610": {
+        "chunkId": "f4bc26",
+        "hash": "42aa2ffc",
+        "encoded": "%22is_high_risk_country%22,",
+        "prevChunkIds": []
+      },
+      "611": {
+        "chunkId": "f4bc26",
+        "hash": "d6df659d",
+        "encoded": "%22is_cross_border%22,",
+        "prevChunkIds": []
+      },
+      "612": {
+        "chunkId": "f4bc26",
+        "hash": "16b9e4fc",
+        "encoded": "%22is_round_amount%22,",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "f4bc26",
+        "hash": "496aa9e4",
+        "encoded": "%22is_small_probe%22,",
+        "prevChunkIds": []
+      },
+      "614": {
+        "chunkId": "f4bc26",
+        "hash": "9a996137",
+        "encoded": "%22merchant_risk_score%22,",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "615": {
+        "chunkId": "f4bc26",
+        "hash": "c5cdd17e",
+        "encoded": "%22amount_usd%22,",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "f4bc26",
+        "hash": "2f368da3",
+        "encoded": "%22last_latitude%22,",
+        "prevChunkIds": [
+          "79b326"
+        ]
+      },
+      "617": {
+        "chunkId": "f4bc26",
+        "hash": "823e8fda",
+        "encoded": "%22last_longitude%22,",
+        "prevChunkIds": [
+          "090428"
+        ]
+      },
+      "618": {
+        "chunkId": "f4bc26",
+        "hash": "abeb0b9d",
+        "encoded": "%22updated_at%22,",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "619": {
+        "chunkId": "f4bc26",
+        "hash": "46791201",
+        "encoded": "%5D",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "620": {
+        "chunkId": "f4bc26",
+        "hash": "307cce9f",
+        "encoded": "KEY_COLUMNS%20=%20%5B%22card_id%22%5D",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "622": {
+        "chunkId": "f4bc26",
+        "hash": "37987909",
+        "encoded": "dbutils.fs.rm(checkpoint_feature_store,%20recurse=True)",
+        "prevChunkIds": [
+          "1fdcd4",
+          "5c57c4"
+        ]
+      },
+      "630": {
+        "chunkId": "b73a71",
+        "hash": "311f90f9",
+        "encoded": ")",
+        "prevChunkIds": [
+          "79b326",
+          "b73a71"
+        ]
+      },
+      "632": {
+        "chunkId": "f4bc26",
+        "hash": "9f94c3d9",
+        "encoded": "feature_query%20=%20(",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "633": {
+        "chunkId": "f4bc26",
+        "hash": "0c0d2e52",
+        "encoded": "feature_output",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "634": {
+        "chunkId": "f4bc26",
+        "hash": "28f075e6",
+        "encoded": ".select(*FEATURE_COLUMNS)",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "635": {
+        "chunkId": "f4bc26",
+        "hash": "cb7bf838",
+        "encoded": ".writeStream",
+        "prevChunkIds": [
+          "5c57c4"
+        ]
+      },
+      "637": {
+        "chunkId": "f4bc26",
+        "hash": "8e053d1f",
+        "encoded": ".option(%22checkpointLocation%22,%20checkpoint_feature_store)",
+        "prevChunkIds": [
+          "f4bc26",
+          "5c57c4"
+        ]
+      },
+      "639": {
+        "chunkId": "f4bc26",
+        "hash": "169fad58",
+        "encoded": ".outputMode(%22update%22)",
+        "prevChunkIds": [
+          "f4bc26",
+          "b73a71"
+        ]
+      },
+      "640": {
+        "chunkId": "f4bc26",
+        "hash": "35454507",
+        "encoded": ".start()",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "641": {
+        "chunkId": "69ec31",
+        "hash": "1d8c324e",
+        "encoded": ")",
+        "prevChunkIds": [
+          "69ec31"
+        ]
+      },
+      "644": {
+        "chunkId": "f4bc26",
+        "hash": "5262fe87",
+        "encoded": "print(f%22Writing%20columns:%20%7BFEATURE_COLUMNS%7D%22)",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "645": {
+        "chunkId": "f4bc26",
+        "hash": "7cbc6224",
+        "encoded": "print(f%22Upsert%20key:%20%7BKEY_COLUMNS%7D%22)",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "652": {
+        "chunkId": "79b326",
+        "hash": "8c41c5c0",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "656": {
+        "chunkId": "04c7c8",
+        "hash": "27284ed6",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "658": {
+        "chunkId": "04c7c8",
+        "hash": "7c3c7f52",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "676": {
+        "chunkId": "716ffd",
+        "hash": "cd7d0bc2",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "680": {
+        "chunkId": "c8e757",
+        "hash": "e1bb627d",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "729": {
+        "chunkId": "1f57a1",
+        "hash": "10004900",
+        "encoded": "display(",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "738": {
+        "chunkId": "b73a71",
+        "hash": "8515ee42",
+        "encoded": ")",
+        "prevChunkIds": [
+          "5c57c4",
+          "b73a71"
+        ]
+      },
+      "739": {
+        "chunkId": "f4bc26",
+        "hash": "d2259f77",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "746": {
+        "chunkId": "f4bc26",
+        "hash": "ebf69807",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "753": {
+        "chunkId": "f4bc26",
+        "hash": "00056043",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "768": {
+        "chunkId": "120c71",
+        "hash": "44f7c0e1",
+        "encoded": ")",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "783": {
+        "chunkId": "120c71",
+        "hash": "322d7926",
+        "encoded": "%5D",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "850": {
+        "chunkId": "cd84e7",
+        "hash": "3e7ede14",
+        "encoded": "print(f%22%22%22",
+        "prevChunkIds": []
+      },
+      "858": {
+        "chunkId": "93472e",
+        "hash": "54c8e39c",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": []
+      },
+      "869": {
+        "chunkId": "f4bc26",
+        "hash": "3e3122f0",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "883": {
+        "chunkId": "090428",
+        "hash": "3d59addf",
+        "encoded": "print(f%22%22%22",
+        "prevChunkIds": []
+      },
+      "890": {
+        "chunkId": "93472e",
+        "hash": "952105b9",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": []
+      },
+      "896": {
+        "chunkId": "84d414",
+        "hash": "3ddc2064",
+        "encoded": "#%20MAGIC%20##%20Section%207:%20ML%20Scoring%20Pipeline",
+        "prevChunkIds": []
+      },
+      "897": {
+        "chunkId": "84d414",
+        "hash": "af4077ad",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": [
+          "cd84e7"
+        ]
+      },
+      "898": {
+        "chunkId": "84d414",
+        "hash": "f28e99a2",
+        "encoded": "#%20MAGIC%20Now%20we%20bring%20it%20all%20together:%20a%20streaming%20pipeline%20that%20reads%20transactions%20from%20Kafka,",
+        "prevChunkIds": []
+      },
+      "899": {
+        "chunkId": "84d414",
+        "hash": "e56635e5",
+        "encoded": "#%20MAGIC%20computes%20the%20same%20features,%20scores%20each%20transaction%20with%20the%20trained%20ML%20model,",
+        "prevChunkIds": []
+      },
+      "901": {
+        "chunkId": "84d414",
+        "hash": "ef38503d",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "902": {
+        "chunkId": "84d414",
+        "hash": "0435919b",
+        "encoded": "#%20MAGIC%20The%20ML%20model%20is%20loaded%20as%20a%20**Spark%20UDF**%20(User-Defined%20Function),%20which%20means",
+        "prevChunkIds": []
+      },
+      "903": {
+        "chunkId": "84d414",
+        "hash": "b713c88e",
+        "encoded": "#%20MAGIC%20it%20runs%20natively%20inside%20the%20streaming%20pipeline%20--%20no%20external%20API%20calls%20needed.",
+        "prevChunkIds": []
+      },
+      "924": {
+        "chunkId": "2951a0",
+        "hash": "59bb661d",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "930": {
+        "chunkId": "b73a71",
+        "hash": "3ee743ff",
+        "encoded": "#%20Read%20from%20the%20same%20Kafka%20topic%20(2%20partitions%20to%20stay%20within%20slot%20limits)",
+        "prevChunkIds": [
+          "090428",
+          "b73a71"
+        ]
+      },
+      "931": {
+        "chunkId": "b73a71",
+        "hash": "5c0e68e4",
+        "encoded": "#%20---%20Azure%20Event%20Hubs%20SASL_SSL%20config%20(same%20as%20Section%204.1)%20---",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "932": {
+        "chunkId": "b73a71",
+        "hash": "38667a6f",
+        "encoded": "scoring_sasl_jaas_config%20=%20(",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "933": {
+        "chunkId": "b73a71",
+        "hash": "ac483971",
+        "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "934": {
+        "chunkId": "b73a71",
+        "hash": "ae5417ec",
+        "encoded": "'username=%22$ConnectionString%22%20'",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "935": {
+        "chunkId": "b73a71",
+        "hash": "10eaf78b",
+        "encoded": "f'password=%22%7Beventhub_conn_string%7D%22;'",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "936": {
+        "chunkId": "1f57a1",
+        "hash": "8581da73",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "938": {
+        "chunkId": "b73a71",
+        "hash": "21499bdf",
+        "encoded": "raw_stream_scoring%20=%20(",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "939": {
+        "chunkId": "b73a71",
+        "hash": "e7ddc063",
+        "encoded": "spark.readStream",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "940": {
+        "chunkId": "b73a71",
+        "hash": "80a94b0f",
+        "encoded": ".format(%22kafka%22)",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "941": {
+        "chunkId": "b73a71",
+        "hash": "01dd71f0",
+        "encoded": ".option(%22kafka.bootstrap.servers%22,%20kafka_brokers)",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "942": {
+        "chunkId": "b73a71",
+        "hash": "38d6aaa4",
+        "encoded": ".option(%22assign%22,%20json.dumps(%7Binput_topic:%20%5B0,%201%5D%7D))",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "943": {
+        "chunkId": "b73a71",
+        "hash": "27e7ca46",
+        "encoded": ".option(%22startingOffsets%22,%20%22latest%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "944": {
+        "chunkId": "b73a71",
+        "hash": "52b7269c",
+        "encoded": ".option(%22failOnDataLoss%22,%20%22false%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "945": {
+        "chunkId": "b73a71",
+        "hash": "0da4464a",
+        "encoded": ".option(%22kafka.security.protocol%22,%20%22SASL_SSL%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "946": {
+        "chunkId": "b73a71",
+        "hash": "b6b8a330",
+        "encoded": ".option(%22kafka.sasl.mechanism%22,%20%22PLAIN%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "947": {
+        "chunkId": "b73a71",
+        "hash": "c960c06d",
+        "encoded": ".option(%22kafka.sasl.jaas.config%22,%20scoring_sasl_jaas_config)",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "948": {
+        "chunkId": "b73a71",
+        "hash": "8a232a00",
+        "encoded": ".option(%22kafka.request.timeout.ms%22,%20%2260000%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "949": {
+        "chunkId": "b73a71",
+        "hash": "0b7507fe",
+        "encoded": ".option(%22kafka.session.timeout.ms%22,%20%2230000%22)",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "950": {
+        "chunkId": "b73a71",
+        "hash": "2b075fa3",
+        "encoded": ".load()",
+        "prevChunkIds": [
+          "84d414",
+          "b73a71"
+        ]
+      },
+      "951": {
+        "chunkId": "1f57a1",
+        "hash": "07300c0e",
+        "encoded": ")",
+        "prevChunkIds": [
+          "f4bc26"
+        ]
+      },
+      "1019": {
+        "chunkId": "000ce8",
+        "hash": "1af15215",
+        "encoded": "scores_output%20=%20ml_scored.select(",
+        "prevChunkIds": []
+      },
+      "1031": {
+        "chunkId": "1f57a1",
+        "hash": "d237f1fd",
+        "encoded": "%22transaction_id%22,%20%22card_id%22,%20%22amount_usd%22,",
+        "prevChunkIds": []
+      },
+      "1035": {
+        "chunkId": "120c71",
+        "hash": "eeb1f709",
+        "encoded": "%22scored_at%22,",
+        "prevChunkIds": []
+      },
+      "1047": {
+        "chunkId": "120c71",
+        "hash": "9e10a308",
+        "encoded": "dbutils.fs.rm(checkpoint_scoring,%20recurse=True)",
+        "prevChunkIds": []
+      },
+      "1049": {
+        "chunkId": "120c71",
+        "hash": "7cd0815f",
+        "encoded": "#%20Match%20the%20SCORES_TABLE%20schema%20declared%20in%20Section%201.3.",
+        "prevChunkIds": []
+      },
+      "1050": {
+        "chunkId": "120c71",
+        "hash": "1d0716be",
+        "encoded": "SCORES_COLUMNS%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "1051": {
+        "chunkId": "120c71",
+        "hash": "e3f91dc7",
+        "encoded": "%22transaction_id%22,",
+        "prevChunkIds": []
+      },
+      "1052": {
+        "chunkId": "120c71",
+        "hash": "afb42bcd",
+        "encoded": "%22card_id%22,",
+        "prevChunkIds": []
+      },
+      "1053": {
+        "chunkId": "120c71",
+        "hash": "548433d2",
+        "encoded": "%22amount_usd%22,",
+        "prevChunkIds": []
+      },
+      "1054": {
+        "chunkId": "120c71",
+        "hash": "68fc60b7",
+        "encoded": "%22fraud_probability%22,",
+        "prevChunkIds": []
+      },
+      "1055": {
+        "chunkId": "120c71",
+        "hash": "c53840c2",
+        "encoded": "%22ml_decision%22,",
+        "prevChunkIds": []
+      },
+      "1056": {
+        "chunkId": "120c71",
+        "hash": "31ac5f97",
+        "encoded": "%22model_version%22,",
+        "prevChunkIds": []
+      },
+      "1059": {
+        "chunkId": "120c71",
+        "hash": "9f94f93c",
+        "encoded": "SCORES_KEY%20=%20%5B%22transaction_id%22%5D",
+        "prevChunkIds": []
+      },
+      "1069": {
+        "chunkId": "120c71",
+        "hash": "0020e3c7",
+        "encoded": "scoring_query%20=%20(",
+        "prevChunkIds": []
+      },
+      "1070": {
+        "chunkId": "120c71",
+        "hash": "92e28e23",
+        "encoded": "scores_output",
+        "prevChunkIds": []
+      },
+      "1071": {
+        "chunkId": "120c71",
+        "hash": "932bca92",
+        "encoded": ".select(*SCORES_COLUMNS)",
+        "prevChunkIds": []
+      },
+      "1072": {
+        "chunkId": "120c71",
+        "hash": "31b6910a",
+        "encoded": ".writeStream",
+        "prevChunkIds": []
+      },
+      "1074": {
+        "chunkId": "120c71",
+        "hash": "c33daf3b",
+        "encoded": ".option(%22checkpointLocation%22,%20checkpoint_scoring)",
+        "prevChunkIds": []
+      },
+      "1076": {
+        "chunkId": "120c71",
+        "hash": "1ac1fd9d",
+        "encoded": ".outputMode(%22update%22)",
+        "prevChunkIds": []
+      },
+      "1077": {
+        "chunkId": "120c71",
+        "hash": "44ec9308",
+        "encoded": ".start()",
+        "prevChunkIds": []
+      },
+      "1081": {
+        "chunkId": "120c71",
+        "hash": "7ef5a4d9",
+        "encoded": "print(f%22Writing%20columns:%20%7BSCORES_COLUMNS%7D%22)",
+        "prevChunkIds": []
+      },
+      "1082": {
+        "chunkId": "120c71",
+        "hash": "7eeb8eb1",
+        "encoded": "print(f%22Upsert%20key:%20%7BSCORES_KEY%7D%22)",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1122": {
+        "chunkId": "2951a0",
+        "hash": "fb408c1c",
+        "encoded": "#%20MAGIC%20Let's%20see%20what%20the%20online%20feature%20store%20looks%20like%20now.%20Each%20card%20should%20have",
+        "prevChunkIds": []
+      },
+      "1123": {
+        "chunkId": "2951a0",
+        "hash": "59096ad3",
+        "encoded": "#%20MAGIC%20its%20latest%20features%20updated%20in%20near-real-time.",
+        "prevChunkIds": [
+          "120c71"
+        ]
+      },
+      "1127": {
+        "chunkId": "2951a0",
+        "hash": "0fd42548",
+        "encoded": "time.sleep(10)",
+        "prevChunkIds": []
+      },
+      "1132": {
+        "chunkId": "2951a0",
+        "hash": "1161c8b3",
+        "encoded": "print(f%22Total%20rows%20in%20%7BFEATURE_TABLE%7D:%20%7Btotal%7D%5Cn%22)",
+        "prevChunkIds": []
+      },
+      "1182": {
+        "chunkId": "1f57a1",
+        "hash": "9ffab602",
+        "encoded": "time.sleep(300)",
+        "prevChunkIds": []
+      },
+      "1187": {
+        "chunkId": "1f57a1",
+        "hash": "068643b2",
+        "encoded": "print(f%22Total%20scored%20transactions:%20%7Btotal%7D%5Cn%22)",
+        "prevChunkIds": []
+      },
+      "1196": {
+        "chunkId": "f4bc26",
+        "hash": "ab13cc30",
+        "encoded": "%22%22%22)",
+        "prevChunkIds": [
+          "b73a71"
+        ]
+      },
+      "1235": {
+        "chunkId": "805620",
+        "hash": "afc8a554",
+        "encoded": "#%20DBTITLE%201,Grant%20App%20access%20to%20all%20tables",
+        "prevChunkIds": []
+      },
+      "1252": {
+        "chunkId": "ee124b",
+        "hash": "a68c9dd8",
+        "encoded": "#%20Stop%20all%20streaming%20queries",
+        "prevChunkIds": []
+      },
+      "1253": {
+        "chunkId": "ee124b",
+        "hash": "f2c34585",
+        "encoded": "for%20q%20in%20spark.streams.active:",
+        "prevChunkIds": []
+      },
+      "1254": {
+        "chunkId": "ee124b",
+        "hash": "2c5f10d7",
+        "encoded": "print(f%22Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
+        "prevChunkIds": []
+      },
+      "1255": {
+        "chunkId": "ee124b",
+        "hash": "1612e855",
+        "encoded": "q.stop()",
+        "prevChunkIds": []
+      },
+      "1257": {
+        "chunkId": "ee124b",
+        "hash": "dbe939fa",
+        "encoded": "#%20Uncache%20reference%20tables",
+        "prevChunkIds": []
+      },
+      "1258": {
+        "chunkId": "ee124b",
+        "hash": "6e691590",
+        "encoded": "spark.catalog.uncacheTable(%22merchants%22)",
+        "prevChunkIds": []
+      },
+      "1259": {
+        "chunkId": "ee124b",
+        "hash": "f7525785",
+        "encoded": "spark.catalog.uncacheTable(%22card_profiles%22)",
+        "prevChunkIds": []
+      },
+      "1261": {
+        "chunkId": "ee124b",
+        "hash": "1532cd0b",
+        "encoded": "print(%22All%20queries%20stopped,%20tables%20uncached.%22)",
+        "prevChunkIds": []
+      },
+      "1272": {
+        "chunkId": "ee124b",
+        "hash": "ea823bf9",
+        "encoded": "#%20Optional:%20clean%20up%20checkpoints",
+        "prevChunkIds": []
+      },
+      "1273": {
+        "chunkId": "ee124b",
+        "hash": "6927ab7c",
+        "encoded": "#%20dbutils.fs.rm(f%22%7Bproject_dir%7D/checkpoints%22,%20recurse=True)",
+        "prevChunkIds": []
+      },
+      "1274": {
+        "chunkId": "ee124b",
+        "hash": "a63c6681",
+        "encoded": "#%20print(%22Checkpoints%20cleared.%22)",
+        "prevChunkIds": []
+      },
+      "1282": {
+        "chunkId": "d099ed",
+        "hash": "af1ca4a0",
+        "encoded": "#%20MAGIC%20**References:**",
+        "prevChunkIds": [
+          "805620"
+        ]
+      },
+      "1284": {
+        "chunkId": "d099ed",
+        "hash": "9ef65ec9",
+        "encoded": "#%20MAGIC%20-%20%5BMLflow%20Model%20Registry%5D(https://mlflow.org/docs/latest/model-registry.html)",
+        "prevChunkIds": []
+      },
+      "1285": {
+        "chunkId": "d099ed",
+        "hash": "06473f54",
+        "encoded": "#%20MAGIC%20-%20%5BReal-Time%20Mode%20in%20Structured%20Streaming%5D(https://docs.databricks.com/en/structured-streaming/real-time.html)",
+        "prevChunkIds": []
+      },
+      "1287": {
+        "chunkId": "d099ed",
+        "hash": "04b813e9",
+        "encoded": "#%20MAGIC%20-%20%5BFeature%20Store%20Concepts%5D(https://docs.databricks.com/en/machine-learning/feature-store/index.html)",
+        "prevChunkIds": []
       }
-    }
+    },
+    "_prevLineCount": 1193
   }
 }

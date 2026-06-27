@@ -1,0 +1,407 @@
+{
+  "notebooks\\resources\\00_lakebase_writer.py": {
+    "filename": "00_lakebase_writer.py",
+    "path": "notebooks\\resources\\00_lakebase_writer.py",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d82824": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558060,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "6ab81983",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:31:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "a4f1ec": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558060,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "f4157aab",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:31:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f0682d": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558180,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "b322ed9e",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:33:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "3a8317": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782558180,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "56727438",
+          "files": "bc3375ee"
+        },
+        "hash": "e69c4159",
+        "messageId": "system_decbef30-7216-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:33:00 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "123": {
+        "chunkId": "3a8317",
+        "hash": "af84d6c8",
+        "encoded": "if%20host%20is%20None%20or%20user%20is%20None%20or%20password%20is%20None:",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "3a8317",
+        "hash": "6abeeb97",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "3a8317",
+        "hash": "d94baa51",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "3a8317",
+        "hash": "00ffdf10",
+        "encoded": "#%20The%20correct%20DatabaseAPI%20method%20is%20.get()%20%E2%80%94%20not%20.get_project()%20or%20.get_database_project()",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "3a8317",
+        "hash": "137db924",
+        "encoded": "project%20=%20w.database.get(name=project_name)",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "3a8317",
+        "hash": "7d0f7774",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "3a8317",
+        "hash": "a17d9551",
+        "encoded": "host%20=%20host%20or%20project.read_write_dns",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "3a8317",
+        "hash": "ffaacda9",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "3a8317",
+        "hash": "cea91ade",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "f0682d",
+        "hash": "ceee21ad",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "f0682d",
+        "hash": "72d6fd1e",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "f0682d",
+        "hash": "5a025fba",
+        "encoded": "#%20Resolve%20the%20Lakebase%20project%20%E2%80%94%20the%20DatabaseAPI%20method%20name%20varies",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "f0682d",
+        "hash": "387ca40b",
+        "encoded": "#%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "f0682d",
+        "hash": "565a3ffe",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "f0682d",
+        "hash": "007f12f4",
+        "encoded": "project_obj%20=%20None",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "f0682d",
+        "hash": "b7e6a8d1",
+        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "f0682d",
+        "hash": "f265996b",
+        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "f0682d",
+        "hash": "d10a38ea",
+        "encoded": "if%20fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "f0682d",
+        "hash": "bb765773",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "f0682d",
+        "hash": "fb0c69ff",
+        "encoded": "project_obj%20=%20fn(name=project_name)",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "f0682d",
+        "hash": "cc5b7771",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "f0682d",
+        "hash": "05a25e38",
+        "encoded": "except%20TypeError:",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "f0682d",
+        "hash": "a8cbbce2",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "f0682d",
+        "hash": "d35df7df",
+        "encoded": "project_obj%20=%20fn(project_name)",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "f0682d",
+        "hash": "774336fb",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "f0682d",
+        "hash": "26130d97",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "f0682d",
+        "hash": "1adc5f9e",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "f0682d",
+        "hash": "421b2426",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "f0682d",
+        "hash": "13397c4f",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "f0682d",
+        "hash": "61bd3b26",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "f0682d",
+        "hash": "072f4766",
+        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "f0682d",
+        "hash": "9d3e34aa",
+        "encoded": "if%20list_fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "f0682d",
+        "hash": "239e31a3",
+        "encoded": "for%20p%20in%20list_fn():",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "f0682d",
+        "hash": "55779bca",
+        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "f0682d",
+        "hash": "4ade7767",
+        "encoded": "project_obj%20=%20p",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "f0682d",
+        "hash": "9462115f",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "f0682d",
+        "hash": "6ba7ad5e",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "f0682d",
+        "hash": "4ffa71ab",
+        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "f0682d",
+        "hash": "afed9178",
+        "encoded": "raise%20AttributeError(",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "f0682d",
+        "hash": "3e31010f",
+        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "f0682d",
+        "hash": "1db4360f",
+        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "f0682d",
+        "hash": "b887ce18",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "f0682d",
+        "hash": "03175ed9",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "f0682d",
+        "hash": "c5f8446e",
+        "encoded": "host%20=%20host%20or%20project_obj.read_write_dns",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "f0682d",
+        "hash": "ee031af4",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "f0682d",
+        "hash": "ff705e15",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "d82824",
+        "hash": "ac3f7191",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "d82824",
+        "hash": "af72c5e9",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "d82824",
+        "hash": "ab1e50c4",
+        "encoded": "project%20=%20w.database.get_project(name=project_name)",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "d82824",
+        "hash": "21e02f85",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "a4f1ec",
+        "hash": "bb8726e8",
+        "encoded": "#%20MAGIC%20Run%20this%20cell%20only%20when%20developing%20the%20writer%20in%20isolation.%20It%20is%20a%20no-op",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "a4f1ec",
+        "hash": "e55e1bec",
+        "encoded": "#%20MAGIC%20when%20the%20notebook%20is%20loaded%20via%20%60%25run%60%20from%20another%20notebook%20(because%20the",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "a4f1ec",
+        "hash": "f2c0283d",
+        "encoded": "#%20MAGIC%20%60LAKEBASE_PROJECT_NAME%60%20and%20%60FEATURE_TABLE%60%20widgets%20won't%20be%20set%20there).",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 272
+  }
+}
