@@ -61,7 +61,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install --upgrade databricks-sdk psycopg kafka-python
+# MAGIC %pip install --upgrade databricks-sdk "psycopg[binary]" kafka-python
 
 # COMMAND ----------
 
@@ -175,15 +175,20 @@ Lakebase Configuration:
 # COMMAND ----------
 
 def connect_to_lakebase(project_name, database):
-  """Generate credentials for a Lakebase project."""
+  """Generate credentials for a Lakebase project using the Projects API.
+  
+  Uses the Lakebase Projects API (get_database_project) to resolve the
+  read/write DNS endpoint and generate a short-lived credential.
+  See: https://docs.databricks.com/aws/en/oltp/projects/api-usage
+  """
   from databricks.sdk import WorkspaceClient
-  import uuid
   import psycopg
 
   w = WorkspaceClient()
-  host = w.database.get_database_instance(name=project_name).read_write_dns
-  cred = w.database.generate_database_credential(
-      request_id=str(uuid.uuid4()), project_names=[project_name])
+  # Use the Projects API (not the deprecated Instance API)
+  project = w.database.get_database_project(name=project_name)
+  host = project.read_write_dns
+  cred = w.database.generate_database_credential(project_names=[project_name])
   
   return psycopg.connect(
     host=host,
