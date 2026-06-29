@@ -14,14 +14,13 @@
 # MAGIC public Solution Accelerators.
 # MAGIC
 # MAGIC `foreach` is the supported public-API alternative for custom sinks in Real-Time
-# MAGIC Mode. This module reproduces the five things `jdbcStreaming` was doing
+# MAGIC Mode. This module reproduces the key things `jdbcStreaming` was doing
 # MAGIC internally so that the calling notebook stays clean:
 # MAGIC
-# MAGIC 1. Resolves the Lakebase project and opens a `psycopg` connection
-# MAGIC 2. Refreshes the short-lived Lakebase OAuth credential before its 60-min TTL expires
-# MAGIC 3. Buffers rows and flushes via Postgres `INSERT ... ON CONFLICT` (upsert)
-# MAGIC 4. Reconnects on transient `OperationalError` / `InterfaceError`
-# MAGIC 5. Cleans up cleanly on stream stop
+# MAGIC 1. Accepts host, user, and a pre-generated Lakebase token directly
+# MAGIC 2. Buffers rows and flushes via Postgres `INSERT ... ON CONFLICT` (upsert)
+# MAGIC 3. Reconnects on transient `OperationalError` / `InterfaceError`
+# MAGIC 4. Cleans up cleanly on stream stop
 # MAGIC
 # MAGIC ## Usage
 # MAGIC
@@ -29,7 +28,9 @@
 # MAGIC %run ./resources/00_lakebase_writer
 # MAGIC
 # MAGIC writer = LakebaseFeatureWriter(
-# MAGIC     project_name=LAKEBASE_PROJECT_NAME,
+# MAGIC     host=LAKEBASE_HOST,
+# MAGIC     user=LAKEBASE_USER,
+# MAGIC     password=LAKEBASE_TOKEN,
 # MAGIC     table=FEATURE_TABLE,
 # MAGIC     columns=[...],          # column order must match feature_output.select(...)
 # MAGIC     key_columns=["card_id"]
@@ -51,16 +52,13 @@
 # MAGIC - `BUFFER_SIZE` — rows buffered in memory before each `INSERT` round-trip.
 # MAGIC   Higher = better throughput, slightly higher latency between flushes.
 # MAGIC
-# MAGIC ## Caveat: 1-hour credential TTL
+# MAGIC ## Caveat: 1-hour token TTL
 # MAGIC
-# MAGIC The Databricks SDK is only callable from the **driver** (notebook auth env
-# MAGIC vars are not propagated to executor Python workers), so this writer
-# MAGIC resolves the Lakebase host/user/token on the driver in `__init__` and
-# MAGIC ships them as plain fields to executors. The token expires after ~60
-# MAGIC minutes, after which the streaming query will fail. Suitable for
-# MAGIC short test runs; for long-running production streams either pass a
-# MAGIC long-lived service principal PAT as `password=...`, or wait for
-# MAGIC `jdbcStreaming` GA (which handles refresh internally).
+# MAGIC The Lakebase token expires after ~60 minutes, after which the streaming
+# MAGIC query will fail. Generate a new token from the Lakebase UI Connect dialog
+# MAGIC and restart the streaming query. Suitable for short test/demo runs;
+# MAGIC for long-running production streams wait for `jdbcStreaming` GA
+# MAGIC (which handles credential refresh internally).
 
 # COMMAND ----------
 
@@ -77,100 +75,46 @@ class LakebaseFeatureWriter:
 
     ## Auth model
 
-    The Databricks SDK is only callable from the **driver** (the notebook process)
-    because Databricks runtime auth env vars are not propagated to executor
-    Python workers. This class therefore resolves the Lakebase host, port, user,
-    and short-lived OAuth token on the driver in `__init__` and ships them as
-    plain serializable fields to executors. Executors only call `psycopg.connect()`.
+    Accepts a pre-generated Lakebase token (from the Lakebase UI Connect dialog)
+    directly as the ``password`` parameter. No Databricks SDK calls are made.
 
-    ## Limitation: 1-hour credential TTL
+    ## Limitation: 1-hour token TTL
 
-    Lakebase short-lived credentials expire after ~60 minutes. Because executors
-    cannot mint new credentials on their own, this writer is suitable for
-    streaming runs that finish within ~50 minutes, or for streams that you
-    restart periodically. For unbounded production streams, either:
-      - wait for `jdbcStreaming` GA (handles refresh internally), or
-      - use a service principal with a longer-lived PAT and pass `password=...`
-        to the constructor instead of letting it generate one.
+    Lakebase tokens expire after ~60 minutes. Generate a new token from the
+    Lakebase UI and restart the streaming query for runs longer than ~50 minutes.
     """
 
     BUFFER_SIZE = 200                    # rows; tune for throughput vs. freshness
 
     def __init__(
         self,
-        project_name: str,
+        host: str,
+        user: str,
+        password: str,
         table: str,
         columns: list,
         key_columns: list,
         database: str = "databricks_postgres",
-        host: str = None,
         port: int = 5432,
-        user: str = None,
-        password: str = None,
     ):
-        """All connection details are captured eagerly on the driver. If `host`,
-        `user`, or `password` are not provided, they are resolved via the
-        Databricks SDK at construction time (driver-side only).
+        """All connection details are captured eagerly on the driver.
+
+        Args:
+            host:          DNS hostname from the Lakebase Connect dialog, e.g.
+                           ``<endpoint-id>.database.<region>.azuredatabricks.net``
+            user:          Databricks user email.
+            password:      Lakebase token (generate from the Lakebase UI Connect dialog).
+            table:         Target PostgreSQL table name.
+            columns:       Column names in insert order.
+            key_columns:   Primary key column(s) for ON CONFLICT upsert.
+            database:      PostgreSQL database name (default ``databricks_postgres``).
+            port:          PostgreSQL port (default ``5432``).
         """
-        self.project_name = project_name
         self.table = table
         self.columns = list(columns)
         self.key_columns = list(key_columns)
         self.database = database
         self.port = port
-
-        # Resolve any unspecified connection details on the DRIVER. Executors
-        # never call the Databricks SDK -- they get plain strings from `self`.
-        if host is None or user is None or password is None:
-            from databricks.sdk import WorkspaceClient
-            w = WorkspaceClient()
-
-            # Resolve the Lakebase instance ("project" in the UI).
-            # In the Databricks SDK, Lakebase projects map to "database instances".
-            # The correct methods are get_database_instance / list_database_instances.
-            db_api = w.database
-            instance = None
-
-            # Try direct lookup by name
-            try:
-                instance = db_api.get_database_instance(name=project_name)
-            except TypeError:
-                try:
-                    instance = db_api.get_database_instance(project_name)
-                except Exception:
-                    pass
-            except Exception:
-                pass
-
-            # Fallback: list all instances and match by name
-            if instance is None:
-                try:
-                    for inst in db_api.list_database_instances():
-                        if getattr(inst, "name", None) == project_name:
-                            instance = inst
-                            break
-                except Exception as e:
-                    raise RuntimeError(
-                        f"Failed to list Lakebase instances: {e}. "
-                        f"Verify that your Lakebase project '{project_name}' exists."
-                    )
-
-            if instance is None:
-                try:
-                    available_names = [getattr(inst, "name", "?") for inst in db_api.list_database_instances()]
-                except Exception:
-                    available_names = ["(could not list instances)"]
-                raise ValueError(
-                    f"Lakebase instance '{project_name}' not found. "
-                    f"Available instances: {available_names}. "
-                    f"Check the name in Databricks UI > SQL > Lakebase."
-                )
-
-            cred = db_api.generate_database_credential(project_names=[project_name])
-            host = host or instance.read_write_dns
-            user = user or w.current_user.me().user_name
-            password = password or cred.token
-
         self.host = host
         self.user = user
         self.password = password

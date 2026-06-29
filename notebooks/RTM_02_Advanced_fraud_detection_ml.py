@@ -30,7 +30,7 @@
 # MAGIC ### Prerequisites
 # MAGIC - **Run Notebook 1 first** (or at least its Section 1 for Kafka config)
 # MAGIC - Same cluster requirements as Notebook 1 (Real-Time Mode enabled)
-# MAGIC - A **Lakebase project** (we'll configure the name below)
+# MAGIC - A **Lakebase project** (we'll configure the project UUID below)
 # MAGIC
 # MAGIC ### Notebook Sections
 # MAGIC | # | Section | What it does |
@@ -72,13 +72,6 @@ dbutils.library.restartPython()
 # DBTITLE 1,TODO: Configure your environment
 # --- Kafka (only needed if running standalone, i.e., without running Notebook 1 first) ---
 dbutils.widgets.text("secret_scope", "", "Kafka Secret Scope Name")
-
-# --- Lakebase ---
-# Use your existing Lakebase project:
-#   1. In the Databricks UI, go to SQL > Lakebase
-#   2. Open your Lakebase project (or create one if needed)
-#   3. Enter the project name in the widget below
-dbutils.widgets.text("lakebase_project", "", "Lakebase Project Name")
 
 # COMMAND ----------
 
@@ -130,21 +123,56 @@ Configuration:
 # MAGIC store** -- a low-latency database where streaming pipelines write features and
 # MAGIC scoring services read them in sub-milliseconds.
 # MAGIC
-# MAGIC Set your Lakebase project name below. If you don't have one yet, create it from
-# MAGIC the Databricks UI under **SQL > Lakebase**.
+# MAGIC We connect directly using `psycopg` with a short-lived token generated from
+# MAGIC the Lakebase UI **Connect** dialog. Generate a **new token** each time you run
+# MAGIC this notebook (tokens expire after ~1 hour).
 
 # COMMAND ----------
 
 # ============================================================
-# Lakebase config (reads from widget)
+# Lakebase connection config (direct psycopg with token)
 # ============================================================
-LAKEBASE_PROJECT_NAME = dbutils.widgets.get("lakebase_project")
-if not LAKEBASE_PROJECT_NAME:
-    raise ValueError(
-        "Widget 'lakebase_project' is empty. Enter your Lakebase project name in the widget above. "
-        "To create one: Databricks UI > SQL > Lakebase > Create project."
-    )
-LAKEBASE_DATABASE = "databricks_postgres"  # Default database
+import psycopg
+
+LAKEBASE_HOST     = "ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net"
+LAKEBASE_DATABASE = "databricks_postgres"
+LAKEBASE_USER     = "harbanga@publicisgroupe.net"
+
+# ⚠️ Generate a NEW token from the Lakebase UI each session (expires ~1 hour)
+LAKEBASE_TOKEN = (
+    "eyJraWQiOiJjMGQ2YzQ2MTA4NWVmY2E1YTgzYTMxNzI2ZDQ2ZmMzN2QxNmMwYzY4NWQwNDRh"
+    "MTJhNTUxNjhhOGM3MzZkM2U2IiwidHlwIjoiYXQrand0IiwiYWxnIjoiUlMyNTYifQ."
+    "eyJjbGllbnRfaWQiOiJkYi1kYXRhYmFzZS1jcmVkZW50aWFsIiwic2NvcGUiOiJpYW0uY3Vy"
+    "cmVudC11c2VyOnJlYWQgaWFtLmdyb3VwczpyZWFkIGlhbS5zZXJ2aWNlLXByaW5jaXBhbHM6"
+    "cmVhZCBpYW0udXNlcnM6cmVhZCIsInBjdHgiOiJDdTBGQ2hRSUFSb0dDTXFOXzlFR0lnWUlx"
+    "UDdfMFFZb0FoS0hCUUdvTnFZOHBxXzd6cW8xY2lycEV5V0VmTU9jREprR2NRdXZtQlhFSndm"
+    "d1ZJNWdWQjFFNEIwUTV2MjA5N2xiUTB0S2tURGVHeGF3NW8tNVJfQ19sNW0zcUtHUVREU2E1"
+    "a2ktTTlfSHRUMGZ3NlFibGhfaER4MzhvZ2dZS2w4WkNCN1U3dWRYOFVGMHVOMjBfM2JJMVBX"
+    "MEtoeUxETE9FTkhaYWlGWFU4U01OM0swWlg1Njh2RGM4NzAxX2dwdHl4dmUzNHVpSHFFb0g0"
+    "M3c3T1g5U2w1a3pKbXBDdzM4VVpCWE1wUExLVndDWEEwU1dOZFFYdkJjRmVTaFlvSnBncUcz"
+    "V1hLZGtWNWZ5Vl9SNmpXZkJpVl9ITHhzUHhYb0xZRm5zQkZ1aVdPNVhQMmQwbGppUlIzQ1Jx"
+    "VlNmek1DNU42NUJQMlFiZk4yZHhxb2dFZzN0ckFFdFFuSkpuaGZuZEdkQzExZ1VFRnB0Y0U2"
+    "dURwUHpadk1QUEh5U2RHdENiS0dQWm5Hb2lTZzk3QjVRLThUVkVMSFh5NDVFRWp0WktKVkN5"
+    "amZLRWZFcEpzWmJIRDdmNEd3QXlIWW5LLUlhcEljN0tsbF9aNk9RSWlySFhQMmlFOW1fc056"
+    "RVBtelhLMFdtOGJ1VzRVSm5XcDdlU1hEUy1KZ3JxZEVKM3BwTXp1MWx2dHdXZnE5c1plLWp3"
+    "cVdoZk16ajIxcHFGZHloZllCN0VleXZfSS11dWVaZVdXRjZZYVRjREdFZ1RKb2hVN0NTX0Jf"
+    "Xy1jMXlpVTZncnhIYm5PUXB6eTFuUV8tbmlYUWR1NURBSlVQTV9OSi12NlpRZ0l0MWtnMm5a"
+    "ODBGSFE2WFIyWGVnWVZZcGs0eFZkem1qQVRBMDZoLU0xRWU2T2l3UGpoTDZ0S0ZSbGRraV9m"
+    "Z3B4dzlDOUpLVlRiVFRJcmplVTUzV3piTG9tWGQ2WXhwcnBuNFE3dDljN0l4TUJUOGRMWmVO"
+    "Ykxpc01JUVRMR0VEMWlteXVRcXdNNXE3OG11TlhyZjdoVHJHd0Q3Y21WTFZLZkpUQkx4TXpM"
+    "QXhIRW9NVzlCdHpmZ2tiSXZCYTdMaUY0Vk9kdkM2a1NvUGhXLW50Nm1xR0hsQkhyVjJZSFFS"
+    "T29BTXUzQk9JZXNHa3NCam5fTDFUQkVBaUFWWHk5dWNKQzYtaDRqd1BkS19INHNwcndibmxh"
+    "QkFWV3dtVUxFRjkyMnRRSWdJZE1ZUU1xR0JzRFFXUDA4bjl1Q3FhQjNvcXB6U3lKQThYakdB"
+    "TUdSMW9vPSIsImlzcyI6Imh0dHBzOi8vYWRiLTc0MDU2MTczMzMyNjA2MjYuNi5henVyZWRh"
+    "dGFicmlja3MubmV0L29pZGMiLCJhdWQiOiI3NDA1NjE3MzMzMjYwNjI2Iiwic3ViIjoiaGFy"
+    "YmFuZ2FAcHVibGljaXNncm91cGUubmV0IiwiaWF0IjoxNzgyNTY0NTg0LCJleHAiOjE3ODI1"
+    "NjgxODQsImp0aSI6ImQwZDk0MTE5LTJlMzgtNDM2ZC1hZDRhLTQzYTExZjdjODc3MCJ9."
+    "wd7krLG1zDHPmNXwZ02k16GqyJwbkpYXVE2LY6cmdrBRWyFOkkpthpbR0Y2CbEGKOX1rGr-a"
+    "unTK6dC9WkJDswH2OFqz9ucEvaMA8r7qzLNvdxV0WWXXNRG1SUTqZggshycelH5_EazxCTn1G"
+    "4VT7hbIbJ2TThupCWKh_LW1FUVJvCeaH4Jydy-KM_x0p875TszPj8phG37u19KPsmQxTe1eik"
+    "Xj4ULBMGXYzUY44WriW9KLrdjaIi01b4l88WGI7-DFSZka1c3z0KHqUBRVjr71y-Lsh2uNY9G"
+    "SwV2KRThT-34CB963O1oR46buYQ9th7uEMMgNWRZRNB8jEbYAXg"
+)
 
 # Feature store table names (must match the app's table names in apps/app.py)
 FEATURE_TABLE = "card_features"
@@ -156,9 +184,11 @@ checkpoint_feature_store = f"{project_dir}/checkpoints/feature_store"
 checkpoint_scoring       = f"{project_dir}/checkpoints/scoring"
 
 print(f"""
-Lakebase Configuration:
-  Project:        {LAKEBASE_PROJECT_NAME}
+Lakebase Connection Configuration:
+  Host:           {LAKEBASE_HOST}
   Database:       {LAKEBASE_DATABASE}
+  User:           {LAKEBASE_USER}
+  Token:          {LAKEBASE_TOKEN[:20]}...{LAKEBASE_TOKEN[-10:]}  (truncated)
   Feature Table:  {FEATURE_TABLE}
   Scores Table:   {SCORES_TABLE}
 """)
@@ -174,79 +204,26 @@ Lakebase Configuration:
 
 # COMMAND ----------
 
-def connect_to_lakebase(project_name, database):
-  """Generate credentials for a Lakebase project using the Databricks SDK.
-  
-  Resolves the read/write DNS endpoint and generates a short-lived credential.
-  
-  IMPORTANT: In the Databricks SDK, Lakebase "projects" map to DatabaseAPI
-  "instances". The correct method is `get_database_instance(name=...)` or
-  `list_database_instances()` — there is no `get_project` / `get_database_project`.
-  See: https://docs.databricks.com/aws/en/oltp/projects/api-usage
+def connect_to_lakebase():
+  """Connect to Lakebase using a pre-generated token.
+
+  Uses the module-level LAKEBASE_HOST, LAKEBASE_DATABASE, LAKEBASE_USER,
+  and LAKEBASE_TOKEN constants configured in Section 1.2.
+
+  ⚠️ The token expires after ~1 hour. Generate a new one from the
+  Lakebase UI Connect dialog and update LAKEBASE_TOKEN before re-running.
   """
-  from databricks.sdk import WorkspaceClient
-  import psycopg
-
-  w = WorkspaceClient()
-
-  # --- Resolve the Lakebase instance ("project" in the UI) ---
-  # The DatabaseAPI exposes instances, not projects. Use get_database_instance
-  # first, then fall back to listing all instances and filtering by name.
-  db_api = w.database
-  instance = None
-
-  # Try direct lookup by name
-  try:
-      instance = db_api.get_database_instance(name=project_name)
-  except TypeError:
-      # SDK version may not accept 'name' kwarg — try positional
-      try:
-          instance = db_api.get_database_instance(project_name)
-      except Exception:
-          pass
-  except Exception:
-      pass
-
-  # Fallback: list all instances and match by name
-  if instance is None:
-      try:
-          for inst in db_api.list_database_instances():
-              if getattr(inst, "name", None) == project_name:
-                  instance = inst
-                  break
-      except Exception as e:
-          raise RuntimeError(
-              f"Failed to list Lakebase instances: {e}. "
-              f"Verify that your Lakebase project '{project_name}' exists "
-              f"and that your cluster has access to the Databricks SDK."
-          )
-
-  if instance is None:
-      # Provide helpful error with available instance names
-      try:
-          available_names = [getattr(inst, "name", "?") for inst in db_api.list_database_instances()]
-      except Exception:
-          available_names = ["(could not list instances)"]
-      raise ValueError(
-          f"Lakebase instance '{project_name}' not found. "
-          f"Available instances: {available_names}. "
-          f"Check the name in Databricks UI > SQL > Lakebase."
-      )
-
-  host = instance.read_write_dns
-  cred = db_api.generate_database_credential(project_names=[project_name])
-  
   return psycopg.connect(
-    host=host,
+    host=LAKEBASE_HOST,
     port=5432,
-    dbname=database,
-    user=w.current_user.me().user_name,
-    password=cred.token,
-    sslmode='require'
+    dbname=LAKEBASE_DATABASE,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
+    sslmode="require"
   )
 
 # Test connection and create tables
-with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     # Feature store table: one row per card, upserted on each transaction
     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
     cur.execute(f"""
@@ -290,7 +267,7 @@ with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn
     print(f"Created tables: {FEATURE_TABLE}, {SCORES_TABLE}")
 
 # Verify tables exist
-with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '{FEATURE_TABLE}' ORDER BY ordinal_position")
     print(f"\n{FEATURE_TABLE} schema:")
     for row in cur.fetchall():
@@ -572,7 +549,9 @@ KEY_COLUMNS = ["card_id"]
 dbutils.fs.rm(checkpoint_feature_store, recurse=True)
 
 writer = LakebaseFeatureWriter(
-    project_name=LAKEBASE_PROJECT_NAME,
+    host=LAKEBASE_HOST,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
     table=FEATURE_TABLE,
     columns=FEATURE_COLUMNS,
     key_columns=KEY_COLUMNS,
@@ -1009,7 +988,9 @@ SCORES_COLUMNS = [
 SCORES_KEY = ["transaction_id"]
 
 scores_writer = LakebaseFeatureWriter(
-    project_name=LAKEBASE_PROJECT_NAME,
+    host=LAKEBASE_HOST,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
     table=SCORES_TABLE,
     columns=SCORES_COLUMNS,
     key_columns=SCORES_KEY,
@@ -1076,7 +1057,7 @@ run_baseline_generator(duration_seconds=30, tps=5)
 
 time.sleep(10)
 
-with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {FEATURE_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total rows in {FEATURE_TABLE}: {total}\n")
@@ -1131,7 +1112,7 @@ print("\nFraud injection complete.")
 
 time.sleep(300)
 
-with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {SCORES_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total scored transactions: {total}\n")
@@ -1184,7 +1165,7 @@ display(spark.sql("""
 
 # DBTITLE 1,Grant App access to all tables
 # If you want to grant access to all tables in the Lakebase schema, uncomment the following code
-# with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase() as conn, conn.cursor() as cur:
 #       conn.autocommit = True
 #       cur.execute("GRANT ALL ON ALL TABLES IN SCHEMA public TO PUBLIC")
 #       print("Done") 
@@ -1213,7 +1194,7 @@ print("All queries stopped, tables uncached.")
 # COMMAND ----------
 
 # Optional: drop Lakebase tables (uncomment to run)
-# with connect_to_lakebase(LAKEBASE_PROJECT_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase() as conn, conn.cursor() as cur:
 #     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
 #     cur.execute(f"DROP TABLE IF EXISTS {SCORES_TABLE}")
 #     conn.commit()

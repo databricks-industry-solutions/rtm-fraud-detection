@@ -32,6 +32,51 @@
           ]
         }
       ]
+    },
+    "85069eab": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1238
+          ]
+        }
+      ]
+    },
+    "a85a2dc6": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1221
+          ]
+        }
+      ]
+    },
+    "6fdf5299": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1223
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
@@ -40,6 +85,15 @@
     },
     "2f514128": {
       "value": "AttributeError: Could not resolve Lakebase project 'rtm-fraud-lakebase'. Available DatabaseAPI methods: ['create_database_catalog', 'create_database_instance', 'create_database_instance_and_wait', 'create_database_instance_role', 'create_database_table', 'create_synced_database_table', 'delete_database_catalog', 'delete_database_instance', 'delete_database_instance_role', 'delete_database_table', 'delete_synced_database_table', 'find_database_instance_by_uid', 'generate_database_credential', 'ge"
+    },
+    "9437e162": {
+      "value": "happened because you tried to use instance-based access, which is not how your current setup (SDK + POC) works."
+    },
+    "bdcc9f8e": {
+      "value": "this code is working from databricks.sdk import WorkspaceClient\n\n# ✅ Initialize client\nw = WorkspaceClient()\n\n# ✅ Use database API from client (DO NOT instantiate manually)\ndb = w.database\n\n# ✅ Your Lakebase context\nproject_id = \"2fcf556f-c4f0-4a88-842f-1db5e8459d91\"\nbranch_name = \"main\"\n\nprint(\"✅ Database client ready\")"
+    },
+    "24924ccc": {
+      "value": "USE THIS ...............import psycopg\n\nHOST = \"ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net\"\nDB = \"databricks_postgres\"\nUSER = \"harbanga@publicisgroupe.net\"\n\n# ⚠️ Generate a NEW token from UI\nTOKEN = \"eyJraWQiOiJjMGQ2YzQ2MTA4NWVmY2E1YTgzYTMxNzI2ZDQ2ZmMzN2QxNmMwYzY4NWQwNDRhMTJhNTUxNjhhOGM3MzZkM2U2IiwidHlwIjoiYXQrand0IiwiYWxnIjoiUlMyNTYifQ.eyJjbGllbnRfaWQiOiJkYi1kYXRhYmFzZS1jcmVkZW50aWFsIiwic2NvcGUiOiJpYW0uY3VycmVudC11c2VyOnJlYWQgaWFtLmdyb3VwczpyZWFkIGlhbS5zZXJ2aWNlLXByaW5jaXBhb"
     }
   },
   "localPrompts": {},

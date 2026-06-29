@@ -99,568 +99,2169 @@
         "codeBlockId": null,
         "isActive": true,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 4:40:57 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "33a7b9": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782562832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "9437e162",
+          "files": "85069eab"
+        },
+        "hash": "d9a70246",
+        "messageId": "system_27ad5370-721b-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 5:50:32 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7439ff": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782562832,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "9437e162",
+          "files": "85069eab"
+        },
+        "hash": "bdd7dc45",
+        "messageId": "system_27ad5370-721b-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 5:50:32 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "c9a8da": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782563406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "bdcc9f8e",
+          "files": "a85a2dc6"
+        },
+        "hash": "8d19c1ae",
+        "messageId": "system_9f7c8b30-7222-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:00:06 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "14cbc1": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782563406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "bdcc9f8e",
+          "files": "a85a2dc6"
+        },
+        "hash": "b5e400d4",
+        "messageId": "system_9f7c8b30-7222-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:00:06 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "ecbd85": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782565900,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "3d6fd9ba",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:41:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "39d14d": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782565900,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "866639cc",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:41:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f8da34": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782565900,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "37623090",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:41:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7a3e3d": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782565909,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "1cf6c7b4",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:41:49 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "e7d6f8": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782566034,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "daec1223",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:43:54 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "c201ba": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782566034,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "87bae319",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:43:54 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7187c6": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782566034,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "24924ccc",
+          "files": "6fdf5299"
+        },
+        "hash": "3d7540d6",
+        "messageId": "system_c7549950-7226-11f1-bb71-b1f5a4f73697",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/27/2026, 6:43:54 PM\n- **source**: agent\n- **type**: agentEditTool\n"
       }
     },
     "lines": {
-      "123": {
-        "chunkId": "3a8317",
-        "hash": "af84d6c8",
-        "encoded": "if%20host%20is%20None%20or%20user%20is%20None%20or%20password%20is%20None:",
+      "8": {
+        "chunkId": "c201ba",
+        "hash": "5a9f5678",
+        "encoded": "#%20MAGIC%20##%20Why%20this%20exists",
         "prevChunkIds": []
       },
-      "124": {
-        "chunkId": "3a8317",
-        "hash": "6abeeb97",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+      "9": {
+        "chunkId": "c201ba",
+        "hash": "52ea6e46",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c201ba",
+        "hash": "c6c956b2",
+        "encoded": "#%20MAGIC%20%60jdbcStreaming%60%20is%20a%20managed%20sink%20that%20handles%20connection%20lifecycle,%20credential",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c201ba",
+        "hash": "d80ae9a7",
+        "encoded": "#%20MAGIC%20refresh,%20batching,%20and%20upsert%20SQL%20internally.%20It%20is%20currently%20in%20**Private",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c201ba",
+        "hash": "7eb1d97d",
+        "encoded": "#%20MAGIC%20Preview**%20and%20so%20cannot%20be%20referenced%20in%20public-facing%20content%20like%20blogs%20or",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c201ba",
+        "hash": "d2d75b8c",
+        "encoded": "#%20MAGIC%20public%20Solution%20Accelerators.",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c201ba",
+        "hash": "fd8a2a1e",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c201ba",
+        "hash": "e8d862aa",
+        "encoded": "#%20MAGIC%20%60foreach%60%20is%20the%20supported%20public-API%20alternative%20for%20custom%20sinks%20in%20Real-Time",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c201ba",
+        "hash": "ca544b71",
+        "encoded": "#%20MAGIC%20Mode.%20This%20module%20reproduces%20the%20key%20things%20%60jdbcStreaming%60%20was%20doing",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c201ba",
+        "hash": "459626e8",
+        "encoded": "#%20MAGIC%20internally%20so%20that%20the%20calling%20notebook%20stays%20clean:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c201ba",
+        "hash": "102b34ca",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c201ba",
+        "hash": "eff1a4e2",
+        "encoded": "#%20MAGIC%201.%20Accepts%20host,%20user,%20and%20a%20pre-generated%20Lakebase%20token%20directly",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c201ba",
+        "hash": "4bf58118",
+        "encoded": "#%20MAGIC%202.%20Buffers%20rows%20and%20flushes%20via%20Postgres%20%60INSERT%20...%20ON%20CONFLICT%60%20(upsert)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c201ba",
+        "hash": "3773e30a",
+        "encoded": "#%20MAGIC%203.%20Reconnects%20on%20transient%20%60OperationalError%60%20/%20%60InterfaceError%60",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c201ba",
+        "hash": "3911f2a5",
+        "encoded": "#%20MAGIC%204.%20Cleans%20up%20cleanly%20on%20stream%20stop",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "14cbc1",
+        "hash": "0fac1226",
+        "encoded": "#%20MAGIC%202.%20Refreshes%20the%20short-lived%20Lakebase%20OAuth%20credential%20before%20its%2060-min%20TTL%20expires",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "14cbc1",
+        "hash": "fe867db4",
+        "encoded": "#%20MAGIC%203.%20Buffers%20rows%20and%20flushes%20via%20Postgres%20%60INSERT%20...%20ON%20CONFLICT%60%20(upsert)",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "14cbc1",
+        "hash": "63fda3c3",
+        "encoded": "#%20MAGIC%204.%20Reconnects%20on%20transient%20%60OperationalError%60%20/%20%60InterfaceError%60",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "14cbc1",
+        "hash": "d2f0fe19",
+        "encoded": "#%20MAGIC%205.%20Cleans%20up%20cleanly%20on%20stream%20stop",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "14cbc1",
+        "hash": "9d3a0460",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "14cbc1",
+        "hash": "3c4cff7a",
+        "encoded": "#%20MAGIC%20##%20Usage",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "14cbc1",
+        "hash": "7413592c",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "14cbc1",
+        "hash": "38ca7e2b",
+        "encoded": "#%20MAGIC%20%60%60%60python",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "14cbc1",
+        "hash": "632dafe8",
+        "encoded": "#%20MAGIC%20%25run%20./resources/00_lakebase_writer",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "14cbc1",
+        "hash": "5918f683",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "f8da34",
+        "hash": "83dd5893",
+        "encoded": "#%20MAGIC%20writer%20=%20LakebaseFeatureWriter(",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "f8da34",
+        "hash": "3c3aa3d8",
+        "encoded": "#%20MAGIC%20%20%20%20%20endpoint_name=LAKEBASE_ENDPOINT,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "f8da34",
+        "hash": "804e55a4",
+        "encoded": "#%20MAGIC%20%20%20%20%20host=LAKEBASE_HOST,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "f8da34",
+        "hash": "f27ff07a",
+        "encoded": "#%20MAGIC%20%20%20%20%20user=LAKEBASE_USER,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "f8da34",
+        "hash": "72db1575",
+        "encoded": "#%20MAGIC%20%20%20%20%20table=FEATURE_TABLE,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "f8da34",
+        "hash": "30f91898",
+        "encoded": "#%20MAGIC%20%20%20%20%20columns=%5B...%5D,%20%20%20%20%20%20%20%20%20%20#%20column%20order%20must%20match%20feature_output.select(...)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "e7d6f8",
+        "hash": "86828c7f",
+        "encoded": "#%20MAGIC%20%60%60%60python",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "e7d6f8",
+        "hash": "4b373355",
+        "encoded": "#%20MAGIC%20%25run%20./resources/00_lakebase_writer",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "e7d6f8",
+        "hash": "6b3762f8",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "e7d6f8",
+        "hash": "26dee6c4",
+        "encoded": "#%20MAGIC%20writer%20=%20LakebaseFeatureWriter(",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "e7d6f8",
+        "hash": "facdeb40",
+        "encoded": "#%20MAGIC%20%20%20%20%20host=LAKEBASE_HOST,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "e7d6f8",
+        "hash": "45731c2f",
+        "encoded": "#%20MAGIC%20%20%20%20%20user=LAKEBASE_USER,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "e7d6f8",
+        "hash": "4530aa08",
+        "encoded": "#%20MAGIC%20%20%20%20%20password=LAKEBASE_TOKEN,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "e7d6f8",
+        "hash": "c7081bd2",
+        "encoded": "#%20MAGIC%20%20%20%20%20table=FEATURE_TABLE,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "e7d6f8",
+        "hash": "10a8ee94",
+        "encoded": "#%20MAGIC%20%20%20%20%20columns=%5B...%5D,%20%20%20%20%20%20%20%20%20%20#%20column%20order%20must%20match%20feature_output.select(...)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "e7d6f8",
+        "hash": "64350a84",
+        "encoded": "#%20MAGIC%20%20%20%20%20key_columns=%5B%22card_id%22%5D",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "e7d6f8",
+        "hash": "3880ff12",
+        "encoded": "#%20MAGIC%20)",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "f8da34",
+        "hash": "7a585acb",
+        "encoded": "#%20MAGIC%20)",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "14cbc1",
+        "hash": "4689bae8",
+        "encoded": "#%20MAGIC%20%20%20%20%20project_id=LAKEBASE_PROJECT_ID,",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "14cbc1",
+        "hash": "8db6f488",
+        "encoded": "#%20MAGIC%20%20%20%20%20table=FEATURE_TABLE,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "14cbc1",
+        "hash": "bb6c8c44",
+        "encoded": "#%20MAGIC%20%20%20%20%20columns=%5B...%5D,%20%20%20%20%20%20%20%20%20%20#%20column%20order%20must%20match%20feature_output.select(...)",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "14cbc1",
+        "hash": "0514e848",
+        "encoded": "#%20MAGIC%20%20%20%20%20key_columns=%5B%22card_id%22%5D",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "14cbc1",
+        "hash": "ec46e7e5",
+        "encoded": "#%20MAGIC%20)",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "33a7b9",
+        "hash": "a78f647b",
+        "encoded": "#%20MAGIC%201.%20Generates%20a%20Lakebase%20project%20credential%20and%20resolves%20the%20DNS%20endpoint",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "33a7b9",
+        "hash": "cc5a3a4e",
+        "encoded": "#%20MAGIC%202.%20Refreshes%20the%20short-lived%20Lakebase%20OAuth%20credential%20before%20its%2060-min%20TTL%20expires",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "33a7b9",
+        "hash": "f40f53b8",
+        "encoded": "#%20MAGIC%203.%20Buffers%20rows%20and%20flushes%20via%20Postgres%20%60INSERT%20...%20ON%20CONFLICT%60%20(upsert)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "33a7b9",
+        "hash": "9fb8c93b",
+        "encoded": "#%20MAGIC%204.%20Reconnects%20on%20transient%20%60OperationalError%60%20/%20%60InterfaceError%60",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "33a7b9",
+        "hash": "fa50ed8e",
+        "encoded": "#%20MAGIC%205.%20Cleans%20up%20cleanly%20on%20stream%20stop",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "7187c6",
+        "hash": "330bb001",
+        "encoded": "%22%22%22Per-partition%20%60foreach%60%20writer%20that%20upserts%20streaming%20features%20into%20Lakebase.",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "7187c6",
+        "hash": "4811f546",
+        "encoded": "Buffers%20rows%20in%20memory%20and%20flushes%20via%20Postgres%20%60INSERT%20...%20ON%20CONFLICT%60%20for",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "7187c6",
+        "hash": "50a2c4e6",
+        "encoded": "upsert%20semantics.",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "7187c6",
+        "hash": "92812f3a",
+        "encoded": "##%20Auth%20model",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "7187c6",
+        "hash": "058baff8",
+        "encoded": "Accepts%20a%20pre-generated%20Lakebase%20token%20(from%20the%20Lakebase%20UI%20Connect%20dialog)",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "7187c6",
+        "hash": "23682abf",
+        "encoded": "directly%20as%20the%20%60%60password%60%60%20parameter.%20No%20Databricks%20SDK%20calls%20are%20made.",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "7187c6",
+        "hash": "300c19ef",
+        "encoded": "##%20Limitation:%201-hour%20token%20TTL",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "7187c6",
+        "hash": "1e503ac2",
+        "encoded": "Lakebase%20tokens%20expire%20after%20~60%20minutes.%20Generate%20a%20new%20token%20from%20the",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "7187c6",
+        "hash": "db53e4d5",
+        "encoded": "Lakebase%20UI%20and%20restart%20the%20streaming%20query%20for%20runs%20longer%20than%20~50%20minutes.",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "7187c6",
+        "hash": "04baf28f",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "39d14d",
+        "hash": "0c4f03b5",
+        "encoded": "%22%22%22Per-partition%20%60foreach%60%20writer%20that%20upserts%20streaming%20features%20into%20Lakebase.",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "39d14d",
+        "hash": "a4d5cda3",
+        "encoded": "Buffers%20rows%20in%20memory%20and%20flushes%20via%20Postgres%20%60INSERT%20...%20ON%20CONFLICT%60%20for",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "39d14d",
+        "hash": "c6d2b0b5",
+        "encoded": "upsert%20semantics.",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "39d14d",
+        "hash": "0d7b3d79",
+        "encoded": "##%20Auth%20model%20(Lakebase%20Autoscaling)",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "39d14d",
+        "hash": "a1432aa0",
+        "encoded": "Uses%20%60%60w.postgres.generate_database_credential(endpoint=...)%60%60%20on%20the",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "39d14d",
+        "hash": "141b245d",
+        "encoded": "**driver**%20to%20obtain%20a%20short-lived%20OAuth%20token.%20The%20endpoint%20and%20host%20are",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "39d14d",
+        "hash": "6005336e",
+        "encoded": "provided%20explicitly%20(from%20the%20Lakebase%20Connect%20dialog)%20rather%20than%20being",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "39d14d",
+        "hash": "b38b228d",
+        "encoded": "resolved%20via%20%60%60w.database%60%60%20instance%20lookups.",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "39d14d",
+        "hash": "02034581",
+        "encoded": "The%20Databricks%20SDK%20is%20only%20callable%20from%20the%20**driver**%20(the%20notebook",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "39d14d",
+        "hash": "82cb86fa",
+        "encoded": "process)%20because%20Databricks%20runtime%20auth%20env%20vars%20are%20not%20propagated%20to",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "39d14d",
+        "hash": "73054625",
+        "encoded": "executor%20Python%20workers.%20This%20class%20therefore%20resolves%20the%20credential%20on",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "39d14d",
+        "hash": "7f1f5a26",
+        "encoded": "the%20driver%20in%20%60%60__init__%60%60%20and%20ships%20plain%20strings%20to%20executors.",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "39d14d",
+        "hash": "769fe036",
+        "encoded": "##%20Limitation:%201-hour%20credential%20TTL",
         "prevChunkIds": []
       },
       "125": {
-        "chunkId": "3a8317",
-        "hash": "d94baa51",
-        "encoded": "w%20=%20WorkspaceClient()",
+        "chunkId": "39d14d",
+        "hash": "1ca2f16d",
+        "encoded": "Lakebase%20short-lived%20credentials%20expire%20after%20~60%20minutes.%20Because",
         "prevChunkIds": []
       },
       "126": {
-        "chunkId": "3a8317",
-        "hash": "00ffdf10",
-        "encoded": "#%20The%20correct%20DatabaseAPI%20method%20is%20.get()%20%E2%80%94%20not%20.get_project()%20or%20.get_database_project()",
+        "chunkId": "39d14d",
+        "hash": "6c2c5318",
+        "encoded": "executors%20cannot%20mint%20new%20credentials%20on%20their%20own,%20this%20writer%20is",
         "prevChunkIds": []
       },
       "127": {
-        "chunkId": "814b3d",
-        "hash": "cbc09051",
-        "encoded": "#%20Resolve%20the%20Lakebase%20instance%20(%22project%22%20in%20the%20UI).",
+        "chunkId": "39d14d",
+        "hash": "7ef657fb",
+        "encoded": "suitable%20for%20streaming%20runs%20that%20finish%20within%20~50%20minutes,%20or%20for",
         "prevChunkIds": []
       },
       "128": {
-        "chunkId": "814b3d",
-        "hash": "ea86bddc",
-        "encoded": "#%20In%20the%20Databricks%20SDK,%20Lakebase%20projects%20map%20to%20%22database%20instances%22.",
+        "chunkId": "39d14d",
+        "hash": "f489415e",
+        "encoded": "streams%20that%20you%20restart%20periodically.%20For%20unbounded%20production%20streams,",
         "prevChunkIds": []
       },
       "129": {
-        "chunkId": "814b3d",
-        "hash": "dfe5bee6",
-        "encoded": "#%20The%20correct%20methods%20are%20get_database_instance%20/%20list_database_instances.",
+        "chunkId": "39d14d",
+        "hash": "36c10651",
+        "encoded": "either:",
         "prevChunkIds": []
       },
       "130": {
-        "chunkId": "814b3d",
-        "hash": "00d0a97f",
-        "encoded": "db_api%20=%20w.database",
+        "chunkId": "39d14d",
+        "hash": "358dd6c7",
+        "encoded": "-%20wait%20for%20%60%60jdbcStreaming%60%60%20GA%20(handles%20refresh%20internally),%20or",
         "prevChunkIds": []
       },
       "131": {
-        "chunkId": "814b3d",
-        "hash": "72374952",
-        "encoded": "instance%20=%20None",
+        "chunkId": "39d14d",
+        "hash": "29939d6a",
+        "encoded": "-%20use%20a%20service%20principal%20with%20a%20longer-lived%20PAT%20and%20pass",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "39d14d",
+        "hash": "130ef0db",
+        "encoded": "%60%60password=...%60%60%20to%20the%20constructor.",
         "prevChunkIds": []
       },
       "133": {
-        "chunkId": "814b3d",
-        "hash": "6040bafc",
-        "encoded": "#%20Try%20direct%20lookup%20by%20name",
-        "prevChunkIds": []
-      },
-      "134": {
-        "chunkId": "814b3d",
-        "hash": "94bac4aa",
-        "encoded": "try:",
+        "chunkId": "39d14d",
+        "hash": "c7371326",
+        "encoded": "%22%22%22",
         "prevChunkIds": []
       },
       "135": {
-        "chunkId": "814b3d",
-        "hash": "8c800d1c",
-        "encoded": "instance%20=%20db_api.get_database_instance(name=project_name)",
-        "prevChunkIds": []
-      },
-      "136": {
-        "chunkId": "814b3d",
-        "hash": "81a1c5e9",
-        "encoded": "except%20TypeError:",
+        "chunkId": "39d14d",
+        "hash": "d7b9b565",
+        "encoded": "BUFFER_SIZE%20=%20200%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20rows;%20tune%20for%20throughput%20vs.%20freshness",
         "prevChunkIds": []
       },
       "137": {
-        "chunkId": "814b3d",
-        "hash": "b874511a",
-        "encoded": "try:",
+        "chunkId": "39d14d",
+        "hash": "0becd562",
+        "encoded": "def%20__init__(",
         "prevChunkIds": []
       },
       "138": {
-        "chunkId": "814b3d",
-        "hash": "7d911d44",
-        "encoded": "instance%20=%20db_api.get_database_instance(project_name)",
+        "chunkId": "39d14d",
+        "hash": "b4ad4729",
+        "encoded": "self,",
         "prevChunkIds": []
       },
       "139": {
-        "chunkId": "814b3d",
-        "hash": "6278eb92",
-        "encoded": "except%20Exception:",
+        "chunkId": "39d14d",
+        "hash": "7f05da5b",
+        "encoded": "endpoint_name:%20str,",
         "prevChunkIds": []
       },
       "140": {
-        "chunkId": "814b3d",
-        "hash": "6a731606",
-        "encoded": "pass",
+        "chunkId": "39d14d",
+        "hash": "df00b402",
+        "encoded": "host:%20str,",
         "prevChunkIds": []
       },
       "141": {
-        "chunkId": "814b3d",
-        "hash": "e1aafdc4",
-        "encoded": "except%20Exception:",
+        "chunkId": "39d14d",
+        "hash": "03b59ac6",
+        "encoded": "user:%20str,",
         "prevChunkIds": []
       },
       "142": {
-        "chunkId": "814b3d",
-        "hash": "3faf6d29",
-        "encoded": "pass",
+        "chunkId": "39d14d",
+        "hash": "065f5091",
+        "encoded": "table:%20str,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "39d14d",
+        "hash": "b00fdfcd",
+        "encoded": "columns:%20list,",
         "prevChunkIds": []
       },
       "144": {
-        "chunkId": "814b3d",
-        "hash": "468edf51",
-        "encoded": "#%20Fallback:%20list%20all%20instances%20and%20match%20by%20name",
+        "chunkId": "39d14d",
+        "hash": "6f198a43",
+        "encoded": "key_columns:%20list,",
         "prevChunkIds": []
       },
       "145": {
-        "chunkId": "814b3d",
-        "hash": "67f0bcf4",
-        "encoded": "if%20instance%20is%20None:",
+        "chunkId": "39d14d",
+        "hash": "e53f7aea",
+        "encoded": "database:%20str%20=%20%22databricks_postgres%22,",
         "prevChunkIds": []
       },
       "146": {
-        "chunkId": "814b3d",
-        "hash": "a8cbbce2",
-        "encoded": "try:",
+        "chunkId": "39d14d",
+        "hash": "9be43544",
+        "encoded": "port:%20int%20=%205432,",
         "prevChunkIds": []
       },
       "147": {
-        "chunkId": "814b3d",
-        "hash": "44afa38b",
-        "encoded": "for%20inst%20in%20db_api.list_database_instances():",
+        "chunkId": "39d14d",
+        "hash": "cd54a182",
+        "encoded": "password:%20str%20=%20None,",
         "prevChunkIds": []
       },
       "148": {
-        "chunkId": "814b3d",
-        "hash": "e7619bb3",
-        "encoded": "if%20getattr(inst,%20%22name%22,%20None)%20==%20project_name:",
+        "chunkId": "39d14d",
+        "hash": "43d45282",
+        "encoded": "):",
         "prevChunkIds": []
       },
       "149": {
-        "chunkId": "814b3d",
-        "hash": "4399303b",
-        "encoded": "instance%20=%20inst",
-        "prevChunkIds": []
-      },
-      "150": {
-        "chunkId": "814b3d",
-        "hash": "97062213",
-        "encoded": "break",
+        "chunkId": "39d14d",
+        "hash": "ed66ad61",
+        "encoded": "%22%22%22All%20connection%20details%20are%20captured%20eagerly%20on%20the%20driver.",
         "prevChunkIds": []
       },
       "151": {
-        "chunkId": "814b3d",
-        "hash": "d5c8b692",
-        "encoded": "except%20Exception%20as%20e:",
+        "chunkId": "39d14d",
+        "hash": "0ab7e98c",
+        "encoded": "If%20%60%60password%60%60%20is%20not%20provided,%20a%20short-lived%20credential%20is%20generated",
         "prevChunkIds": []
       },
       "152": {
-        "chunkId": "814b3d",
-        "hash": "a8fd1ac6",
-        "encoded": "raise%20RuntimeError(",
-        "prevChunkIds": []
-      },
-      "153": {
-        "chunkId": "814b3d",
-        "hash": "22bdfb07",
-        "encoded": "f%22Failed%20to%20list%20Lakebase%20instances:%20%7Be%7D.%20%22",
+        "chunkId": "39d14d",
+        "hash": "2cdd8ca6",
+        "encoded": "via%20%60%60w.postgres.generate_database_credential(endpoint=...)%60%60.",
         "prevChunkIds": []
       },
       "154": {
-        "chunkId": "814b3d",
-        "hash": "fafd7ab9",
-        "encoded": "f%22Verify%20that%20your%20Lakebase%20project%20'%7Bproject_name%7D'%20exists.%22",
+        "chunkId": "39d14d",
+        "hash": "8402d2e9",
+        "encoded": "Args:",
         "prevChunkIds": []
       },
       "155": {
-        "chunkId": "814b3d",
-        "hash": "5b3ab2ba",
-        "encoded": ")",
+        "chunkId": "39d14d",
+        "hash": "9e109249",
+        "encoded": "endpoint_name:%20Full%20Lakebase%20Autoscaling%20endpoint%20path,%20e.g.",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "39d14d",
+        "hash": "ed8da7ad",
+        "encoded": "%60%60projects/%3Cproject-id%3E/branches/%3Cbranch-id%3E/endpoints/%3Cendpoint-id%3E%60%60",
         "prevChunkIds": []
       },
       "157": {
-        "chunkId": "814b3d",
-        "hash": "26d29a73",
-        "encoded": "if%20instance%20is%20None:",
+        "chunkId": "39d14d",
+        "hash": "554c5ce0",
+        "encoded": "host:%20%20%20%20%20%20%20%20%20%20DNS%20hostname%20from%20the%20Lakebase%20Connect%20dialog,%20e.g.",
         "prevChunkIds": []
       },
       "158": {
-        "chunkId": "814b3d",
-        "hash": "972ecff6",
-        "encoded": "try:",
+        "chunkId": "39d14d",
+        "hash": "afb92664",
+        "encoded": "%60%60%3Cendpoint-id%3E.database.%3Cregion%3E.cloud.databricks.com%60%60",
         "prevChunkIds": []
       },
       "159": {
-        "chunkId": "814b3d",
-        "hash": "d1ea3b0a",
-        "encoded": "available_names%20=%20%5Bgetattr(inst,%20%22name%22,%20%22?%22)%20for%20inst%20in%20db_api.list_database_instances()%5D",
+        "chunkId": "39d14d",
+        "hash": "df158530",
+        "encoded": "user:%20%20%20%20%20%20%20%20%20%20Databricks%20user%20email%20(for%20OAuth)%20or%20service%20principal%20client%20ID.",
         "prevChunkIds": []
       },
       "160": {
-        "chunkId": "814b3d",
-        "hash": "c07229e4",
-        "encoded": "except%20Exception:",
+        "chunkId": "39d14d",
+        "hash": "02a16045",
+        "encoded": "table:%20%20%20%20%20%20%20%20%20Target%20PostgreSQL%20table%20name.",
         "prevChunkIds": []
       },
       "161": {
-        "chunkId": "814b3d",
-        "hash": "b34bc33e",
-        "encoded": "available_names%20=%20%5B%22(could%20not%20list%20instances)%22%5D",
+        "chunkId": "39d14d",
+        "hash": "2ba16657",
+        "encoded": "columns:%20%20%20%20%20%20%20Column%20names%20in%20insert%20order.",
         "prevChunkIds": []
       },
       "162": {
-        "chunkId": "814b3d",
-        "hash": "cee8152d",
-        "encoded": "raise%20ValueError(",
+        "chunkId": "39d14d",
+        "hash": "acc78a39",
+        "encoded": "key_columns:%20%20%20Primary%20key%20column(s)%20for%20ON%20CONFLICT%20upsert.",
         "prevChunkIds": []
       },
       "163": {
-        "chunkId": "814b3d",
-        "hash": "81a3a898",
-        "encoded": "f%22Lakebase%20instance%20'%7Bproject_name%7D'%20not%20found.%20%22",
+        "chunkId": "39d14d",
+        "hash": "fa4c171f",
+        "encoded": "database:%20%20%20%20%20%20PostgreSQL%20database%20name%20(default%20%60%60databricks_postgres%60%60).",
         "prevChunkIds": []
       },
       "164": {
-        "chunkId": "814b3d",
-        "hash": "b5ff4803",
-        "encoded": "f%22Available%20instances:%20%7Bavailable_names%7D.%20%22",
+        "chunkId": "39d14d",
+        "hash": "e1e080ef",
+        "encoded": "port:%20%20%20%20%20%20%20%20%20%20PostgreSQL%20port%20(default%20%60%605432%60%60).",
         "prevChunkIds": []
       },
       "165": {
-        "chunkId": "814b3d",
-        "hash": "8c913f76",
-        "encoded": "f%22Check%20the%20name%20in%20Databricks%20UI%20%3E%20SQL%20%3E%20Lakebase.%22",
+        "chunkId": "39d14d",
+        "hash": "7b28e492",
+        "encoded": "password:%20%20%20%20%20%20Optional%20explicit%20password/token.%20If%20omitted,%20generated",
         "prevChunkIds": []
       },
       "166": {
-        "chunkId": "814b3d",
-        "hash": "1ea95003",
-        "encoded": ")",
+        "chunkId": "39d14d",
+        "hash": "38c6f3b3",
+        "encoded": "via%20the%20Databricks%20SDK%20on%20the%20driver.",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "39d14d",
+        "hash": "d62550bb",
+        "encoded": "%22%22%22",
         "prevChunkIds": []
       },
       "168": {
-        "chunkId": "814b3d",
-        "hash": "1cc201b7",
-        "encoded": "cred%20=%20db_api.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "39d14d",
+        "hash": "b1cb2601",
+        "encoded": "self.endpoint_name%20=%20endpoint_name",
         "prevChunkIds": []
       },
       "169": {
-        "chunkId": "814b3d",
-        "hash": "ef0787aa",
-        "encoded": "host%20=%20host%20or%20instance.read_write_dns",
+        "chunkId": "39d14d",
+        "hash": "1a8af65e",
+        "encoded": "self.table%20=%20table",
         "prevChunkIds": []
       },
       "170": {
-        "chunkId": "814b3d",
-        "hash": "cd435591",
-        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "chunkId": "39d14d",
+        "hash": "04601b72",
+        "encoded": "self.columns%20=%20list(columns)",
         "prevChunkIds": []
       },
       "171": {
-        "chunkId": "814b3d",
-        "hash": "9924b6eb",
-        "encoded": "password%20=%20password%20or%20cred.token",
+        "chunkId": "39d14d",
+        "hash": "07080ec3",
+        "encoded": "self.key_columns%20=%20list(key_columns)",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "39d14d",
+        "hash": "b6ee34ab",
+        "encoded": "self.database%20=%20database",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "39d14d",
+        "hash": "68b2eeef",
+        "encoded": "self.port%20=%20port",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "39d14d",
+        "hash": "2da78a26",
+        "encoded": "self.host%20=%20host",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "39d14d",
+        "hash": "1ef99271",
+        "encoded": "self.user%20=%20user",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "39d14d",
+        "hash": "3e939781",
+        "encoded": "#%20Resolve%20password%20on%20the%20DRIVER%20if%20not%20explicitly%20provided.",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "39d14d",
+        "hash": "766c1ead",
+        "encoded": "if%20password%20is%20None:",
         "prevChunkIds": []
       },
       "179": {
-        "chunkId": "3a8317",
-        "hash": "e906ec79",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "39d14d",
+        "hash": "63c60793",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
         "prevChunkIds": []
       },
       "180": {
-        "chunkId": "3a8317",
-        "hash": "4ec9d1ad",
-        "encoded": "host%20=%20host%20or%20project.read_write_dns",
+        "chunkId": "39d14d",
+        "hash": "5899c512",
+        "encoded": "w%20=%20WorkspaceClient()",
         "prevChunkIds": []
       },
       "181": {
-        "chunkId": "3a8317",
-        "hash": "37883061",
-        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "chunkId": "39d14d",
+        "hash": "905c68cd",
+        "encoded": "cred%20=%20w.postgres.generate_database_credential(",
         "prevChunkIds": []
       },
       "182": {
-        "chunkId": "3a8317",
-        "hash": "10ee4ed1",
-        "encoded": "password%20=%20password%20or%20cred.token",
+        "chunkId": "39d14d",
+        "hash": "15f82916",
+        "encoded": "endpoint=endpoint_name",
         "prevChunkIds": []
       },
       "183": {
-        "chunkId": "f0682d",
-        "hash": "9539584a",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
-        "prevChunkIds": []
-      },
-      "184": {
-        "chunkId": "f0682d",
-        "hash": "a0badee2",
-        "encoded": "w%20=%20WorkspaceClient()",
-        "prevChunkIds": []
-      },
-      "186": {
-        "chunkId": "f0682d",
-        "hash": "ffb27e69",
-        "encoded": "#%20Resolve%20the%20Lakebase%20project%20%E2%80%94%20the%20DatabaseAPI%20method%20name%20varies",
-        "prevChunkIds": []
-      },
-      "187": {
-        "chunkId": "f0682d",
-        "hash": "2c451409",
-        "encoded": "#%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
-        "prevChunkIds": []
-      },
-      "188": {
-        "chunkId": "f0682d",
-        "hash": "0827d321",
-        "encoded": "db_api%20=%20w.database",
-        "prevChunkIds": []
-      },
-      "189": {
-        "chunkId": "f0682d",
-        "hash": "a8294d8f",
-        "encoded": "project_obj%20=%20None",
-        "prevChunkIds": []
-      },
-      "190": {
-        "chunkId": "f0682d",
-        "hash": "6524628f",
-        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
-        "prevChunkIds": []
-      },
-      "191": {
-        "chunkId": "f0682d",
-        "hash": "ac4e8264",
-        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
-        "prevChunkIds": []
-      },
-      "192": {
-        "chunkId": "f0682d",
-        "hash": "989ab665",
-        "encoded": "if%20fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "193": {
-        "chunkId": "f0682d",
-        "hash": "e41ca95a",
-        "encoded": "try:",
-        "prevChunkIds": []
-      },
-      "194": {
-        "chunkId": "f0682d",
-        "hash": "0a09a96a",
-        "encoded": "project_obj%20=%20fn(name=project_name)",
-        "prevChunkIds": []
-      },
-      "195": {
-        "chunkId": "f0682d",
-        "hash": "e1ddfe15",
-        "encoded": "break",
-        "prevChunkIds": []
-      },
-      "196": {
-        "chunkId": "f0682d",
-        "hash": "f9f6e6ff",
-        "encoded": "except%20TypeError:",
-        "prevChunkIds": []
-      },
-      "197": {
-        "chunkId": "f0682d",
-        "hash": "7cb5bd98",
-        "encoded": "try:",
-        "prevChunkIds": []
-      },
-      "198": {
-        "chunkId": "f0682d",
-        "hash": "a75e8bec",
-        "encoded": "project_obj%20=%20fn(project_name)",
-        "prevChunkIds": []
-      },
-      "199": {
-        "chunkId": "f0682d",
-        "hash": "53126346",
-        "encoded": "break",
-        "prevChunkIds": []
-      },
-      "200": {
-        "chunkId": "f0682d",
-        "hash": "61e5f442",
-        "encoded": "except%20Exception:",
-        "prevChunkIds": []
-      },
-      "201": {
-        "chunkId": "f0682d",
-        "hash": "0442a2e9",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "202": {
-        "chunkId": "f0682d",
-        "hash": "7245fe0a",
-        "encoded": "except%20Exception:",
-        "prevChunkIds": []
-      },
-      "203": {
-        "chunkId": "f0682d",
-        "hash": "0903c86b",
-        "encoded": "continue",
-        "prevChunkIds": []
-      },
-      "205": {
-        "chunkId": "f0682d",
-        "hash": "cff7c834",
-        "encoded": "if%20project_obj%20is%20None:",
-        "prevChunkIds": []
-      },
-      "206": {
-        "chunkId": "f0682d",
-        "hash": "09f26e49",
-        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
-        "prevChunkIds": []
-      },
-      "207": {
-        "chunkId": "f0682d",
-        "hash": "152cbb39",
-        "encoded": "if%20list_fn%20is%20not%20None:",
-        "prevChunkIds": []
-      },
-      "208": {
-        "chunkId": "f0682d",
-        "hash": "dc3f8b2a",
-        "encoded": "for%20p%20in%20list_fn():",
-        "prevChunkIds": []
-      },
-      "209": {
-        "chunkId": "f0682d",
-        "hash": "a4eeba2f",
-        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
-        "prevChunkIds": []
-      },
-      "210": {
-        "chunkId": "f0682d",
-        "hash": "02d526ea",
-        "encoded": "project_obj%20=%20p",
-        "prevChunkIds": []
-      },
-      "211": {
-        "chunkId": "f0682d",
-        "hash": "f3a2f527",
-        "encoded": "break",
-        "prevChunkIds": []
-      },
-      "213": {
-        "chunkId": "f0682d",
-        "hash": "c65be4f4",
-        "encoded": "if%20project_obj%20is%20None:",
-        "prevChunkIds": []
-      },
-      "214": {
-        "chunkId": "f0682d",
-        "hash": "44071345",
-        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
-        "prevChunkIds": []
-      },
-      "215": {
-        "chunkId": "f0682d",
-        "hash": "a0aa1d9e",
-        "encoded": "raise%20AttributeError(",
-        "prevChunkIds": []
-      },
-      "216": {
-        "chunkId": "f0682d",
-        "hash": "db2eccc0",
-        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
-        "prevChunkIds": []
-      },
-      "217": {
-        "chunkId": "f0682d",
-        "hash": "4cb22cc4",
-        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
-        "prevChunkIds": []
-      },
-      "218": {
-        "chunkId": "f0682d",
-        "hash": "db97fdf0",
+        "chunkId": "39d14d",
+        "hash": "52bea5c5",
         "encoded": ")",
         "prevChunkIds": []
       },
+      "184": {
+        "chunkId": "39d14d",
+        "hash": "72dd983a",
+        "encoded": "password%20=%20cred.token",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "39d14d",
+        "hash": "fb70e2a6",
+        "encoded": "self.password%20=%20password",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "ecbd85",
+        "hash": "bc7a2ddf",
+        "encoded": "def%20__init__(",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "ecbd85",
+        "hash": "0461f432",
+        "encoded": "self,",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "ecbd85",
+        "hash": "300d48a7",
+        "encoded": "host:%20str,",
+        "prevChunkIds": []
+      },
       "220": {
-        "chunkId": "f0682d",
-        "hash": "cc27fc1e",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "ecbd85",
+        "hash": "b8f69499",
+        "encoded": "user:%20str,",
         "prevChunkIds": []
       },
       "221": {
-        "chunkId": "f0682d",
-        "hash": "bb06f1c8",
-        "encoded": "host%20=%20host%20or%20project_obj.read_write_dns",
+        "chunkId": "ecbd85",
+        "hash": "6c80d0de",
+        "encoded": "password:%20str,",
         "prevChunkIds": []
       },
       "222": {
-        "chunkId": "f0682d",
-        "hash": "a5fd9496",
-        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "chunkId": "ecbd85",
+        "hash": "e8d48b02",
+        "encoded": "table:%20str,",
         "prevChunkIds": []
       },
       "223": {
-        "chunkId": "f0682d",
-        "hash": "0b3fa15b",
-        "encoded": "password%20=%20password%20or%20cred.token",
+        "chunkId": "ecbd85",
+        "hash": "2cbcd30e",
+        "encoded": "columns:%20list,",
         "prevChunkIds": []
       },
       "224": {
-        "chunkId": "d82824",
-        "hash": "53f796c6",
-        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "chunkId": "ecbd85",
+        "hash": "2ee2e6d7",
+        "encoded": "key_columns:%20list,",
         "prevChunkIds": []
       },
       "225": {
-        "chunkId": "d82824",
-        "hash": "70af84f3",
-        "encoded": "w%20=%20WorkspaceClient()",
+        "chunkId": "ecbd85",
+        "hash": "15d860d1",
+        "encoded": "database:%20str%20=%20%22databricks_postgres%22,",
         "prevChunkIds": []
       },
       "226": {
-        "chunkId": "d82824",
-        "hash": "64fcace2",
-        "encoded": "project%20=%20w.database.get_project(name=project_name)",
+        "chunkId": "ecbd85",
+        "hash": "1c78a524",
+        "encoded": "port:%20int%20=%205432,",
         "prevChunkIds": []
       },
       "227": {
-        "chunkId": "d82824",
-        "hash": "aa203325",
-        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "chunkId": "ecbd85",
+        "hash": "5f56da57",
+        "encoded": "):",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "ecbd85",
+        "hash": "395c45f0",
+        "encoded": "%22%22%22All%20connection%20details%20are%20captured%20eagerly%20on%20the%20driver.",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "ecbd85",
+        "hash": "5612d667",
+        "encoded": "Args:",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "ecbd85",
+        "hash": "201290ab",
+        "encoded": "host:%20%20%20%20%20%20%20%20%20%20DNS%20hostname%20from%20the%20Lakebase%20Connect%20dialog,%20e.g.",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "ecbd85",
+        "hash": "bb5327c1",
+        "encoded": "%60%60%3Cendpoint-id%3E.database.%3Cregion%3E.azuredatabricks.net%60%60",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "ecbd85",
+        "hash": "1b0b4ac3",
+        "encoded": "user:%20%20%20%20%20%20%20%20%20%20Databricks%20user%20email.",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "ecbd85",
+        "hash": "fb052ab8",
+        "encoded": "password:%20%20%20%20%20%20Lakebase%20token%20(generate%20from%20the%20Lakebase%20UI%20Connect%20dialog).",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "ecbd85",
+        "hash": "090f7c5b",
+        "encoded": "table:%20%20%20%20%20%20%20%20%20Target%20PostgreSQL%20table%20name.",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "ecbd85",
+        "hash": "f9d319eb",
+        "encoded": "columns:%20%20%20%20%20%20%20Column%20names%20in%20insert%20order.",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "ecbd85",
+        "hash": "6817c1ce",
+        "encoded": "key_columns:%20%20%20Primary%20key%20column(s)%20for%20ON%20CONFLICT%20upsert.",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "ecbd85",
+        "hash": "60aabd26",
+        "encoded": "database:%20%20%20%20%20%20PostgreSQL%20database%20name%20(default%20%60%60databricks_postgres%60%60).",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "ecbd85",
+        "hash": "1de50660",
+        "encoded": "port:%20%20%20%20%20%20%20%20%20%20PostgreSQL%20port%20(default%20%60%605432%60%60).",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "ecbd85",
+        "hash": "715f0019",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "ecbd85",
+        "hash": "16ea0569",
+        "encoded": "self.table%20=%20table",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "ecbd85",
+        "hash": "b62b0a5d",
+        "encoded": "self.columns%20=%20list(columns)",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "ecbd85",
+        "hash": "ba700443",
+        "encoded": "self.key_columns%20=%20list(key_columns)",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "ecbd85",
+        "hash": "24c2feb3",
+        "encoded": "self.database%20=%20database",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "ecbd85",
+        "hash": "6370ef95",
+        "encoded": "self.port%20=%20port",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "ecbd85",
+        "hash": "6964fad9",
+        "encoded": "self.host%20=%20host",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "ecbd85",
+        "hash": "c967e2e1",
+        "encoded": "self.user%20=%20user",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "ecbd85",
+        "hash": "c6b73c94",
+        "encoded": "self.password%20=%20password",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "c9a8da",
+        "hash": "184ae159",
+        "encoded": "BUFFER_SIZE%20=%20200%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20rows;%20tune%20for%20throughput%20vs.%20freshness",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "c9a8da",
+        "hash": "4bc766ee",
+        "encoded": "def%20__init__(",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "c9a8da",
+        "hash": "9e553468",
+        "encoded": "self,",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "c9a8da",
+        "hash": "d74c54f5",
+        "encoded": "project_id:%20str,",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "c9a8da",
+        "hash": "8a23b56c",
+        "encoded": "table:%20str,",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "c9a8da",
+        "hash": "df55358f",
+        "encoded": "columns:%20list,",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "c9a8da",
+        "hash": "6164ac28",
+        "encoded": "key_columns:%20list,",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "c9a8da",
+        "hash": "c266b8d0",
+        "encoded": "database:%20str%20=%20%22databricks_postgres%22,",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "c9a8da",
+        "hash": "33005955",
+        "encoded": "host:%20str%20=%20None,",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "c9a8da",
+        "hash": "91be2762",
+        "encoded": "port:%20int%20=%205432,",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "c9a8da",
+        "hash": "c6061215",
+        "encoded": "user:%20str%20=%20None,",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "c9a8da",
+        "hash": "6df88709",
+        "encoded": "password:%20str%20=%20None,",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "c9a8da",
+        "hash": "fac6d4a9",
+        "encoded": "):",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "c9a8da",
+        "hash": "80951e49",
+        "encoded": "%22%22%22All%20connection%20details%20are%20captured%20eagerly%20on%20the%20driver.%20If%20%60host%60,",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "c9a8da",
+        "hash": "828d7d02",
+        "encoded": "%60user%60,%20or%20%60password%60%20are%20not%20provided,%20they%20are%20resolved%20via%20the",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "c9a8da",
+        "hash": "d70069ff",
+        "encoded": "Databricks%20SDK%20at%20construction%20time%20(driver-side%20only).",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "c9a8da",
+        "hash": "74ac4bf0",
+        "encoded": "#%20.token%20(short-lived%20OAuth%20password)%20and%20.host%20/%20.endpoint",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "c9a8da",
+        "hash": "2ad72cb4",
+        "encoded": "#%20(the%20read/write%20DNS).%20This%20is%20the%20correct%20flow%20for%20Lakebase",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "c9a8da",
+        "hash": "65a91c5c",
+        "encoded": "#%20projects%20%E2%80%94%20it%20does%20NOT%20require%20a%20separately%20provisioned",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "c9a8da",
+        "hash": "7b679605",
+        "encoded": "#%20instance.",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "c9a8da",
+        "hash": "c7cc2725",
+        "encoded": "cred%20=%20db_api.generate_database_credential(project_ids=%5Bproject_id%5D)",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "c9a8da",
+        "hash": "0f3fab7c",
+        "encoded": "self.project_id%20=%20project_id",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "c9a8da",
+        "hash": "d0919029",
+        "encoded": "#%20Extract%20host%20from%20the%20credential%20response",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "c9a8da",
+        "hash": "dd2f648e",
+        "encoded": "resolved_host%20=%20getattr(cred,%20%22host%22,%20None)%20or%20getattr(cred,%20%22endpoint%22,%20None)",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "c9a8da",
+        "hash": "deed4a5c",
+        "encoded": "self.key_columns%20=%20list(key_columns)",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "c9a8da",
+        "hash": "8bd07684",
+        "encoded": "if%20not%20resolved_host:",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "c9a8da",
+        "hash": "7c57fced",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "c9a8da",
+        "hash": "dd2ab9b8",
+        "encoded": "f%22Could%20not%20resolve%20the%20Lakebase%20endpoint%20for%20project_id%20'%7Bproject_id%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "c9a8da",
+        "hash": "1deffee2",
+        "encoded": "f%22Ensure%20the%20project%20exists%20in%20Databricks%20UI%20%3E%20SQL%20%3E%20Lakebase%20and%20that%20%22",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "c9a8da",
+        "hash": "16d952b8",
+        "encoded": "f%22generate_database_credential%20returned%20a%20valid%20response.%20%22",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "c9a8da",
+        "hash": "30c068a8",
+        "encoded": "f%22Credential%20attributes:%20%7B%5Ba%20for%20a%20in%20dir(cred)%20if%20not%20a.startswith('_')%5D%7D%22",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "c9a8da",
+        "hash": "1ef0d43b",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "c9a8da",
+        "hash": "c0128775",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "c9a8da",
+        "hash": "97e5608d",
+        "encoded": "host%20=%20host%20or%20resolved_host",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "c9a8da",
+        "hash": "e7998987",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "c9a8da",
+        "hash": "4b92c293",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "c9a8da",
+        "hash": "9a25eca9",
+        "encoded": "#%20generate_database_credential%20accepts%20project%20UUIDs%20via",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "c9a8da",
+        "hash": "3d382e32",
+        "encoded": "#%20%60project_ids=%5B...%5D%60.%20It%20returns%20a%20credential%20object%20with",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "7439ff",
+        "hash": "93795035",
+        "encoded": "#%20Resolve%20any%20unspecified%20connection%20details%20on%20the%20DRIVER.%20Executors",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "7439ff",
+        "hash": "b036deb9",
+        "encoded": "#%20never%20call%20the%20Databricks%20SDK%20--%20they%20get%20plain%20strings%20from%20%60self%60.",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "7439ff",
+        "hash": "76e5b839",
+        "encoded": "if%20host%20is%20None%20or%20user%20is%20None%20or%20password%20is%20None:",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "7439ff",
+        "hash": "987b10e5",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "7439ff",
+        "hash": "bcd8a170",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "7439ff",
+        "hash": "ce581f4d",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "7439ff",
+        "hash": "208fca21",
+        "encoded": "#%20---%20Project-based%20access%20---",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "7439ff",
+        "hash": "929c3e54",
+        "encoded": "#%20generate_database_credential%20works%20with%20Lakebase%20*projects*",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "7439ff",
+        "hash": "4eb6a72e",
+        "encoded": "#%20directly.%20It%20returns%20a%20credential%20object%20with%20.token%20(short-lived",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "7439ff",
+        "hash": "d37bcb38",
+        "encoded": "#%20OAuth%20password)%20and%20.host%20/%20.endpoint%20(the%20read/write%20DNS).",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "7439ff",
+        "hash": "2fd3781c",
+        "encoded": "#%20This%20avoids%20calling%20get_database_instance,%20which%20requires%20a",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "7439ff",
+        "hash": "c26f0f69",
+        "encoded": "#%20separately%20provisioned%20instance%20and%20is%20not%20applicable%20for",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "7439ff",
+        "hash": "2e3fa912",
+        "encoded": "#%20project-based%20setups.",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "7439ff",
+        "hash": "8a554e08",
+        "encoded": "cred%20=%20db_api.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "7439ff",
+        "hash": "f4b3ac24",
+        "encoded": "#%20Extract%20host%20from%20the%20credential%20response",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "7439ff",
+        "hash": "894de471",
+        "encoded": "resolved_host%20=%20getattr(cred,%20%22host%22,%20None)%20or%20getattr(cred,%20%22endpoint%22,%20None)",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "7439ff",
+        "hash": "118b5b15",
+        "encoded": "if%20not%20resolved_host:",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "7439ff",
+        "hash": "4cd19d27",
+        "encoded": "#%20Fallback:%20some%20SDK%20versions%20may%20not%20surface%20the%20host%20on",
         "prevChunkIds": []
       },
       "329": {
-        "chunkId": "a4f1ec",
-        "hash": "1786cf70",
-        "encoded": "#%20MAGIC%20Run%20this%20cell%20only%20when%20developing%20the%20writer%20in%20isolation.%20It%20is%20a%20no-op",
+        "chunkId": "7439ff",
+        "hash": "902b3781",
+        "encoded": "#%20the%20credential.%20Try%20listing%20instances%20to%20find%20the%20endpoint.",
         "prevChunkIds": []
       },
       "330": {
-        "chunkId": "a4f1ec",
-        "hash": "f81c0749",
-        "encoded": "#%20MAGIC%20when%20the%20notebook%20is%20loaded%20via%20%60%25run%60%20from%20another%20notebook%20(because%20the",
+        "chunkId": "7439ff",
+        "hash": "bb598771",
+        "encoded": "try:",
         "prevChunkIds": []
       },
       "331": {
+        "chunkId": "7439ff",
+        "hash": "3137ed56",
+        "encoded": "for%20inst%20in%20db_api.list_database_instances():",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "7439ff",
+        "hash": "9925f1e4",
+        "encoded": "if%20getattr(inst,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "7439ff",
+        "hash": "117bda99",
+        "encoded": "resolved_host%20=%20inst.read_write_dns",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "7439ff",
+        "hash": "e61d3543",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "7439ff",
+        "hash": "6287d2f2",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "7439ff",
+        "hash": "1e2a0d91",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "7439ff",
+        "hash": "a88e59b9",
+        "encoded": "if%20not%20resolved_host:",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "7439ff",
+        "hash": "3f6c1e99",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "7439ff",
+        "hash": "44faa8e9",
+        "encoded": "f%22Could%20not%20resolve%20the%20Lakebase%20endpoint%20for%20project%20'%7Bproject_name%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "7439ff",
+        "hash": "8cabe30b",
+        "encoded": "f%22Ensure%20the%20project%20exists%20in%20Databricks%20UI%20%3E%20SQL%20%3E%20Lakebase%20and%20that%20%22",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "7439ff",
+        "hash": "3476370c",
+        "encoded": "f%22generate_database_credential%20returned%20a%20valid%20response.%20%22",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "7439ff",
+        "hash": "185dae53",
+        "encoded": "f%22Credential%20attributes:%20%7B%5Ba%20for%20a%20in%20dir(cred)%20if%20not%20a.startswith('_')%5D%7D%22",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "7439ff",
+        "hash": "b77477b2",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "7439ff",
+        "hash": "10cace12",
+        "encoded": "host%20=%20host%20or%20resolved_host",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "7439ff",
+        "hash": "b4a67fc3",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "7439ff",
+        "hash": "8f997c90",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "814b3d",
+        "hash": "99f6481d",
+        "encoded": "#%20The%20correct%20methods%20are%20get_database_instance%20/%20list_database_instances.",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "814b3d",
+        "hash": "24b5a860",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "814b3d",
+        "hash": "3b0bd8c6",
+        "encoded": "instance%20=%20None",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "3a8317",
+        "hash": "506a87ed",
+        "encoded": "#%20The%20correct%20DatabaseAPI%20method%20is%20.get()%20%E2%80%94%20not%20.get_project()%20or%20.get_database_project()",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "814b3d",
+        "hash": "a350d96a",
+        "encoded": "#%20Try%20direct%20lookup%20by%20name",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "814b3d",
+        "hash": "4d9d09ea",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "814b3d",
+        "hash": "7591dc9d",
+        "encoded": "instance%20=%20db_api.get_database_instance(name=project_name)",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "814b3d",
+        "hash": "aa3d15c7",
+        "encoded": "except%20TypeError:",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "814b3d",
+        "hash": "aa167c4b",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "814b3d",
+        "hash": "99a5a032",
+        "encoded": "instance%20=%20db_api.get_database_instance(project_name)",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "814b3d",
+        "hash": "f8e2d42f",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "814b3d",
+        "hash": "3c5b9e9d",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "814b3d",
+        "hash": "cf3a24d6",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "814b3d",
+        "hash": "0dd12f2b",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "814b3d",
+        "hash": "d1cc06d2",
+        "encoded": "#%20Fallback:%20list%20all%20instances%20and%20match%20by%20name",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "814b3d",
+        "hash": "83023e95",
+        "encoded": "if%20instance%20is%20None:",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "814b3d",
+        "hash": "c5807dc3",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "814b3d",
+        "hash": "d3146c37",
+        "encoded": "for%20inst%20in%20db_api.list_database_instances():",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "814b3d",
+        "hash": "254e9ee3",
+        "encoded": "if%20getattr(inst,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "814b3d",
+        "hash": "17627135",
+        "encoded": "instance%20=%20inst",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "814b3d",
+        "hash": "3f5ea260",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "814b3d",
+        "hash": "361776cb",
+        "encoded": "except%20Exception%20as%20e:",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "814b3d",
+        "hash": "56987ff0",
+        "encoded": "raise%20RuntimeError(",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "814b3d",
+        "hash": "83a45cda",
+        "encoded": "f%22Failed%20to%20list%20Lakebase%20instances:%20%7Be%7D.%20%22",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "814b3d",
+        "hash": "b3580cd4",
+        "encoded": "f%22Verify%20that%20your%20Lakebase%20project%20'%7Bproject_name%7D'%20exists.%22",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "814b3d",
+        "hash": "a14a2614",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "814b3d",
+        "hash": "4016831a",
+        "encoded": "if%20instance%20is%20None:",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "814b3d",
+        "hash": "fa1cd9bd",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "814b3d",
+        "hash": "7c40be11",
+        "encoded": "available_names%20=%20%5Bgetattr(inst,%20%22name%22,%20%22?%22)%20for%20inst%20in%20db_api.list_database_instances()%5D",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "814b3d",
+        "hash": "14db28ff",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "814b3d",
+        "hash": "8ca739b2",
+        "encoded": "available_names%20=%20%5B%22(could%20not%20list%20instances)%22%5D",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "814b3d",
+        "hash": "2a8043a4",
+        "encoded": "raise%20ValueError(",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "814b3d",
+        "hash": "01c568d7",
+        "encoded": "f%22Lakebase%20instance%20'%7Bproject_name%7D'%20not%20found.%20%22",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "814b3d",
+        "hash": "207194d6",
+        "encoded": "f%22Available%20instances:%20%7Bavailable_names%7D.%20%22",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "814b3d",
+        "hash": "8e1fe75e",
+        "encoded": "f%22Check%20the%20name%20in%20Databricks%20UI%20%3E%20SQL%20%3E%20Lakebase.%22",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "814b3d",
+        "hash": "8921e394",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "814b3d",
+        "hash": "f48ad5a7",
+        "encoded": "cred%20=%20db_api.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "814b3d",
+        "hash": "da39a05a",
+        "encoded": "host%20=%20host%20or%20instance.read_write_dns",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "814b3d",
+        "hash": "4e873e08",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "814b3d",
+        "hash": "f8b1066b",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "3a8317",
+        "hash": "7cf8f249",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "3a8317",
+        "hash": "c6468ea6",
+        "encoded": "host%20=%20host%20or%20project.read_write_dns",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "3a8317",
+        "hash": "cec7f983",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "3a8317",
+        "hash": "7300847e",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "f0682d",
+        "hash": "88c12543",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "f0682d",
+        "hash": "d9a9e20a",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "f0682d",
+        "hash": "bf3a2a42",
+        "encoded": "#%20Resolve%20the%20Lakebase%20project%20%E2%80%94%20the%20DatabaseAPI%20method%20name%20varies",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "f0682d",
+        "hash": "80d95837",
+        "encoded": "#%20across%20SDK%20versions%20(get,%20get_project,%20get_database_project).",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "f0682d",
+        "hash": "61f6ca7c",
+        "encoded": "db_api%20=%20w.database",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "f0682d",
+        "hash": "22e2f64f",
+        "encoded": "project_obj%20=%20None",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "f0682d",
+        "hash": "83d1d17c",
+        "encoded": "for%20method_name%20in%20(%22get%22,%20%22get_project%22,%20%22get_database_project%22):",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "f0682d",
+        "hash": "480eb79c",
+        "encoded": "fn%20=%20getattr(db_api,%20method_name,%20None)",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "f0682d",
+        "hash": "3779df84",
+        "encoded": "if%20fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "f0682d",
+        "hash": "e95286fb",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "f0682d",
+        "hash": "0e4372f9",
+        "encoded": "project_obj%20=%20fn(name=project_name)",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "f0682d",
+        "hash": "74a08890",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "f0682d",
+        "hash": "a12f6a02",
+        "encoded": "except%20TypeError:",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "f0682d",
+        "hash": "6de19a27",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "f0682d",
+        "hash": "87c27d93",
+        "encoded": "project_obj%20=%20fn(project_name)",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "f0682d",
+        "hash": "d64e0d89",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "f0682d",
+        "hash": "3ca18750",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "f0682d",
+        "hash": "a864741b",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "f0682d",
+        "hash": "f26bf0ff",
+        "encoded": "except%20Exception:",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "f0682d",
+        "hash": "865e3e68",
+        "encoded": "continue",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "f0682d",
+        "hash": "9ea097fc",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "f0682d",
+        "hash": "bacf679b",
+        "encoded": "list_fn%20=%20getattr(db_api,%20%22list%22,%20getattr(db_api,%20%22list_projects%22,%20None))",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "f0682d",
+        "hash": "04d94a77",
+        "encoded": "if%20list_fn%20is%20not%20None:",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "f0682d",
+        "hash": "452ac625",
+        "encoded": "for%20p%20in%20list_fn():",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "f0682d",
+        "hash": "9b518fa2",
+        "encoded": "if%20getattr(p,%20%22name%22,%20None)%20==%20project_name:",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "f0682d",
+        "hash": "8ddff536",
+        "encoded": "project_obj%20=%20p",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "f0682d",
+        "hash": "9ad412ab",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "f0682d",
+        "hash": "d0816476",
+        "encoded": "if%20project_obj%20is%20None:",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "f0682d",
+        "hash": "d4ae9347",
+        "encoded": "available%20=%20%5Bm%20for%20m%20in%20dir(db_api)%20if%20not%20m.startswith(%22_%22)%5D",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "f0682d",
+        "hash": "36624097",
+        "encoded": "raise%20AttributeError(",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "f0682d",
+        "hash": "24b2ecd9",
+        "encoded": "f%22Could%20not%20resolve%20Lakebase%20project%20'%7Bproject_name%7D'.%20%22",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "f0682d",
+        "hash": "64f64bc2",
+        "encoded": "f%22Available%20DatabaseAPI%20methods:%20%7Bavailable%7D%22",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "f0682d",
+        "hash": "640ab6f3",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "f0682d",
+        "hash": "9392cb85",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "f0682d",
+        "hash": "4745a2f4",
+        "encoded": "host%20=%20host%20or%20project_obj.read_write_dns",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "f0682d",
+        "hash": "6abfa711",
+        "encoded": "user%20=%20user%20or%20w.current_user.me().user_name",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "f0682d",
+        "hash": "77b4f08a",
+        "encoded": "password%20=%20password%20or%20cred.token",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "d82824",
+        "hash": "236a894a",
+        "encoded": "from%20databricks.sdk%20import%20WorkspaceClient",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "d82824",
+        "hash": "a1808d9d",
+        "encoded": "w%20=%20WorkspaceClient()",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "d82824",
+        "hash": "c18e7d82",
+        "encoded": "project%20=%20w.database.get_project(name=project_name)",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "d82824",
+        "hash": "97a2566d",
+        "encoded": "cred%20=%20w.database.generate_database_credential(project_names=%5Bproject_name%5D)",
+        "prevChunkIds": []
+      },
+      "554": {
         "chunkId": "a4f1ec",
-        "hash": "0323f1c7",
+        "hash": "0b0bb291",
+        "encoded": "#%20MAGIC%20Run%20this%20cell%20only%20when%20developing%20the%20writer%20in%20isolation.%20It%20is%20a%20no-op",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "a4f1ec",
+        "hash": "ac3ad579",
+        "encoded": "#%20MAGIC%20when%20the%20notebook%20is%20loaded%20via%20%60%25run%60%20from%20another%20notebook%20(because%20the",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "a4f1ec",
+        "hash": "f3d346e5",
         "encoded": "#%20MAGIC%20%60LAKEBASE_PROJECT_NAME%60%20and%20%60FEATURE_TABLE%60%20widgets%20won't%20be%20set%20there).",
         "prevChunkIds": []
       }
     },
-    "_prevLineCount": 279
+    "_prevLineCount": 223
   }
 }
