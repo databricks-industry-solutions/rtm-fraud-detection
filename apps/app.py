@@ -1,12 +1,12 @@
 import os
 import time
 import traceback
+import contextlib
 
 import streamlit as st
 import pandas as pd
 import psycopg
 from databricks import sdk
-from psycopg_pool import ConnectionPool
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -16,75 +16,87 @@ FEATURES_TABLE = "card_features"
 REFRESH_INTERVAL = 10
 
 # ---------------------------------------------------------------------------
-# Database connection (uses PG* env vars injected by Lakebase resource binding)
+# Database connection
 # ---------------------------------------------------------------------------
 workspace_client = sdk.WorkspaceClient()
-postgres_password = None
-last_password_refresh = 0
-connection_pool = None
-
+_postgres_password = None
+_last_password_refresh = 0
 
 # Lakebase endpoint for credential generation
-LAKEBASE_ENDPOINT_NAME = "projects/rtm-fraud-lakebase/branches/production/endpoints/ep-wandering-art-ee26lbua"
+LAKEBASE_ENDPOINT_NAME = (
+    "projects/rtm-fraud-lakebase/branches/production/"
+    "endpoints/ep-wandering-art-ee26lbua"
+)
+
+# Connection parameters from app.yaml env vars
+PGHOST = os.getenv("PGHOST", "ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net")
+PGDATABASE = os.getenv("PGDATABASE", "databricks_postgres")
+PGUSER = os.getenv("PGUSER", "harbanga@publicisgroupe.net")
+PGPORT = os.getenv("PGPORT", "5432")
+PGSSLMODE = os.getenv("PGSSLMODE", "require")
 
 
-def refresh_oauth_token():
-    """Refresh Lakebase credential using the Databricks SDK."""
-    global postgres_password, last_password_refresh
-    if postgres_password is None or time.time() - last_password_refresh > 900:
-        print("Refreshing PostgreSQL credential via w.postgres.generate_database_credential")
+def _refresh_credential():
+    """Refresh Lakebase credential using the Databricks SDK.
+
+    Tokens are cached for 15 minutes (900 s) before being refreshed.
+    """
+    global _postgres_password, _last_password_refresh
+    now = time.time()
+    if _postgres_password is not None and now - _last_password_refresh < 900:
+        return _postgres_password
+
+    print("[lakebase] Refreshing credential via SDK …")
+    try:
+        cred = workspace_client.postgres.generate_database_credential(
+            endpoint=LAKEBASE_ENDPOINT_NAME
+        )
+        _postgres_password = cred.token
+        print("[lakebase] Credential refreshed successfully")
+    except Exception as e:
+        print(f"[lakebase] SDK credential generation failed: {e}")
+        # Fall back to workspace OAuth token (works for some setups)
         try:
-            cred = workspace_client.postgres.generate_database_credential(
-                endpoint=LAKEBASE_ENDPOINT_NAME
-            )
-            postgres_password = cred.token
-        except Exception as e:
-            print(f"SDK credential generation failed ({e}), falling back to OAuth token")
-            postgres_password = workspace_client.config.oauth_token().access_token
-        last_password_refresh = time.time()
-
-
-def get_connection_pool():
-    """Get or create the connection pool."""
-    global connection_pool
-    if connection_pool is None:
-        # Validate that Lakebase resource binding injected the PG* env vars
-        required_vars = ["PGHOST", "PGDATABASE", "PGUSER", "PGPORT"]
-        missing = [v for v in required_vars if not os.getenv(v)]
-        if missing:
+            _postgres_password = workspace_client.config.oauth_token().access_token
+            print("[lakebase] Fell back to workspace OAuth token")
+        except Exception as e2:
             raise RuntimeError(
-                f"Missing environment variables: {', '.join(missing)}. "
-                "Ensure the app has a Lakebase resource binding configured in app.yaml "
-                "and the app has been redeployed with 'databricks bundle deploy'."
-            )
-        refresh_oauth_token()
-        conn_string = (
-            f"dbname={os.getenv('PGDATABASE')} "
-            f"user={os.getenv('PGUSER')} "
-            f"password={postgres_password} "
-            f"host={os.getenv('PGHOST')} "
-            f"port={os.getenv('PGPORT')} "
-            f"sslmode={os.getenv('PGSSLMODE', 'require')} "
-            f"application_name={os.getenv('PGAPPNAME')}"
-        )
-        connection_pool = ConnectionPool(
-            conn_string,
-            min_size=2,
-            max_size=10,
-            timeout=30.0,
-            open=True,
-        )
-    return connection_pool
+                f"Cannot obtain Lakebase credential. "
+                f"SDK error: {e}; OAuth fallback error: {e2}"
+            ) from e2
+    _last_password_refresh = now
+    return _postgres_password
 
 
+def _make_connection():
+    """Create a single psycopg connection to Lakebase."""
+    password = _refresh_credential()
+    conn = psycopg.connect(
+        host=PGHOST,
+        port=int(PGPORT),
+        dbname=PGDATABASE,
+        user=PGUSER,
+        password=password,
+        sslmode=PGSSLMODE,
+        connect_timeout=15,
+        application_name="rtm-fraud-dashboard",
+    )
+    return conn
+
+
+@contextlib.contextmanager
 def get_connection():
-    """Get a connection from the pool."""
-    global connection_pool
-    if postgres_password is None or time.time() - last_password_refresh > 900:
-        if connection_pool:
-            connection_pool.close()
-            connection_pool = None
-    return get_connection_pool().connection()
+    """Context manager that yields a single psycopg connection.
+
+    Using direct connections instead of a pool avoids PoolTimeout
+    issues when the Lakebase endpoint is slow to respond or when
+    credentials need refreshing.
+    """
+    conn = _make_connection()
+    try:
+        yield conn
+    finally:
+        conn.close()
 
 
 def query(sql: str) -> pd.DataFrame:
