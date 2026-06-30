@@ -1,0 +1,172 @@
+{
+  "databricks.yml": {
+    "filename": "databricks.yml",
+    "path": "databricks.yml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e1d863": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782750233,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b0d81d77",
+          "files": "dd6eb47b"
+        },
+        "hash": "065b5ca6",
+        "messageId": "system_a3c3c320-73d5-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/29/2026, 9:53:53 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "860ab6": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782817621,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "63aa2dca",
+          "files": "dd6eb47b"
+        },
+        "hash": "24907ef8",
+        "messageId": "system_bafe23e0-7471-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:37:01 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f9263c": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782817621,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "63aa2dca",
+          "files": "dd6eb47b"
+        },
+        "hash": "61718785",
+        "messageId": "system_bafe23e0-7471-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:37:01 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "8": {
+        "chunkId": "f9263c",
+        "hash": "b2fd7868",
+        "encoded": "warehouse_id:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f9263c",
+        "hash": "8f94fc3d",
+        "encoded": "lookup:",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f9263c",
+        "hash": "9273334c",
+        "encoded": "warehouse:%20%22Starter%20Warehouse%22",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "860ab6",
+        "hash": "6b852b1c",
+        "encoded": "node_type_id:%20%22Standard_DS4_v2%22",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "860ab6",
+        "hash": "82ed0096",
+        "encoded": "driver_node_type_id:%20%22Standard_DS4_v2%22",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "860ab6",
+        "hash": "ff848985",
+        "encoded": "runtime_engine:%20STANDARD",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "860ab6",
+        "hash": "3205a022",
+        "encoded": "data_security_mode:%20SINGLE_USER",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "860ab6",
+        "hash": "ea8ae1c6",
+        "encoded": "spark_conf:",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "860ab6",
+        "hash": "3a122b73",
+        "encoded": "spark.databricks.streaming.realTimeMode.enabled:%20%22true%22",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "860ab6",
+        "hash": "e174c2b8",
+        "encoded": "spark.sql.shuffle.partitions:%20%224%22",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "860ab6",
+        "hash": "8a9c496a",
+        "encoded": "azure_attributes:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "860ab6",
+        "hash": "6dcb0668",
+        "encoded": "availability:%20ON_DEMAND_AZURE",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "e1d863",
+        "hash": "e6c31494",
+        "encoded": "apps:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "e1d863",
+        "hash": "9c06d309",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "e1d863",
+        "hash": "2c185604",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "e1d863",
+        "hash": "bf4f62aa",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "e1d863",
+        "hash": "0a8df41a",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 85
+  }
+}

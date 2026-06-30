@@ -8,7 +8,7 @@ variables:
 
   warehouse_id:
     lookup:
-      warehouse: "Shared Unity Catalog Serverless"
+      warehouse: "Starter Warehouse"
 
   environment:
     description: "Deployment environment (dev, staging, prod)"
@@ -29,16 +29,15 @@ resources:
           new_cluster:
             spark_version: "18.0.x-scala2.13"
             num_workers: 6
-            node_type_id: "i3.xlarge"
-            driver_node_type_id: "i3.xlarge"
+            node_type_id: "Standard_DS4_v2"
+            driver_node_type_id: "Standard_DS4_v2"
             runtime_engine: STANDARD
             data_security_mode: SINGLE_USER
             spark_conf:
               spark.databricks.streaming.realTimeMode.enabled: "true"
               spark.sql.shuffle.partitions: "4"
-            aws_attributes:
-              availability: ON_DEMAND
-              zone_id: auto
+            azure_attributes:
+              availability: ON_DEMAND_AZURE
 
       tasks:
         # Step 0: Introduction / Overview
@@ -71,12 +70,11 @@ resources:
           notebook_task:
             notebook_path: "./notebooks/RTM_02_Advanced_fraud_detection_ml.py"
 
-  # Uncomment when app deployment is available on this workspace
-  # apps:
-  #   fraud_dashboard:
-  #     name: "rtm-fraud-dashboard-${var.environment}"
-  #     description: "Real-time fraud detection dashboard powered by Lakebase"
-  #     source_code_path: "./apps"
+  apps:
+    fraud_dashboard:
+      name: "rtm-fraud-dashboard-${var.environment}"
+      description: "Real-time fraud detection dashboard powered by Lakebase"
+      source_code_path: "./apps"
 
   # Uncomment if you add a Lakeview dashboard
   # dashboards:
