@@ -1,1 +1,8 @@
 command: ["streamlit", "run", "app.py"]
+
+resources:
+  - name: lakebase
+    type: postgres
+    postgres:
+      project: rtm-fraud-lakebase
+      branch: production

@@ -1,0 +1,217 @@
+{
+  "apps\\app.py": {
+    "filename": "app.py",
+    "path": "apps\\app.py",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "3c6edb": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782818639,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "26c28006",
+          "files": "2b61e8b7"
+        },
+        "hash": "391b465c",
+        "messageId": "system_7d085610-7475-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:53:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "35": {
+        "chunkId": "3c6edb",
+        "hash": "7072b72e",
+        "encoded": "def%20get_connection_pool():",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "3c6edb",
+        "hash": "0e2b230e",
+        "encoded": "%22%22%22Get%20or%20create%20the%20connection%20pool.%22%22%22",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "3c6edb",
+        "hash": "b76bc853",
+        "encoded": "global%20connection_pool",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "3c6edb",
+        "hash": "7cc79b79",
+        "encoded": "if%20connection_pool%20is%20None:",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "3c6edb",
+        "hash": "f85cccbc",
+        "encoded": "#%20Validate%20that%20Lakebase%20resource%20binding%20injected%20the%20PG*%20env%20vars",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "3c6edb",
+        "hash": "308bc58b",
+        "encoded": "required_vars%20=%20%5B%22PGHOST%22,%20%22PGDATABASE%22,%20%22PGUSER%22,%20%22PGPORT%22%5D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "3c6edb",
+        "hash": "eef8695b",
+        "encoded": "missing%20=%20%5Bv%20for%20v%20in%20required_vars%20if%20not%20os.getenv(v)%5D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "3c6edb",
+        "hash": "512f5751",
+        "encoded": "if%20missing:",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "3c6edb",
+        "hash": "67c64fa5",
+        "encoded": "raise%20RuntimeError(",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "3c6edb",
+        "hash": "19819b27",
+        "encoded": "f%22Missing%20environment%20variables:%20%7B',%20'.join(missing)%7D.%20%22",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "3c6edb",
+        "hash": "bf1c1494",
+        "encoded": "%22Ensure%20the%20app%20has%20a%20Lakebase%20resource%20binding%20configured%20in%20app.yaml%20%22",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "3c6edb",
+        "hash": "948ce480",
+        "encoded": "%22and%20the%20app%20has%20been%20redeployed%20with%20'databricks%20bundle%20deploy'.%22",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "3c6edb",
+        "hash": "7384634f",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "3c6edb",
+        "hash": "ce205b24",
+        "encoded": "refresh_oauth_token()",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "3c6edb",
+        "hash": "9ef40c39",
+        "encoded": "conn_string%20=%20(",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "3c6edb",
+        "hash": "42bc6686",
+        "encoded": "f%22dbname=%7Bos.getenv('PGDATABASE')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "3c6edb",
+        "hash": "c5fee881",
+        "encoded": "f%22user=%7Bos.getenv('PGUSER')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "3c6edb",
+        "hash": "24afd21c",
+        "encoded": "f%22password=%7Bpostgres_password%7D%20%22",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "3c6edb",
+        "hash": "a9849919",
+        "encoded": "f%22host=%7Bos.getenv('PGHOST')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "3c6edb",
+        "hash": "a5d2fcef",
+        "encoded": "f%22port=%7Bos.getenv('PGPORT')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "3c6edb",
+        "hash": "a164d02b",
+        "encoded": "f%22sslmode=%7Bos.getenv('PGSSLMODE',%20'require')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "3c6edb",
+        "hash": "a48969e7",
+        "encoded": "f%22application_name=%7Bos.getenv('PGAPPNAME')%7D%22",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "3c6edb",
+        "hash": "092cf027",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "3c6edb",
+        "hash": "24a1281d",
+        "encoded": "connection_pool%20=%20ConnectionPool(",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "3c6edb",
+        "hash": "f138474c",
+        "encoded": "conn_string,",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "3c6edb",
+        "hash": "5c47d195",
+        "encoded": "min_size=2,",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "3c6edb",
+        "hash": "e22f852e",
+        "encoded": "max_size=10,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "3c6edb",
+        "hash": "b0b21a15",
+        "encoded": "timeout=30.0,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "3c6edb",
+        "hash": "990e20fa",
+        "encoded": "open=True,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "3c6edb",
+        "hash": "d7021adc",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "3c6edb",
+        "hash": "a419a64f",
+        "encoded": "return%20connection_pool",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

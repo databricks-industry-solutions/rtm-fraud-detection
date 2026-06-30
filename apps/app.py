@@ -37,6 +37,15 @@ def get_connection_pool():
     """Get or create the connection pool."""
     global connection_pool
     if connection_pool is None:
+        # Validate that Lakebase resource binding injected the PG* env vars
+        required_vars = ["PGHOST", "PGDATABASE", "PGUSER", "PGPORT"]
+        missing = [v for v in required_vars if not os.getenv(v)]
+        if missing:
+            raise RuntimeError(
+                f"Missing environment variables: {', '.join(missing)}. "
+                "Ensure the app has a Lakebase resource binding configured in app.yaml "
+                "and the app has been redeployed with 'databricks bundle deploy'."
+            )
         refresh_oauth_token()
         conn_string = (
             f"dbname={os.getenv('PGDATABASE')} "
@@ -47,7 +56,13 @@ def get_connection_pool():
             f"sslmode={os.getenv('PGSSLMODE', 'require')} "
             f"application_name={os.getenv('PGAPPNAME')}"
         )
-        connection_pool = ConnectionPool(conn_string, min_size=2, max_size=10)
+        connection_pool = ConnectionPool(
+            conn_string,
+            min_size=2,
+            max_size=10,
+            timeout=30.0,
+            open=True,
+        )
     return connection_pool
 
 

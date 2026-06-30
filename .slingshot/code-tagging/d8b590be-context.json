@@ -1,23 +1,8 @@
 {
-  "filename": "databricks.yml",
-  "path": "databricks.yml",
+  "filename": "app.yaml",
+  "path": "apps\\app.yaml",
   "version": "1.1",
   "files": {
-    "dd6eb47b": {
-      "value": [
-        {
-          "programming_language": "Python",
-          "fileName": "app.py",
-          "relativeFilePath": "apps/app.py",
-          "startLine": [
-            1
-          ],
-          "endLine": [
-            237
-          ]
-        }
-      ]
-    },
     "2b61e8b7": {
       "value": [
         {
@@ -35,12 +20,6 @@
     }
   },
   "promptMessage": {
-    "b0d81d77": {
-      "value": "I need to deploy this app.py"
-    },
-    "63aa2dca": {
-      "value": "restart"
-    },
     "26c28006": {
       "value": "getting this error"
     }
