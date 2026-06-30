@@ -24,12 +24,23 @@ last_password_refresh = 0
 connection_pool = None
 
 
+# Lakebase endpoint for credential generation
+LAKEBASE_ENDPOINT_NAME = "projects/rtm-fraud-lakebase/branches/production/endpoints/ep-wandering-art-ee26lbua"
+
+
 def refresh_oauth_token():
-    """Refresh OAuth token if expired."""
+    """Refresh Lakebase credential using the Databricks SDK."""
     global postgres_password, last_password_refresh
     if postgres_password is None or time.time() - last_password_refresh > 900:
-        print("Refreshing PostgreSQL OAuth token")
-        postgres_password = workspace_client.config.oauth_token().access_token
+        print("Refreshing PostgreSQL credential via w.postgres.generate_database_credential")
+        try:
+            cred = workspace_client.postgres.generate_database_credential(
+                endpoint=LAKEBASE_ENDPOINT_NAME
+            )
+            postgres_password = cred.token
+        except Exception as e:
+            print(f"SDK credential generation failed ({e}), falling back to OAuth token")
+            postgres_password = workspace_client.config.oauth_token().access_token
         last_password_refresh = time.time()
 
 
