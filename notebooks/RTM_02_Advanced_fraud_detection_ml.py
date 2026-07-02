@@ -136,43 +136,9 @@ import psycopg
 
 LAKEBASE_HOST     = "ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net"
 LAKEBASE_DATABASE = "databricks_postgres"
-LAKEBASE_USER     = "harbanga@publicisgroupe.net"
+LAKEBASE_USER     = dbutils.secrets.get(scope="lakebase-scope", key="lakebase-user")
+LAKEBASE_TOKEN    = dbutils.secrets.get(scope="lakebase-scope", key="lakebase-token")
 
-# ⚠️ Generate a NEW token from the Lakebase UI each session (expires ~1 hour)
-LAKEBASE_TOKEN = (
-    "eyJraWQiOiJjMGQ2YzQ2MTA4NWVmY2E1YTgzYTMxNzI2ZDQ2ZmMzN2QxNmMwYzY4NWQwNDRh"
-    "MTJhNTUxNjhhOGM3MzZkM2U2IiwidHlwIjoiYXQrand0IiwiYWxnIjoiUlMyNTYifQ."
-    "eyJjbGllbnRfaWQiOiJkYi1kYXRhYmFzZS1jcmVkZW50aWFsIiwic2NvcGUiOiJpYW0uY3Vy"
-    "cmVudC11c2VyOnJlYWQgaWFtLmdyb3VwczpyZWFkIGlhbS5zZXJ2aWNlLXByaW5jaXBhbHM6"
-    "cmVhZCBpYW0udXNlcnM6cmVhZCIsInBjdHgiOiJDdTBGQ2hRSUFSb0dDTXFOXzlFR0lnWUlx"
-    "UDdfMFFZb0FoS0hCUUdvTnFZOHBxXzd6cW8xY2lycEV5V0VmTU9jREprR2NRdXZtQlhFSndm"
-    "d1ZJNWdWQjFFNEIwUTV2MjA5N2xiUTB0S2tURGVHeGF3NW8tNVJfQ19sNW0zcUtHUVREU2E1"
-    "a2ktTTlfSHRUMGZ3NlFibGhfaER4MzhvZ2dZS2w4WkNCN1U3dWRYOFVGMHVOMjBfM2JJMVBX"
-    "MEtoeUxETE9FTkhaYWlGWFU4U01OM0swWlg1Njh2RGM4NzAxX2dwdHl4dmUzNHVpSHFFb0g0"
-    "M3c3T1g5U2w1a3pKbXBDdzM4VVpCWE1wUExLVndDWEEwU1dOZFFYdkJjRmVTaFlvSnBncUcz"
-    "V1hLZGtWNWZ5Vl9SNmpXZkJpVl9ITHhzUHhYb0xZRm5zQkZ1aVdPNVhQMmQwbGppUlIzQ1Jx"
-    "VlNmek1DNU42NUJQMlFiZk4yZHhxb2dFZzN0ckFFdFFuSkpuaGZuZEdkQzExZ1VFRnB0Y0U2"
-    "dURwUHpadk1QUEh5U2RHdENiS0dQWm5Hb2lTZzk3QjVRLThUVkVMSFh5NDVFRWp0WktKVkN5"
-    "amZLRWZFcEpzWmJIRDdmNEd3QXlIWW5LLUlhcEljN0tsbF9aNk9RSWlySFhQMmlFOW1fc056"
-    "RVBtelhLMFdtOGJ1VzRVSm5XcDdlU1hEUy1KZ3JxZEVKM3BwTXp1MWx2dHdXZnE5c1plLWp3"
-    "cVdoZk16ajIxcHFGZHloZllCN0VleXZfSS11dWVaZVdXRjZZYVRjREdFZ1RKb2hVN0NTX0Jf"
-    "Xy1jMXlpVTZncnhIYm5PUXB6eTFuUV8tbmlYUWR1NURBSlVQTV9OSi12NlpRZ0l0MWtnMm5a"
-    "ODBGSFE2WFIyWGVnWVZZcGs0eFZkem1qQVRBMDZoLU0xRWU2T2l3UGpoTDZ0S0ZSbGRraV9m"
-    "Z3B4dzlDOUpLVlRiVFRJcmplVTUzV3piTG9tWGQ2WXhwcnBuNFE3dDljN0l4TUJUOGRMWmVO"
-    "Ykxpc01JUVRMR0VEMWlteXVRcXdNNXE3OG11TlhyZjdoVHJHd0Q3Y21WTFZLZkpUQkx4TXpM"
-    "QXhIRW9NVzlCdHpmZ2tiSXZCYTdMaUY0Vk9kdkM2a1NvUGhXLW50Nm1xR0hsQkhyVjJZSFFS"
-    "T29BTXUzQk9JZXNHa3NCam5fTDFUQkVBaUFWWHk5dWNKQzYtaDRqd1BkS19INHNwcndibmxh"
-    "QkFWV3dtVUxFRjkyMnRRSWdJZE1ZUU1xR0JzRFFXUDA4bjl1Q3FhQjNvcXB6U3lKQThYakdB"
-    "TUdSMW9vPSIsImlzcyI6Imh0dHBzOi8vYWRiLTc0MDU2MTczMzMyNjA2MjYuNi5henVyZWRh"
-    "dGFicmlja3MubmV0L29pZGMiLCJhdWQiOiI3NDA1NjE3MzMzMjYwNjI2Iiwic3ViIjoiaGFy"
-    "YmFuZ2FAcHVibGljaXNncm91cGUubmV0IiwiaWF0IjoxNzgyNTY0NTg0LCJleHAiOjE3ODI1"
-    "NjgxODQsImp0aSI6ImQwZDk0MTE5LTJlMzgtNDM2ZC1hZDRhLTQzYTExZjdjODc3MCJ9."
-    "wd7krLG1zDHPmNXwZ02k16GqyJwbkpYXVE2LY6cmdrBRWyFOkkpthpbR0Y2CbEGKOX1rGr-a"
-    "unTK6dC9WkJDswH2OFqz9ucEvaMA8r7qzLNvdxV0WWXXNRG1SUTqZggshycelH5_EazxCTn1G"
-    "4VT7hbIbJ2TThupCWKh_LW1FUVJvCeaH4Jydy-KM_x0p875TszPj8phG37u19KPsmQxTe1eik"
-    "Xj4ULBMGXYzUY44WriW9KLrdjaIi01b4l88WGI7-DFSZka1c3z0KHqUBRVjr71y-Lsh2uNY9G"
-    "SwV2KRThT-34CB963O1oR46buYQ9th7uEMMgNWRZRNB8jEbYAXg"
-)
 
 # Feature store table names (must match the app's table names in apps/app.py)
 FEATURE_TABLE = "card_features"
@@ -188,7 +154,7 @@ Lakebase Connection Configuration:
   Host:           {LAKEBASE_HOST}
   Database:       {LAKEBASE_DATABASE}
   User:           {LAKEBASE_USER}
-  Token:          {LAKEBASE_TOKEN[:20]}...{LAKEBASE_TOKEN[-10:]}  (truncated)
+  Token:          [REDACTED - loaded from Databricks Secrets]
   Feature Table:  {FEATURE_TABLE}
   Scores Table:   {SCORES_TABLE}
 """)
