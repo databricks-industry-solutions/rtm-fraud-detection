@@ -260,7 +260,207 @@ display(
 
 # MAGIC %md
 # MAGIC ---
-# MAGIC ## Section 6: Cleanup
+# MAGIC ## Section 6: Spark Structured Streaming vs Real-Time Mode — Latency Comparison
+# MAGIC
+# MAGIC > *"Using the same fraud detection logic and Event Hub source, Real-Time Mode reduced
+# MAGIC > end-to-end latency from X ms to Y ms while maintaining comparable throughput."*
+# MAGIC
+# MAGIC This section runs the **exact same pipeline** twice — once with the traditional
+# MAGIC `processingTime` trigger (standard Structured Streaming) and once with the `realTime`
+# MAGIC trigger (RTM). By comparing `query.lastProgress` output side-by-side, you can
+# MAGIC quantify the latency improvement.
+# MAGIC
+# MAGIC ### Demo Approach
+# MAGIC 1. **Run A** — Traditional trigger: `.trigger(processingTime="1 second")`
+# MAGIC 2. **Run B** — Real-Time Mode trigger: `.trigger(realTime="5 seconds")`
+# MAGIC 3. Capture `query.lastProgress` from each run
+# MAGIC 4. Build a comparison DataFrame
+# MAGIC 5. *(Optional)* Screenshot both and place side-by-side in a PPT
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 6.1 — Run A: Traditional Structured Streaming (`processingTime`)
+# MAGIC
+# MAGIC This uses the standard micro-batch trigger. Even at 1-second intervals, latency
+# MAGIC is bounded by the micro-batch scheduling overhead.
+
+# COMMAND ----------
+
+import time
+import json
+
+# --- Run A: Traditional processingTime trigger ---
+query_traditional = (
+    scored_stream.select(
+        "transaction_id", "card_id", "amount_usd", "channel", "ip_country",
+        "velocity_60s", "velocity_score", "amount_score", "country_score",
+        "fraud_score", "decision", "event_time", "scored_time",
+    )
+    .writeStream
+    .queryName("traditional_streaming")
+    .format("memory")
+    .outputMode("update")
+    .trigger(processingTime="1 second")
+    .start()
+)
+
+print("Traditional Structured Streaming query started (processingTime='1 second').")
+print("Letting it run for 60 seconds to collect stable metrics...")
+time.sleep(60)
+
+# Capture lastProgress
+traditional_progress = query_traditional.lastProgress
+print("\n=== Traditional Streaming — query.lastProgress ===")
+print(json.dumps(traditional_progress, indent=2, default=str))
+
+# Stop the traditional query
+query_traditional.stop()
+print("\nTraditional query stopped.")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 6.2 — Run B: Real-Time Mode (`realTime`)
+# MAGIC
+# MAGIC Same pipeline, same scoring logic — only the trigger changes. RTM processes
+# MAGIC records one-at-a-time with sub-300ms latency.
+
+# COMMAND ----------
+
+# --- Run B: Real-Time Mode trigger ---
+query_rtm = (
+    scored_stream.select(
+        "transaction_id", "card_id", "amount_usd", "channel", "ip_country",
+        "velocity_60s", "velocity_score", "amount_score", "country_score",
+        "fraud_score", "decision", "event_time", "scored_time",
+    )
+    .writeStream
+    .queryName("rtm_streaming")
+    .format("memory")
+    .outputMode("update")
+    .trigger(realTime="5 seconds")
+    .start()
+)
+
+print("Real-Time Mode query started (realTime='5 seconds').")
+print("Letting it run for 60 seconds to collect stable metrics...")
+time.sleep(60)
+
+# Capture lastProgress
+rtm_progress = query_rtm.lastProgress
+print("\n=== Real-Time Mode — query.lastProgress ===")
+print(json.dumps(rtm_progress, indent=2, default=str))
+
+# Stop the RTM query
+query_rtm.stop()
+print("\nRTM query stopped.")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 6.3 — Side-by-Side Comparison
+# MAGIC
+# MAGIC Build a comparison DataFrame from the captured `lastProgress` metrics.
+# MAGIC Key metrics to compare:
+# MAGIC - **triggerExecution (ms)** — total time for one trigger cycle
+# MAGIC - **inputRowsPerSecond** — throughput
+# MAGIC - **processedRowsPerSecond** — processing throughput
+# MAGIC - **latency (ms)** — derived from `durationMs` fields
+
+# COMMAND ----------
+
+from pyspark.sql import Row
+
+def extract_metrics(progress, label):
+    """Extract key latency and throughput metrics from query.lastProgress."""
+    if progress is None:
+        return Row(
+            mode=label,
+            trigger_execution_ms=None,
+            input_rows_per_sec=None,
+            processed_rows_per_sec=None,
+            add_batch_ms=None,
+            get_batch_ms=None,
+            query_planning_ms=None,
+            wal_commit_ms=None,
+            num_input_rows=None,
+        )
+
+    durations = progress.get("durationMs", {})
+    return Row(
+        mode=label,
+        trigger_execution_ms=durations.get("triggerExecution"),
+        input_rows_per_sec=progress.get("inputRowsPerSecond"),
+        processed_rows_per_sec=progress.get("processedRowsPerSecond"),
+        add_batch_ms=durations.get("addBatch"),
+        get_batch_ms=durations.get("getBatch"),
+        query_planning_ms=durations.get("queryPlanning"),
+        wal_commit_ms=durations.get("walCommit"),
+        num_input_rows=progress.get("numInputRows"),
+    )
+
+
+metrics_rows = [
+    extract_metrics(traditional_progress, "Structured Streaming (processingTime=1s)"),
+    extract_metrics(rtm_progress, "Real-Time Mode (realTime=5s)"),
+]
+
+metrics_df = spark.createDataFrame(metrics_rows)
+
+print("=== Latency Comparison: Structured Streaming vs Real-Time Mode ===")
+print()
+display(metrics_df)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 6.4 — How to Read the Results
+# MAGIC
+# MAGIC | Metric | What It Tells You |
+# MAGIC |--------|-------------------|
+# MAGIC | `trigger_execution_ms` | Total time for one trigger cycle — **lower = faster** |
+# MAGIC | `add_batch_ms` | Time spent processing the batch — the core latency metric |
+# MAGIC | `input_rows_per_sec` | Throughput — should be comparable between modes |
+# MAGIC | `processed_rows_per_sec` | Effective processing rate |
+# MAGIC | `get_batch_ms` | Time to fetch data from source |
+# MAGIC | `query_planning_ms` | Spark planning overhead |
+# MAGIC | `wal_commit_ms` | Write-ahead log commit time |
+# MAGIC
+# MAGIC **Expected Result:** RTM should show significantly lower `trigger_execution_ms`
+# MAGIC and `add_batch_ms` compared to traditional streaming, while `input_rows_per_sec`
+# MAGIC remains comparable.
+# MAGIC
+# MAGIC ### Presenting to Stakeholders
+# MAGIC 1. Run this notebook and screenshot the `metrics_df` table above
+# MAGIC 2. Also screenshot `query.lastProgress` raw JSON from Sections 6.1 and 6.2
+# MAGIC 3. Place them side-by-side in a slide with the headline:
+# MAGIC    > *"Real-Time Mode reduced trigger execution latency from X ms to Y ms
+# MAGIC    > (Z% improvement) while maintaining comparable throughput."*
+# MAGIC 4. Fill in X, Y, Z from your actual run results
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 6.5 — Raw `lastProgress` Inspection
+# MAGIC
+# MAGIC For deeper analysis, inspect the full `lastProgress` dictionaries captured above.
+# MAGIC Uncomment the cells below to display them.
+
+# COMMAND ----------
+
+# Uncomment to inspect raw progress data:
+# print("=== Traditional Streaming — Full lastProgress ===")
+# print(json.dumps(traditional_progress, indent=2, default=str))
+
+# print("\n=== Real-Time Mode — Full lastProgress ===")
+# print(json.dumps(rtm_progress, indent=2, default=str))
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ---
+# MAGIC ## Section 7: Cleanup
 
 # COMMAND ----------
 

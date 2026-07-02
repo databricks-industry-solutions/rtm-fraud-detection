@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-30T11:10:48.657Z",
+  "user_memory": [],
+  "slingshot_memory": [
+    {
+      "id": "mem_1782817848070_ys1fhv",
+      "content": "Databricks CLI v1.5.0 (Go-based) installed via winget at $LOCALAPPDATA\\Microsoft\\WinGet\\Packages\\Databricks.DatabricksCLI_Microsoft.Winget.Source_8wekyb3d8bbwe",
+      "createdAt": "2026-06-30T11:10:48.070Z",
+      "updatedAt": "2026-06-30T11:10:48.070Z",
+      "isEnabled": true
+    },
+    {
+      "id": "mem_1782817848113_8dbpse",
+      "content": "Legacy databricks-cli v0.18.0 (Python) was uninstalled from miniconda3. Must prepend winget path to $env:PATH for bundle commands.",
+      "createdAt": "2026-06-30T11:10:48.113Z",
+      "updatedAt": "2026-06-30T11:10:48.113Z",
+      "isEnabled": true
+    },
+    {
+      "id": "mem_1782817848190_qgocfx",
+      "content": "databricks.yml uses Azure VM types (Standard_DS4_v2), azure_attributes with ON_DEMAND_AZURE, warehouse 'Starter Warehouse'",
+      "createdAt": "2026-06-30T11:10:48.190Z",
+      "updatedAt": "2026-06-30T11:10:48.190Z",
+      "isEnabled": true
+    },
+    {
+      "id": "mem_1782817848236_e97hqx",
+      "content": "Databricks app 'rtm-fraud-dashboard-dev' deployed from bundle path /Workspace/Users/harbanga@publicisgroupe.net/.bundle/rtm_fraud_detection/dev/files/apps",
+      "createdAt": "2026-06-30T11:10:48.236Z",
+      "updatedAt": "2026-06-30T11:10:48.236Z",
+      "isEnabled": true
+    },
+    {
+      "id": "mem_1782817848248_xu3ld3",
+      "content": "App URL: https://rtm-fraud-dashboard-dev-7405617333260626.6.azure.databricksapps.com",
+      "createdAt": "2026-06-30T11:10:48.248Z",
+      "updatedAt": "2026-06-30T11:10:48.248Z",
+      "isEnabled": true
+    },
+    {
+      "id": "mem_1782817848543_faaayp",
+      "content": "Azure Databricks workspace host: adb-7405617333260626.6.azuredatabricks.net, user: harbanga@publicisgroupe.net",
+      "createdAt": "2026-06-30T11:10:48.543Z",
+      "updatedAt": "2026-06-30T11:10:48.543Z",
+      "isEnabled": true
+    }
+  ]
+}

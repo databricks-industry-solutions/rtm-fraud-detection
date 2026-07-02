@@ -49,22 +49,22 @@ if realtime_mode_enabled != "true":
 import pyspark.sql.functions as F
 import ssl, time
 
-# --- Kafka credentials from Databricks Secrets (uses widget values from parent notebook) ---
-secret_scope = dbutils.widgets.get("secret_scope")
-if not secret_scope:
-    raise ValueError(
-        "Widget 'secret_scope' is empty. Please set your Databricks Secret Scope name "
-        "in the widget at the top of this notebook. See README for setup instructions."
-    )
+# --- Kafka credentials from Databricks Secrets (scope: kafka-scope) ---
+secret_scope = "kafka-scope"
 
 kafka_bootstrap_servers_tls = dbutils.secrets.get(secret_scope, "kafka-bootstrap-servers-tls")
 kafka_bootstrap_servers_plaintext = dbutils.secrets.get(secret_scope, "kafka-bootstrap-servers-plaintext")
+eh_conn_string = dbutils.secrets.get(secret_scope, "kafka-connection-string")
 
 use_tls = True
 kafka_brokers = kafka_bootstrap_servers_tls if use_tls else kafka_bootstrap_servers_plaintext
 
-if use_tls and "9094" not in kafka_brokers:
-    print("WARNING: Using TLS but port is not 9094. Check your bootstrap server address!")
+# SASL/PLAIN JAAS config for Azure Event Hubs
+eh_sasl_jaas = (
+    'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule required '
+    'username="$ConnectionString" '
+    f'password="{eh_conn_string}";'
+)
 
 # --- Per-user topic names (enables concurrent demos) ---
 username = spark.sql("SELECT current_user()").collect()[0][0]
@@ -147,14 +147,12 @@ RTM Slot Calculation:
 
 from kafka.admin import KafkaAdminClient, NewTopic
 
-ssl_context = ssl.create_default_context()
-ssl_context.check_hostname = False
-ssl_context.verify_mode = ssl.CERT_NONE
-
 admin_client = KafkaAdminClient(
     bootstrap_servers=kafka_bootstrap_servers_tls,
-    security_protocol="SSL",
-    ssl_context=ssl_context
+    security_protocol="SASL_SSL",
+    sasl_mechanism="PLAIN",
+    sasl_plain_username="$ConnectionString",
+    sasl_plain_password=eh_conn_string,
 )
 
 TOPIC_PARTITIONS = 8

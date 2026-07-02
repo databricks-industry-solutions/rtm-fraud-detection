@@ -1,0 +1,34 @@
+{
+  "filename": "requirements.txt",
+  "path": "apps\\requirements.txt",
+  "version": "1.1",
+  "files": {
+    "2b61e8b7": {
+      "value": [
+        {
+          "programming_language": "text",
+          "fileName": "requirements.txt",
+          "relativeFilePath": "apps/requirements.txt",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "26c28006": {
+      "value": "getting this error"
+    },
+    "28b9f4b9": {
+      "value": "Traceback (most recent call last):\n  File \"/app/python/source_code/app.py\", line 143, in <module>\n    with get_connection() as conn:\n  File \"/usr/lib/python3.11/contextlib.py\", line 137, in __enter__\n    return next(self.gen)\n           ^^^^^^^^^^^^^^\n  File \"/app/python/source_code/.venv/lib/python3.11/site-packages/psycopg_pool/pool.py\", line 184, in connection\n    conn = self.getconn(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/python/source_code/.venv/lib/python3.11"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

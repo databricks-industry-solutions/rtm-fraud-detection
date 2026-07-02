@@ -1,0 +1,426 @@
+{
+  "databricks.yml": {
+    "filename": "databricks.yml",
+    "path": "databricks.yml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e1d863": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782750233,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b0d81d77",
+          "files": "dd6eb47b"
+        },
+        "hash": "065b5ca6",
+        "messageId": "system_a3c3c320-73d5-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/29/2026, 9:53:53 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "860ab6": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782817621,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "63aa2dca",
+          "files": "dd6eb47b"
+        },
+        "hash": "24907ef8",
+        "messageId": "system_bafe23e0-7471-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:37:01 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f9263c": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782817621,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "63aa2dca",
+          "files": "dd6eb47b"
+        },
+        "hash": "61718785",
+        "messageId": "system_bafe23e0-7471-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:37:01 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "d515ff": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782818556,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "26c28006",
+          "files": "2b61e8b7"
+        },
+        "hash": "5c8dbc3f",
+        "messageId": "system_7d085610-7475-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:52:36 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "4f9933": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782818561,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "26c28006",
+          "files": "2b61e8b7"
+        },
+        "hash": "065b5ca6",
+        "messageId": "system_7d085610-7475-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:52:41 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "d9a99b": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782819445,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "e50c02cd"
+        },
+        "hash": "c5bed183",
+        "messageId": "system_83a5fde0-7477-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 5:07:25 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "6eaa4a": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782819482,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "e50c02cd"
+        },
+        "hash": "0c02c5e7",
+        "messageId": "system_83a5fde0-7477-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 5:08:02 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "8": {
+        "chunkId": "f9263c",
+        "hash": "b2fd7868",
+        "encoded": "warehouse_id:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f9263c",
+        "hash": "8f94fc3d",
+        "encoded": "lookup:",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f9263c",
+        "hash": "9273334c",
+        "encoded": "warehouse:%20%22Starter%20Warehouse%22",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "860ab6",
+        "hash": "6b852b1c",
+        "encoded": "node_type_id:%20%22Standard_DS4_v2%22",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "860ab6",
+        "hash": "82ed0096",
+        "encoded": "driver_node_type_id:%20%22Standard_DS4_v2%22",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "860ab6",
+        "hash": "ff848985",
+        "encoded": "runtime_engine:%20STANDARD",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "860ab6",
+        "hash": "3205a022",
+        "encoded": "data_security_mode:%20SINGLE_USER",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "860ab6",
+        "hash": "ea8ae1c6",
+        "encoded": "spark_conf:",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "860ab6",
+        "hash": "3a122b73",
+        "encoded": "spark.databricks.streaming.realTimeMode.enabled:%20%22true%22",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "860ab6",
+        "hash": "e174c2b8",
+        "encoded": "spark.sql.shuffle.partitions:%20%224%22",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "860ab6",
+        "hash": "8a9c496a",
+        "encoded": "azure_attributes:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "860ab6",
+        "hash": "6dcb0668",
+        "encoded": "availability:%20ON_DEMAND_AZURE",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "6eaa4a",
+        "hash": "18d7bde2",
+        "encoded": "apps:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "6eaa4a",
+        "hash": "f853ea94",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "6eaa4a",
+        "hash": "f76d290b",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "6eaa4a",
+        "hash": "bca52391",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "6eaa4a",
+        "hash": "e3d73599",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "6eaa4a",
+        "hash": "2af56605",
+        "encoded": "#%20Uncomment%20if%20you%20add%20a%20Lakeview%20dashboard",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "d9a99b",
+        "hash": "4ae21d70",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "d9a99b",
+        "hash": "7fbdd198",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "d9a99b",
+        "hash": "92da7d7e",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "d9a99b",
+        "hash": "4b6b47e0",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "d9a99b",
+        "hash": "4c579add",
+        "encoded": "resources:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "d9a99b",
+        "hash": "d78b5560",
+        "encoded": "-%20name:%20lakebase",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "d9a99b",
+        "hash": "31db3bed",
+        "encoded": "lakebase:",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "d9a99b",
+        "hash": "d7afa3a1",
+        "encoded": "project:%20rtm-fraud-lakebase",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "d9a99b",
+        "hash": "d441a6be",
+        "encoded": "branch:%20production",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "d9a99b",
+        "hash": "c48c273e",
+        "encoded": "#%20Uncomment%20if%20you%20add%20a%20Lakeview%20dashboard",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "4f9933",
+        "hash": "c84065a9",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "4f9933",
+        "hash": "68ee8f02",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "4f9933",
+        "hash": "b20bc37f",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "4f9933",
+        "hash": "7291daf9",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "d515ff",
+        "hash": "4ab4ccab",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "d515ff",
+        "hash": "03b43d22",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "d515ff",
+        "hash": "67621ca8",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "d515ff",
+        "hash": "c7d6860b",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "d515ff",
+        "hash": "2bd2a7b1",
+        "encoded": "resources:",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "d515ff",
+        "hash": "59aa25a7",
+        "encoded": "-%20name:%20lakebase",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "d515ff",
+        "hash": "95ecdf59",
+        "encoded": "type:%20postgres",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "d515ff",
+        "hash": "2f7fb69c",
+        "encoded": "postgres:",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "d515ff",
+        "hash": "b63a4b55",
+        "encoded": "project:%20rtm-fraud-lakebase",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "d515ff",
+        "hash": "907ac378",
+        "encoded": "branch:%20production",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "e1d863",
+        "hash": "b867b779",
+        "encoded": "apps:",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "e1d863",
+        "hash": "be54201d",
+        "encoded": "fraud_dashboard:",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "e1d863",
+        "hash": "2ba5c025",
+        "encoded": "name:%20%22rtm-fraud-dashboard-$%7Bvar.environment%7D%22",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "e1d863",
+        "hash": "2ca184f0",
+        "encoded": "description:%20%22Real-time%20fraud%20detection%20dashboard%20powered%20by%20Lakebase%22",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "e1d863",
+        "hash": "3854df1f",
+        "encoded": "source_code_path:%20%22./apps%22",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 91
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "filename": "RTM_00_Quick_Start.py",
+  "path": "notebooks\\RTM_00_Quick_Start.py",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "ae2fcce5": {
+      "value": "can u add this code for comparison of spark streaming vs rtm in quick start notebook?\n\n\"Using the same fraud detection logic and Event Hub source, Real-Time Mode reduced end-to-end latency from X ms to Y ms while maintaining comparable throughput.\"\n\nEasiest Demo Trick\nSince you've already completed RTM_00_Quick_Start, run it and show:\n\n\n\n\nPython\ndisplay(metrics_df)\nor\n\n\n\n\nPython\nquery.lastProgress\nThen run the same notebook with:\n\n\n\n\nPython\n.trigger(processingTime=\"1 second\")\ninstead of:\n\n\n\n\nPyt"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

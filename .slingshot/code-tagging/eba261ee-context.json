@@ -1,0 +1,55 @@
+{
+  "filename": "databricks.yml",
+  "path": "databricks.yml",
+  "version": "1.1",
+  "files": {
+    "dd6eb47b": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "app.py",
+          "relativeFilePath": "apps/app.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            237
+          ]
+        }
+      ]
+    },
+    "2b61e8b7": {
+      "value": [
+        {
+          "programming_language": "text",
+          "fileName": "requirements.txt",
+          "relativeFilePath": "apps/requirements.txt",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "b0d81d77": {
+      "value": "I need to deploy this app.py"
+    },
+    "63aa2dca": {
+      "value": "restart"
+    },
+    "26c28006": {
+      "value": "getting this error"
+    },
+    "e50c02cd": {
+      "value": "getting the error again"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

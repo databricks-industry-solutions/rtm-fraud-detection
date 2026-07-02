@@ -30,7 +30,7 @@
 # MAGIC ### Prerequisites
 # MAGIC - **Run Notebook 1 first** (or at least its Section 1 for Kafka config)
 # MAGIC - Same cluster requirements as Notebook 1 (Real-Time Mode enabled)
-# MAGIC - A **Lakebase instance** (we'll configure the name below)
+# MAGIC - A **Lakebase project** (we'll configure the project UUID below)
 # MAGIC
 # MAGIC ### Notebook Sections
 # MAGIC | # | Section | What it does |
@@ -61,7 +61,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install --upgrade databricks-sdk psycopg kafka-python
+# MAGIC %pip install --upgrade databricks-sdk "psycopg[binary]" kafka-python
 
 # COMMAND ----------
 
@@ -72,13 +72,6 @@ dbutils.library.restartPython()
 # DBTITLE 1,TODO: Configure your environment
 # --- Kafka (only needed if running standalone, i.e., without running Notebook 1 first) ---
 dbutils.widgets.text("secret_scope", "", "Kafka Secret Scope Name")
-
-# --- Lakebase ---
-# Create a Lakebase instance if you don't have one:
-#   1. In the Databricks UI, go to SQL > Lakebase
-#   2. Click "Create instance", give it a name (e.g., "rtm-lakebase-demo"), select a size
-#   3. Enter that instance name in the widget below
-dbutils.widgets.text("lakebase_instance", "", "Lakebase Instance Name")
 
 # COMMAND ----------
 
@@ -130,21 +123,22 @@ Configuration:
 # MAGIC store** -- a low-latency database where streaming pipelines write features and
 # MAGIC scoring services read them in sub-milliseconds.
 # MAGIC
-# MAGIC Set your Lakebase instance name below. If you don't have one yet, create it from
-# MAGIC the Databricks UI under **SQL > Lakebase**.
+# MAGIC We connect directly using `psycopg` with a short-lived token generated from
+# MAGIC the Lakebase UI **Connect** dialog. Generate a **new token** each time you run
+# MAGIC this notebook (tokens expire after ~1 hour).
 
 # COMMAND ----------
 
 # ============================================================
-# Lakebase config (reads from widget)
+# Lakebase connection config (direct psycopg with token)
 # ============================================================
-LAKEBASE_INSTANCE_NAME = dbutils.widgets.get("lakebase_instance")
-if not LAKEBASE_INSTANCE_NAME:
-    raise ValueError(
-        "Widget 'lakebase_instance' is empty. Enter your Lakebase instance name in the widget above. "
-        "To create one: Databricks UI > SQL > Lakebase > Create instance."
-    )
-LAKEBASE_DATABASE = "databricks_postgres"  # Default database
+import psycopg
+
+LAKEBASE_HOST     = "ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net"
+LAKEBASE_DATABASE = "databricks_postgres"
+LAKEBASE_USER     = dbutils.secrets.get(scope="lakebase-scope", key="lakebase-user")
+LAKEBASE_TOKEN    = dbutils.secrets.get(scope="lakebase-scope", key="lakebase-token")
+
 
 # Feature store table names (must match the app's table names in apps/app.py)
 FEATURE_TABLE = "card_features"
@@ -156,9 +150,11 @@ checkpoint_feature_store = f"{project_dir}/checkpoints/feature_store"
 checkpoint_scoring       = f"{project_dir}/checkpoints/scoring"
 
 print(f"""
-Lakebase Configuration:
-  Instance:       {LAKEBASE_INSTANCE_NAME}
+Lakebase Connection Configuration:
+  Host:           {LAKEBASE_HOST}
   Database:       {LAKEBASE_DATABASE}
+  User:           {LAKEBASE_USER}
+  Token:          [REDACTED - loaded from Databricks Secrets]
   Feature Table:  {FEATURE_TABLE}
   Scores Table:   {SCORES_TABLE}
 """)
@@ -174,28 +170,26 @@ Lakebase Configuration:
 
 # COMMAND ----------
 
-def connect_to_lakebase(instance_name, database):
-  """Generate credentials for a Lakebase instance."""
-  from databricks.sdk import WorkspaceClient
-  import uuid
-  import psycopg
+def connect_to_lakebase():
+  """Connect to Lakebase using a pre-generated token.
 
-  w = WorkspaceClient()
-  host = w.database.get_database_instance(name=instance_name).read_write_dns
-  cred = w.database.generate_database_credential(
-      request_id=str(uuid.uuid4()), instance_names=[instance_name])
-  
+  Uses the module-level LAKEBASE_HOST, LAKEBASE_DATABASE, LAKEBASE_USER,
+  and LAKEBASE_TOKEN constants configured in Section 1.2.
+
+  ⚠️ The token expires after ~1 hour. Generate a new one from the
+  Lakebase UI Connect dialog and update LAKEBASE_TOKEN before re-running.
+  """
   return psycopg.connect(
-    host=host,
+    host=LAKEBASE_HOST,
     port=5432,
-    dbname=database,
-    user=w.current_user.me().user_name,
-    password=cred.token,
-    sslmode='require'
+    dbname=LAKEBASE_DATABASE,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
+    sslmode="require"
   )
 
 # Test connection and create tables
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     # Feature store table: one row per card, upserted on each transaction
     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
     cur.execute(f"""
@@ -239,7 +233,7 @@ with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, con
     print(f"Created tables: {FEATURE_TABLE}, {SCORES_TABLE}")
 
 # Verify tables exist
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '{FEATURE_TABLE}' ORDER BY ordinal_position")
     print(f"\n{FEATURE_TABLE} schema:")
     for row in cur.fetchall():
@@ -341,6 +335,14 @@ transaction_schema = StructType([
     StructField("event_time", StringType()),
 ])
 
+# --- Azure Event Hubs SASL_SSL config ---
+eventhub_conn_string = dbutils.secrets.get(scope="kafka-scope", key="kafka-connection-string")
+kafka_sasl_jaas_config = (
+    'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule required '
+    'username="$ConnectionString" '
+    f'password="{eventhub_conn_string}";'
+)
+
 raw_stream = (
     spark.readStream
     .format("kafka")
@@ -348,7 +350,11 @@ raw_stream = (
     .option("assign", json.dumps({input_topic: [0, 1]}))  # Read only 2 of 8 partitions
     .option("startingOffsets", "latest")
     .option("failOnDataLoss", "false")
-    .option("kafka.security.protocol", "SSL")
+    .option("kafka.security.protocol", "SASL_SSL")
+    .option("kafka.sasl.mechanism", "PLAIN")
+    .option("kafka.sasl.jaas.config", kafka_sasl_jaas_config)
+    .option("kafka.request.timeout.ms", "60000")
+    .option("kafka.session.timeout.ms", "30000")
     .load()
 )
 
@@ -509,7 +515,9 @@ KEY_COLUMNS = ["card_id"]
 dbutils.fs.rm(checkpoint_feature_store, recurse=True)
 
 writer = LakebaseFeatureWriter(
-    instance_name=LAKEBASE_INSTANCE_NAME,
+    host=LAKEBASE_HOST,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
     table=FEATURE_TABLE,
     columns=FEATURE_COLUMNS,
     key_columns=KEY_COLUMNS,
@@ -815,6 +823,13 @@ print(f"Loaded model as Spark UDF: {scoring_model_uri}")
 # COMMAND ----------
 
 # Read from the same Kafka topic (2 partitions to stay within slot limits)
+# --- Azure Event Hubs SASL_SSL config (same as Section 4.1) ---
+scoring_sasl_jaas_config = (
+    'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule required '
+    'username="$ConnectionString" '
+    f'password="{eventhub_conn_string}";'
+)
+
 raw_stream_scoring = (
     spark.readStream
     .format("kafka")
@@ -822,7 +837,11 @@ raw_stream_scoring = (
     .option("assign", json.dumps({input_topic: [0, 1]}))
     .option("startingOffsets", "latest")
     .option("failOnDataLoss", "false")
-    .option("kafka.security.protocol", "SSL")
+    .option("kafka.security.protocol", "SASL_SSL")
+    .option("kafka.sasl.mechanism", "PLAIN")
+    .option("kafka.sasl.jaas.config", scoring_sasl_jaas_config)
+    .option("kafka.request.timeout.ms", "60000")
+    .option("kafka.session.timeout.ms", "30000")
     .load()
 )
 
@@ -935,7 +954,9 @@ SCORES_COLUMNS = [
 SCORES_KEY = ["transaction_id"]
 
 scores_writer = LakebaseFeatureWriter(
-    instance_name=LAKEBASE_INSTANCE_NAME,
+    host=LAKEBASE_HOST,
+    user=LAKEBASE_USER,
+    password=LAKEBASE_TOKEN,
     table=SCORES_TABLE,
     columns=SCORES_COLUMNS,
     key_columns=SCORES_KEY,
@@ -1002,7 +1023,7 @@ run_baseline_generator(duration_seconds=30, tps=5)
 
 time.sleep(10)
 
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {FEATURE_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total rows in {FEATURE_TABLE}: {total}\n")
@@ -1057,7 +1078,7 @@ print("\nFraud injection complete.")
 
 time.sleep(300)
 
-with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+with connect_to_lakebase() as conn, conn.cursor() as cur:
     cur.execute(f"SELECT count(*) FROM {SCORES_TABLE}")
     total = cur.fetchone()[0]
     print(f"Total scored transactions: {total}\n")
@@ -1110,7 +1131,7 @@ display(spark.sql("""
 
 # DBTITLE 1,Grant App access to all tables
 # If you want to grant access to all tables in the Lakebase schema, uncomment the following code
-# with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase() as conn, conn.cursor() as cur:
 #       conn.autocommit = True
 #       cur.execute("GRANT ALL ON ALL TABLES IN SCHEMA public TO PUBLIC")
 #       print("Done") 
@@ -1139,7 +1160,7 @@ print("All queries stopped, tables uncached.")
 # COMMAND ----------
 
 # Optional: drop Lakebase tables (uncomment to run)
-# with connect_to_lakebase(LAKEBASE_INSTANCE_NAME, LAKEBASE_DATABASE) as conn, conn.cursor() as cur:
+# with connect_to_lakebase() as conn, conn.cursor() as cur:
 #     cur.execute(f"DROP TABLE IF EXISTS {FEATURE_TABLE}")
 #     cur.execute(f"DROP TABLE IF EXISTS {SCORES_TABLE}")
 #     conn.commit()

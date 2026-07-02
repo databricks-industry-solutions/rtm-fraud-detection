@@ -1,0 +1,34 @@
+{
+  "filename": "app.py",
+  "path": "apps\\app.py",
+  "version": "1.1",
+  "files": {
+    "2b61e8b7": {
+      "value": [
+        {
+          "programming_language": "text",
+          "fileName": "requirements.txt",
+          "relativeFilePath": "apps/requirements.txt",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "26c28006": {
+      "value": "getting this error"
+    },
+    "e50c02cd": {
+      "value": "getting the error again"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

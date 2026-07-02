@@ -4,23 +4,23 @@ import json, ssl, random, time, uuid
 from datetime import datetime, timedelta
 from kafka import KafkaProducer
 
-# --- Read config from spark.conf (set by Scala in Section 1) ---
+# --- Read config from spark.conf (set by config notebook in Section 1) ---
 kafka_servers = spark.conf.get("demo.kafka.brokers.tls")
 input_topic   = spark.conf.get("demo.topic.input")
 
-# --- SSL context for AWS MSK ---
-ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-ssl_context.check_hostname = False
-ssl_context.verify_mode = ssl.CERT_NONE
+# --- Retrieve Event Hubs connection string from Databricks Secrets ---
+eh_conn_string = dbutils.secrets.get(scope="kafka-scope", key="kafka-connection-string")
 
-# --- Create Kafka producer ---
+# --- Create Kafka producer (Azure Event Hubs via SASL_SSL/PLAIN) ---
 producer = KafkaProducer(
     bootstrap_servers=kafka_servers,
-    security_protocol="SSL",
-    ssl_context=ssl_context,
+    security_protocol="SASL_SSL",
+    sasl_mechanism="PLAIN",
+    sasl_plain_username="$ConnectionString",
+    sasl_plain_password=eh_conn_string,
     value_serializer=lambda v: json.dumps(v).encode('utf-8'),
     request_timeout_ms=10000,
-    api_version_auto_timeout_ms=10000
+    #api_version_auto_timeout_ms=10000
 )
 
 # --- Constants ---

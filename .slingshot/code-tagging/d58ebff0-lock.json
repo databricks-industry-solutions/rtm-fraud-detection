@@ -1,0 +1,331 @@
+{
+  "apps\\app.py": {
+    "filename": "app.py",
+    "path": "apps\\app.py",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "3c6edb": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782818639,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "26c28006",
+          "files": "2b61e8b7"
+        },
+        "hash": "391b465c",
+        "messageId": "system_7d085610-7475-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 4:53:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "8f1be7": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782819538,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "e50c02cd"
+        },
+        "hash": "1128c28f",
+        "messageId": "system_83a5fde0-7477-11f1-9808-a947cce624f9",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 6/30/2026, 5:08:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "26": {
+        "chunkId": "8f1be7",
+        "hash": "49526941",
+        "encoded": "#%20Lakebase%20endpoint%20for%20credential%20generation",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8f1be7",
+        "hash": "c1d7428c",
+        "encoded": "LAKEBASE_ENDPOINT_NAME%20=%20%22projects/rtm-fraud-lakebase/branches/production/endpoints/ep-wandering-art-ee26lbua%22",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "8f1be7",
+        "hash": "fc0b147b",
+        "encoded": "def%20refresh_oauth_token():",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "8f1be7",
+        "hash": "5be3662a",
+        "encoded": "%22%22%22Refresh%20Lakebase%20credential%20using%20the%20Databricks%20SDK.%22%22%22",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8f1be7",
+        "hash": "e5958145",
+        "encoded": "global%20postgres_password,%20last_password_refresh",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "8f1be7",
+        "hash": "047c6bbe",
+        "encoded": "if%20postgres_password%20is%20None%20or%20time.time()%20-%20last_password_refresh%20%3E%20900:",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "8f1be7",
+        "hash": "aa19fbba",
+        "encoded": "print(%22Refreshing%20PostgreSQL%20credential%20via%20w.postgres.generate_database_credential%22)",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "8f1be7",
+        "hash": "b9a31a00",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "8f1be7",
+        "hash": "7375d427",
+        "encoded": "cred%20=%20workspace_client.postgres.generate_database_credential(",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "8f1be7",
+        "hash": "3a5af2ba",
+        "encoded": "endpoint=LAKEBASE_ENDPOINT_NAME",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "8f1be7",
+        "hash": "e30cf15e",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "8f1be7",
+        "hash": "250a4cb2",
+        "encoded": "postgres_password%20=%20cred.token",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "8f1be7",
+        "hash": "7fa6903f",
+        "encoded": "except%20Exception%20as%20e:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "8f1be7",
+        "hash": "c8266bf6",
+        "encoded": "print(f%22SDK%20credential%20generation%20failed%20(%7Be%7D),%20falling%20back%20to%20OAuth%20token%22)",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "8f1be7",
+        "hash": "740c0fed",
+        "encoded": "postgres_password%20=%20workspace_client.config.oauth_token().access_token",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "8f1be7",
+        "hash": "6b9d9310",
+        "encoded": "last_password_refresh%20=%20time.time()",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "3c6edb",
+        "hash": "6f44d040",
+        "encoded": "def%20get_connection_pool():",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "3c6edb",
+        "hash": "364ad893",
+        "encoded": "%22%22%22Get%20or%20create%20the%20connection%20pool.%22%22%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "3c6edb",
+        "hash": "8d708d9d",
+        "encoded": "global%20connection_pool",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "3c6edb",
+        "hash": "af8f471f",
+        "encoded": "if%20connection_pool%20is%20None:",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "3c6edb",
+        "hash": "501f7d26",
+        "encoded": "#%20Validate%20that%20Lakebase%20resource%20binding%20injected%20the%20PG*%20env%20vars",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "3c6edb",
+        "hash": "2711eef6",
+        "encoded": "required_vars%20=%20%5B%22PGHOST%22,%20%22PGDATABASE%22,%20%22PGUSER%22,%20%22PGPORT%22%5D",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "3c6edb",
+        "hash": "ba98f66e",
+        "encoded": "missing%20=%20%5Bv%20for%20v%20in%20required_vars%20if%20not%20os.getenv(v)%5D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "3c6edb",
+        "hash": "5a5a4eca",
+        "encoded": "if%20missing:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "3c6edb",
+        "hash": "b021cd82",
+        "encoded": "raise%20RuntimeError(",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "3c6edb",
+        "hash": "e86377c0",
+        "encoded": "f%22Missing%20environment%20variables:%20%7B',%20'.join(missing)%7D.%20%22",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "3c6edb",
+        "hash": "6f15d5d3",
+        "encoded": "%22Ensure%20the%20app%20has%20a%20Lakebase%20resource%20binding%20configured%20in%20app.yaml%20%22",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "3c6edb",
+        "hash": "d8085629",
+        "encoded": "%22and%20the%20app%20has%20been%20redeployed%20with%20'databricks%20bundle%20deploy'.%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "3c6edb",
+        "hash": "d7021adc",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "3c6edb",
+        "hash": "5e60c35a",
+        "encoded": "refresh_oauth_token()",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "3c6edb",
+        "hash": "6d59f2ff",
+        "encoded": "conn_string%20=%20(",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "3c6edb",
+        "hash": "70bb463e",
+        "encoded": "f%22dbname=%7Bos.getenv('PGDATABASE')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "3c6edb",
+        "hash": "82c61f6c",
+        "encoded": "f%22user=%7Bos.getenv('PGUSER')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "3c6edb",
+        "hash": "9179bf44",
+        "encoded": "f%22password=%7Bpostgres_password%7D%20%22",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "3c6edb",
+        "hash": "199ffba4",
+        "encoded": "f%22host=%7Bos.getenv('PGHOST')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "3c6edb",
+        "hash": "c08a5950",
+        "encoded": "f%22port=%7Bos.getenv('PGPORT')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "3c6edb",
+        "hash": "83faa989",
+        "encoded": "f%22sslmode=%7Bos.getenv('PGSSLMODE',%20'require')%7D%20%22",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "3c6edb",
+        "hash": "36c68547",
+        "encoded": "f%22application_name=%7Bos.getenv('PGAPPNAME')%7D%22",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "3c6edb",
+        "hash": "24a491b5",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "3c6edb",
+        "hash": "8e868511",
+        "encoded": "connection_pool%20=%20ConnectionPool(",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "3c6edb",
+        "hash": "bf2cc1ee",
+        "encoded": "conn_string,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "3c6edb",
+        "hash": "07f1e0fe",
+        "encoded": "min_size=2,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "3c6edb",
+        "hash": "db782c6d",
+        "encoded": "max_size=10,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "3c6edb",
+        "hash": "613e320d",
+        "encoded": "timeout=30.0,",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "3c6edb",
+        "hash": "629aca5e",
+        "encoded": "open=True,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "3c6edb",
+        "hash": "490979b5",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "3c6edb",
+        "hash": "c23039db",
+        "encoded": "return%20connection_pool",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "notebooks\\resources\\00_config.py": {
+    "filename": "00_config.py",
+    "path": "notebooks\\resources\\00_config.py",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2d15f4": {
+        "user": "Harneet Singh Banga",
+        "model": "gpt-4o",
+        "timestamp": 1779983842,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c24b917",
+          "files": "17f2badd"
+        },
+        "hash": "332b4d5e",
+        "messageId": "system_33e14780-5aad-11f1-b7bf-81ab4583febf",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: gpt-4o\n- **timestamp**: 5/28/2026, 9:27:22 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "548b13": {
+        "user": "Harneet Singh Banga",
+        "model": "gpt-4o",
+        "timestamp": 1779983842,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c24b917",
+          "files": "17f2badd"
+        },
+        "hash": "d68f4c3c",
+        "messageId": "system_33e14780-5aad-11f1-b7bf-81ab4583febf",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: gpt-4o\n- **timestamp**: 5/28/2026, 9:27:22 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "51": {
+        "chunkId": "548b13",
+        "hash": "9e3aaecf",
+        "encoded": "#%20---%20Kafka%20credentials%20from%20Databricks%20Secrets%20(scope:%20kafka-scope)%20---",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "548b13",
+        "hash": "a3c9a889",
+        "encoded": "secret_scope%20=%20%22kafka-scope%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "548b13",
+        "hash": "6608a702",
+        "encoded": "kafka_bootstrap_servers_tls%20=%20dbutils.secrets.get(secret_scope,%20%22kafka-bootstrap-servers-tls%22)",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "548b13",
+        "hash": "0dbc49e1",
+        "encoded": "kafka_bootstrap_servers_plaintext%20=%20dbutils.secrets.get(secret_scope,%20%22kafka-bootstrap-servers-plaintext%22)",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "548b13",
+        "hash": "56ce00a5",
+        "encoded": "eh_conn_string%20=%20dbutils.secrets.get(secret_scope,%20%22kafka-connection-string%22)",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "548b13",
+        "hash": "bc62d100",
+        "encoded": "use_tls%20=%20True",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "548b13",
+        "hash": "277f5671",
+        "encoded": "kafka_brokers%20=%20kafka_bootstrap_servers_tls%20if%20use_tls%20else%20kafka_bootstrap_servers_plaintext",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "548b13",
+        "hash": "5f4d90ba",
+        "encoded": "#%20SASL/PLAIN%20JAAS%20config%20for%20Azure%20Event%20Hubs",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "548b13",
+        "hash": "2513b619",
+        "encoded": "eh_sasl_jaas%20=%20(",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "548b13",
+        "hash": "93f3b6d2",
+        "encoded": "'kafkashaded.org.apache.kafka.common.security.plain.PlainLoginModule%20required%20'",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "548b13",
+        "hash": "0a09237f",
+        "encoded": "'username=%22$ConnectionString%22%20'",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "548b13",
+        "hash": "04252625",
+        "encoded": "f'password=%22%7Beh_conn_string%7D%22;'",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "548b13",
+        "hash": "e9467d36",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "2d15f4",
+        "hash": "f48690b3",
+        "encoded": "admin_client%20=%20KafkaAdminClient(",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "2d15f4",
+        "hash": "895d4e7f",
+        "encoded": "bootstrap_servers=kafka_bootstrap_servers_tls,",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "2d15f4",
+        "hash": "d1951232",
+        "encoded": "security_protocol=%22SASL_SSL%22,",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "2d15f4",
+        "hash": "b11eac29",
+        "encoded": "sasl_mechanism=%22PLAIN%22,",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "2d15f4",
+        "hash": "1826bb30",
+        "encoded": "sasl_plain_username=%22$ConnectionString%22,",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "2d15f4",
+        "hash": "16f48c46",
+        "encoded": "sasl_plain_password=eh_conn_string,",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "2d15f4",
+        "hash": "d6292ebd",
+        "encoded": ")",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

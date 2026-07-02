@@ -1,0 +1,106 @@
+{
+  "filename": "RTM_02_Advanced_fraud_detection_ml.py",
+  "path": "notebooks\\RTM_02_Advanced_fraud_detection_ml.py",
+  "version": "1.1",
+  "files": {
+    "3d62d74f": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1163
+          ]
+        }
+      ]
+    },
+    "bc3375ee": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1192
+          ]
+        }
+      ]
+    },
+    "85069eab": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1238
+          ]
+        }
+      ]
+    },
+    "a85a2dc6": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1221
+          ]
+        }
+      ]
+    },
+    "6fdf5299": {
+      "value": [
+        {
+          "programming_language": "Python",
+          "fileName": "RTM_02_Advanced_fraud_detection_ml.py",
+          "relativeFilePath": "notebooks/RTM_02_Advanced_fraud_detection_ml.py",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1223
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "56727438": {
+      "value": "sam eerror..AttributeError: 'DatabaseAPI' object has no attribute 'get_project'\n[Trace ID: 00-da765c47144a7ecad4f4a696b2e02a21-052e74dc21fc58ea-00]"
+    },
+    "10a9ba83": {
+      "value": "yesv correct those"
+    },
+    "9437e162": {
+      "value": "happened because you tried to use instance-based access, which is not how your current setup (SDK + POC) works."
+    },
+    "bdcc9f8e": {
+      "value": "this code is working from databricks.sdk import WorkspaceClient\n\n# ✅ Initialize client\nw = WorkspaceClient()\n\n# ✅ Use database API from client (DO NOT instantiate manually)\ndb = w.database\n\n# ✅ Your Lakebase context\nproject_id = \"2fcf556f-c4f0-4a88-842f-1db5e8459d91\"\nbranch_name = \"main\"\n\nprint(\"✅ Database client ready\")"
+    },
+    "24924ccc": {
+      "value": "USE THIS ...............import psycopg\n\nHOST = \"ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net\"\nDB = \"databricks_postgres\"\nUSER = \"harbanga@publicisgroupe.net\"\n\n# ⚠️ Generate a NEW token from UI\nTOKEN = \"eyJraWQiOiJjMGQ2YzQ2MTA4NWVmY2E1YTgzYTMxNzI2ZDQ2ZmMzN2QxNmMwYzY4NWQwNDRhMTJhNTUxNjhhOGM3MzZkM2U2IiwidHlwIjoiYXQrand0IiwiYWxnIjoiUlMyNTYifQ.eyJjbGllbnRfaWQiOiJkYi1kYXRhYmFzZS1jcmVkZW50aWFsIiwic2NvcGUiOiJpYW0uY3VycmVudC11c2VyOnJlYWQgaWFtLmdyb3VwczpyZWFkIGlhbS5zZXJ2aWNlLXByaW5jaXBhb"
+    },
+    "e55a65ee": {
+      "value": "I created the dashboard using UI ....getting below error Error: Execution failed on sql ' SELECT ml_decision, COUNT(*) AS cnt, ROUND(AVG(fraud_probability)::numeric, 4) AS avg_prob, ROUND(MIN(fraud_probability)::numeric, 4) AS min_prob, ROUND(MAX(fraud_probability)::numeric, 4) AS max_prob, ROUND(AVG(amount_usd)::numeric, 2) AS avg_amount FROM fraud_scores GROUP BY ml_decision ORDER BY avg_prob ': permission denied for table fraud_scores"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

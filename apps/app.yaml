@@ -1,1 +1,13 @@
 command: ["streamlit", "run", "app.py"]
+
+env:
+  - name: PGHOST
+    value: "ep-wandering-art-ee26lbua.database.westus2.azuredatabricks.net"
+  - name: PGDATABASE
+    value: "databricks_postgres"
+  - name: PGUSER
+    value: "harbanga@publicisgroupe.net"
+  - name: PGPORT
+    value: "5432"
+  - name: PGSSLMODE
+    value: "require"

@@ -25,3 +25,4 @@ build/
 # Environment files
 .env
 .env.local 
+.slingshot/code-tagging/c25e4c38-lock.json

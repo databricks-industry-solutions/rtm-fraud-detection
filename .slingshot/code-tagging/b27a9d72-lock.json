@@ -1,0 +1,1104 @@
+{
+  "notebooks\\RTM_00_Quick_Start.py": {
+    "filename": "RTM_00_Quick_Start.py",
+    "path": "notebooks\\RTM_00_Quick_Start.py",
+    "version": "1.2",
+    "contextFile": "b27a9d72-context.json",
+    "chunks": {
+      "b0a2b4": {
+        "user": "Harneet Singh Banga",
+        "model": "claude-opus-4-6",
+        "timestamp": 1782876203,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "ae2fcce5"
+        },
+        "hash": "cc804ce2",
+        "messageId": "system_df1c4060-74fb-11f1-889c-d7e41fec020a",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Harneet Singh Banga\n- **model**: claude-opus-4-6\n- **timestamp**: 7/1/2026, 8:53:23 AM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "258": {
+        "chunkId": "b0a2b4",
+        "hash": "6ab4b7cd",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "b0a2b4",
+        "hash": "64cce73b",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "b0a2b4",
+        "hash": "cd8cda25",
+        "encoded": "#%20MAGIC%20---",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "b0a2b4",
+        "hash": "796cd049",
+        "encoded": "#%20MAGIC%20##%20Section%206:%20Spark%20Structured%20Streaming%20vs%20Real-Time%20Mode%20%E2%80%94%20Latency%20Comparison",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "b0a2b4",
+        "hash": "dbd74832",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "b0a2b4",
+        "hash": "bbe9d88d",
+        "encoded": "#%20MAGIC%20%3E%20*%22Using%20the%20same%20fraud%20detection%20logic%20and%20Event%20Hub%20source,%20Real-Time%20Mode%20reduced",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "b0a2b4",
+        "hash": "2bc35f01",
+        "encoded": "#%20MAGIC%20%3E%20end-to-end%20latency%20from%20X%20ms%20to%20Y%20ms%20while%20maintaining%20comparable%20throughput.%22*",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "b0a2b4",
+        "hash": "c0b38c94",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "b0a2b4",
+        "hash": "e6356ea7",
+        "encoded": "#%20MAGIC%20This%20section%20runs%20the%20**exact%20same%20pipeline**%20twice%20%E2%80%94%20once%20with%20the%20traditional",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "b0a2b4",
+        "hash": "7a6c1897",
+        "encoded": "#%20MAGIC%20%60processingTime%60%20trigger%20(standard%20Structured%20Streaming)%20and%20once%20with%20the%20%60realTime%60",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "b0a2b4",
+        "hash": "5cf797d7",
+        "encoded": "#%20MAGIC%20trigger%20(RTM).%20By%20comparing%20%60query.lastProgress%60%20output%20side-by-side,%20you%20can",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "b0a2b4",
+        "hash": "46e5fc12",
+        "encoded": "#%20MAGIC%20quantify%20the%20latency%20improvement.",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "b0a2b4",
+        "hash": "15ff391b",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "b0a2b4",
+        "hash": "92c8b959",
+        "encoded": "#%20MAGIC%20###%20Demo%20Approach",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "b0a2b4",
+        "hash": "7ed487a8",
+        "encoded": "#%20MAGIC%201.%20**Run%20A**%20%E2%80%94%20Traditional%20trigger:%20%60.trigger(processingTime=%221%20second%22)%60",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "b0a2b4",
+        "hash": "67fa8e9e",
+        "encoded": "#%20MAGIC%202.%20**Run%20B**%20%E2%80%94%20Real-Time%20Mode%20trigger:%20%60.trigger(realTime=%225%20seconds%22)%60",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "b0a2b4",
+        "hash": "e916586b",
+        "encoded": "#%20MAGIC%203.%20Capture%20%60query.lastProgress%60%20from%20each%20run",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "b0a2b4",
+        "hash": "710898b6",
+        "encoded": "#%20MAGIC%204.%20Build%20a%20comparison%20DataFrame",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "b0a2b4",
+        "hash": "1272b124",
+        "encoded": "#%20MAGIC%205.%20*(Optional)*%20Screenshot%20both%20and%20place%20side-by-side%20in%20a%20PPT",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "b0a2b4",
+        "hash": "3cd46ac1",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "b0a2b4",
+        "hash": "b80f731c",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "b0a2b4",
+        "hash": "830dacf5",
+        "encoded": "#%20MAGIC%20###%206.1%20%E2%80%94%20Run%20A:%20Traditional%20Structured%20Streaming%20(%60processingTime%60)",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "b0a2b4",
+        "hash": "b124f2a8",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "b0a2b4",
+        "hash": "e3222dff",
+        "encoded": "#%20MAGIC%20This%20uses%20the%20standard%20micro-batch%20trigger.%20Even%20at%201-second%20intervals,%20latency",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "b0a2b4",
+        "hash": "65e8212d",
+        "encoded": "#%20MAGIC%20is%20bounded%20by%20the%20micro-batch%20scheduling%20overhead.",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "b0a2b4",
+        "hash": "8df530c8",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "b0a2b4",
+        "hash": "cc0cca59",
+        "encoded": "import%20time",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "b0a2b4",
+        "hash": "90bc04b5",
+        "encoded": "import%20json",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "b0a2b4",
+        "hash": "13d9b470",
+        "encoded": "#%20---%20Run%20A:%20Traditional%20processingTime%20trigger%20---",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "b0a2b4",
+        "hash": "c5ad8cbd",
+        "encoded": "query_traditional%20=%20(",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "b0a2b4",
+        "hash": "8061cf06",
+        "encoded": "scored_stream.select(",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "b0a2b4",
+        "hash": "bebf3d58",
+        "encoded": "%22transaction_id%22,%20%22card_id%22,%20%22amount_usd%22,%20%22channel%22,%20%22ip_country%22,",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "b0a2b4",
+        "hash": "7d3ae7fe",
+        "encoded": "%22velocity_60s%22,%20%22velocity_score%22,%20%22amount_score%22,%20%22country_score%22,",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "b0a2b4",
+        "hash": "b2014dec",
+        "encoded": "%22fraud_score%22,%20%22decision%22,%20%22event_time%22,%20%22scored_time%22,",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "b0a2b4",
+        "hash": "12f49ec9",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "b0a2b4",
+        "hash": "e3a87e84",
+        "encoded": ".writeStream",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "b0a2b4",
+        "hash": "abeee8cb",
+        "encoded": ".queryName(%22traditional_streaming%22)",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "b0a2b4",
+        "hash": "249f930f",
+        "encoded": ".format(%22memory%22)",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "b0a2b4",
+        "hash": "d02369c7",
+        "encoded": ".outputMode(%22update%22)",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "b0a2b4",
+        "hash": "925673ca",
+        "encoded": ".trigger(processingTime=%221%20second%22)",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "b0a2b4",
+        "hash": "c509414b",
+        "encoded": ".start()",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "b0a2b4",
+        "hash": "8908aa80",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "b0a2b4",
+        "hash": "e1f8e32f",
+        "encoded": "print(%22Traditional%20Structured%20Streaming%20query%20started%20(processingTime='1%20second').%22)",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "b0a2b4",
+        "hash": "9b551f55",
+        "encoded": "print(%22Letting%20it%20run%20for%2060%20seconds%20to%20collect%20stable%20metrics...%22)",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "b0a2b4",
+        "hash": "8b3a5783",
+        "encoded": "time.sleep(60)",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "b0a2b4",
+        "hash": "6ce0b0d5",
+        "encoded": "#%20Capture%20lastProgress",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "b0a2b4",
+        "hash": "316e3eb1",
+        "encoded": "traditional_progress%20=%20query_traditional.lastProgress",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "b0a2b4",
+        "hash": "f58dca54",
+        "encoded": "print(%22%5Cn===%20Traditional%20Streaming%20%E2%80%94%20query.lastProgress%20===%22)",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "b0a2b4",
+        "hash": "8e0b6efa",
+        "encoded": "print(json.dumps(traditional_progress,%20indent=2,%20default=str))",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "b0a2b4",
+        "hash": "113d575c",
+        "encoded": "#%20Stop%20the%20traditional%20query",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "b0a2b4",
+        "hash": "1851b963",
+        "encoded": "query_traditional.stop()",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "b0a2b4",
+        "hash": "0874ac3c",
+        "encoded": "print(%22%5CnTraditional%20query%20stopped.%22)",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "b0a2b4",
+        "hash": "cc4e6b93",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "b0a2b4",
+        "hash": "2e35d1ec",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "b0a2b4",
+        "hash": "0b4aabbe",
+        "encoded": "#%20MAGIC%20###%206.2%20%E2%80%94%20Run%20B:%20Real-Time%20Mode%20(%60realTime%60)",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "b0a2b4",
+        "hash": "5d5799e9",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "b0a2b4",
+        "hash": "e1637b99",
+        "encoded": "#%20MAGIC%20Same%20pipeline,%20same%20scoring%20logic%20%E2%80%94%20only%20the%20trigger%20changes.%20RTM%20processes",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "b0a2b4",
+        "hash": "d7911195",
+        "encoded": "#%20MAGIC%20records%20one-at-a-time%20with%20sub-300ms%20latency.",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "b0a2b4",
+        "hash": "faeb2417",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "b0a2b4",
+        "hash": "8ac35c47",
+        "encoded": "#%20---%20Run%20B:%20Real-Time%20Mode%20trigger%20---",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "b0a2b4",
+        "hash": "b4e6a00b",
+        "encoded": "query_rtm%20=%20(",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "b0a2b4",
+        "hash": "1902133d",
+        "encoded": "scored_stream.select(",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "b0a2b4",
+        "hash": "71ee0dd5",
+        "encoded": "%22transaction_id%22,%20%22card_id%22,%20%22amount_usd%22,%20%22channel%22,%20%22ip_country%22,",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "b0a2b4",
+        "hash": "d1192b88",
+        "encoded": "%22velocity_60s%22,%20%22velocity_score%22,%20%22amount_score%22,%20%22country_score%22,",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "b0a2b4",
+        "hash": "981f8fa8",
+        "encoded": "%22fraud_score%22,%20%22decision%22,%20%22event_time%22,%20%22scored_time%22,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "b0a2b4",
+        "hash": "d14bdc34",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "b0a2b4",
+        "hash": "671ca056",
+        "encoded": ".writeStream",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "b0a2b4",
+        "hash": "e92d7b65",
+        "encoded": ".queryName(%22rtm_streaming%22)",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "b0a2b4",
+        "hash": "0d6c4c8f",
+        "encoded": ".format(%22memory%22)",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "b0a2b4",
+        "hash": "f3608e39",
+        "encoded": ".outputMode(%22update%22)",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "b0a2b4",
+        "hash": "ed6e43e3",
+        "encoded": ".trigger(realTime=%225%20seconds%22)",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "b0a2b4",
+        "hash": "ab383b0a",
+        "encoded": ".start()",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "b0a2b4",
+        "hash": "ea05bc78",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "b0a2b4",
+        "hash": "85043bf8",
+        "encoded": "print(%22Real-Time%20Mode%20query%20started%20(realTime='5%20seconds').%22)",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "b0a2b4",
+        "hash": "6120b274",
+        "encoded": "print(%22Letting%20it%20run%20for%2060%20seconds%20to%20collect%20stable%20metrics...%22)",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "b0a2b4",
+        "hash": "3e48d6d1",
+        "encoded": "time.sleep(60)",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "b0a2b4",
+        "hash": "87f967e8",
+        "encoded": "#%20Capture%20lastProgress",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "b0a2b4",
+        "hash": "4b7eae48",
+        "encoded": "rtm_progress%20=%20query_rtm.lastProgress",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "b0a2b4",
+        "hash": "a6d8d849",
+        "encoded": "print(%22%5Cn===%20Real-Time%20Mode%20%E2%80%94%20query.lastProgress%20===%22)",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "b0a2b4",
+        "hash": "00c07c1d",
+        "encoded": "print(json.dumps(rtm_progress,%20indent=2,%20default=str))",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "b0a2b4",
+        "hash": "1255ebc9",
+        "encoded": "#%20Stop%20the%20RTM%20query",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "b0a2b4",
+        "hash": "e3958e82",
+        "encoded": "query_rtm.stop()",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "b0a2b4",
+        "hash": "6a9c5129",
+        "encoded": "print(%22%5CnRTM%20query%20stopped.%22)",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "b0a2b4",
+        "hash": "070160a6",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "b0a2b4",
+        "hash": "edb01ecd",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "b0a2b4",
+        "hash": "64ef5880",
+        "encoded": "#%20MAGIC%20###%206.3%20%E2%80%94%20Side-by-Side%20Comparison",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "b0a2b4",
+        "hash": "da76ff1e",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "b0a2b4",
+        "hash": "565a2495",
+        "encoded": "#%20MAGIC%20Build%20a%20comparison%20DataFrame%20from%20the%20captured%20%60lastProgress%60%20metrics.",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "b0a2b4",
+        "hash": "955d9a2e",
+        "encoded": "#%20MAGIC%20Key%20metrics%20to%20compare:",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "b0a2b4",
+        "hash": "22b425ce",
+        "encoded": "#%20MAGIC%20-%20**triggerExecution%20(ms)**%20%E2%80%94%20total%20time%20for%20one%20trigger%20cycle",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "b0a2b4",
+        "hash": "4d4bdc13",
+        "encoded": "#%20MAGIC%20-%20**inputRowsPerSecond**%20%E2%80%94%20throughput",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "b0a2b4",
+        "hash": "4d21da1f",
+        "encoded": "#%20MAGIC%20-%20**processedRowsPerSecond**%20%E2%80%94%20processing%20throughput",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "b0a2b4",
+        "hash": "423c8e96",
+        "encoded": "#%20MAGIC%20-%20**latency%20(ms)**%20%E2%80%94%20derived%20from%20%60durationMs%60%20fields",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "b0a2b4",
+        "hash": "775aa3be",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "b0a2b4",
+        "hash": "4246da24",
+        "encoded": "from%20pyspark.sql%20import%20Row",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "b0a2b4",
+        "hash": "d1f6312d",
+        "encoded": "def%20extract_metrics(progress,%20label):",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "b0a2b4",
+        "hash": "8ff4b5dc",
+        "encoded": "%22%22%22Extract%20key%20latency%20and%20throughput%20metrics%20from%20query.lastProgress.%22%22%22",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "b0a2b4",
+        "hash": "5069f293",
+        "encoded": "if%20progress%20is%20None:",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "b0a2b4",
+        "hash": "7da993d3",
+        "encoded": "return%20Row(",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "b0a2b4",
+        "hash": "7181f2dc",
+        "encoded": "mode=label,",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "b0a2b4",
+        "hash": "14ef83e1",
+        "encoded": "trigger_execution_ms=None,",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "b0a2b4",
+        "hash": "be8adbb2",
+        "encoded": "input_rows_per_sec=None,",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "b0a2b4",
+        "hash": "e99ad73f",
+        "encoded": "processed_rows_per_sec=None,",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "b0a2b4",
+        "hash": "8854b03e",
+        "encoded": "add_batch_ms=None,",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "b0a2b4",
+        "hash": "41b610e7",
+        "encoded": "get_batch_ms=None,",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "b0a2b4",
+        "hash": "3e879d4a",
+        "encoded": "query_planning_ms=None,",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "b0a2b4",
+        "hash": "ed502c54",
+        "encoded": "wal_commit_ms=None,",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "b0a2b4",
+        "hash": "c15a5d1c",
+        "encoded": "num_input_rows=None,",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "b0a2b4",
+        "hash": "7a70d578",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "b0a2b4",
+        "hash": "e1d74118",
+        "encoded": "durations%20=%20progress.get(%22durationMs%22,%20%7B%7D)",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "b0a2b4",
+        "hash": "9b54bc49",
+        "encoded": "return%20Row(",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "b0a2b4",
+        "hash": "f83818d5",
+        "encoded": "mode=label,",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "b0a2b4",
+        "hash": "903b58b3",
+        "encoded": "trigger_execution_ms=durations.get(%22triggerExecution%22),",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "b0a2b4",
+        "hash": "e4d24341",
+        "encoded": "input_rows_per_sec=progress.get(%22inputRowsPerSecond%22),",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "b0a2b4",
+        "hash": "2fea27bb",
+        "encoded": "processed_rows_per_sec=progress.get(%22processedRowsPerSecond%22),",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "b0a2b4",
+        "hash": "831f8f62",
+        "encoded": "add_batch_ms=durations.get(%22addBatch%22),",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "b0a2b4",
+        "hash": "2ff3f172",
+        "encoded": "get_batch_ms=durations.get(%22getBatch%22),",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "b0a2b4",
+        "hash": "e3b127de",
+        "encoded": "query_planning_ms=durations.get(%22queryPlanning%22),",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "b0a2b4",
+        "hash": "a2ca9f54",
+        "encoded": "wal_commit_ms=durations.get(%22walCommit%22),",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "b0a2b4",
+        "hash": "f87017b3",
+        "encoded": "num_input_rows=progress.get(%22numInputRows%22),",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "b0a2b4",
+        "hash": "08574e23",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "b0a2b4",
+        "hash": "67eb5c8a",
+        "encoded": "metrics_rows%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "b0a2b4",
+        "hash": "544cadc1",
+        "encoded": "extract_metrics(traditional_progress,%20%22Structured%20Streaming%20(processingTime=1s)%22),",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "b0a2b4",
+        "hash": "66d2e6e7",
+        "encoded": "extract_metrics(rtm_progress,%20%22Real-Time%20Mode%20(realTime=5s)%22),",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "b0a2b4",
+        "hash": "797c556b",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "b0a2b4",
+        "hash": "51452665",
+        "encoded": "metrics_df%20=%20spark.createDataFrame(metrics_rows)",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "b0a2b4",
+        "hash": "931d3a6c",
+        "encoded": "print(%22===%20Latency%20Comparison:%20Structured%20Streaming%20vs%20Real-Time%20Mode%20===%22)",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "b0a2b4",
+        "hash": "637fa18e",
+        "encoded": "print()",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "b0a2b4",
+        "hash": "3989e6ff",
+        "encoded": "display(metrics_df)",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "b0a2b4",
+        "hash": "77761456",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "b0a2b4",
+        "hash": "f1173e91",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "b0a2b4",
+        "hash": "36c8af02",
+        "encoded": "#%20MAGIC%20###%206.4%20%E2%80%94%20How%20to%20Read%20the%20Results",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "b0a2b4",
+        "hash": "062d03fc",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "b0a2b4",
+        "hash": "68a2da66",
+        "encoded": "#%20MAGIC%20%7C%20Metric%20%7C%20What%20It%20Tells%20You%20%7C",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "b0a2b4",
+        "hash": "5e340fed",
+        "encoded": "#%20MAGIC%20%7C--------%7C-------------------%7C",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "b0a2b4",
+        "hash": "17a19dc9",
+        "encoded": "#%20MAGIC%20%7C%20%60trigger_execution_ms%60%20%7C%20Total%20time%20for%20one%20trigger%20cycle%20%E2%80%94%20**lower%20=%20faster**%20%7C",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "b0a2b4",
+        "hash": "cbc949ae",
+        "encoded": "#%20MAGIC%20%7C%20%60add_batch_ms%60%20%7C%20Time%20spent%20processing%20the%20batch%20%E2%80%94%20the%20core%20latency%20metric%20%7C",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "b0a2b4",
+        "hash": "7176f2e5",
+        "encoded": "#%20MAGIC%20%7C%20%60input_rows_per_sec%60%20%7C%20Throughput%20%E2%80%94%20should%20be%20comparable%20between%20modes%20%7C",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "b0a2b4",
+        "hash": "f0d54d01",
+        "encoded": "#%20MAGIC%20%7C%20%60processed_rows_per_sec%60%20%7C%20Effective%20processing%20rate%20%7C",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "b0a2b4",
+        "hash": "227786e8",
+        "encoded": "#%20MAGIC%20%7C%20%60get_batch_ms%60%20%7C%20Time%20to%20fetch%20data%20from%20source%20%7C",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "b0a2b4",
+        "hash": "106efc9f",
+        "encoded": "#%20MAGIC%20%7C%20%60query_planning_ms%60%20%7C%20Spark%20planning%20overhead%20%7C",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "b0a2b4",
+        "hash": "2d9b4650",
+        "encoded": "#%20MAGIC%20%7C%20%60wal_commit_ms%60%20%7C%20Write-ahead%20log%20commit%20time%20%7C",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "b0a2b4",
+        "hash": "1dd87245",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "b0a2b4",
+        "hash": "f9757d64",
+        "encoded": "#%20MAGIC%20**Expected%20Result:**%20RTM%20should%20show%20significantly%20lower%20%60trigger_execution_ms%60",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "b0a2b4",
+        "hash": "906bca0c",
+        "encoded": "#%20MAGIC%20and%20%60add_batch_ms%60%20compared%20to%20traditional%20streaming,%20while%20%60input_rows_per_sec%60",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "b0a2b4",
+        "hash": "ae30bffa",
+        "encoded": "#%20MAGIC%20remains%20comparable.",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "b0a2b4",
+        "hash": "d9b8b61c",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "b0a2b4",
+        "hash": "51b47ee7",
+        "encoded": "#%20MAGIC%20###%20Presenting%20to%20Stakeholders",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "b0a2b4",
+        "hash": "4e82e2b5",
+        "encoded": "#%20MAGIC%201.%20Run%20this%20notebook%20and%20screenshot%20the%20%60metrics_df%60%20table%20above",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "b0a2b4",
+        "hash": "c59f4dcf",
+        "encoded": "#%20MAGIC%202.%20Also%20screenshot%20%60query.lastProgress%60%20raw%20JSON%20from%20Sections%206.1%20and%206.2",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "b0a2b4",
+        "hash": "ac3d57fd",
+        "encoded": "#%20MAGIC%203.%20Place%20them%20side-by-side%20in%20a%20slide%20with%20the%20headline:",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "b0a2b4",
+        "hash": "84fa8760",
+        "encoded": "#%20MAGIC%20%20%20%20%3E%20*%22Real-Time%20Mode%20reduced%20trigger%20execution%20latency%20from%20X%20ms%20to%20Y%20ms",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "b0a2b4",
+        "hash": "e3c1f2a7",
+        "encoded": "#%20MAGIC%20%20%20%20%3E%20(Z%25%20improvement)%20while%20maintaining%20comparable%20throughput.%22*",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "b0a2b4",
+        "hash": "ec236017",
+        "encoded": "#%20MAGIC%204.%20Fill%20in%20X,%20Y,%20Z%20from%20your%20actual%20run%20results",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "b0a2b4",
+        "hash": "15851432",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "b0a2b4",
+        "hash": "de9d232f",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "b0a2b4",
+        "hash": "9cc24e00",
+        "encoded": "#%20MAGIC%20###%206.5%20%E2%80%94%20Raw%20%60lastProgress%60%20Inspection",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "b0a2b4",
+        "hash": "d9eeae66",
+        "encoded": "#%20MAGIC",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "b0a2b4",
+        "hash": "a6297c12",
+        "encoded": "#%20MAGIC%20For%20deeper%20analysis,%20inspect%20the%20full%20%60lastProgress%60%20dictionaries%20captured%20above.",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "b0a2b4",
+        "hash": "5880fc9b",
+        "encoded": "#%20MAGIC%20Uncomment%20the%20cells%20below%20to%20display%20them.",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "b0a2b4",
+        "hash": "a142b95f",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "b0a2b4",
+        "hash": "11f7d8b3",
+        "encoded": "#%20Uncomment%20to%20inspect%20raw%20progress%20data:",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "b0a2b4",
+        "hash": "e7e3fa19",
+        "encoded": "#%20print(%22===%20Traditional%20Streaming%20%E2%80%94%20Full%20lastProgress%20===%22)",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "b0a2b4",
+        "hash": "53a2a4bc",
+        "encoded": "#%20print(json.dumps(traditional_progress,%20indent=2,%20default=str))",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "b0a2b4",
+        "hash": "b83d767e",
+        "encoded": "#%20print(%22%5Cn===%20Real-Time%20Mode%20%E2%80%94%20Full%20lastProgress%20===%22)",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "b0a2b4",
+        "hash": "5d6b3fb3",
+        "encoded": "#%20print(json.dumps(rtm_progress,%20indent=2,%20default=str))",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "b0a2b4",
+        "hash": "1cc28351",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "b0a2b4",
+        "hash": "f8fe2cd8",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "b0a2b4",
+        "hash": "4931e6ce",
+        "encoded": "#%20MAGIC%20---",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "b0a2b4",
+        "hash": "86a7ddda",
+        "encoded": "#%20MAGIC%20##%20Section%207:%20Cleanup",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "b0a2b4",
+        "hash": "868b6c16",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "b0a2b4",
+        "hash": "609ee17e",
+        "encoded": "for%20q%20in%20spark.streams.active:",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "b0a2b4",
+        "hash": "3a4b70af",
+        "encoded": "print(f%22Stopping:%20%7Bq.name%20or%20q.id%7D%22)",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "b0a2b4",
+        "hash": "cb8f7980",
+        "encoded": "q.stop()",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "b0a2b4",
+        "hash": "46a55b1f",
+        "encoded": "print(%22All%20queries%20stopped.%22)",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "b0a2b4",
+        "hash": "175d0e8d",
+        "encoded": "#%20COMMAND%20----------",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "b0a2b4",
+        "hash": "cf76ad48",
+        "encoded": "#%20MAGIC%20%25md",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "b0a2b4",
+        "hash": "3c28486f",
+        "encoded": "#%20MAGIC%20---",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "b0a2b4",
+        "hash": "4e08e7d0",
+        "encoded": "#%20MAGIC%20##%20Next%20Steps",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
